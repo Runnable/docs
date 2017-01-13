@@ -15,7 +15,7 @@ help:
 install:
 	bundle install
 
-start: build start
+start: build serve
 
 build:
 	bundle exec jekyll build
