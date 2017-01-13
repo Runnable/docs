@@ -1,0 +1,11 @@
+*.orig
+_site
+.jekyll-metadata
+.sass-cache
+
+java/
+getting-started/
+js/
+php/
+python/
+rails/

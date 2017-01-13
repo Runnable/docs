@@ -1,0 +1,42 @@
+.breadcrumbs {
+  padding-top: 30px;
+
+  @include media(xxs) {
+    font-size: 15px;
+  }
+
+  .link {
+    color: $gray;
+    flex: 0 0 auto;
+    padding: 0 12px;
+    text-decoration: none;
+
+    &:hover,
+    &:active {
+      color: $gray-dark;
+    }
+
+    &.text-overflow {
+      flex: 0 1 auto;
+    }
+  }
+
+  .icons-life-preserver {
+    color: $gray;
+    height: 21px;
+    opacity: .75;
+    width: 21px;
+
+    &:hover,
+    &:active {
+      opacity: 1;
+    }
+  }
+
+  .icons-chevron-right {
+    color: $gray-light;
+    flex: 0 0 auto;
+    height: 12px;
+    width: 12px;
+  }
+}

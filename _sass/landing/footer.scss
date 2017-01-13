@@ -1,0 +1,46 @@
+.footer {
+  align-items: center;
+  background: linear-gradient($gray-lighterest, $white);
+  border-top: 1px solid $gray-lighter;
+  margin: 0 auto;
+  overflow: visible;
+  padding-top: 30px;
+  position: relative;
+
+  @include media(xxs) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .well-anchor .p {
+    margin-bottom: 9px;
+    margin-right: 120px;
+
+    @include media(xs) {
+      margin-right: 0;
+    }
+  }
+
+  .link-wrapper {
+    padding: 60px;
+  }
+
+  .link {
+    color: $gray-light;
+    font-size: 19px;
+    line-height: 24px;
+    margin: 15px 27px;
+    text-decoration: none;
+
+    &:hover,
+    &:active {
+      color: $gray;
+    }
+  }
+
+  .hr {
+    background: $gray-lightest;
+    margin: 0 auto;
+    width: 510px;
+  }
+}

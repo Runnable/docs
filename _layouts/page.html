@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<div class="grid-block grid-container vertical">
+  {% include breadcrumbs.html %}
+  <article class="article">
+    <header class="post-header">
+      <h1 class="post-title">{{ page.title }}</h1>
+    </header>
+
+    {{ content }}
+    {% assign next_step = page.step | plus: 1  %}   
+    {% assign next_page = (site.posts | where: "category", page.category | where: "step", next_step ) %}
+
+    {% if next_page.[0] %}
+      {% include next.html %}
+    {% endif %}
+  </article>
+</div>

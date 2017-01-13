@@ -1,0 +1,47 @@
+.main {
+  overflow: visible;
+  padding-bottom: 30px;
+  width: 100%;
+
+  @include media(xs) {
+    > .grid-container {
+      padding: 0 30px;
+    }
+  }
+
+  .grid-2 {
+
+    @include media(md) {
+      flex-direction: column;
+    }
+
+    > .grid-block {
+      @include media(md) {
+        flex: 1 1 auto;
+        max-width: none;
+      }
+    }
+  }
+
+  .card {
+    margin-bottom: 90px;
+  }
+
+  .categories .card {
+    margin: 75px auto 30px;
+
+    @include media(xs) {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .well-anchor {
+    min-width: 660px;
+
+    @include media(sm) {
+      min-width: 0;
+    }
+  }
+}
