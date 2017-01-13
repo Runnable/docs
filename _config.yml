@@ -6,12 +6,12 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Runnable Docker Guides
-email: slash-docker@runnable.com
+title: Runnable Documentation
+email: support@runnable.com
 description: > # this means to ignore newlines until "baseurl:"
-  Articles to help those who use Docker for Java, Rails, PHP, Python, and Node development.
-url: https://runnable.com # the base hostname & protocol for your site
-baseurl: /docker
+  Articles to help those who use Runnable.com
+url: https://docs.runnable.com # the base hostname & protocol for your site
+baseurl:
 twitter:
   username: GetRunnable
 facebook:
