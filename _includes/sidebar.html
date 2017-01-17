@@ -2,12 +2,20 @@
   <ul class="nav">
     {% for section in site.sidebar %}
       {% assign orderedPosts = site.categories.[section.category] %}
+      {% if page.category == section.category %}
+      <li class="active">
+      {% else %}
       <li>
-        <a href="/{{ section.category }}">{{ section.title }}</a>
+      {% endif %}
+        <a href="#">{{ section.title }}</a>
         {% if orderedPosts.size > 0 %}
         <ul>
         {% for post in orderedPosts %}
+          {% if page.url == post.url %}
+          <li class="active">
+          {% else %}
           <li>
+          {% endif %}
             <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
           </li>
         {% endfor %}
@@ -22,4 +30,5 @@
 $(document).ready(function() {
   $('.nav').navgoco();
 });
+$('li.active').parents('li').toggleClass('open');
 </script>

@@ -8,6 +8,10 @@
   .grid-container {
     padding: 0 15px;
   }
+
+  nav {
+    align-items: center;
+  }
 }
 
 .home {
@@ -28,9 +32,9 @@
   padding-bottom: 0;
 }
 
-li > ul {
-  margin-left: 15px;
-}
+/*
+ * Lunr.js Search & Results
+ */
 
 .lunr-hidden {
   display: none;
@@ -49,4 +53,80 @@ li > ul {
   margin: 15px auto;
   padding: 15px;
   background-color: white;
+}
+
+/*
+ * Sidebar Navigation
+ */
+.nav {
+  width: 100%;
+}
+
+.nav, .nav ul, .nav li {
+  list-style: none;
+}
+
+.nav ul {
+  padding: 0;
+  margin: 0 0 0 18px;
+}
+
+.nav {
+  margin: 0px;
+}
+
+.nav > li {
+  margin: 4px 0;
+}
+
+.nav > li li {
+  margin: 2px 0;
+}
+
+.nav a {
+  color: #333;
+  display: block;
+  outline: none;
+  text-decoration: none;
+}
+
+.nav li > a > span {
+  float: right;
+  font-size: 19px;
+  font-weight: bolder;
+}
+
+.nav li > a:hover > span {
+  color: #fff;
+}
+
+.nav li > a > span:after {
+  content: '\25cf';
+}
+.nav li.open > a > span:after {
+  content: '\25cb';
+}
+
+.nav a:hover {
+  background-color: #f0f0f0;
+}
+
+.nav li.active > a {
+  background-color: lighten($purple-light, 30);
+}
+
+.nav > li.active > a  {
+  background-color: lighten($purple-light, 40);
+}
+
+.nav li a {
+  font-size: 16px;
+  line-height: 20px;
+  padding: 2px 10px;
+}
+
+.nav > li > a {
+  font-size: 22px;
+  line-height: 30px;
+  padding: 4px 10px;
 }
