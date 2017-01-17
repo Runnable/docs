@@ -1,5 +1,5 @@
 ---
-title: How to Seed your Database from a Dump file
+title: How to seed your database from a dump file
 category: services
 step: 5
 tags:
@@ -7,8 +7,7 @@ tags:
 - databases
 - postgres
 - mysql
-excerpt: How to Seed your Database from a Dump file
-description: How to Seed your Database from a Dump file
+description: How to seed your database from a dump file
 ---
 
 One of the greatest features of Runnable is the ability to launch isolated application stacks for
