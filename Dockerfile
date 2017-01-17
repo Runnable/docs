@@ -1,6 +1,7 @@
 FROM ruby:2.3.1
 
 # Add Node.js
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash
 RUN apt-get update && apt-get install nodejs
 
 # Cache Bundle Install
