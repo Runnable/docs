@@ -16,13 +16,16 @@ twitter:
   usertitle: GetRunnable
 facebook:
   publisher: Runnable
-
 seo:
   type: TechArticle
 
+# Server Config options
+livereload: true     # You no longer need to include --livereload
+reload_port: 15678    # If you don't want to use the default port
+host: 0.0.0.0
+
 # Build settings
 markdown: kramdown
-
 gems:
   - jekyll-seo-tag
   - jekyll-sitemap
@@ -45,10 +48,7 @@ defaults:
 sass:
   sass_dir: _sass/
 
-# Server Config options
-livereload: true     # You no longer need to include --livereload
-reload_port: 15678    # If you don't want to use the default port
-
+# External Variables
 sidebar:
   - 
     title: Configuring a Repository
