@@ -11,7 +11,7 @@
 //   88      "8a,  ,a88 88      88 88      88 88,   ,88 88,. ,a8" 88 "8b,  ,a
 //   88       `"YbdP'88 88      88 88      88 `"8bbd"Y8,8Y"Ybb8"  88  `"Ybd8"'
 
-//   California Style Sheets
+// California Style Sheets
 
 // scss-lint:disable StringQuotes
 
@@ -20,7 +20,7 @@
 @import "jekyll/layout";
 @import "jekyll/syntax-highlighting";
 
-// // global
+// global
 @import "globals/mixins";
 @import "globals/var";
 @import "globals/reset";
@@ -53,7 +53,5 @@
 
 // documentation specific
 @import "documentation/layout";
-
 @import "articles/article";
-
 @import "globals/responsive-utils";

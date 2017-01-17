@@ -1,4 +1,5 @@
 FROM ruby:2.3.1
+ENV LANG C.UTF-8
 
 # Add Node.js
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash
