@@ -9,6 +9,7 @@ help:
 	@echo "  install        Install dependencies."
 	@echo "  build          Update dependencies and build project."
 	@echo "  serve          Serve documentation locally."
+	@echo "  start          Build & Serve Livereload."
 	@echo "  deploy         Deploy to gh-pages branch."
 	@echo ""
 
@@ -21,7 +22,7 @@ build:
 	bundle exec jekyll build
 
 serve:
-	bundle exec jekyll serve --verbose --trace
+	bundle exec jekyll serve
 
 deploy:
 	@echo "Deploy to gh-pages"
