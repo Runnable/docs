@@ -151,7 +151,7 @@
   margin-right: auto;
   width: 100%;
 
-  @media (min-width: $screen-xxs) {
+/*  @media (min-width: $screen-xxs) {
     max-width: inherit;
     width: inherit;
   }
@@ -169,7 +169,7 @@
   @media (min-width: $screen-md) {
     max-width: $screen-md - 30px;
     width: $screen-md - 30px;
-  }
+  }*/
 }
 
 .grid-container-sm {

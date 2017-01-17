@@ -21,7 +21,7 @@ build:
 	bundle exec jekyll build
 
 serve:
-	bundle exec jekyll serve
+	bundle exec jekyll serve --verbose --trace
 
 deploy:
 	@echo "Deploy to gh-pages"

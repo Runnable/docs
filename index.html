@@ -1,92 +1,58 @@
 ---
 layout: default
 ---
-{% include hero.html %}
 
-<div class="grid-block grid-container grid-2">
+<div class="grid-block noscroll vertical home">
 
-  <div class="grid-block noscroll vertical">
+  <section class="card padding-lg">
+    <img class="img" src="{{ site.baseurl }}/images/getting-started.svg" height="180" width="180">
+    <h1 class="h1 padding-xxs">Quickstart Guides</h1>
+    <ul class="list">
+      {% assign orderedPosts = site.tags.quickstarts | sort: "step" %}
+      {% for post in orderedPosts %}
+        <li class="list-item">
+          <a class="grid-block justify-justified align-center link padding-xxs" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}
+            <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
     <section class="card padding-lg">
-      <img class="img" src="{{ site.baseurl }}/images/getting-started.svg" height="180" width="180">
-      <h1 class="h1 padding-xxs">Getting Started</h1>
+      <img class="img" src="{{ site.baseurl }}/images/repositories.svg" height="180" width="180">
+      <h1 class="h1 padding-xxs">Configuring a Repository</h1>
       <ul class="list">
-        {% assign orderedPosts = site.categories.getting-started | sort: "step" %}
-        {% for post in orderedPosts %}
-          {% if post.title %}
+        {% assign posts = site.categories.repositories | sort "step" %}
+        {% for post in posts %}
+          {% unless post.tags contains "quickstarts" %}
           <li class="list-item">
             <a class="grid-block justify-justified align-center link padding-xxs" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}
               <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
             </a>
-          {% endif %}
+          </li>
+          {% endunless %}
         {% endfor %}
       </ul>
     </section>
 
-    <section class="card padding-lg">
-      <img class="img" src="{{ site.baseurl }}/images/java.svg" height="150" width="150">
-      <h1 class="h1 padding-xxs">Java</h1>
-      <ul class="list">
-        {% assign orderedPosts = site.categories.java | sort: "step" %}
-        {% for post in orderedPosts %}
-          {% if post.title %}
-          <li class="list-item">
-            <a class="grid-block justify-justified align-center link padding-xxs" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}
-              <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
-            </a>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </section>
+</div>
 
-    <section class="card padding-lg">
-      <img class="img" src="{{ site.baseurl }}/images/php.svg" height="150" width="150">
-      <h1 class="h1 padding-xxs">PHP</h1>
-      <ul class="list">
-        {% assign orderedPosts = site.categories.php | sort: "step" %}
-        {% for post in orderedPosts %}
-          {% if post.title %}
-          <li class="list-item">
-            <a class="grid-block justify-justified align-center link padding-xxs" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}
-              <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
-            </a>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </section>
-  </div>
+<div class="grid-block noscroll vertical home">
 
-  <div class="grid-block noscroll vertical">
-    <section class="card padding-lg">
-      <img class="img" src="{{ site.baseurl }}/images/python.svg" height="150" width="150">
-      <h1 class="h1 padding-xxs">Python</h1>
-      <ul class="list">
-        {% assign orderedPosts = site.categories.python | sort: "step" %}
-        {% for post in orderedPosts %}
-          {% if post.title %}
-          <li class="list-item">
-            <a class="grid-block justify-justified align-center link padding-xxs" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}
-              <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
-            </a>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </section>
+  <section class="card padding-lg">
+    <img class="img" src="{{ site.baseurl }}/images/getting-started.svg" height="180" width="180">
+    <h1 class="h1 padding-xxs">Configuring other Services</h1>
+    <ul class="list">
+      {% assign orderedPosts = site.categories.services | sort: "step" %}
+      {% for post in orderedPosts %}
+        <li class="list-item">
+          <a class="grid-block justify-justified align-center link padding-xxs" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}
+            <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
 
-    <section class="card padding-lg">
-      <img class="img" src="{{ site.baseurl }}/images/rails.svg" height="150" width="150">
-      <h1 class="h1 padding-xxs">Ruby on Rails</h1>
-      <ul class="list">
-        {% assign orderedPosts = site.categories.rails | sort: "step" %}
-        {% for post in orderedPosts %}
-          {% if post.title %}
-          <li class="list-item">
-            <a class="grid-block justify-justified align-center link padding-xxs" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}
-              <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
-            </a>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </section>
-  </div>
-  {% include coming-soon.html %}
 </div>

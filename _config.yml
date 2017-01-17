@@ -10,10 +10,10 @@ title: Runnable Documentation
 email: support@runnable.com
 description: > # this means to ignore newlines until "baseurl:"
   Articles to help those who use Runnable.com
-url: https://docs.runnable.com # the base hostname & protocol for your site
+url: https://docs.runnable.com # the base hosttitle & protocol for your site
 baseurl:
 twitter:
-  username: GetRunnable
+  usertitle: GetRunnable
 facebook:
   publisher: Runnable
 
@@ -48,3 +48,41 @@ sass:
 # Server Config options
 livereload: true     # You no longer need to include --livereload
 reload_port: 15678    # If you don't want to use the default port
+
+sidebar:
+  - 
+    title: Configuring a Repository
+    category: repositories
+  - 
+    title: Configuring Other Services
+    category: services
+  - 
+    title: Using Docker Compose
+    category: docker-compose
+  - 
+    title: Using Kubernetes
+    category: kubernetes
+  - 
+    title: Networking
+    category: networking
+  - 
+    title: Automated Testing
+    category: testing
+  - 
+    title: Enterprise
+    category: enterprise
+  - 
+    title: Integrations
+    category: integrations
+  - 
+    title: Runnable CLI
+    category: cli
+  - 
+    title: Privacy & Security
+    category: privacy
+  - 
+    title: Pricing
+    category: pricing
+  - 
+    title: Troubleshooting
+    category: troubleshooting

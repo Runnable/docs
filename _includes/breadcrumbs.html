@@ -23,13 +23,14 @@
     }
   },
 {% if page.categories %}
+{% assign category = site.sidebar | where:"category", page.category  | first %}
   {
    "@type": "ListItem",
   "position": 3,
   "item":
    {
      "@id": "{{ site.url }}{{ site.baseurl }}/{{ page.categories }}/",
-     "name": "{{ page.category | replace: '-', ' ' | replace: 'php', 'PHP' | replace: 'java', 'Java' | replace: 'rails', 'Ruby on Rails' | replace: 'nodejs', 'Node.js' | replace: 'python', 'Python' | replace: 'getting started', 'Getting Started' }}"
+     "name": "{{ category.title }}"
    }
   },
   {
@@ -58,7 +59,7 @@
 <nav class="grid-block align-center justify-center breadcrumbs">
   <a class="grid-block shrink align-center link" href="{{ site.baseurl }}/"><svg class="icons icons-life-preserver"><use xlink:href="#icons-life-preserver"></svg></a> <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
   {% if page.categories %}
-  <a class="link" href="{{ site.baseurl }}/{{ page.categories }}/">{{ page.category | replace: 'python', 'Python' | replace: 'java', 'Java' | replace: 'getting-started', 'Getting Started' | replace: 'php', 'PHP' | replace: 'rails', 'Ruby on Rails' }}</a> <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
+  <a class="link" href="{{ site.baseurl }}/{{ page.categories }}/">{{ category.title }}</a> <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
   {% endif %}
-  <a class="link link text-overflow" href="{{ site.baseurl }}{{ page.url }}">{{ page.title | replace: 'Rails', 'Ruby on Rails' }}</a>
+  <a class="link link text-overflow" href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
 </nav>

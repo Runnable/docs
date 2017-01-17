@@ -1,0 +1,37 @@
+<div class="grid-block master">
+  <ul class="sidebar-list">
+    {% for section in site.sidebar %}
+      {% assign orderedPosts = site.categories.[section.category] %}
+      <li class="sidebar-list-item">
+        <div class="sidebar-list-item-label">
+          <a class="sidebar-list-item-title" href="/{{ section.category }}">{{ section.title }}</a>
+          <span class="sidebar-list-item-icon"></span>
+        </div>
+        {% if orderedPosts.size > 0 %}
+        <ul>
+        {% for post in orderedPosts %}
+          <li class="sidebar-list-item">
+            <div class="sidebar-list-item-label">
+              <a class="sidebar-list-item-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            </div>
+          </li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script>
+$('.sidebar-list-item:not(.sidebar-list-item-no-sub) > .sidebar-list-item-label .sidebar-list-item-icon').click(function() {
+  console.log($(this).parent().parent())
+  $(this).parent().parent().toggleClass('sidebar-list-item-open');
+})
+
+$('.sidebar-list-item').each(function(){
+  if ( $(this).find('> ul').length === 0 ) {
+    $(this).addClass('sidebar-list-item-no-sub');
+  }
+})
+</script>
