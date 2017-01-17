@@ -1,5 +1,6 @@
 <div class="grid-block master">
   <ul class="nav">
+    <input placeholder="Search…" type="search" id="search" class="search">
     {% for section in site.sidebar %}
       {% assign orderedPosts = site.categories.[section.category] %}
       {% if page.category == section.category %}
