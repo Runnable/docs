@@ -1,4 +1,9 @@
-# Frequently Asked Questions
+---
+title: Frequently Asked Questions
+category: troubleshooting
+step: 1
+description: Frequently Asked Questions
+---
 
 ### Do I have to already be a Docker user to use Runnable? {#docker}
 
@@ -18,4 +23,3 @@ Using Repository URLs as your callback eliminates the need to re-configure exter
 
 > Your Repository URL is:
 `repositoryName-organizationName-staging.runnableapp.com`
-
