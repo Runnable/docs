@@ -1,13 +1,17 @@
 /**
  * Master/Detail Layout
  */
+ .grid-container {
+   padding: 0 15px;
+   max-width: 994px;
+   width: 994px;
+ }
 
 .header {
   height: 45px;
 
   .grid-container {
     padding: 0 15px;
-
   }
 
   nav {
