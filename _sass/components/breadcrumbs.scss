@@ -21,6 +21,10 @@
     &.text-overflow {
       flex: 0 1 auto;
     }
+    
+    &:last-of-type {
+      color: $purple-light;
+    }
   }
 
   .icons-life-preserver {
@@ -28,7 +32,6 @@
     height: 21px;
     opacity: .75;
     width: 21px;
-
     &:hover,
     &:active {
       opacity: 1;
