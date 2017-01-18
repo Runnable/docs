@@ -7,6 +7,7 @@
 
   .grid-container {
     padding: 0 15px;
+    max-width: 994px;
   }
 
   nav {
@@ -48,16 +49,16 @@
 }
 
 .search {
+  font-size: 13px;
+  height: 24px;
+  line-height: 22px;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  padding: 0 8px;
+  resize: none;
   width: 100%;
-  box-sizing: border-box;
-  background: #f0f0f0;
-  margin-top: 16px;
-  margin-bottom: 8px;
-  padding: 8px;
-  font-size: 14px;
-  font-weight: bold;
-  background-color: white;
-  border-bottom: 1px solid $gray;
+  word-break: normal;
 }
 
 /*
