@@ -4,7 +4,6 @@ category: docker-compose
 step: 1
 tags:
 - docker
-excerpt: Docker Compose enables Docker users to specify definitions across all their services in a YAML file.
 description: Using Docker Compose With Runnable
 ---
 

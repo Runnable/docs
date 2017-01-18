@@ -1,7 +1,7 @@
 <div class="grid-block master">
   <ul class="nav">
     {% for section in site.sidebar %}
-      {% assign orderedPosts = site.categories.[section.category] %}
+      {% assign orderedPosts = site.categories.[section.category] | sort "step" %}
       {% if page.category == section.category %}
       <li class="active">
       {% else %}

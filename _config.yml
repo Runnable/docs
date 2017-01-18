@@ -59,9 +59,6 @@ sidebar:
     title: Using Docker Compose
     category: docker-compose
   - 
-    title: Using Kubernetes
-    category: kubernetes
-  - 
     title: Networking
     category: networking
   - 
