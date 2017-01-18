@@ -1,4 +1,9 @@
-# How to use the Runnable CLI
+---
+title: How to use the Runnable CLI
+category: cli
+step: 1
+description: How to use the Runnable CLI
+---
 
 ## Requirements
 

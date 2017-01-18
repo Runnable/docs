@@ -1,4 +1,9 @@
-## Starting an SSH Session
+---
+title: Starting an SSH Session
+category: cli
+step: 2 
+description: Starting an SSH Session
+---
 
     Usage:
       runnable ssh [repository]

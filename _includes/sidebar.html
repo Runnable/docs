@@ -1,4 +1,5 @@
-<div class="grid-block master">
+<div class="master">
+  <a class="button" id="navToggle">&#x2630;</a>
   <ul class="nav">
     {% for section in site.sidebar %}
       {% assign orderedPosts = site.categories.[section.category] | sort "step" %}
@@ -29,8 +30,13 @@
 </div>
 
 <script type="text/javascript">
-$(document).ready(function() {
-  $('.nav').navgoco();
-});
-$('li.active').parents('li').toggleClass('open');
+$(document).ready(() => {
+  var navToggle = true
+  $('.nav').navgoco()
+  $('li.active').parents('li').toggleClass('open')
+  $('#navToggle').click(() => {
+    $('.nav').navgoco('toggle', navToggle)
+    navToggle ^= true
+  })
+})
 </script>

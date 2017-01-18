@@ -1,4 +1,9 @@
-## Enabling Auto-Isolation for a Branch
+---
+title: Enabling Auto-Isolation for a Branch
+category: cli
+step: 4
+description: Enabling Auto-Isolation for a Branch
+---
 
 #### What is Auto-Isolation?
   Auto-isolation is
