@@ -6,7 +6,6 @@ tags:
 - services
 - databases
 - mongodb
-excerpt: How to setup your Mongo database template
 description: How to setup your Mongo database template
 ---
 

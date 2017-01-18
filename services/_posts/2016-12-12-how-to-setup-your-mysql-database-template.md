@@ -6,7 +6,6 @@ tags:
 - services
 - databases
 - mysql
-excerpt: Our DB templates for MySQL come with a build-in initialization script
 description: How to setup your MySQL database template
 ---
 

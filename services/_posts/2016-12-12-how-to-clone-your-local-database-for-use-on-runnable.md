@@ -7,7 +7,6 @@ tags:
 - databases
 - postgres
 - mysql
-excerpt: How to clone your local database for use on Runnable
 description: How to clone your local database for use on Runnable
 ---
 

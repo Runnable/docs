@@ -5,7 +5,6 @@ step: 3
 tags:
 - quickstarts
 - php
-excerpt: Docker for developing and deploying Rails applications.
 description: How Docker helps speed up development and future proof the deployment process for your PHP applications.
 ---
 

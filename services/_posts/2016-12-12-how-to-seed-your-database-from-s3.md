@@ -6,7 +6,6 @@ tags:
 - services
 - databases
 - postgres
-excerpt: How to seed your database from S3
 description: How to seed your database from S3
 ---
 

@@ -6,7 +6,6 @@ tags:
 - services
 - databases
 - postgres
-excerpt: Our DB templates for PostgreSQL come with a build-in initialization script
 description: How to setup your PostgreSQL database template
 ---
 
