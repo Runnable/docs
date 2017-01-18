@@ -48,4 +48,4 @@ Below is a list of stacks and services that Runnable has been tested with; howev
 * ElasticSearch
 * Consul-Server
 
-This site contains articles designed to help those who are using Docker for development. Brought to you by the team at [Runnable](https://runnable.com/).
+Brought to you by the team at [Runnable](https://runnable.com/).

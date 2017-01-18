@@ -18,7 +18,7 @@
    "position": 2,
    "item":
    {
-    "@id": "{{ site.url }}{{ site.baseurl }}/",
+    "@id": "{{ site.url }}/",
     "name": "Docker Guides"
     }
   },
@@ -29,7 +29,7 @@
   "position": 3,
   "item":
    {
-     "@id": "{{ site.url }}{{ site.baseurl }}/{{ page.categories }}/",
+     "@id": "{{ site.url }}/{{ page.categories }}/",
      "name": "{{ category.title }}"
    }
   },
@@ -38,7 +38,7 @@
   "position": 4,
   "item":
    {
-     "@id": "{{ site.url }}{{ site.baseurl }}{{ page.url }}",
+     "@id": "{{ site.url }}{{ page.url }}",
      "name": "{{ page.title }}"
    }
   }
@@ -48,7 +48,7 @@
   "position": 3,
   "item":
    {
-     "@id": "{{ site.url }}{{ site.baseurl }}{{ page.url }}",
+     "@id": "{{ site.url }}{{ page.url }}",
      "name": "{{ page.title }}"
    }
   }
@@ -57,9 +57,9 @@
 }
 </script>
 <nav class="grid-block align-center justify-center breadcrumbs">
-  <a class="grid-block shrink align-center link" href="{{ site.baseurl }}/"><svg class="icons icons-life-preserver"><use xlink:href="#icons-life-preserver"></svg></a> <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
+  <a class="grid-block shrink align-center link" href="/"><svg class="icons icons-life-preserver"><use xlink:href="#icons-life-preserver"></svg></a> <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
   {% if page.categories %}
-  <a class="link" href="{{ site.baseurl }}/{{ page.categories }}/">{{ category.title }}</a> <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
+  <a class="link" href="/{{ page.categories }}/">{{ category.title }}</a> <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
   {% endif %}
-  <a class="link link text-overflow" href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
+  <a class="link link text-overflow" href="{{ page.url }}">{{ page.title }}</a>
 </nav>

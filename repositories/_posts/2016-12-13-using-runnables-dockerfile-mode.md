@@ -4,11 +4,10 @@ category: repositories
 step: 6
 tags:
 - dockerfile
-excerpt: Docker for developing and deploying Rails applications.
 description: How Docker helps speed up development and future proof the deployment process for your PHP applications.
 ---
 
-# Using Runnable's Dockerfile Mode
+This guide will teach you how to use Runnable's Dockerfile mode. Unlike Simple Mode, Dockerfile mode lets you store your configuration in a Dockerfile template.
 
 ## Understanding Runnable's Dockerfile Build Context
 

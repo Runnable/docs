@@ -2,11 +2,8 @@
 title: Adding Additional Files
 category: repositories
 step: 5
-excerpt: Docker for developing and deploying Rails applications.
 description: How Docker helps speed up development and future proof the deployment process for your PHP applications.
 ---
-
-# Adding Additional Files (without committing to Github)
 
 Every time a container is rebuilt, all dirty files and changes are reverted to the cached state before the Dockerfile CMD.
 If you have files that you want to persist for every build of a container, you can use the **Files & SSH Keys** tool to add them.
