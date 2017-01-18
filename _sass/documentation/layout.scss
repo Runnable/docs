@@ -48,9 +48,16 @@
 }
 
 .search {
+  width: 100%;
+  box-sizing: border-box;
   background: #f0f0f0;
-  padding: 15px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: bold;
   background-color: white;
+  border-bottom: 1px solid $gray;
 }
 
 /*
@@ -112,11 +119,12 @@
 }
 
 .nav li.active > a {
-  background-color: lighten($purple-light, 30);
+  border-bottom: 1px solid $purple-light;
 }
 
 .nav > li.active > a  {
-  background-color: lighten($purple-light, 40);
+  background-color: $purple-light;
+  color: $white;
 }
 
 .nav li a {
@@ -127,6 +135,7 @@
 
 .nav > li > a {
   font-size: 15px;
+  font-weight: 500;
   line-height: 22px;
   padding: 5px 10px;
 }

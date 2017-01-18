@@ -1,15 +1,17 @@
 .breadcrumbs {
-  padding-top: 12px;
+  padding-top: 22px;
 
   @include media(xxs) {
-    font-size: 15px;
+    font-size: 1px;
   }
 
   .link {
+    font-weight: bold;
     color: $gray;
     flex: 0 0 auto;
     padding: 0 12px;
     text-decoration: none;
+    font-size: 14px;
 
     &:hover,
     &:active {
