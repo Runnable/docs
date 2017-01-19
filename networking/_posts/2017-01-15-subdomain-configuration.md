@@ -1,5 +1,9 @@
-Subdomain Configuration
-============
+---
+title: Subdomain Configuration
+category: networking
+step: 1
+description: Subdomain Configuration
+---
 
 Runnable supports routing subdomain requests to your containers.
 Our routing logic does a wildcard match on ```*.containerID-repo-org-staging.runnableapp.com``` and will route any queries to the URL pattern directly to the destination container.

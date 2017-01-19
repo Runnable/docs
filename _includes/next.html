@@ -3,7 +3,7 @@
   <div class="grid-block vertical">
     <p class="p">
       <strong class="strong">Next: {{ next_page.[0].title }}</strong>
-      <br>{{ next_page.[0].content | strip_html | truncatewords: 20 }}
+      <br>{{ next_page.[0].content | markdownify | strip_html | truncatewords: 20 }}
     </p>
   </div>
   <svg class="icons icons-chevron-right hidden-xs">
