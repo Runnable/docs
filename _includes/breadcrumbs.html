@@ -22,15 +22,15 @@
     "name": "Docker Guides"
     }
   },
-{% if page.categories %}
-{% assign category = site.sidebar | where:"category", page.category  | first %}
+{% if page.category %}
+{% assign category = site.titles.[page.category] %}
   {
    "@type": "ListItem",
   "position": 3,
   "item":
    {
-     "@id": "{{ site.url }}/{{ page.categories }}/",
-     "name": "{{ category.title }}"
+     "@id": "{{ site.url }}/{{ page.category }}/",
+     "name": "{{ category }}"
    }
   },
   {
@@ -58,8 +58,8 @@
 </script>
 <nav class="grid-block align-center justify-center breadcrumbs">
   <a class="grid-block shrink align-center link" href="/"><svg class="icons icons-life-preserver"><use xlink:href="#icons-life-preserver"></svg></a> <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
-  {% if page.categories %}
-  <a class="link" href="/{{ page.categories }}/">{{ category.title }}</a> <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
+  {% if page.category %}
+  <a class="link" href="/{{ page.category }}/">{{ category }}</a> <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
   {% endif %}
   <a class="link link text-overflow" href="{{ page.url }}">{{ page.title }}</a>
 </nav>

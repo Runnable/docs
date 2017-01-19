@@ -1,5 +1,5 @@
 ---
-layout: none
+layout: null
 ---
 var index = lunr(function () {
   this.field('title')

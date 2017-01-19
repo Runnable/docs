@@ -1,6 +1,6 @@
 ---
 title: Ruby On Rails Quickstart Guide
-category: repositories
+category: quickstarts
 step: 2
 tags:
 - quickstarts

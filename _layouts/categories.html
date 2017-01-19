@@ -4,18 +4,21 @@ layout: default
 <div class="grid-block grid-container vertical">
   {% include breadcrumbs.html %}
   <div class="categories">
+    {% for category in page.categories %}
     <section class="card padding-lg">
-      <img class="img" src="/images/icons/{{ page.category }}.svg" height="100" width="100">
-      <h1 class="h1 padding-xxs">{{ page.title }}</h1>
+      <img class="img icon" src="/images/icons/{{ category }}.svg" height="100" width="100">
+      <h1 class="h1 padding-xxs">{{ site.titles.[category] }}</h1>
       <ul class="list">
-        {% assign posts = site.categories.[page.category] %}
+        {% assign posts = site.categories.[category] %}
         {% for post in posts %}
           <li class="list-item">
             <a class="grid-block justify-justified align-center link padding-xxs" href="{{ post.url }}">{{ post.title }}
               <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
             </a>
+          </li>
         {% endfor %}
       </ul>
     </section>
+    {% endfor %}
   </div>
 </div>

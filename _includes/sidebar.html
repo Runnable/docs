@@ -1,31 +1,54 @@
 <div class="master">
   <a class="button" id="navToggle">&#x2630;</a>
   <ul class="nav">
-    {% for section in site.sidebar %}
-      {% assign orderedPosts = site.categories.[section.category] | sort "step" %}
-      {% if page.category == section.category %}
-      <li class="active">
-      {% else %}
-      <li>
-      {% endif %}
-        {% if orderedPosts.size > 0 %}
-        <a href="#">{{ section.title }}</a>
-        <ul>
-        {% for post in orderedPosts %}
-          {% if page.url == post.url %}
-          <li class="active">
-          {% else %}
-          <li>
-          {% endif %}
-            <a href="{{ post.url }}">{{ post.title }}</a>
-          </li>
-        {% endfor %}
-        </ul>
-        {% elsif orderedPosts.size == 1 %}
-        <a href="{{ orderedPosts.[0].url }}">{{ section.title }}</a>
+{% for section in site.sidebar %}
+  {% assign orderedPosts = site.categories.[section.category] | sort "step" %}
+  {% if page.category == section.category %}
+    <li class="active">
+  {% else %}
+    <li>
+  {% endif %}
+  {% if orderedPosts.size > 0 %}
+      <a href="#">{{ site.titles.[section.category] }}</a>
+      <ul>
+    {% if section.subcategories %}
+      {% for subCategory in section.subcategories %}
+        {% assign posts = site.categories.[subCategory.category] %}
+        <li>
+        {% if posts.size > 0 %}
+          <a class="subcategory" href="#">{{ site.titles.[subCategory.category] }}</a>
+          <ul>
+          {% for post in posts %}
+            {% if page.url == post.url %}
+            <li class="active">
+            {% else %}
+            <li>
+            {% endif %}
+              <a href="{{ post.url }}">{{ post.title }}</a>
+            </li>
+          {% endfor %}
+          </ul>
+        {% elsif posts.size == 1 %}
+          <a href="{{ posts.[0].url }}">{{ subCategory.title }}</a>
         {% endif %}
-      </li>
+        </li>    
+      {% endfor %}
+    {% endif %}
+    {% for post in orderedPosts %}
+      {% if page.url == post.url %}
+        <li class="active">
+      {% else %}
+        <li>
+      {% endif %}
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
     {% endfor %}
+      </ul>
+  {% elsif orderedPosts.size == 1 %}
+      <a href="{{ orderedPosts.[0].url }}">{{ section.title }}</a>
+  {% endif %}
+    </li>
+{% endfor %}
   </ul>
 </div>
 

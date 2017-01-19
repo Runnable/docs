@@ -1,6 +1,6 @@
 ---
 title: PHP Quickstart Guide
-category: repositories
+category: quickstarts
 step: 3
 tags:
 - quickstarts

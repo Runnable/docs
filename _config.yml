@@ -48,37 +48,79 @@ sass:
 # ==================
 # External Variables
 # ==================
+titles:
+  repositories: Configuring a Repository
+  quickstarts: Quickstart Guides
+  byod: Bring Your Own Dockerfile
+  services: Configuring Other Services
+  databases: Databases
+  kvstores: Data / Key-Value Stores
+  servicediscovery: Service Discovery
+  msgqueues: Messaging Queues
+  routers: HTTP Routers / Load Balancers 
+  docker-compose: Using Docker Compose
+  networking: Networking
+  testing: Automated Testing
+  enterprise: Enterprise
+  github: GitHub Enterprise
+  bitbucket: BitBucket Pro
+  integrations: Integrations
+  notifications: Notifications
+  dockerhub: Dockerhub
+  oauth: OAuth
+  cli: Runnable CLI
+  privacy: Privacy & Security
+  pricing: Pricing
+  troubleshooting: Troubleshooting
+
 sidebar:
   - 
-    title: Configuring a Repository
     category: repositories
+    subcategories:
+      -
+        category: quickstarts
+      -
+        category: byod
   - 
-    title: Configuring Other Services
     category: services
+    subcategories:
+      -
+        category: databases
+      -
+        category: kvstores
+      -
+        category: servicediscovery
+      -
+        category: msgqueues
+      -
+        category: routers
   - 
-    title: Using Docker Compose
     category: docker-compose
   - 
-    title: Networking
     category: networking
   - 
-    title: Automated Testing
     category: testing
   - 
-    title: Enterprise
     category: enterprise
+    subcategories:
+      -
+        category: github
+      -
+        category: bitbucket
   - 
-    title: Integrations
     category: integrations
+    subcategories:
+      -
+        category: notifications
+      -
+        category: dockerhub
+      -
+        category: oauth
   - 
-    title: Runnable CLI
     category: cli
   - 
-    title: Privacy & Security
     category: privacy
   - 
-    title: Pricing
     category: pricing
   - 
-    title: Troubleshooting
     category: troubleshooting
