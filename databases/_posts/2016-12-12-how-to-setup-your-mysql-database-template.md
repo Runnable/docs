@@ -1,6 +1,6 @@
 ---
 title: How to setup your MySQL database template
-category: services
+category: databases
 step: 1
 tags:
 - services

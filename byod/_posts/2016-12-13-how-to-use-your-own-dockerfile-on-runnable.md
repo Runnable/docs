@@ -1,7 +1,7 @@
 ---
 title: How to use your own Dockerfile on Runnable
-category: repositories
-step: 7
+category: byod
+step: 1
 tags:
 - quickstarts
 - nodejs

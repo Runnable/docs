@@ -1,6 +1,6 @@
 ---
 title: How to setup your PostgreSQL database template
-category: services
+category: databases
 step: 2
 tags:
 - services

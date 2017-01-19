@@ -22,7 +22,8 @@ If you have files that you want to persist for every build of a container, you c
 
 Files that you upload in the template configuration will be available to all branches that inherit the template configuration.
 
-> It is important to note that all the files are listed in the order they are added and executed on the build container. You can change this order using the *hamburger* (3 horizontal lines) symbol next to the file name.
+> It is important to note that all the files are listed in the order they are added and executed on the build container. You can change this order by dragging the &#x2630; symbol next to the file name.
+
   ![File Order 1](/images/add_files_order_1.png)
   ![File Order 2](/images/add_files_order_2.png)
   ![File Order 3](/images/add_files_order_3.png)

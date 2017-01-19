@@ -51,7 +51,7 @@ sass:
 titles:
   repositories: Configuring a Repository
   quickstarts: Quickstart Guides
-  byod: Bring Your Own Dockerfile
+  byod: Using Your Own Dockerfile
   services: Configuring Other Services
   databases: Databases
   kvstores: Data / Key-Value Stores

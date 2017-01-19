@@ -1,6 +1,6 @@
 ---
 title: How to setup your Mongo database template
-category: services
+category: databases
 step: 3
 tags:
 - services

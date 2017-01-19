@@ -1,7 +1,7 @@
 ---
 title: Using Runnable's Dockerfile Mode
-category: repositories
-step: 6
+category: byod
+step: 2
 tags:
 - dockerfile
 description: How Docker helps speed up development and future proof the deployment process for your PHP applications.
