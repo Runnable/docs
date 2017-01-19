@@ -1,5 +1,5 @@
 .breadcrumbs {
-  padding-top: 22px;
+  margin-top: 36px;
 
   @include media(xxs) {
     font-size: 1px;
@@ -21,7 +21,7 @@
     &.text-overflow {
       flex: 0 1 auto;
     }
-    
+
     &:last-of-type {
       color: $purple-light;
     }

@@ -4,18 +4,22 @@ layout: default
 <div class="grid-block grid-container vertical">
   {% include breadcrumbs.html %}
   <div class="categories">
-    <section class="card padding-lg">
-      <img class="img" src="{{ site.baseurl }}/images/icons/quickstarts.svg" height="100" width="100">
+    <section class="card">
+      <div class="preview">
+        <img class="img" src="{{ site.baseurl }}/images/icons/quickstarts.svg" height="100" width="100">
+      </div>
+      <div class="padding-sm">
       <h1 class="h1 padding-xxs">{{ page.title }}</h1>
-      <ul class="list">
-        {% assign posts = site.tags.quickstarts | sort "site" %}
-        {% for post in posts %}
-          <li class="list-item">
-            <a class="grid-block justify-justified align-center link padding-xxs" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}
-              <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
-            </a>
-        {% endfor %}
-      </ul>
+        <ul class="list">
+          {% assign posts = site.tags.quickstarts | sort "site" %}
+          {% for post in posts %}
+            <li class="list-item">
+              <a class="grid-block justify-justified align-center link padding-xxs" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}
+                <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
+              </a>
+          {% endfor %}
+        </ul>
+      </div>
     </section>
   </div>
 </div>

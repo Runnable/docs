@@ -20,7 +20,7 @@
 }
 
 .home {
-  padding-top: 75px;
+  padding-top: 30px;
 }
 
 .grid-block .master {
@@ -54,16 +54,21 @@
 
 .search {
   font-size: 13px;
-  height: 30px;
-  line-height: 28px;
+  font-weight: bold;
+  height: 34px;
+  line-height: 32px;
   background: #fff;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
-  padding: 0 8px;
-  margin: 15px 0;
+  padding: 0 10px;
+  margin: 30px 0 15px 0;
   resize: none;
   width: 100%;
   word-break: normal;
+  transition: 0.075s border-color linear;
+  &:focus {
+    border-color: $purple-light;
+  }
 }
 
 /*
@@ -90,9 +95,6 @@
   margin: 4px 0;
 }
 
-.nav > li li {
-  margin: 2px 0;
-}
 
 .nav a {
   color: #333;
@@ -103,20 +105,15 @@
 
 .nav li > a > span {
   float: right;
-  font-size: 13px;
-}
-
-.nav li > a:hover > span {
-  color: #fff;
 }
 
 .nav li > a > span:after {
-  content: '\25BC';
-  font-size: 11px;
+  content: '+';
+  font-size: 16px;
 }
 .nav li.open > a > span:after {
-  content: '\25B2';
-  font-size: 11px;
+  content: '-';
+  font-size: 16px;
 }
 
 .nav a:hover {
@@ -124,7 +121,10 @@
 }
 
 .nav li.active > a {
-  border-bottom: 1px solid $purple-light;
+  border: 1px solid $purple-light;
+  background-color: $purple-lightest;
+  color: $purple-light;
+  font-weight: bold;
 }
 
 .nav > li.active > a  {
@@ -133,9 +133,12 @@
 }
 
 .nav li a {
+  box-sizing: border-box;
   font-size: 13px;
   line-height: 20px;
-  padding: 5px 10px;
+  padding: 5px 8px;
+  border-radius: 4px;
+  margin-bottom: 4px;
 }
 
 .nav > li > a {
@@ -143,5 +146,4 @@
   font-weight: 500;
   line-height: 22px;
   padding: 5px 10px;
-  border-radius: 4px;
 }
