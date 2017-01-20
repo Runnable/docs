@@ -1,8 +1,8 @@
 ---
-title: How do I exclude org members from launching containers on Runnable ?
-category: troubleshooting
-step: 2
-description: How do I exclude org members from launching containers on Runnable ?
+title: How do I exclude org members from launching containers on Runnable?
+shortTitle: Excluding Teammates
+step: 4
+description: How do I exclude org members from launching containers on Runnable?
 ---
 
 Once you are past setup, Runnable makes it easy for your teammates to launch a branch. A member of your Github organization can login to Runnable, push a commit to a branch, and their changes are reflected in Runnable.

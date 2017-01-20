@@ -1,0 +1,50 @@
+- 
+  category: repositories
+  subcategories:
+    -
+      category: quickstarts
+    -
+      category: byod
+- 
+  category: services
+  subcategories:
+    -
+      category: databases
+    -
+      category: kvstores
+    -
+      category: servicediscovery
+    -
+      category: msgqueues
+    -
+      category: routers
+- 
+  category: docker-compose
+- 
+  category: networking
+- 
+  category: testing
+- 
+  category: enterprise
+  subcategories:
+    -
+      category: github
+    -
+      category: bitbucket
+- 
+  category: integrations
+  subcategories:
+    -
+      category: notifications
+    -
+      category: dockerhub
+    -
+      category: oauth
+- 
+  category: cli
+- 
+  category: privacy
+- 
+  category: pricing
+- 
+  category: troubleshooting

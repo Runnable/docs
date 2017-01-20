@@ -1,8 +1,8 @@
 ---
 title: How do I cancel my Runnable account?
-category: pricing
+shortTitle: Cancellation
 step: 2
-description: How to disable your account at Runnable
+description: How to disable your account at Runnable and halt billing.
 ---
 
 Please contact us at [support@runnable.com](mailto:support@runnable.com) to cancel your account.

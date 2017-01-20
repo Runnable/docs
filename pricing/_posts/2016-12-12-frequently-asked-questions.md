@@ -1,6 +1,6 @@
 ---
 title: Frequently Asked Questions
-category: pricing
+shortTitle: F.A.Q.
 step: 1
 description: Frequently Asked Questions regarding pricing for Runnable
 ---

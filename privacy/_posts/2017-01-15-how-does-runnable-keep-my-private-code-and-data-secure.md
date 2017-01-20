@@ -1,6 +1,6 @@
 ---
 title: How does Runnable keep my private code and data secure?
-category: privacy
+shortTitle: Data/Code Privacy
 step: 1
 description: How does Runnable keep my private code and data secure?
 ---

@@ -1,6 +1,6 @@
 ---
 title: Syncing Files through Runnable CLI
-category: cli
+shortTitle: Syncing Files
 step: 3
 description: Syncing Files through Runnable CLI
 ---

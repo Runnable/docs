@@ -1,7 +1,7 @@
 ---
 title: My build is failing because of "No Such Key" or "Host key verification failed". What do I do?
-category: troubleshooting
-step: 2
+shortTitle: My Build is Failing!?
+step: 3
 description: My build is failing because of "No Such Key" or "Host key verification failed". What do I do?
 ---
 

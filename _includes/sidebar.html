@@ -1,22 +1,21 @@
 <div class="master">
-  <a class="button" id="navToggle">&#x2630;</a>
   <ul class="nav">
-{% for section in site.sidebar %}
+{% for section in site.data.sidebar %}
   {% assign orderedPosts = site.categories.[section.category] | sort "step" %}
-  {% if page.category == section.category %}
+  {% if page.categories contains section.category %}
     <li class="active">
   {% else %}
     <li>
   {% endif %}
   {% if orderedPosts.size > 0 %}
-      <a href="#">{{ site.titles.[section.category] }}</a>
+      <a href="#">{{ site.data.titles.[section.category] }}</a>
       <ul>
     {% if section.subcategories %}
       {% for subCategory in section.subcategories %}
         {% assign posts = site.categories.[subCategory.category] %}
         <li>
         {% if posts.size > 0 %}
-          <a class="subcategory" href="#">{{ site.titles.[subCategory.category] }}</a>
+          <a class="subcategory" href="#">{{ site.data.titles.[subCategory.category] }}</a>
           <ul>
           {% for post in posts %}
             {% if page.url == post.url %}
@@ -24,14 +23,14 @@
             {% else %}
             <li>
             {% endif %}
-              <a href="{{ post.url }}">{{ post.title }}</a>
+              <a href="{{ post.url }}">{{ post.shortTitle }}</a>
             </li>
           {% endfor %}
           </ul>
         {% elsif posts.size == 1 %}
           <a href="{{ posts.[0].url }}">{{ subCategory.title }}</a>
         {% endif %}
-        </li>    
+        </li>
       {% endfor %}
     {% endif %}
     {% for post in orderedPosts %}
@@ -40,7 +39,7 @@
       {% else %}
         <li>
       {% endif %}
-          <a href="{{ post.url }}">{{ post.title }}</a>
+          <a href="{{ post.url }}">{{ post.shortTitle }}</a>
         </li>
     {% endfor %}
       </ul>
@@ -54,12 +53,7 @@
 
 <script type="text/javascript">
 $(document).ready(() => {
-  var navToggle = true
   $('.nav').navgoco()
   $('li.active').parents('li').toggleClass('open')
-  $('#navToggle').click(() => {
-    $('.nav').navgoco('toggle', navToggle)
-    navToggle ^= true
-  })
 })
 </script>

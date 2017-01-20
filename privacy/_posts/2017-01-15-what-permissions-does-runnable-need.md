@@ -1,6 +1,6 @@
 ---
 title: What permissions does Runnable need?
-category: privacy
+shortTitle: GitHub Permissions
 step: 2
 description: What permissions does Runnable need?
 ---

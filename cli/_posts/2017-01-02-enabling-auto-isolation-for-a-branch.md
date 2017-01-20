@@ -1,6 +1,6 @@
 ---
 title: Enabling Auto-Isolation for a Branch
-category: cli
+shortTitle: Auto-Isolation
 step: 4
 description: Enabling Auto-Isolation for a Branch
 ---
