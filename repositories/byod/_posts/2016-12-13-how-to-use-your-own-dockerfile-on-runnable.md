@@ -3,8 +3,7 @@ title: How to use your own Dockerfile on Runnable
 shortTitle: Import your Dockerfile
 step: 1
 tags:
-- quickstarts
-- nodejs
+- dockerfile
 description: Import your own Dockerfile from your repository to skip service configuration.
 ---
 
