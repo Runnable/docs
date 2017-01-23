@@ -1,6 +1,6 @@
 ---
 layout: categories
-title: Configuring other Services
+title: Troubleshooting
 category: services
 description: Articles to help get your addtional services running on Runnable
 ---
