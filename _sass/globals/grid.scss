@@ -6,14 +6,17 @@
   justify-content: flex-start;
   overflow-x: hidden;
   overflow-y: auto;
-
   &.noscroll {
     overflow: visible;
   }
 
   // switch orientation to vertical (defaults to horizontal)
   &.vertical {
-    flex-flow: column nowrap;
+    flex-flow: column;
+    @include media(sm) {
+      height: auto;
+      width: 100%;
+    }
   }
 
   // shrink to only fill space of content (defaults to fill available space)

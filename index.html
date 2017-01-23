@@ -4,55 +4,65 @@ layout: default
 
 <div class="grid-block noscroll vertical home">
 
-  <section class="card padding-lg">
-    <img class="img" src="/images/icons/quickstarts.svg" height="100" width="100">
-    <h1 class="h1 padding-xxs">Quickstart Guides</h1>
+  <section class="card">
+    <div class="preview">
+      <img class="img" src="{{ site.baseurl }}/images/icons/quickstarts.svg" height="100" width="100">
+    </div>
+    <div class="padding-sm">
+      <h1 class="h1 padding-xxs">Quickstart Guides</h1>
+      <ul class="list">
+        {% assign orderedPosts = site.tags.quickstarts | sort: "step" %}
+        {% for post in orderedPosts %}
+          <li class="list-item">
+            <a class="grid-block justify-justified align-center link padding-xxs" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}
+              <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="preview">
+      <img class="img" src="{{ site.baseurl }}/images/icons/repositories.svg" height="100" width="100">
+    </div>
+    <h1 class="h1 justify padding-xxs">Configuring a Repository</h1>
     <ul class="list">
-      {% assign orderedPosts = site.tags.quickstarts | sort: "step" %}
-      {% for post in orderedPosts %}
+      {% assign posts = site.categories.repositories | sort "step" %}
+      {% for post in posts %}
+        {% unless post.tags contains "quickstarts" %}
         <li class="list-item">
           <a class="grid-block justify-justified align-center link padding-xxs" href="{{ post.url }}">{{ post.title }}
             <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
           </a>
         </li>
+        {% endunless %}
       {% endfor %}
     </ul>
   </section>
-
-    <section class="card padding-lg">
-      <img class="img" src="/images/icons/repositories.svg" height="100" width="100">
-      <h1 class="h1 padding-xxs">Configuring a Repository</h1>
-      <ul class="list">
-        {% assign posts = site.categories.repositories | sort "step" %}
-        {% for post in posts %}
-          {% unless post.tags contains "quickstarts" %}
-          <li class="list-item">
-            <a class="grid-block justify-justified align-center link padding-xxs" href="{{ post.url }}">{{ post.title }}
-              <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
-            </a>
-          </li>
-          {% endunless %}
-        {% endfor %}
-      </ul>
-    </section>
 
 </div>
 
 <div class="grid-block noscroll vertical home">
 
-  <section class="card padding-lg">
-    <img class="img" src="/images/icons/services.svg" height="100" width="100">
-    <h1 class="h1 padding-xxs">Configuring other Services</h1>
-    <ul class="list">
-      {% assign orderedPosts = site.categories.services | sort: "step" %}
-      {% for post in orderedPosts %}
-        <li class="list-item">
-          <a class="grid-block justify-justified align-center link padding-xxs" href="{{ post.url }}">{{ post.title }}
-            <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
+  <section class="card">
+    <div class="preview">
+      <img class="img" src="{{ site.baseurl }}/images/icons/services.svg" height="100" width="100">
+    </div>
+    <div class="padding-sm">
+      <h1 class="h1 padding-xxs">Configuring other Services</h1>
+      <ul class="list">
+        {% assign orderedPosts = site.categories.services | sort: "step" %}
+        {% for post in orderedPosts %}
+          <li class="list-item">
+            <a class="grid-block justify-justified align-center link padding-xxs" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}
+              <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
   </section>
 
 </div>

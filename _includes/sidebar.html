@@ -1,5 +1,6 @@
 <div class="master">
   <ul class="nav">
+    <input placeholder="Search…" type="search" id="search" class="search">
 {% for section in site.data.sidebar %}
   {% assign orderedPosts = site.categories.[section.category] | sort "step" %}
   {% if page.categories contains section.category %}

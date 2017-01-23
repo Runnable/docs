@@ -4,10 +4,9 @@
   <body>
     {% include icons.html %}
     {% include header.html %}
-    <main class="grid-block horizontal grid-2 main">
+    <main class="grid-block grid-container horizontal grid-2 main">
       {% include sidebar.html %}
       <div class="grid-block vertical detail">
-        <input placeholder="Search…" type="search" id="search" class="search">
         <div id="results" class="grid-block vertical lunr-hidden"></div>
         <div id="content" class="grid-block lunr-active">
         {{ content }}

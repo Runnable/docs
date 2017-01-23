@@ -4,40 +4,40 @@
   border-radius: $input-border-radius-lg;
   box-shadow: 0 2px 9px rgba($black,.075);
   margin: 0 auto;
-  width: 450px;
+  margin-bottom: 60px;
+  width: 280px;
 
   @include media(xs) {
     font-size: 17px;
-    padding: 15px 15px 30px;
     width: 100%;
-  }
 
-  @include media(xxs) {
-    margin-left: 0;
-    margin-right: 0;
-    width: auto;
-  }
-
-  .h1 {
-    font-size: 21px;
-    font-weight: $weight-bold;
-  }
-
-  > .img {
-    display: block;
-    margin: -120px auto 0;
-
-    @include media(xs) {
-      margin-top: -105px;
-      width: 150px;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
+  .h1 {
+    font-size: 18px;
+    font-weight: $weight-bold;
+  }
+
+  .preview {
+    background-color: $gray-lighterest;
+    padding: 30px;
+
+    > .img {
+      display: block;
+      margin: 0 auto;
+      height: 80px;
+      width: 80px;
+    }
+  }
   .list-item {
     margin-top: 2px;
   }
 
   .link {
+    font-size: 15px;
     border: 1px solid transparent;
     border-radius: $input-border-radius-lg;
     text-decoration: none;
@@ -57,8 +57,9 @@
 
   .icons-chevron-right {
     float: right;
-    height: 18px;
+    height: 12px;
     opacity: .3;
-    width: 18px;
+    width: 12px;
+    margin-left: 10px;
   }
 }

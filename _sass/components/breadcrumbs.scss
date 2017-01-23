@@ -1,15 +1,18 @@
 .breadcrumbs {
-  padding-top: 30px;
+  margin-top: 36px;
+  height: 30px;
 
   @include media(xxs) {
-    font-size: 15px;
+    font-size: 1px;
   }
 
   .link {
+    font-weight: bold;
     color: $gray;
     flex: 0 0 auto;
     padding: 0 12px;
     text-decoration: none;
+    font-size: 14px;
 
     &:hover,
     &:active {
@@ -19,6 +22,10 @@
     &.text-overflow {
       flex: 0 1 auto;
     }
+
+    &:last-of-type {
+      color: $purple-light;
+    }
   }
 
   .icons-life-preserver {
@@ -26,7 +33,6 @@
     height: 21px;
     opacity: .75;
     width: 21px;
-
     &:hover,
     &:active {
       opacity: 1;

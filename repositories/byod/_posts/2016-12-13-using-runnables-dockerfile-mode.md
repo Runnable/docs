@@ -4,10 +4,12 @@ shortTitle: Runnable Dockerfile Mode
 step: 2
 tags:
 - dockerfile
-description: How Docker helps speed up development and future proof the deployment process for your PHP applications.
+description: Maintain your Dockerfile configuration within your Runnable account.
 ---
 
-This guide will teach you how to use Runnable's Dockerfile mode. Unlike Simple Mode, Dockerfile mode lets you store your configuration in a Dockerfile template.
+If you need to perform more custom build commands or specific configuration, Runnable offers a Dockerfile mode for more Docker-mature users. This allows you to create and modify your configuration in a Dockerfile specific for your Runnable service. This guide will teach you how to use Runnable's Dockerfile mode. Unlike Simple Mode, Dockerfile mode lets you store your configuration in a Dockerfile template.
+
+## Select 
 
 ## Understanding Runnable's Dockerfile Build Context
 
