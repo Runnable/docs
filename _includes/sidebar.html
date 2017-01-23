@@ -1,5 +1,6 @@
-<ul class="nav">
-  <input placeholder="Search…" type="search" id="search" class="search">
+<nav class="sidebar">
+  <ul class="nav">
+    <input placeholder="Search…" type="search" id="search" class="search">
 {% for section in site.data.sidebar %}
   {% assign orderedPosts = site.categories.[section.category] | sort: "step" %}
   {% if page.categories contains section.category %}
@@ -35,11 +36,11 @@
   {% elsif orderedPosts.size == 1 %}
     <a href="{{ orderedPosts.[0].url }}">{{ section.title }}</a>
   {% endif %}
-  </li>
 {% endfor %}
 </ul>
+</nav>
 
-<script type="text/javascript">
+<script>
 $(document).ready(() => {
   $('.nav').navgoco()
   // $('li.active').parents('li').toggleClass('open')
