@@ -33,7 +33,7 @@
         </li>
       {% endfor %}
     {% endif %}
-    {% for post in orderedPosts | sort "step" %}
+    {% for post in orderedPosts%}
       {% if page.url == post.url %}
         <li class="active">
       {% else %}

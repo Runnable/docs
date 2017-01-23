@@ -1,23 +1,23 @@
-repositories: Configuring a Repository
-quickstarts: Quickstart Guides
+bitbucket: BitBucket Pro
 byod: Using Your Own Dockerfile
-services: Configuring Other Services
+cli: Runnable CLI
 databases: Databases
-kvstores: Data / Key-Value Stores
-servicediscovery: Service Discovery
-msgqueues: Messaging Queues
-routers: HTTP Routers / Load Balancers 
 docker-compose: Using Docker Compose
-networking: Networking
-testing: Automated Testing
+dockerhub: Dockerhub
 enterprise: Enterprise
 github: GitHub Enterprise
-bitbucket: BitBucket Pro
 integrations: Integrations
+kvstores: Data / Key-Value Stores
+msgqueues: Messaging Queues
+networking: Networking
 notifications: Notifications
-dockerhub: Dockerhub
 oauth: OAuth
-cli: Runnable CLI
-privacy: Privacy & Security
 pricing: Pricing
+privacy: Privacy & Security
+quickstarts: Quickstart Guides
+repositories: Configuring a Repository
+routers: HTTP Routers / Load Balancers 
+servicediscovery: Service Discovery
+services: Configuring Other Services
+testing: Automated Testing
 troubleshooting: Troubleshooting
