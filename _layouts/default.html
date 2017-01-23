@@ -5,9 +5,7 @@
     {% include icons.html %}
     <!-- {% include header.html %} -->
     {% include sidebar.html %}
-    <main class="grid-block vertical main">
-      <div id="results" class="grid-block vertical lunr-hidden"></div>
-      <div id="content" class="grid-block lunr-active">{{ content }}</div>
-    </main>
+    <main class="grid-block vertical main lunr-hidden" id="results"></main>
+    <main class="grid-block vertical main lunr-active" id="content">{{ content }}</main>
   </body>
 </html>

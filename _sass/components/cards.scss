@@ -1,20 +1,10 @@
 .card {
   background: $white;
-  border: 1px solid $gray-lighter;
+  border: $input-border solid $gray-lighter;
   border-radius: $input-border-radius-lg;
   box-shadow: 0 2px 9px rgba($black,.075);
-  margin: 0 auto;
-  margin-bottom: 60px;
-  width: 280px;
-
-  @include media(xs) {
-    font-size: 17px;
-    width: 100%;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
+  margin: $sm;
+  width: 420px;
 
   .h1 {
     font-size: 18px;
@@ -23,7 +13,7 @@
 
   .preview {
     background-color: $gray-lighterest;
-    padding: 15px;
+    border-radius: $input-border-radius-lg $input-border-radius-lg 0 0;
 
     > .img {
       display: block;
