@@ -1,60 +1,47 @@
-<div class="master">
-  <ul class="nav">
-    <input placeholder="Search…" type="search" id="search" class="search">
+<ul class="nav">
+  <input placeholder="Search…" type="search" id="search" class="search">
 {% for section in site.data.sidebar %}
   {% assign orderedPosts = site.categories.[section.category] | sort: "step" %}
   {% if page.categories contains section.category %}
-    <li class="active">
+  <li class="active">
   {% else %}
-    <li>
+  <li>
   {% endif %}
   {% if orderedPosts.size > 0 %}
-      <a href="#">{{ site.data.titles.[section.category] }}</a>
-      <ul>
-    {% if section.subcategories %}
-      {% for subCategory in section.subcategories %}
-        {% assign posts = site.categories.[subCategory.category] %}
-        <li>
-        {% if posts.size > 0 %}
-          <a class="subcategory" href="#">{{ site.data.titles.[subCategory.category] }}</a>
-          <ul>
-          {% for post in posts %}
-            {% if page.url == post.url %}
-            <li class="active">
-            {% else %}
-            <li>
-            {% endif %}
-              <a href="{{ post.url }}">{{ post.shortTitle }}</a>
-            </li>
-          {% endfor %}
-          </ul>
-        {% elsif posts.size == 1 %}
-          <a href="{{ posts.[0].url }}">{{ subCategory.title }}</a>
-        {% endif %}
-        </li>
-      {% endfor %}
-    {% endif %}
-    {% for post in orderedPosts%}
-      {% if page.url == post.url %}
-        <li class="active">
-      {% else %}
-        <li>
+    <a href="#">{{ site.data.titles.[section.category] }}</a>
+    <ul>
+    {% for subCategory in section.subcategories %}
+      {% assign posts = site.categories.[subCategory.category] %}
+      <li>
+      {% if posts.size > 0 %}
+        <a class="subcategory" href="#">{{ site.data.titles.[subCategory.category] }}</a>
+        <ul>
+        {% for post in posts %}
+          {% if page.url == post.url %}
+          <li class="active">
+          {% else %}
+          <li>
+          {% endif %}
+            <a href="{{ post.url }}">{{ post.shortTitle }}</a>
+          </li>
+        {% endfor %}
+        </ul>
+      {% elsif posts.size == 1 %}
+        <a href="{{ posts.[0].url }}">{{ subCategory.title }}</a>
       {% endif %}
-          <a href="{{ post.url }}">{{ post.shortTitle }}</a>
-        </li>
+      </li>
     {% endfor %}
-      </ul>
+    </ul>
   {% elsif orderedPosts.size == 1 %}
-      <a href="{{ orderedPosts.[0].url }}">{{ section.title }}</a>
+    <a href="{{ orderedPosts.[0].url }}">{{ section.title }}</a>
   {% endif %}
-    </li>
+  </li>
 {% endfor %}
-  </ul>
-</div>
+</ul>
 
 <script type="text/javascript">
 $(document).ready(() => {
   $('.nav').navgoco()
-  $('li.active').parents('li').toggleClass('open')
+  // $('li.active').parents('li').toggleClass('open')
 })
 </script>
