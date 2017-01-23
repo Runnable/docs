@@ -4,14 +4,10 @@
   <body>
     {% include icons.html %}
     <!-- {% include header.html %} -->
-    <main class="grid-block grid-container horizontal grid-2 main">
-      {% include sidebar.html %}
-      <div class="grid-block vertical detail">
-        <div id="results" class="grid-block vertical lunr-hidden"></div>
-        <div id="content" class="grid-block lunr-active">
-        {{ content }}
-        </div>
-      </div>
+    {% include sidebar.html %}
+    <main class="grid-block vertical main">
+      <div id="results" class="grid-block vertical lunr-hidden"></div>
+      <div id="content" class="grid-block lunr-active">{{ content }}</div>
     </main>
   </body>
 </html>
