@@ -13,10 +13,6 @@
   // switch orientation to vertical (defaults to horizontal)
   &.vertical {
     flex-flow: column;
-    @include media(sm) {
-      height: auto;
-      width: 100%;
-    }
   }
 
   // shrink to only fill space of content (defaults to fill available space)
