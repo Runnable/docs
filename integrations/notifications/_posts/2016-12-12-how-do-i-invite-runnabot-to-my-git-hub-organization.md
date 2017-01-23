@@ -1,7 +1,6 @@
 ---
 title: How do I invite Runnabot to my GitHub Organization?
 shortTitle: Inviting Runnabot
-category: integrations
 step: 2
 tags:
 - integrations

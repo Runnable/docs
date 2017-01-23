@@ -1,4 +1,9 @@
-# My conatiner is stuck in _starting_ or _building_ — what do I do?
+---
+title: My conatiner is stuck in _starting_ or _building_!?
+shortTitle: Slow / Halted Build
+step: 4
+description: My conatiner is stuck in _starting_ or _building_!?
+---
 
 If your container seems to be stuck in the building or starting state, you can try to rebuild it without cache—this will rebuild your container from a fresh state. To rebuild without cache:
 
