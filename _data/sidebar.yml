@@ -26,11 +26,6 @@
   category: testing
 - 
   category: enterprise
-  subcategories:
-    -
-      category: github
-    -
-      category: bitbucket
 - 
   category: integrations
   subcategories:
