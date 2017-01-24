@@ -1,4 +1,6 @@
-.share a{
+.share {
+  border-top: 1px solid $gray-lighter;
+  padding: $md $md $md 0;
 
   @include media(xs) {
     flex-direction: column;
@@ -10,7 +12,7 @@
 
     @include media(xs) {
       margin-left: 0;
-      margin-top: $xs;
+      margin-top: $xxs;
     }
   }
 }
