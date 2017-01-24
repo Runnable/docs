@@ -12,6 +12,11 @@
   width: auto;
 }
 
+.home {
+  flex-wrap: wrap;
+  padding: $sm;
+}
+
 // /**
 //  * Master/Detail Layout
 //  */
@@ -35,10 +40,6 @@
 //   nav {
 //     align-items: center;
 //   }
-// }
-
-// .home {
-//   padding-top: 30px;
 // }
 
 // .grid-block .master {

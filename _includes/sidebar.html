@@ -2,47 +2,39 @@
   <ul class="nav">
     <input placeholder="Search…" type="search" id="search" class="search">
 {% for section in site.data.sidebar %}
-  {% assign orderedPosts = site.categories.[section.category] | sort: "step" %}
-  {% if page.categories contains section.category %}
-  <li class="active">
-  {% else %}
   <li>
-  {% endif %}
-  {% if orderedPosts.size > 0 %}
     <a href="#">{{ site.data.titles.[section.category] }}</a>
     <ul>
     {% for subCategory in section.subcategories %}
       {% assign posts = site.categories.[subCategory.category] %}
       <li>
-      {% if posts.size > 0 %}
         <a class="subcategory" href="#">{{ site.data.titles.[subCategory.category] }}</a>
         <ul>
-        {% for post in posts %}
-          {% if page.url == post.url %}
+        {% for p in posts %}
+          {% if page.url == p.url %}
           <li class="active">
           {% else %}
           <li>
           {% endif %}
-            <a href="{{ post.url }}">{{ post.shortTitle }}</a>
+            <a href="{{ p.url }}">{{ p.shortTitle }}</a>
           </li>
         {% endfor %}
         </ul>
-      {% elsif posts.size == 1 %}
-        <a href="{{ posts.[0].url }}">{{ subCategory.title }}</a>
-      {% endif %}
       </li>
     {% endfor %}
+    {% assign posts = site.categories.[section.category] | %}
+    {% for p in posts %}
+      {% if p.category %}
+      <li><a href="{{ p.url }}">{{ p.shortTitle }}</a></li>
+      {% endif %}
+    {% endfor %}
     </ul>
-  {% elsif orderedPosts.size == 1 %}
-    <a href="{{ orderedPosts.[0].url }}">{{ section.title }}</a>
-  {% endif %}
 {% endfor %}
 </ul>
 </nav>
 
 <script>
 $(document).ready(() => {
-  $('.nav').navgoco()
-  // $('li.active').parents('li').toggleClass('open')
+  $('.nav').navgoco();
 })
 </script>

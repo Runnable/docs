@@ -9,11 +9,11 @@ tags:
 description: How to seed your database from S3
 ---
 
-Instead of uploading a seed directly through the Runnable UI, we can add a script to pull your seed 
+Instead of uploading a seed directly through the Runnable UI, we can add a script to pull your seed
 from an external location. In this case, we will pull the seed from an S3 bucket.
 
-1. Create a script using the language of your choice to pull the seed from your S3 bucket. Or, just 
-use the Bash script we have provided below (remember to replace your aws key/secret/region/bucket). 
+1. Create a script using the language of your choice to pull the seed from your S3 bucket. Or, just
+use the Bash script we have provided below (remember to replace your aws key/secret/region/bucket).
 This script will get the latest dump from an S3 bucket, as it sorts by the timestamp given by S3.
 
     ```bash
@@ -42,7 +42,7 @@ This script will get the latest dump from an S3 bucket, as it sorts by the times
 
     installAWS
     getDumpFromS3
-    ``` 
+    ```
 
 2. Add the script to your Runnable documentation using the `[+]` button under the Dockerfile mode.
 3. Add the following lines to your Dockerfile:
@@ -51,7 +51,7 @@ This script will get the latest dump from an S3 bucket, as it sorts by the times
     ADD getS3Dump.sh /getS3Dump.sh
     RUN chmod +x /getS3Dump.sh
     RUN ./getS3Dump.sh
-    ```  
+    ```
 
 4. Your Dockerfile should look something like this:
 
@@ -75,6 +75,6 @@ This script will get the latest dump from an S3 bucket, as it sorts by the times
     RUN gosu postgres /init.sh \
       # Uncomment the following line for a custom pg_restore command. Edit, as needed
       # "pg_restore --no-acl --no-owner -c -v -d $POSTGRES_DB /seed.dump"
-    ```  
+    ```
 
 5.  Now you can click `Save & Build` to see your container build, pull your seed from S3, and apply the restore command.
