@@ -18,7 +18,6 @@ Launching a new Memcached service is easy;
 
 3. Give your service a name. This will help build the URL you will use to connect this service. 
   > For example, if your service is called *memcached-datastore*, your URL will be `memcached-datatore-staging-yourGitHubOrgName.runnableapp.com`.
-  
   ![memcached-name](/images/memcached-name.png)
 
 4. Click "Add service".
