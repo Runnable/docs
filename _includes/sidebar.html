@@ -22,7 +22,7 @@
         </ul>
       </li>
     {% endfor %}
-    {% assign posts = site.categories.[section.category] | %}
+    {% assign posts = site.categories.[section.category] | sort: "step" %}
     {% for p in posts %}
       {% unless p.categories.size > 1 %}
       {% if page.url == p.url %}
