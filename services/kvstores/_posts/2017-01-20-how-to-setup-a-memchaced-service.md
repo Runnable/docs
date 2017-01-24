@@ -14,7 +14,7 @@ Launching a new Memcached service is easy;
 1. Just click on the *Add a Service* button.  
   ![add-a-service](/images/memcached-add-service.png)
 
-2. Find the memcached template and click select.
+2. Find Memcached in the list and click select next to it.
 
 3. Give your service a name. This will help build the URL you will use to connect this service. 
   > For example, if your service is called *memcached-datastore*, your URL will be `memcached-datatore-staging-yourGitHubOrgName.runnableapp.com`.
