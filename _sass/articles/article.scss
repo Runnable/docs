@@ -3,14 +3,14 @@
   padding: $md;
 
   > *:last-child:not(.well) {
-    margin-bottom: 75px;
+    margin: $xl 0 0 0;
   }
 
   img {
     display: block;
     margin: 30px 0;
     max-height: 420px;
-    max-width: 420px;
+    max-width: 640px;
   }
 
   // vertical rhythm
