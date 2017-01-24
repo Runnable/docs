@@ -9,9 +9,9 @@ tags:
 description: How to setup a Redis service
 ---
 
-Launching a new Redis service is easy; 
+To launch a Redis service:
 
-1. Just click on the *Add a Service* button.  
+1. On the containers page, click on the *Add a Service* button on the side bar. 
   ![add-a-service](/images/redis-add-service.png)
 
 2. Find Redis in the list and click select next to it.

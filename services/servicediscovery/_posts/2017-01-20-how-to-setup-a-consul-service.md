@@ -9,9 +9,9 @@ tags:
 description: How to setup a Consul service
 ---
 
-Launching a new Consul service is easy; 
+To launch a Consul service:
 
-1. Just click on the *Add a Service* button.  
+1. On the containers page, click on the *Add a Service* button on the side bar. 
   ![add-a-service](/images/consul-add-service.png)
 
 2. Find Consul in the list and click select next to it.
