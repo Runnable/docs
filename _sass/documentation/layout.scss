@@ -75,7 +75,15 @@
 }
 
 .result {
-  margin: 20px;
+  margin: $spacing-unit 0;
+}
+
+.result-length {
+  border-bottom: 1px solid $gray-lightest;
+  font-weight: 600;
+  font-size: 15px;
+  padding-bottom: 15px;
+  width: 100%;
 }
 
 .search {
@@ -86,8 +94,8 @@
   background: #fff;
   border: $input-border solid $gray-lighter;
   border-radius: $input-border-radius;
-  padding: 0 $xs;
-  margin: $sm 0;
+  padding: 0 15px;
+  margin: $spacing-unit 0;
   width: 100%;
   word-break: normal;
 
