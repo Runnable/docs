@@ -57,3 +57,46 @@
 // .main {
 //   padding-bottom: 0;
 // }
+
+/*
+ * Lunr.js Search & Results
+ */
+
+.lunr-hidden {
+  display: none;
+}
+
+#results {
+  padding: 50px;
+}
+
+.result {
+  margin: 36px 0;
+  max-width: 580px;
+}
+
+.result-length {
+  border-bottom: 1px solid $gray-lightest;
+  font-weight: 600;
+  font-size: 15px;
+  padding-bottom: 15px;
+  width: 100%;
+}
+
+.search {
+  font-size: 13px;
+  font-weight: $weight-bold;
+  height: $input-sm;
+  line-height: $input-line-height-sm;
+  background: #fff;
+  border: $input-border solid $gray-lighter;
+  border-radius: $input-border-radius;
+  padding: 0 15px;
+  margin: $spacing-unit 0;
+  width: 100%;
+  word-break: normal;
+
+  &:focus {
+    border-color: $purple-light;
+  }
+}
