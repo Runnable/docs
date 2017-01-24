@@ -2,7 +2,7 @@
 // font stack
 // **********
 $monospace: 'Source Code Pro', monospace;
-$sans-serif: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+$sans-serif: -apple-system, 'BlinkMacSystemFont', 'Helvetica Neue', 'Segoe UI', sans-serif;
 $weight-bold: 500;
 $weight-normal: 400;
 $weight-light: 300;
@@ -10,14 +10,13 @@ $weight-light: 300;
 // ******
 // colors
 // ******
-
 $black: #000;
 $white: #fff;
 
 $gray-lighterest: #fafafa;
 $gray-lightest: #f3f3f3;
 $gray-lighter: #e6e6e6;
-$gray-light: #bbb;
+$gray-light: #ccc;
 $gray: #888;
 $gray-dark: #555;
 $gray-darker: #222;
@@ -37,8 +36,8 @@ $purple-lightest: #eee1f7;
 $purple-dark: #402754; // darken($purple,10%);
 $purple-darker: #261731; // darken($purple,20%);
 $purple-darkest: #1b0f24;
+$purple-blue: #475496; // blend of purple and blue
 
-// from marketing
 $purple-faded: #866f98;
 $purple-light-faded: #f8f5fc;
 
@@ -58,65 +57,16 @@ $red: #f25058;
 $red-light: #ef737f;
 $red-lighter: #fde6e9;
 $red-dark: #e62932; // desaturate(darken($red,10),7);
-$red-darker: darken($red-dark,10%);
 $red-faded: #be424d;
 
 $blue: #0ca6f2; // previously #2ab0f6;
 $blue-light: #8bd5f9; // previously #86cff6;
 $blue-lighter: #f5fcff; // previously #f1faff;
-$blue-dark: #0a9be2;
-
-// ********
-// spinners
-// ********
-
-$spin-rate: .5s;
-$spinner-offset: 187;
-$spinner-duration: 1.4s;
-
-// *******
-// z-index
-// *******
-
-// overrides
-$z-hide: -10000;
-$z-show: 10000;
-
-// views
-$z-views: 1000;
-$z-views-active-panel: 1001;
-$z-views-sidebar: 1002;
-
-// modals
-$z-modal-backdrop: 2000;
-$z-modal: 2001;
-
-// popovers
-$z-popover: 3000;
-$z-popover-context-menu: 3001;
-$z-popover-content: 3002;
-$z-popover-fixed: 3003;
-$z-popover-arrow: 3004;
-
-// alerts
-$z-alert: 4000;
-
-// tooltips
-$z-tooltip: 5000;
-
-// spinners
-$z-spinner: 6000;
+$blue-dark: #1e7daf;
 
 // **********
 // dimensions
 // **********
-
-// layout
-$sidebar-width: 300px;
-
-// header
-$header-height: 60px;
-
 // screen sizes
 $screen-xxxs: 350px;
 $screen-xxs: 400px;
@@ -126,11 +76,12 @@ $screen-md: 1024px;
 $screen-lg: 1440px;
 $screen-xl: 1920px;
 
+$sidebar-width: 300px;
+
+$directions-list: col row;
+$flex-directions: column row;
 $screen-size-list: xl lg md sm xs xxs xxxs;
 $screen-sizes: $screen-xl $screen-lg  $screen-md $screen-sm  $screen-xs $screen-xxs $screen-xxxs;
-
-// logs & terminal
-$terminal-line-height: 19px;
 
 // button/input sizes
 $input-border: 1px;
@@ -140,7 +91,7 @@ $input-border-radius-lg: 6px;
 $input-border-radius-xxs: 2px;
 
 $input-lg: 54px;
-$input-line-height-lg: $input-lg - ($input-border * 2);
+$input-line-height-lg: $input-lg - ($input-border-lg * 2);
 
 $input-md: 42px;
 $input-line-height-md: $input-md - ($input-border * 2);
@@ -154,6 +105,9 @@ $input-line-height-xs: $input-xs - ($input-border * 2);
 $input-xxs: 18px;
 $input-line-height-xxs: $input-xxs - ($input-border * 2);
 
+$z-modal: 100;
+$z-modal-close: 101;
+
 // margin/padding sizes
 $none: 0;
 $xxs: 9px;
@@ -166,3 +120,18 @@ $xl: 60px;
 $size-directions: top right bottom left;
 $size-list: none xxs xs sm md lg xl;
 $sizes: $none, $xxs, $xs, $sm, $md, $lg, $xl;
+
+// for the graph
+$bugs-z: 3; // faded white + bugs
+$circle-z: 2; // solid white
+$graph-x-z: 1; // x-axis lines
+
+$circle-size: 2500px;
+$circle-size-sm: $circle-size * .75;
+$circle-size-xs: $circle-size * .4;
+$circle-width: 2px;
+$bug-orange: #f2863c;
+$bug-popover-bg: #9685be;
+
+$spin-time: 15;
+$spin-seconds: #{$spin-time}s;

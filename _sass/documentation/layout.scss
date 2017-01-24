@@ -1,107 +1,17 @@
-.sidebar {
-  height: 100vh;
-  overflow: auto;
-  position: fixed;
-  top: 0;
-  width: $sidebar-width;
-}
-
 .main {
-  margin-left: $sidebar-width;
-  max-width: 960px;
-  width: auto;
+  height: 100vh;
+  overflow-y: auto;
+
+  @include media(xs) {
+    height: calc(100vh - 250px);
+  }
 }
 
 .home {
   flex-wrap: wrap;
   padding: $sm;
-}
 
-// /**
-//  * Master/Detail Layout
-//  */
-//  .grid-container {
-//    padding: 0 15px;
-//    max-width: 994px;
-
-//    @include media(sm) {
-//      max-width: 100%;
-//      padding: 0;
-//    }
-//  }
-
-// .header {
-//   height: 45px;
-
-//   .grid-container {
-//     padding: 0 15px;
-//   }
-
-//   nav {
-//     align-items: center;
-//   }
-// }
-
-// .grid-block .master {
-//   flex: 0 0 25%;
-
-//   @include media(sm) {
-//     width: 0;
-//     display: none;
-//   }
-// }
-
-// .grid-block .detail {
-//   flex: 1 0 auto;
-//   max-width: 75%;
-//   @include media(sm) {
-//     max-width: 100%;
-//   }
-// }
-
-// .main {
-//   padding-bottom: 0;
-// }
-
-/*
- * Lunr.js Search & Results
- */
-
-.lunr-hidden {
-  display: none;
-}
-
-#results {
-  padding: 50px;
-}
-
-.result {
-  margin: 36px 0;
-  max-width: 580px;
-}
-
-.result-length {
-  border-bottom: 1px solid $gray-lightest;
-  font-weight: 600;
-  font-size: 15px;
-  padding-bottom: 15px;
-  width: 100%;
-}
-
-.search {
-  font-size: 13px;
-  font-weight: $weight-bold;
-  height: $input-sm;
-  line-height: $input-line-height-sm;
-  background: #fff;
-  border: $input-border solid $gray-lighter;
-  border-radius: $input-border-radius;
-  padding: 0 15px;
-  margin: $spacing-unit 0;
-  width: 100%;
-  word-break: normal;
-
-  &:focus {
-    border-color: $purple-light;
+  @include media(xs) {
+    justify-content: center;
   }
 }
