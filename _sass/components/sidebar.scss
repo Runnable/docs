@@ -1,9 +1,30 @@
 .sidebar {
   background: linear-gradient($purple-light, $purple-blue);
-  border-right: 1px solid $gray-lighter;
   color: $white;
-  padding-left: 150px;
-  width: $sidebar-width + 150px;
+
+  @include media(xxl) {
+    padding-left: 300px;
+    width: $sidebar-width + 300px;
+  }
+
+  @include media(xl) {
+    padding-left: 150px;
+    width: $sidebar-width + 150px;
+  }
+
+  @include media(lg) {
+    padding-left: 90px;
+    width: $sidebar-width + 90px;
+  }
+
+  @include media(md) {
+    padding-left: 0;
+    width: $sidebar-width;
+  }
+
+  @include media(sm) {
+    width: $sidebar-width - 60px;
+  }
 
   .logo {
     padding: $md $sm $sm;
@@ -15,118 +36,87 @@
     overflow: auto;
     padding: $sm;
     width: $sidebar-width;
+
+    @include media(sm) {
+      padding: $sm 0;
+      width: $sidebar-width - 60px;
+    }
   }
-}
-
-/*
- * Sidebar Navigation
- */
-
-.nav, .nav ul, .nav li {
-  list-style: none;
-}
-
-.nav ul {
-  padding: 0;
-  margin: 0 0 0 18px;
 }
 
 .nav {
-  margin: 0;
-}
 
-.nav a {
-  display: block;
-  outline: none;
-  text-decoration: none;
-}
+  .ul {
+    list-style: none;
+    margin-left: $sm;
+    padding: 0;
 
-.nav li > a > span {
-  float: right;
-  font-weight: $weight-bold;
-  text-align: center;
-  width: $xs;
-}
+    @include media(sm) {
+      margin-left: 0;
+    }
+  }
 
-.nav li > a > span:after {
-  content: '+';
-  font-size: 16px;
-  font-weight: $weight-bold;
-}
-.nav li.open > a > span:after {
-  content: '-';
-  font-size: 16px;
-  font-weight: $weight-bold;
-}
+  .li {
+    border-color: transparent;
+    border-radius: $input-border-radius-lg;
 
-.nav a:hover {
-  border-color: $purple-lightest;
-}
+    @include media(sm) {
+      border-radius: 0;
+    }
 
-.nav li.active > a {
-  border: 1px solid transparent;
-  background-color: $purple-lightest;
-  color: $purple;
-}
+    // active state
+    &.active {
+      background-color: $purple-lightest;
+      color: $purple;
 
-.nav > li.active > a  {
-  background-color: transparent;
-  border-color: transparent;
-  color: $gray-dark;
+      .a,
+      .a:hover {
+        background-color: transparent;
+        border-color: transparent;
+      }
+    }
+  }
 
-  &:hover {
-    border-color: $purple-lightest;
+  .a {
+    border: $input-border solid transparent;
+    border-radius: $input-border-radius-lg;
+    display: block;
+    font-size: 14px;
+    line-height: $input-line-height-sm - 12px;
+    margin-bottom: 3px;
+    outline: none;
+    padding: 6px $xxs;
+    text-decoration: none;
+
+    @include media(sm) {
+      border-left: 0;
+      border-radius: 0;
+      border-right: 0;
+    }
+
+    &:hover,
+    &:active {
+      background-color: $purple-lightest;
+      color: $purple;
+    }
+
+    > span {
+      float: right;
+    }
+  }
+
+  // + & - symbols
+  .a > span,
+  .a > span::after {
+    content: '+';
+    font-size: 16px;
+    font-weight: $weight-bold;
+    opacity: .6;
+    text-align: center;
+    width: $xs;
+  }
+
+  .open > a > span::after {
+    content: '-';
   }
 }
-
-.nav li a {
-  box-sizing: border-box;
-  font-size: 13px;
-  border: 1px solid transparent;
-  line-height: 20px;
-  padding: 5px 10px;
-  border-radius: 4px;
-  margin-bottom: 4px;
-}
-
-.nav > li > a {
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 22px;
-  padding: 5px 10px;
-}
-
-.subcategory {
-  font-weight: 400;
-}
-
-// .nav > .li {
-//   font-size: 16px;
-
-//   // category
-//   > .a {
-//     font-weight: $weight-bold;
-//   }
-
-//   .ul {
-//     margin-left: $sm;
-
-//     .a {
-//       border: $input-border solid transparent;
-//       border-radius: $input-border-radius;
-//       display: block;
-//       padding: 0 $xxs;
-
-//       &:hover {
-//         background: rgba($purple,.5);
-//         border-color: rgba($purple-dark,.3);
-//       }
-
-//       &:active,
-//       &.active {
-//         background: $purple;
-//         border-color: rgba($purple-dark,.6);
-//       }
-//     }
-//   }
-// }

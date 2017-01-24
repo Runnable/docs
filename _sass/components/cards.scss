@@ -12,7 +12,8 @@
   }
 
   .preview {
-    background-color: $gray-lighterest;
+    background: linear-gradient($white,$gray-lighterest);
+    border-bottom: $input-border solid $gray-lightest;
     border-radius: $input-border-radius-lg $input-border-radius-lg 0 0;
 
     > .img {

@@ -4,42 +4,37 @@
   </a>
   <input placeholder="Search…" type="search" id="search" class="grid-block shrink search">
   <ul class="grid-block vertical nav">
-{% for section in site.data.sidebar %}
-  <li>
-    <a href="#">{{ site.data.titles.[section.category] }}</a>
-    <ul>
-    {% for subCategory in section.subcategories %}
-      {% assign posts = site.categories.[subCategory.category] %}
-      <li>
-        <a class="subcategory" href="#">{{ site.data.titles.[subCategory.category] }}</a>
-        <ul>
-        {% for p in posts %}
-          {% if page.url == p.url %}
-          <li class="active">
-          {% else %}
-          <li>
-          {% endif %}
-            <a href="{{ p.url }}">{{ p.shortTitle }}</a>
-          </li>
+    {% for section in site.data.sidebar %}
+    <li class="li"><a class="a strong" href="#">{{ site.data.titles.[section.category] }}</a>
+      <ul class="ul">
+        {% for subCategory in section.subcategories %}
+        {% assign posts = site.categories.[subCategory.category] %}
+        <li class="li"><a class="a" href="#">{{ site.data.titles.[subCategory.category] }}</a>
+          <ul class="ul">
+            {% for p in posts %}
+            {% if page.url == p.url %}
+            <li class="li active">
+            {% else %}
+            <li class="li">
+            {% endif %}
+              <a class="a" href="{{ p.url }}">{{ p.shortTitle }}</a>
+            {% endfor %}
+          </ul>
         {% endfor %}
-        </ul>
-      </li>
-    {% endfor %}
-    {% assign posts = site.categories.[section.category] | %}
-    {% for p in posts %}
-      {% unless p.categories.size > 1 %}
-      {% if page.url == p.url %}
-      <li class="active">
-      {% else %}
-      <li>
-      {% endif %}
-        <a href="{{ p.url }}">{{ p.shortTitle }}</a>
-      </li>
-      {% endunless %}
-    {% endfor %}
+        {% assign posts = site.categories.[section.category] | %}
+        {% for p in posts %}
+        {% unless p.categories.size > 1 %}
+        {% if page.url == p.url %}
+        <li class="li active">
+        {% else %}
+        <li class="li">
+        {% endif %}
+          <a class="a" href="{{ p.url }}">{{ p.shortTitle }}</a>
+        {% endunless %}
+      {% endfor %}
     </ul>
-{% endfor %}
-</ul>
+  {% endfor %}
+  </ul>
 </nav>
 
 <script>
