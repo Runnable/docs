@@ -1,5 +1,5 @@
 .article {
-  max-width: 960px;
+  max-width: 880px;
   padding: $md;
 
   > *:last-child:not(.well) {
@@ -7,6 +7,7 @@
   }
 
   img {
+    display: block;
     margin: 30px 0;
     max-height: 420px;
     max-width: 420px;
@@ -211,7 +212,7 @@
       max-width: 100%;
     }
   }
-  
+
   img {
     height: auto;
     margin-bottom: $lg;
