@@ -143,7 +143,7 @@
   }
 
   // link
-  a:not(.well-anchor) {
+  a:not(.well-anchor, .share) {
     color: currentColor;
     cursor: pointer;
     text-decoration: underline;

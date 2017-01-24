@@ -1,81 +1,18 @@
-// defaults to btn-md
-.btn {
-  border: 0;
-  border-radius: $input-border-radius;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 18px;
-  font-weight: $weight-normal;
-  padding: 0 15px;
-  position: relative;
-  text-align: center;
-  user-select: none;
-  white-space: nowrap;
-
-  // for <a> elemnts
-  &:hover,
-  &:active {
-    text-decoration: none;
-  }
-
-  &:active {
-    transition: none;
-  }
-
-  // animations
-  &.active,
-  &.in {
-
-    > .icons-add {
-      transform: rotate3d(0,0,1,135deg) scale3d(.75,.75,1);
-    }
-  }
-
-  &[disabled],
-  &.disabled {
-    cursor: not-allowed;
-    opacity: .5;
-  }
-
-  // if .arrow-down
-  > .icons-arrow-down {
-    float: right;
-    height: 100%;
-    margin-right: -6px;
-
-    &.btn-xxs {
-      margin-right: -3px;
-    }
-  }
-
-  // fancy select
-  .display .iconnables {
-    float: left;
-    height: 21px;
-    margin-right: 6px;
-    top: 6px;
-    width: 21px;
-  }
-}
-
 // button sizes
-%btn-lg,
-.btn-lg {
+%btn-lg {
   border-radius: $input-border-radius-lg;
   font-size: 21px;
   height: $input-lg;
   line-height: $input-line-height-lg;
 }
 
-%btn-md,
-.btn-md {
+%btn-md {
   font-size: 18px;
   height: $input-md;
   line-height: $input-line-height-md;
 }
 
-%btn-sm,
-.btn-sm {
+%btn-sm {
   font-size: 16px;
   height: $input-sm;
   line-height: $input-line-height-sm;
@@ -86,8 +23,7 @@
   }
 }
 
-%btn-xs,
-.btn-xs {
+%btn-xs {
   font-size: 13px;
   height: $input-xs;
   line-height: $input-line-height-xs;
@@ -102,8 +38,7 @@
 }
 
 // only for inline buttons
-%btn-xxs,
-.btn-xxs {
+%btn-xxs {
   border-radius: $input-border-radius-xxs;
   font-size: 12px;
   height: $input-xxs;
@@ -111,139 +46,6 @@
   padding: 0 3px;
 }
 
-// .btn-icon
-.btn-icon {
-  line-height: $input-md;
-  padding: 0;
-  width: $input-md;
-
-  &.btn-sm {
-    width: $input-sm;
-  }
-
-  &.btn-icon-sm {
-    line-height: $input-sm;
-    min-width: $input-sm;
-    width: auto;
-  }
-
-  &.btn-icon-xs {
-    line-height: $input-xs;
-    min-width: $input-xs;
-    width: auto;
-  }
-
-  &.btn-icon-xxs {
-    height: $input-xxs;
-    line-height: $input-xxs;
-    width: $input-xxs;
-  }
-
-  .iconnables {
-    height: 100%;
-    width: 100%;
-  }
-
-  // if .arrow-down
-  > .icons-arrow-down {
-    width: 24px;
-  }
-}
-
-// help
-.btn-help {
-  background: rgba($white,.6);
-  border: 1px solid $gray-light;
-  border-radius: 50%;
-  color: $gray;
-  height: 24px;
-  text-decoration: none;
-  width: 24px;
-
-  &:hover {
-    border-color: currentColor;
-    color: rgba($blue,.6);
-  }
-
-  &:active,
-  &.active {
-    border-color: currentColor;
-    color: $blue;
-  }
-}
-
-.btn-close {
-  border-radius: 50%;
-
-  .icons-close {
-    color: currentColor;
-  }
-
-  &.btn-xs .icons-close {
-    top: 0;
-  }
-}
-
-.btn-check {
-
-  &.active {
-    background: $green;
-    border-color: $green;
-
-    .icons-add {
-      transform: scale3d(0,0,0);
-    }
-
-    .icons-check {
-      transform: scale3d(1,1,1);
-    }
-  }
-
-  .iconnables {
-    height: 100%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transform: scale3d(0,0,0);
-    transition: transform .3s ease-in;
-    width: 100%;
-  }
-
-  .icons-add {
-    color: $gray-lighter;
-    transform: scale3d(1,1,1);
-    transition: none;
-  }
-}
-
-.blue,
-.gray,
-.gray-dark,
-.green,
-.orange,
-.purple,
-.red,
-.white {
-  border: $input-border solid transparent;
-  color: $white;
-  font-weight: $weight-bold;
-  text-decoration: none;
-
-  &:active {
-    transition: none;
-  }
-
-  &:active,
-  &.active {
-    box-shadow: none;
-  }
-
-  &.reversed {
-    letter-spacing: 0;
-  }
-}
-
-.blue,
 %blue {
   color: $gray-light;
 
@@ -262,7 +64,6 @@
   }
 }
 
-.gray,
 %gray {
   background: $gray-lighterest;
   border-color: $gray-lighter;
@@ -286,7 +87,6 @@
   }
 }
 
-.gray-dark,
 %gray-dark {
   background: $gray;
   border-color: $gray-dark;
@@ -308,7 +108,6 @@
   }
 }
 
-.green,
 %green {
   background: #5fd377; // rgba($green,.81);
   border-color: $green;
@@ -329,7 +128,6 @@
   }
 }
 
-.orange,
 %orange {
   background: $orange-light;
   border-color: $orange;
@@ -350,7 +148,6 @@
   }
 }
 
-.purple,
 %purple {
   color: $purple-light;
 
@@ -388,7 +185,6 @@
   }
 }
 
-.red,
 %red {
   color: $red;
 
@@ -413,7 +209,6 @@
   }
 }
 
-.white,
 %white {
   border-color: $gray-lighter;
   color: $gray-dark;
@@ -442,76 +237,50 @@
   }
 }
 
-// transparent to white
-.btn-cancel {
-  background: transparent;
-  border: $input-border solid transparent;
+.twitter {
+  color: $gray-light;
 
-  &:hover,
-  &:active {
-    background: $white;
+  &.btn {
+    background: $twitter;
+    border: 1px solid $twitter-dark;
+    color: $white;
+
+    &:not([disabled]):not(.disabled) {
+
+      &:hover,
+      &.hover {
+        background: $twitter-light;
+      }
+
+      &:active,
+      &.active,
+      &.active:hover {
+        background: $twitter-dark;
+      }
+    }
   }
 }
 
-// .btn-label
-.btn-label {
-  font-size: 12px;
-  height: 22px;
-  line-height: 22px;
-  padding: 0 6px;
-  pointer-events: none;
- }
+.linkedin {
+  color: $gray-light;
 
-.btn-radio {
-  background: $white;
-  border: $input-border solid transparent;
-  border-radius: $input-border-radius;
-  box-shadow: none;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 16px;
-  height: 72px;
-  text-align: center;
-  text-decoration: none;
-  transition: none;
-  user-select: none;
-  white-space: nowrap;
-  width: 90px;
+  &.btn {
+    background: $linkedin;
+    border: 1px solid $linkedin-dark;
+    color: $white;
 
-  &:active,
-  &.active {
-    color: $purple-light;
-    cursor: default;
-  }
+    &:not([disabled]):not(.disabled) {
 
-  &.active {
-    font-weight: $weight-bold;
-  }
+      &:hover,
+      &.hover {
+        background: $linkedin-light;
+      }
 
-  &:focus {
-    outline: 0;
-  }
-
-  &.btn-lg {
-    height: 108px;
-    width: 120px;
-
-    .img,
-    .iconnables {
-      margin-bottom: 6px;
-      width: 36px;
+      &:active,
+      &.active,
+      &.active:hover {
+        background: $linkedin-dark;
+      }
     }
-  }
-
-  &:last-child {
-    margin-right: 0;
-  }
-
-  .img,
-  .iconnables {
-    display: block;
-    height: 33px;
-    margin: 0 auto;
-    width: 18px;
   }
 }
