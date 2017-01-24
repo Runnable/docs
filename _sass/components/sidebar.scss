@@ -5,10 +5,16 @@
   padding-left: 150px;
   width: $sidebar-width + 150px;
 
+  .logo {
+    padding: $md $sm $sm;
+  }
+
   .nav {
-    flex: 0 0 $sidebar-width;
+    border-top: 1px solid rgba($white,.1);
+    margin-top: $sm;
     overflow: auto;
     padding: $sm;
+    width: $sidebar-width;
   }
 }
 
@@ -58,7 +64,7 @@
 }
 
 .nav li.active > a {
-  border: 1px solid $purple-light;
+  border: 1px solid transparent;
   background-color: $purple-lightest;
   color: $purple;
 }

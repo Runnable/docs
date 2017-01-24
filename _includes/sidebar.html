@@ -1,6 +1,9 @@
-<nav class="grid-block shrink sidebar">
-  <ul class="grid-block vertical shrink nav">
-    <input placeholder="Search…" type="search" id="search" class="grid-block shrink search">
+<nav class="grid-block vertical shrink sidebar">
+  <a href="/" class="grid-block shrink justify-center logo">
+    <img src="/images/runnable-logo.svg" height="32" width="192">
+  </a>
+  <input placeholder="Search…" type="search" id="search" class="grid-block shrink search">
+  <ul class="grid-block vertical nav">
 {% for section in site.data.sidebar %}
   <li>
     <a href="#">{{ site.data.titles.[section.category] }}</a>
