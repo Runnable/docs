@@ -6,13 +6,23 @@
   margin: $sm;
   width: 420px;
 
+
+  @include media(sm) {
+    max-width: calc(100vw - #{$sidebar-width});
+  }
+
+  @include media(xs) {
+    max-width: calc(100vw - 60px);
+  }
+
   .h1 {
     font-size: 18px;
     font-weight: $weight-bold;
   }
 
   .preview {
-    background-color: $gray-lighterest;
+    background: linear-gradient($white,$gray-lighterest);
+    border-bottom: $input-border solid $gray-lightest;
     border-radius: $input-border-radius-lg $input-border-radius-lg 0 0;
 
     > .img {

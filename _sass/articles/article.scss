@@ -1,6 +1,6 @@
 .article {
   max-width: 960px;
-  padding: $xs $md;
+  padding: $md;
 
   > *:last-child:not(.well) {
     margin-bottom: 75px;
@@ -8,6 +8,8 @@
 
   img {
     margin: 30px 0;
+    max-height: 420px;
+    max-width: 420px;
   }
 
   // vertical rhythm

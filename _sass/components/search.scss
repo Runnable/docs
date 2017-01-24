@@ -1,0 +1,40 @@
+.lunr-hidden {
+  display: none;
+}
+
+#results {
+  padding: 50px;
+}
+
+.result {
+  margin: 36px 0;
+  max-width: 580px;
+}
+
+.result-length {
+  border-bottom: 1px solid $gray-lightest;
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: 27px;
+  padding-bottom: 15px;
+  width: 100%;
+}
+
+.search {
+  background: $purple-lightest;
+  border-color: transparent;
+  border-radius: $input-xs;
+  font-size: 13px;
+  color: $purple;
+  height: $input-xs;
+  line-height: $input-line-height-xs;
+  margin: 0 $md;
+  opacity: .3;
+  padding: 0 $sm;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 1;
+  }
+}
