@@ -20,7 +20,7 @@ Launching a new Redis service is easy;
   > For example, if your service is called *redis-datastore*, your URL will be `redis-datatore-staging-yourGitHubOrgName.runnableapp.com`.
   ![redis-name](/images/redis-name.png)
 
-4. Click `Add service`.
+4. Click *Add Service*.
 
 5. Your redis is now ready to configure. Just click on the *Configure Service* button to reveal additional configuration settings.
   ![redis-configure](/images/redis-configure.png)
