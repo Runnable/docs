@@ -24,9 +24,15 @@
     {% endfor %}
     {% assign posts = site.categories.[section.category] | %}
     {% for p in posts %}
-      {% if p.category %}
-      <li><a href="{{ p.url }}">{{ p.shortTitle }}</a></li>
+      {% unless p.categories.size > 1 %}
+      {% if page.url == p.url %}
+      <li class="active">
+      {% else %}
+      <li>
       {% endif %}
+        <a href="{{ p.url }}">{{ p.shortTitle }}</a>
+      </li>
+      {% endunless %}
     {% endfor %}
     </ul>
 {% endfor %}
