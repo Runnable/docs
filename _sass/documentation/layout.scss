@@ -1,59 +1,17 @@
-.sidebar {
-  height: 100vh;
-}
-
 .main {
   height: 100vh;
-  overflow: auto;
+  overflow-y: auto;
+
+  @include media(xs) {
+    height: calc(100vh - 250px);
+  }
 }
 
 .home {
   flex-wrap: wrap;
   padding: $sm;
+
+  @include media(xs) {
+    justify-content: center;
+  }
 }
-
-// /**
-//  * Master/Detail Layout
-//  */
-//  .grid-container {
-//    padding: 0 15px;
-//    max-width: 994px;
-
-//    @include media(sm) {
-//      max-width: 100%;
-//      padding: 0;
-//    }
-//  }
-
-// .header {
-//   height: 45px;
-
-//   .grid-container {
-//     padding: 0 15px;
-//   }
-
-//   nav {
-//     align-items: center;
-//   }
-// }
-
-// .grid-block .master {
-//   flex: 0 0 25%;
-
-//   @include media(sm) {
-//     width: 0;
-//     display: none;
-//   }
-// }
-
-// .grid-block .detail {
-//   flex: 1 0 auto;
-//   max-width: 75%;
-//   @include media(sm) {
-//     max-width: 100%;
-//   }
-// }
-
-// .main {
-//   padding-bottom: 0;
-// }

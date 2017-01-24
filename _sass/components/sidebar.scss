@@ -1,6 +1,7 @@
 .sidebar {
   background: linear-gradient($purple-light, $purple-blue);
   color: $white;
+  height: 100vh;
 
   @include media(xxl) {
     padding-left: 300px;
@@ -26,8 +27,17 @@
     width: $sidebar-width - 60px;
   }
 
+  @include media(xs) {
+    height: 250px;
+    width: 100vw;
+  }
+
   .logo {
     padding: $md $sm $sm;
+
+    @include media(xs) {
+      padding-top: $sm;
+    }
   }
 
   .nav {
@@ -40,6 +50,10 @@
     @include media(sm) {
       padding: $sm 0;
       width: $sidebar-width - 60px;
+    }
+
+    @include media(xs) {
+      width: 100vw;
     }
   }
 }
