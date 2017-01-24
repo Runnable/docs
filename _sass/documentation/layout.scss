@@ -1,15 +1,10 @@
 .sidebar {
   height: 100vh;
-  overflow: auto;
-  position: fixed;
-  top: 0;
-  width: $sidebar-width;
 }
 
 .main {
-  margin-left: $sidebar-width;
-  max-width: 960px;
-  width: auto;
+  height: 100vh;
+  overflow: auto;
 }
 
 .home {
@@ -62,37 +57,3 @@
 // .main {
 //   padding-bottom: 0;
 // }
-
-/*
- * Lunr.js Search & Results
- */
-
-.lunr-hidden {
-  display: none;
-}
-
-#results {
-  padding: 50px;
-}
-
-.result {
-  margin: 20px;
-}
-
-.search {
-  font-size: 13px;
-  font-weight: $weight-bold;
-  height: $input-sm;
-  line-height: $input-line-height-sm;
-  background: #fff;
-  border: $input-border solid $gray-lighter;
-  border-radius: $input-border-radius;
-  padding: 0 $xs;
-  margin: $sm 0;
-  width: 100%;
-  word-break: normal;
-
-  &:focus {
-    border-color: $purple-light;
-  }
-}
