@@ -1,0 +1,16 @@
+.share a{
+
+  @include media(xs) {
+    flex-direction: column;
+    padding: $md 0;
+  }
+
+  .btn + .btn {
+    margin-left: $xs;
+
+    @include media(xs) {
+      margin-left: 0;
+      margin-top: $xs;
+    }
+  }
+}
