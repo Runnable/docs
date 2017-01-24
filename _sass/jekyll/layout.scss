@@ -199,13 +199,26 @@
 /**
  * Posts
  */
+.post-date {
+  font-size: 15px;
+  font-weight: 600;
+  opacity: 0.8;
+  margin-bottom: 12px;
+}
+.result-length {
+  font-weight: 600;
+  font-size: 15px;
+  padding-bottom: $spacing-unit;
+}
+.post-excerpt {
+  font-size: 15px;
+}
 .post-title {
-    font-size: 42px;
-    letter-spacing: -1px;
+    font-size: 28px;
     line-height: 1;
 
     @include media-query($on-laptop) {
-        font-size: 36px;
+        font-size: 24px;
     }
 }
 

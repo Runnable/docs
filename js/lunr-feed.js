@@ -55,11 +55,11 @@ $(document).ready(function() {
     // Show results
     resultdiv.empty();
     // Add status
-    resultdiv.prepend('<p class="result">Found '+result.length+' result(s)</p>');
+    resultdiv.prepend('<p class="result-length">Found '+result.length+' result(s)</p>');
     // Loop through, match, and add results
     for (var item in result) {
       var ref = result[item].ref;
-      var searchitem = '<div class="result"><div class="result-body"><a href="'+store[ref].link+'" class="post-title">'+store[ref].title+'</a><div class="post-date small">'+store[ref].category+'</div><p>'+store[ref].excerpt+'</p></div>';
+      var searchitem = '<div class="result"><div class="result-body"><a href="'+store[ref].link+'" class="post-title">'+store[ref].title+'</a><div class="post-date">'+store[ref].category+'</div><p class="post-excerpt">'+store[ref].excerpt+'</p></div>';
       resultdiv.append(searchitem);
     }
   });
