@@ -9,7 +9,7 @@
       <ul class="ul">
         {% for subCategory in section.subcategories %}
         {% assign posts = site.categories.[subCategory.category] %}
-        <li class="li"><a class="a" href="#">{{ site.baseurl }}{{ site.data.titles.[subCategory.category] }}</a>
+        <li class="li"><a class="a" href="#">{{ site.data.titles.[subCategory.category] }}</a>
           <ul class="ul">
             {% for p in posts %}
             {% if page.url == p.url %}
