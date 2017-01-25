@@ -36,7 +36,7 @@ layout: default
           {% unless forloop.index > 5 %}
             {% if post.categories.[0] == 'repositories' %}
           <li class="list-item">
-            <a class="grid-block justify-justified align-center link padding-xxs" href="{{ post.url }}">{{ post.title }}
+            <a class="grid-block justify-justified align-center link padding-xxs" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}
               <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
             </a>
           </li>
@@ -58,7 +58,7 @@ layout: default
         {% for post in posts %}
           {% unless forloop.index > 5 %}
           <li class="list-item">
-            <a class="grid-block justify-justified align-center link padding-xxs" href="{{ post.url }}">{{ post.title }}
+            <a class="grid-block justify-justified align-center link padding-xxs" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}
               <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
             </a>
           </li>

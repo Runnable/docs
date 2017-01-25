@@ -1,6 +1,6 @@
 <nav class="grid-block vertical shrink sidebar">
-  <a href="/" class="grid-block shrink justify-center logo">
-    <img src="/images/runnable-logo.svg" height="32" width="192">
+  <a href="{{ site.baseurl }}/" class="grid-block shrink justify-center logo">
+    <img src="{{ site.baseurl }}/images/runnable-logo.svg" height="32" width="192">
   </a>
   <input placeholder="Search…" type="search" id="search" class="grid-block shrink search">
   <ul class="grid-block vertical nav">
@@ -17,7 +17,7 @@
             {% else %}
             <li class="li">
             {% endif %}
-              <a class="a" href="{{ p.url }}">{{ p.shortTitle }}</a>
+              <a class="a" href="{{ site.baseurl }}{{ p.url }}">{{ p.shortTitle }}</a>
             {% endfor %}
           </ul>
         {% endfor %}
@@ -29,7 +29,7 @@
         {% else %}
         <li class="li">
         {% endif %}
-          <a class="a" href="{{ p.url }}">{{ p.shortTitle }}</a>
+          <a class="a" href="{{ site.baseurl }}{{ p.url }}">{{ p.shortTitle }}</a>
         {% endunless %}
       {% endfor %}
     </ul>

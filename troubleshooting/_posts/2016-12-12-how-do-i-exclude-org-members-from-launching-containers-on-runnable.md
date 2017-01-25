@@ -8,11 +8,11 @@ description: How do I exclude org members from launching containers on Runnable?
 Once you are past setup, Runnable makes it easy for your teammates to launch a branch. A member of your Github organization can login to Runnable, push a commit to a branch, and their changes are reflected in Runnable.
 If you don’t want the commits some users are making to affect Runnable, you can remove them. Click on your avatar on the top-left of the page, then select ‘Teammates’
 
-![Branch container](/images/exclude_org1.png)
+![Branch container]({{ site.baseurl }}/images/exclude_org1.png)
 
 Choose the teammate you want to remove and their commits will no longer be reflected on Runnable.
 
-![Branch container](/images/exclude_orgs2.png)
+![Branch container]({{ site.baseurl }}/images/exclude_orgs2.png)
 
 ## Do many teams share your Github org?
 

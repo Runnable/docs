@@ -4,8 +4,8 @@
 title: Runnable Documentation
 email: support@runnable.com
 description: Articles to help those who use Runnable.com
-url: https://docs.runnable.com
-baseurl:
+url: https://runnable.com
+baseurl: /docs
 twitter:
   usertitle: GetRunnable
 facebook:

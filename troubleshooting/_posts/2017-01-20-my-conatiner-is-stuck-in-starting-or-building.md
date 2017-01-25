@@ -9,6 +9,6 @@ If your container seems to be stuck in the building or starting state, you can t
 
 1. Click on the **Status** button.
 2. Click on **Rebuild Without Cache**.
-  ![Rebuild Without Cache](/images/rebuild-wo-cache.png)
+  ![Rebuild Without Cache]({{ site.baseurl }}/images/rebuild-wo-cache.png)
 
 If your container is _still_ stuck after rebuilding without cache, contact us using the in-app chat messenger.

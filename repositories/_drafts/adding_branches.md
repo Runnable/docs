@@ -10,10 +10,10 @@ NOTE: Runnable automatically stops and removes containers from stale branches. A
 1. Find the template name in the sidebar on Runnable. You can scroll or use the search filter on top to help you.
 
 2. Click on "Add Branch" to reveal a tray. 
-	![branches2](/images/branches2.png)
+	![branches2]({{ site.baseurl }}/images/branches2.png)
 
 3. Click on the branch you'd like to add. Shortly after that, you should see your branch running in your container list.
-	![branches3](/images/branches3.png)
+	![branches3]({{ site.baseurl }}/images/branches3.png)
 
 ## Automatically launch containers for new Branches
 
@@ -24,10 +24,10 @@ To enable this behavior:
 1. Find the template name in the side bar.
 
 2. Click on "Add Branch" to reveal a tray. 
-	![branches2](/images/branches2.png)
+	![branches2]({{ site.baseurl }}/images/branches2.png)
 
 3. Ensure that the the toggle on this view is enabled.
-	![branches7](/images/branches7.png)
+	![branches7]({{ site.baseurl }}/images/branches7.png)
 
 4. Now any commits made by a member of your Github org will launch in Runnable. 
 
@@ -38,7 +38,7 @@ Note: Runnable will only launch a container for your commit only if the commit-a
 1. Find the branch on the sidebar on Runnable.
 
 2. Click on the configuration gear on the right of the branch's name.
-	![branches4](/images/branches4.png)
+	![branches4]({{ site.baseurl }}/images/branches4.png)
 
 3. Click on "Remove Branch" twice to confirm that you'd like to remove the branch.
 
