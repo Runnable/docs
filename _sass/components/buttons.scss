@@ -285,3 +285,26 @@
     }
   }
 }
+.facebook {
+  color: $gray-light;
+
+  &.btn {
+    background: $facebook;
+    border: 1px solid $facebook-dark;
+    color: $white;
+
+    &:not([disabled]):not(.disabled) {
+
+      &:hover,
+      &.hover {
+        background: $facebook-light;
+      }
+
+      &:active,
+      &.active,
+      &.active:hover {
+        background: $facebook-dark;
+      }
+    }
+  }
+}
