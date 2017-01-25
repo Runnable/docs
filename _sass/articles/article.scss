@@ -125,8 +125,8 @@
     list-style-type: circle;
   }
 
-  li + li {
-    margin-top: 6px;
+  li {
+    margin-bottom: $sm;
   }
 
   // blockquote
