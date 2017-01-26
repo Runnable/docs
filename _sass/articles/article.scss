@@ -147,6 +147,16 @@
   a {
     text-decoration: underline;
   }
+  
+  .share a {
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+  }
 
   // utility
   .indent {
