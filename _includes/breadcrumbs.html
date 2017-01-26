@@ -63,5 +63,5 @@
   {% if category %}
   <a class="link" href="/{{ category }}/">{{ categoryTitle }}</a> <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
   {% endif %}
-  <a class="link link text-overflow" href="{{ page.url }}">{{ page.title }}</a>
+  <a class="link link text-overflow" href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
 </nav>

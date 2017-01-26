@@ -19,18 +19,18 @@ container that is pre-seeded, taking advantage of the container image cache.
 #### Create a _Non-Repository Template_ for PostgreSQL.
   1. Click __Create Template__ in the _Templates_ tab
   2. Select __Non-Repository Template__ to reveal a list of non-repository templates. Select __PostgreSQL__.
-    ![Select Template](/images/create-postgres-db-1.png)  
+    ![Select Template]({{ site.baseurl }}/images/create-postgres-db-1.png)  
 
   3. Name your template, if desired. Click __Create Template__
-    ![Name & Create Template](/images/create-postgres-db-2.png)  
+    ![Name & Create Template]({{ site.baseurl }}/images/create-postgres-db-2.png)  
 
   4. Your template should launch and turn *green* when the container has finsihed building.
-    ![Template launched](/images/create-postgres-db-3.png)  
+    ![Template launched]({{ site.baseurl }}/images/create-postgres-db-3.png)  
 
   5. Select __Dockerfile__ to customize your database. Here you can modify the environment variables to
   change desired usernames, passwords, and database names. Defaults have been set for your convienence, 
   but if you would like to change anything, just uncomment the line and modify as desired.
-    ![Dockerfile](/images/create-postgres-db-4.png)  
+    ![Dockerfile]({{ site.baseurl }}/images/create-postgres-db-4.png)  
 
   6. Once running, you can setup template connections with your repository applications. [Here is how.](/connections/how_to_connect_your_containers.md)
 
@@ -59,18 +59,18 @@ container that is pre-seeded, taking advantage of the container image cache.
 
 ### Upload the seed file to your template configuration
 1. Bring up the template configuration modal by either clicking on the _cog_ next to your database template in the `Containers` pane, or clicking on Dockerfile in the `Templates` pane.
-  ![Select Template](/images/seed-postgres-db-1.png)  
+  ![Select Template]({{ site.baseurl }}/images/seed-postgres-db-1.png)  
 2. Select the `Dockerfile` tab on the top menu within the modal.
-  ![Select Dockerfile](/images/seed-postgres-db-2.png)  
+  ![Select Dockerfile]({{ site.baseurl }}/images/seed-postgres-db-2.png)  
 3. Click on the `[+]` button above the file explorer to the left of the Dockerfile editor.
-  ![Add File/Folder](/images/seed-postgres-db-3.png)  
+  ![Add File/Folder]({{ site.baseurl }}/images/seed-postgres-db-3.png)  
 4. Select 'Upload File' to bring up the file selector and choose your dump file (i.e. `seed.dump`).
-  ![File Uploaded](/images/seed-postgres-db-4.png)  
+  ![File Uploaded]({{ site.baseurl }}/images/seed-postgres-db-4.png)  
 
 
 ### Enable the database seeding functionality
 1. Uncomment the `ADD seed.dump /seed/dump` line in the Dockerfile editor to the right.
-  ![Uncomment Seed](/images/seed-postgres-db-5.png)  
+  ![Uncomment Seed]({{ site.baseurl }}/images/seed-postgres-db-5.png)  
     > If you have named your seed something other than `seed.dump`, you should modify the first part of the add command.
     Make sure you leave the second `seed.dump` intact so the init script will work.
 2. Now click `Save & Build` to build your container and seed your database.

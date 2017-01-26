@@ -13,5 +13,5 @@ description: How do I configure SSL in Runnable?
 #### Runnable's SSL Certificate
 Runnable’s SSL certs are available to export using any browser. Just navigate to the URL, and click on the lock icon in the address bar to get the details.
 
- ![SSL Cert in Chrome](/images/runnablessl.png)
+ ![SSL Cert in Chrome]({{ site.baseurl }}/images/runnablessl.png)
 

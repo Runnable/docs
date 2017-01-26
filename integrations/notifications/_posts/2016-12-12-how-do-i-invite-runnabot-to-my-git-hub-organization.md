@@ -12,19 +12,19 @@ description: Instructions on how to add Runnabot to your GitHub Organization
 
 2. Go to your Github Organization page and click on **People**.
 
-  ![GitHub Organization People](/images/runnabot-people.png)
+  ![GitHub Organization People]({{ site.baseurl }}/images/runnabot-people.png)
 
 3. Click on **Invite Member**.
 
-  ![GitHub Invite Member](/images/runnabot-invite.png)
+  ![GitHub Invite Member]({{ site.baseurl }}/images/runnabot-invite.png)
 
 4. Search for **Runnabot**
 
-  ![GitHub Add User](/images/runnabot-add-user.png)
+  ![GitHub Add User]({{ site.baseurl }}/images/runnabot-add-user.png)
 
 5. Add him as a member to your Organization.
 
-  ![GitHub Choose Member](/images/runnabot-choose-member.png)
+  ![GitHub Choose Member]({{ site.baseurl }}/images/runnabot-choose-member.png)
 
 Now *every-time you commit to a pull request* on a branch that is Running on Runnable, you will get a status update from Runnabot! 
-![GitHub PR Notification](/images/runnabot-notify.png)
+![GitHub PR Notification]({{ site.baseurl }}/images/runnabot-notify.png)
