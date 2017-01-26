@@ -144,15 +144,8 @@
   }
 
   // link
-  a:not(.well-anchor, .share) {
-    color: currentColor;
-    cursor: pointer;
+  a {
     text-decoration: underline;
-
-    &:hover,
-    &:active {
-      text-decoration: none;
-    }
   }
 
   // utility
