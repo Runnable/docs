@@ -20,7 +20,7 @@ index.add({
 
 var store = [{% for post in site.posts %}{
   "title": {{post.title | jsonify}},
-  "link": {{ post.url | jsonify }},
+  "link": {{ site.baseurl | append: post.url | jsonify }},
   "category": {{ post.categories.[0] | jsonify }},
   "excerpt": {{ post.content | strip_html | truncatewords: 20 | jsonify }}
 }{% unless forloop.last %},{% endunless %}{% endfor %}]

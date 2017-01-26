@@ -5,7 +5,7 @@ step: 3
 description: Syncing Files through Runnable CLI
 ---
 
-Instead of uploading files through the UI on [runnable.io](runnable.io), our runnable-cli enables you to upload files to your repository directly from your command line.
+Instead of uploading files through the UI on [runnable.io](http://runnable.io), our runnable-cli enables you to upload files to your repository directly from your command line.
 
     Usage:
       runnable upload <file>

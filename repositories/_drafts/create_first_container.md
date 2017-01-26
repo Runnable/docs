@@ -5,30 +5,30 @@ Any text that is **bold** will represent a button on screen and any text in **_i
 
 1. From the **Configure** page, click on the **Add Container** button.
 
-  ![Configuration -> Add Container](/images/create-container-add.png)
+  ![Configuration -> Add Container]({{ site.baseurl }}/images/create-container-add.png)
 
 2. Let’s start with a repository. These will stay in sync with your repository on Github. 
   Choose the repository you want to run.
 
-  ![Select Repository](/images/create-container-select-repo.png)
+  ![Select Repository]({{ site.baseurl }}/images/create-container-select-repo.png)
   > You can use the search field to filter your results. 
 
 3. Now you must _choose your configuration_. Our assumption in this step is that we do not have an existing Dockerfile to build from.
 
-  ![Choose Container Configuration](/images/create-container-choose-config.png)
+  ![Choose Container Configuration]({{ site.baseurl }}/images/create-container-choose-config.png)
 
 4. Enter a name for your container, if desired.
 
-  ![Name Container](/images/create-container-name.png)
+  ![Name Container]({{ site.baseurl }}/images/create-container-name.png)
 
 5. Next, you’ll be able to select your app’s **_Stack Type_**, **_Version_** and **_Branch_**. 
 
   Go ahead and choose your **_Stack Type_**. 
-  ![Stack Type](/images/create-container-select-version.png)
+  ![Stack Type]({{ site.baseurl }}/images/create-container-select-version.png)
   > Make sure you choose the branch that corresponds to your team’s main integration branch (**_master_** or **_develop_** for example). 
   
   And _select the version_ you want to use.
-  ![Select Version](/images/create-container-select-version-detail.png)
+  ![Select Version]({{ site.baseurl }}/images/create-container-select-version-detail.png)
 
 6. On the next step, you can specify additional **_Packages_**, **_Build Commands_**, and the **_Container CMD_**. 
 
@@ -36,45 +36,45 @@ Any text that is **bold** will represent a button on screen and any text in **_i
 
   **_Build Commands_** are commands that are needed to build and prepare our app (Bash scripts are supported!). These commands are run to create a new container on every push to the branch. For Node.js, this is where we’ll specify `npm install`.
 
-  ![Commands & Packages](/images/create-container-cmd-and-pkg.png)
+  ![Commands & Packages]({{ site.baseurl }}/images/create-container-cmd-and-pkg.png)
 
   **_Container CMD_** is where the invocation command for our app is specified. There can only be one CMD instruction in a Dockerfile, so you may need to chain tasks if multiple processes are necessary. Many Node.js apps, use simply `npm start` as their Container CMD.
 
-  ![Container CMD](/images/create-container-cmd.png)
+  ![Container CMD]({{ site.baseurl }}/images/create-container-cmd.png)
   > Important: the container will stop running when this command exits. Make sure the process you choose will stay alive.
 
 7. Click **Next** to see that your container is ready for its first build! 🎉 
 
-  ![Ready to Build](/images/create-container-ready-to-build.png)
+  ![Ready to Build]({{ site.baseurl }}/images/create-container-ready-to-build.png)
 
 #### Additional configuration options are revealed to customize your container further.
 The following panes allow optional configuration for your application. [Skip]()
 
 * Security
   This pane allows you to control external access to your Runnable containers' dynamic URLs.
-  ![Security](/images/create-container-security.png)
+  ![Security]({{ site.baseurl }}/images/create-container-security.png)
 
 * Exposed Ports
   Since your app runs on port 3000, we'll click on the Exposed Ports tool and expose it.
-  ![Exposed Ports](/images/create-container-ports.png)
+  ![Exposed Ports]({{ site.baseurl }}/images/create-container-ports.png)
 
 * Environment Variables
   This pane allows you to add custom environment variables that may be need by your application.
-  ![Environment Variables](/images/create-container-env-vars.png)
+  ![Environment Variables]({{ site.baseurl }}/images/create-container-env-vars.png)
 
 * Files & SSH Keys
   This pane allows you to add additional files, repositories, and SSH keys to your container.
   Please click [here]() to find out more.
-  ![Files & SSH Keys](/images/create-container-files-and-ssh.png)
+  ![Files & SSH Keys]({{ site.baseurl }}/images/create-container-files-and-ssh.png)
 
 * Find & Replace
   This pane allows you to use our _Find & Replace_ feature to make slight modifications to your code when running on Runnable.
   Please click [here]() to find out more.
-  ![Find & Replace](/images/create-container-find-and-replace.png)
+  ![Find & Replace]({{ site.baseurl }}/images/create-container-find-and-replace.png)
 
 * Dockerfile
   This pane will allow you to go into _Dockerfile_ mode. This is for advanced users, to find out more, [click here]().
-  ![Dockerfile](/images/create-container-dockerfile.png)
+  ![Dockerfile]({{ site.baseurl }}/images/create-container-dockerfile.png)
 
 Save & Build to save our changes and trigger your first build. 
 
