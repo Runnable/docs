@@ -146,8 +146,13 @@
   // link
   a {
     text-decoration: underline;
+
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
   }
-  
+
   .share a {
     cursor: pointer;
     text-decoration: none;
