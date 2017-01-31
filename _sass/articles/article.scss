@@ -16,10 +16,6 @@
   // vertical rhythm
   h1,
   h2,
-  h3,
-  h4,
-  h5,
-  h6,
   p,
   blockquote,
   pre,
@@ -28,7 +24,14 @@
   dl,
   figure,
   .highlight {
-    margin-bottom: 30px;
+    margin-bottom: $md;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6{
+    margin-bottom: $sm;
   }
 
   // headings
@@ -39,7 +42,7 @@
   h5,
   h6 {
     font-weight: $weight-bold;
-    padding: 15px 0;
+    padding: $xs 0;
   }
 
   // code
@@ -48,7 +51,7 @@
     background-color: $gray-lighterest;
     border: 1px solid $gray-lighter;
     border-radius: $input-border-radius-lg;
-    font-size: 15px;
+    font-size: 16px;
   }
 
   code {
@@ -81,7 +84,7 @@
   // tables
   table {
     display: block;
-    font-size: 15px;
+    font-size: 16px;
     margin: 60px 0;
     overflow: auto;
     text-align: left;
@@ -127,6 +130,9 @@
 
   li {
     margin-bottom: $sm;
+    font-size: 16px;
+    max-width: 540px;
+    font-weight: 400;
   }
 
   // blockquote
@@ -134,9 +140,10 @@
     border-left: $input-border solid $gray-lighter;
     color: $gray;
     font-style: italic;
-    margin-left: 30px;
-    margin-right: 30px;
-    padding: 0 30px;
+    font-size: 16px;
+    margin-left: $md;
+    margin-right: $md;
+    padding: 0 $md;
 
     > :last-child {
       margin-bottom: 0;
