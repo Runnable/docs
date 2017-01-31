@@ -7,6 +7,7 @@
   overflow: visible;
   padding-top: 30px;
   position: relative;
+  width: 100%;
 
   @include media(xxs) {
     padding-left: 30px;
@@ -23,7 +24,9 @@
   }
 
   .link-wrapper {
-    max-width: 640px;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 520px;
   }
 
   .link {
