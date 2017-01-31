@@ -2,6 +2,7 @@
   align-items: center;
   background: linear-gradient($gray-lighterest, $white);
   border-top: 1px solid $gray-lighter;
+  display: block;
   margin: 0 auto;
   overflow: visible;
   padding-top: 30px;
@@ -22,7 +23,7 @@
   }
 
   .link-wrapper {
-    padding: 60px;
+    max-width: 640px;
   }
 
   .link {
