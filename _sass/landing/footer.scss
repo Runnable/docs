@@ -3,7 +3,6 @@
   background: linear-gradient($gray-lighterest, $white);
   border-top: 1px solid $gray-lighter;
   display: block;
-  margin: 0 auto;
   overflow: visible;
   padding-top: 30px;
   position: relative;
@@ -24,9 +23,9 @@
   }
 
   .link-wrapper {
-    margin: 0 auto;
-    padding: 0;
-    max-width: 520px;
+    max-width: 820px;
+    padding: 0 $sm;
+
   }
 
   .link {

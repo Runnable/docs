@@ -1,8 +1,8 @@
 .share {
   border-top: 1px solid $gray-lighter;
   margin: 0 auto;
-  text-align: center;
   padding: $md 0 $md 0;
+  text-align: center;
 
   @include media(xs) {
     flex-direction: column;
@@ -17,11 +17,12 @@
       margin-top: $xxs;
     }
   }
+
   .btn-sm {
     @include media(md) {
-      width: 100%;
       max-width: 480px;
       margin: 0 auto;
+      width: 100%;
     }
   }
 }

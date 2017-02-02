@@ -1,8 +1,16 @@
+.sign-up-container {
+  max-width: 880px;
+  padding: $md;
+}
+
 .sign-up-box {
   align-items: flex-start;
   align-self: stretch;
   background: $white;
-  min-width: 660px;
+  box-sizing: border-box;
+  display: block;
+  max-width: 660px;
+  margin: 0 auto;
   overflow: visible;
   padding-left: 45px;
   position: relative;
