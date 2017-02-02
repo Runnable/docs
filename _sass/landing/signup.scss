@@ -9,14 +9,15 @@
   background: $white;
   box-sizing: border-box;
   display: block;
-  max-width: 660px;
   margin: 0 auto;
+  max-width: 660px;
+  min-width: none;
   overflow: visible;
   padding-left: 45px;
   position: relative;
 
   @media (max-width: 720px) {
-    min-width: 0;
+    min-width: none;
   }
 
   @include media(xs) {
@@ -25,11 +26,11 @@
   }
 
   .img {
-    bottom: 0;
+    bottom: -11px;
     height: auto;
     position: absolute;
-    right: 0;
-    width: 150px;
+    right: 30px;
+    width: 210px;
 
     @include media(xs) {
       left: 0;
