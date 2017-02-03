@@ -5,4 +5,4 @@ step: 2
 description: How to setup Integration Tests for your services on Runnable.
 ---
 
-Comming soon.
+Coming soon.
