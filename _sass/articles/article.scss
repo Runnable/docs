@@ -3,7 +3,7 @@
   padding: $md;
 
   > *:last-child:not(.well) {
-    margin: $xl 0 0 0;
+    margin: $xl 0 0;
   }
 
   img {
@@ -167,11 +167,6 @@
   .indent {
     margin-left: 30px;
   }
-
-  // next cta
-  // .well-anchor:last-child {
-  //   margin-top: 75px;
-  // }
 }
 
 .page-landing {

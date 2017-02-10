@@ -4,30 +4,32 @@
   border-top: 1px solid $gray-lighter;
   display: block;
   overflow: visible;
-  padding-top: 30px;
+  padding-top: $md;
   position: relative;
   width: 100%;
 
   @include media(xxs) {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: $md;
+    padding-right: $md;
   }
 
   .well-anchor .p {
-    margin-bottom: 9px;
+    margin-bottom: $xxs;
     margin-right: 120px;
 
     @include media(xs) {
       margin-right: 0;
     }
   }
+
   .block-wrapper {
     max-width: 880px;
   }
+
   .link-wrapper {
-    max-width: 530px;
-    padding: 60px 30px 60px 0;
     margin: 0 auto;
+    max-width: 530px;
+    padding: $xl $md $xl 0;
 
   }
 
