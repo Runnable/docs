@@ -3,37 +3,25 @@
 }
 
 .sign-up-box {
-  align-items: flex-start;
-  align-self: stretch;
-  background: $white;
-  box-sizing: border-box;
-  display: block;
-  margin: 0 auto;
-  max-width: 660px;
-  min-width: none;
-  overflow: visible;
-  padding-left: 45px;
-  position: relative;
 
-  @media (max-width: 720px) {
-    min-width: none;
-  }
-
-  @include media(xs) {
+  @include media(lg) {
     align-items: center;
-    padding: 30px 15px 105px;
+    padding: 30px 15px 90px;
+    text-align: center;
   }
 
   .img {
-    bottom: -11px;
-    height: auto;
-    position: absolute;
-    right: 30px;
-    width: 210px;
 
-    @include media(xs) {
+    @include media(lg) {
+      bottom: -9px;
       left: 0;
       margin: 0 auto;
+      right: 0;
+      width: 150px;
+    }
+
+    @include media(xs) {
+      bottom: -6px;
       width: 105px;
     }
   }

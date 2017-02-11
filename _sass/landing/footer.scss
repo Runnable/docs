@@ -29,8 +29,9 @@
       margin-bottom: $xxs;
       margin-right: 120px;
 
-      @include media(xs) {
-        margin-right: 0;
+      @include media(lg) {
+        margin-left: auto;
+        margin-right: auto;
       }
     }
   }
