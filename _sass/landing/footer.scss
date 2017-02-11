@@ -1,28 +1,65 @@
-.footer {
-  align-items: center;
+.footer-wrapper {
   background: linear-gradient($gray-lighterest, $white);
   border-top: 1px solid $gray-lighter;
-  margin: 0 auto;
+  padding: 0 $md;
+}
+
+.footer {
+  align-items: center;
+  display: block;
+  margin: 0;
+  max-width: 880px;
   overflow: visible;
-  padding-top: 30px;
+  padding-top: $md;
   position: relative;
+  width: 100%;
 
   @include media(xxs) {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: $md;
+    padding-right: $md;
   }
 
-  .well-anchor .p {
-    margin-bottom: 9px;
-    margin-right: 120px;
+  .well-anchor {
 
-    @include media(xs) {
-      margin-right: 0;
+    @include media(lg) {
+      min-width: initial;
+    }
+
+    .p {
+      margin-bottom: $xxs;
+      margin-right: 120px;
+
+      @include media(lg) {
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
   }
 
   .link-wrapper {
-    padding: 60px;
+    margin: 0 auto;
+    max-width: 530px;
+    padding: $xl $md $xl 0;
+
+    @include media(md) {
+      flex-flow: column wrap;
+      justify-content: center;
+      padding: $xl $md;
+    }
+  }
+
+  .align-start {
+
+    @include media(md) {
+      align-items: center;
+    }
+
+    + .align-start {
+
+      @include media(md) {
+        margin-left: 0;
+      }
+    }
   }
 
   .link {
@@ -42,5 +79,38 @@
     background: $gray-lightest;
     margin: 0 auto;
     width: 510px;
+  }
+}
+
+// support aside
+.aside-support {
+
+  @include media(md) {
+    flex-flow: column;
+    padding: 0 15px 30px;
+  }
+
+  .support-text {
+
+    @include media(md) {
+      margin-bottom: 15px;
+      margin-right: 0;
+      text-align: center;
+    }
+
+    .br {
+      display: none;
+
+      @include media(md) {
+        display: block;
+      }
+    }
+  }
+
+  .figure {
+    @include media(md) {
+      margin: 0 auto;
+      max-width: 225px;
+    }
   }
 }
