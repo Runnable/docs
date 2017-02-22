@@ -30,7 +30,7 @@
   h3,
   h4,
   h5,
-  h6{
+  h6 {
     margin-bottom: $sm;
   }
 
@@ -129,18 +129,18 @@
   }
 
   li {
-    margin-bottom: $sm;
     font-size: 16px;
-    max-width: 540px;
     font-weight: 400;
+    margin-bottom: $sm;
+    max-width: 720px;
   }
 
   // blockquote
   blockquote {
     border-left: $input-border solid $gray-lighter;
     color: $gray;
-    font-style: italic;
     font-size: 16px;
+    font-style: italic;
     margin-left: $md;
     margin-right: $md;
     padding: 0 $md;
