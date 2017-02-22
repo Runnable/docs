@@ -203,14 +203,6 @@
       margin-right: 30px;
       max-width: calc(100% - 60px);
     }
-
-    &.hr-footer {
-      margin-top: 150px;
-
-      @include media(sm) {
-        margin-top: 60px;
-      }
-    }
   }
 
   .img-centered {
