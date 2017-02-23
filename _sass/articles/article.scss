@@ -13,9 +13,20 @@
     max-width: 640px;
   }
 
-  // vertical rhythm
+  h1 {
+    font-size: 36px;
+  }
+
   h1,
   h2,
+  h3, {
+    margin: $lg 0 $sm;
+  }
+
+  // vertical rhythm
+  h4,
+  h5,
+  h6,
   p,
   blockquote,
   pre,
@@ -24,14 +35,7 @@
   dl,
   figure,
   .highlight {
-    margin-bottom: $lg;
-  }
-
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-bottom: $sm;
+    margin: $sm 0;
   }
 
   // headings
@@ -42,7 +46,6 @@
   h5,
   h6 {
     font-weight: $weight-bold;
-    margin: $sm 0;
   }
 
   // code
