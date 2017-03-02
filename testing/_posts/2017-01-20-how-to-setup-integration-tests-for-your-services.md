@@ -5,4 +5,4 @@ step: 2
 description: How to setup Integration Tests for your services on Runnable.
 ---
 
-Coming soon.
+Please [contact us](mailto:support@runnable.com) for help setting up testing.

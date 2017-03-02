@@ -5,4 +5,4 @@ step: 4
 description: How to add Github Pull Request testing notifications
 ---
 
-Coming soon.
+Please [contact us](mailto:support@runnable.com) for help setting up testing.
