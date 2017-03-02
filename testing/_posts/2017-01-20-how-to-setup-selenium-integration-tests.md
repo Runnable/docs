@@ -5,4 +5,4 @@ step: 3
 description: How to setup Web Driver based Integration tests on Runnable.
 ---
 
-Coming soon.
+Please [contact us](mailto:support@runnable.com) for help setting up testing.
