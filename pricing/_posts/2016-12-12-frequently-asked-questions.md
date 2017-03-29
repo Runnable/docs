@@ -17,7 +17,7 @@ description: Frequently Asked Questions regarding pricing for Runnable
 A service is a repository or other service (like a database) that Runnable will create containers for. The number of services your team will need is roughly the number of services that make up your application.
 
 ### Q: How are services calculated with Docker Compose?
-The number of services your team uses is the same as the number of services defined in your Compose file.
+The number of services your team uses is the same as the number of services defined in each Compose file you add.
 
 ### Q: What is a user?
 A user is anyone who is able to make changes to your account, and have their branches deployed and kept up-to-date on Runnable.
