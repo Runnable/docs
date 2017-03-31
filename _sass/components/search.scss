@@ -2,7 +2,9 @@
   display: none;
 }
 
+// scss-lint:disable IdSelector
 #results {
+// scss-lint:enable IdSelector
   padding: 50px;
 }
 
@@ -13,8 +15,8 @@
 
 .result-length {
   border-bottom: 1px solid $gray-lightest;
-  font-weight: 600;
   font-size: 16px;
+  font-weight: 600;
   margin-top: 27px;
   padding-bottom: 15px;
   width: 100%;
@@ -24,13 +26,33 @@
   background: $purple-lightest;
   border-color: transparent;
   border-radius: $input-xs;
-  font-size: 13px;
-
+  color: $purple;
+  font-size: 16px;
   height: $input-sm;
   line-height: $input-line-height-xs;
-  margin: 0 $md;
-  opacity: .3;
-  padding: 0 $sm;
+  margin: 0 $lg;
+  opacity: .5;
+  padding: 0 $xs;
+
+  // for some reason, these have to be separate selectors
+  // scss-lint:disable VendorPrefix PseudoElement
+  &::-webkit-input-placeholder {
+    color: $purple;
+  }
+
+  &::-moz-placeholder {
+    color: $purple;
+  }
+
+  &:-ms-input-placeholder {
+    color: $purple;
+  }
+
+  &:-moz-placeholder {
+    color: $purple;
+  }
+  // scss-lint:enable VendorPrefix PseudoElement
+
 
   &:hover,
   &:focus,
