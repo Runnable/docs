@@ -48,7 +48,6 @@ Use this command to get an overview of all the different containers you have und
 
 You can drill down and list all the branches of a repository by specifying a repository name.
 
-#### [`runnable auto-isolation [repository]`](./enable_auto_isolation.md)
-#### [`runnable ssh [repository]`](./ssh_into_container.md)
-#### [`runnable upload <file>`](./syncing_files.md)
-#### [`runnable pull [repository]`](./pulling_docker_images.md)
+#### [`runnable ssh [repository]`](/docs/cli/starting-an-ssh-session)
+
+#### [`runnable upload <file>`](/docs/cli/syncing-files-through-runnable-c-l-i)
