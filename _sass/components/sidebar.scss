@@ -5,7 +5,8 @@
   padding-top: $xxl;
 
   @include media(xs) {
-    height: 300px;
+    border-right: none;
+    height: 272px;
     width: 100vw;
   }
 
