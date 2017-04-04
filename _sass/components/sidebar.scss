@@ -1,6 +1,6 @@
 .sidebar {
   background: $gray-lighterest;
-  border-right: 1px solid rgba($black,.05);
+  border-right: 1px solid $gray-lighter;
   color: $purple-dark;
   padding-top: $xxl;
 
@@ -18,15 +18,11 @@
   }
 
   .nav {
-    border-top: 1px solid rgba($black,.1);
-    margin-top: $sm;
     overflow: auto;
     padding: $sm;
-    width: $sidebar-width;
 
     @include media(sm) {
       padding: $sm 0;
-      width: $sidebar-width - 60px;
     }
 
     @include media(xs) {
