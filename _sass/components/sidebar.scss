@@ -2,33 +2,7 @@
   background: $gray-lighterest;
   border-right: 1px solid rgba($black,.05);
   color: $purple-dark;
-  height: 100vh;
   padding-top: $xxl;
-
-
-  @include media(xxl) {
-    padding-left: 300px;
-    width: $sidebar-width + 300px;
-  }
-
-  @include media(xl) {
-    padding-left: 150px;
-    width: $sidebar-width + 150px;
-  }
-
-  @include media(lg) {
-    padding-left: 90px;
-    width: $sidebar-width + 90px;
-  }
-
-  @include media(md) {
-    padding-left: 0;
-    width: $sidebar-width;
-  }
-
-  @include media(sm) {
-    width: $sidebar-width - 60px;
-  }
 
   @include media(xs) {
     height: 300px;

@@ -1,7 +1,7 @@
 .header {
   align-items: center;
   background: $purple-light;
-  height:60px;
+  height: 60px;
   line-height: 60px;
   overflow: visible;
   position: absolute;
@@ -32,23 +32,8 @@
   }
 
   .grid-container {
-    padding: 0 45px;
     line-height: 60px;
-
-    @include media(xxl) {
-      padding-left: 300px;
-    }
-
-    @include media(xl) {
-      padding-left: 150px;
-    }
-
-    @include media(lg) {
-      padding-left: 130px;
-    }
-    @include media(md) {
-      padding-left: 45px;
-    }
+    padding: 0 45px;
 
     @include media(sm) {
       padding-left: 15px;

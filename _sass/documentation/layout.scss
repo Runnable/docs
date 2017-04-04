@@ -1,5 +1,4 @@
 .main {
-  height: 100vh;
   overflow-y: auto;
 
   @include media(xs) {
@@ -13,7 +12,7 @@
   padding-top: $xxl;
 
   @include media(xs) {
-    padding-top: $sm;
     justify-content: center;
+    padding-top: $sm;
   }
 }
