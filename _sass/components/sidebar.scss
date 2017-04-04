@@ -2,6 +2,8 @@
   background: linear-gradient($purple-light, $purple-blue);
   color: $white;
   height: 100vh;
+  padding-top: $xxl;
+
 
   @include media(xxl) {
     padding-left: 300px;
@@ -28,7 +30,7 @@
   }
 
   @include media(xs) {
-    height: 285px;
+    height: 300px;
     width: 100vw;
   }
 
