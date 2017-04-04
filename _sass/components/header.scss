@@ -14,10 +14,6 @@
     position: relative; // forces popover to recognize hover state
     z-index: 1;
 
-    @include media(sm) {
-      margin: 0 auto;
-    }
-
     @include media(xxxs) {
       align-items: center;
       flex: 0 0 150px;
