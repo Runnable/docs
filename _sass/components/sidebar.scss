@@ -1,9 +1,9 @@
 .sidebar {
   background: $gray-lighterest;
+  border-right: 1px solid rgba($black,.05);
   color: $purple-dark;
   height: 100vh;
   padding-top: $xxl;
-  border-right: 1px solid rgba($black,.05);
 
 
   @include media(xxl) {
