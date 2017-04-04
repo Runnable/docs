@@ -1,8 +1,9 @@
 .sidebar {
-  background: linear-gradient($purple-light, $purple-blue);
-  color: $white;
+  background: $gray-lighterest;
+  color: $purple-dark;
   height: 100vh;
   padding-top: $xxl;
+  border-right: 1px solid rgba($black,.05);
 
 
   @include media(xxl) {
@@ -43,7 +44,7 @@
   }
 
   .nav {
-    border-top: 1px solid rgba($white,.1);
+    border-top: 1px solid rgba($black,.1);
     margin-top: $sm;
     overflow: auto;
     padding: $sm;

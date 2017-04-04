@@ -1,7 +1,6 @@
 .header {
   align-items: center;
-  background: $white;
-  box-shadow: 0 1px rgba($black,.1), 0 2px 4px rgba($black,.05);
+  background: $purple-light;
   line-height: 60px;
   overflow: visible;
   height:60px;
@@ -67,7 +66,7 @@
   }
 
   .text-white {
-    color: $purple-lightest;
+    color: $white;
     line-height: $input-sm;
 
     &:hover,
