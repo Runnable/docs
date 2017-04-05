@@ -1,6 +1,6 @@
 ---
 title: Using Docker Compose With Runnable
-shortTitle: Launching your first environment with Compose
+shortTitle: Launching your first environment
 step: 3
 tags:
 - docker
