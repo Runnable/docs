@@ -1,6 +1,6 @@
 ---
 title: Using Docker Compose With Runnable
-shortTitle: Launching your First Staging Cluster
+shortTitle: Launching your first environment with Compose
 step: 3
 tags:
 - docker
