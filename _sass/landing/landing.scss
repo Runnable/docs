@@ -1,5 +1,15 @@
 .body {
+  padding: 0 $md;
+
+  @include media(sm) {
+    padding: 0 $sm;
+  }
+
   @include media(xs) {
     flex-direction: column;
+  }
+
+  > .card {
+    margin: 120px auto;
   }
 }

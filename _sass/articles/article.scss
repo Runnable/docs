@@ -1,6 +1,6 @@
 .article {
   max-width: 880px;
-  padding: $lg $md;
+  padding: $md;
   width: 100%;
 
   @include media(xs) {
@@ -17,14 +17,14 @@
     max-height: 420px;
   }
 
-  h1 {
-    font-size: 36px;
+  h1:first-child {
+    margin-top: 0;
   }
 
   h1,
   h2,
   h3, {
-    margin: $lg 0 $sm;
+    margin: $sm 0;
   }
 
   // vertical rhythm
@@ -180,8 +180,8 @@
     background: $gray-lighter;
     border: 0;
     height: 1px;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    margin-bottom: $lg;
+    margin-top: $lg;
 
     @include media(xs) {
       margin-left: 30px;
@@ -237,9 +237,9 @@
 
   img {
     height: auto;
-    margin-bottom: $lg;
-    margin-top: $sm;
-    max-width: calc(100vw - 3rem);
+    margin-bottom: $md;
+    margin-top: $md;
+    max-width: 100%;
     width: auto;
 
     &.img-sm {

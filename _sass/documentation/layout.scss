@@ -1,11 +1,3 @@
-.main {
-  overflow-y: auto;
-
-  @include media(xs) {
-    height: calc(100vh - 250px);
-  }
-}
-
 .home {
   flex-wrap: wrap;
   padding: $sm;

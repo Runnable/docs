@@ -1,11 +1,11 @@
 .sidebar {
   background: $gray-lighterest;
   border-right: 1px solid $gray-lighter;
-  color: $purple-dark;
-  padding-top: $xxl;
+  color: $gray;
+  padding: $md;
 
   @include media(md) {
-    max-width: 300px;
+    padding: $md $sm;
   }
 
   @include media(xs) {
@@ -16,26 +16,11 @@
     width: 100vw;
   }
 
-  .logo {
-    padding: $md $sm $sm;
-
-    @include media(xs) {
-      padding-top: $sm;
-    }
-  }
-
   .nav {
+    margin-top: $md;
     overflow: auto;
-    padding: $sm;
-
-    @include media(sm) {
-      padding-bottom: $sm;
-      padding-top: $sm;
-    }
 
     @include media(xs) {
-      padding-left: 0;
-      padding-right: 0;
       width: 100vw;
     }
 
@@ -50,17 +35,14 @@
     }
 
     .li {
-      border-color: transparent;
-      border-radius: $input-border-radius-lg;
-
-      @include media(sm) {
-        border-radius: 0;
-      }
+      border: $input-border solid transparent;
+      border-radius: $input-border-radius;
 
       // active state
       &.active {
-        background-color: $purple-lightest;
-        color: $purple;
+        background-color: $white;
+        border-color: $gray-lighter;
+        height: 32px;
 
         .a,
         .a:hover {
@@ -72,20 +54,12 @@
 
     .a {
       border: $input-border solid transparent;
-      border-radius: $input-border-radius-lg;
+      border-radius: $input-border-radius;
       display: block;
-      font-size: 14px;
-      line-height: $input-line-height-sm - 12px;
-      margin-bottom: 3px;
-      outline: none;
-      padding: 6px $xxs;
-      text-decoration: none;
-
-      @include media(sm) {
-        border-left: 0;
-        border-radius: 0;
-        border-right: 0;
-      }
+      font-size: 13px;
+      height: 32px;
+      margin-bottom: 2px;
+      padding: 3px $xxs;
 
       @include media(xs) {
         padding: 6px $sm;
@@ -93,8 +67,8 @@
 
       &:hover,
       &:active {
-        background-color: $purple-lightest;
-        color: $purple;
+        background-color: $white;
+        border-color: $gray-lighter;
       }
 
       > span {
@@ -106,9 +80,7 @@
     .a > span,
     .a > span::after {
       content: '+';
-      font-size: 16px;
       font-weight: $weight-bold;
-      opacity: .6;
       text-align: center;
       width: $xs;
     }
