@@ -4,9 +4,15 @@
   color: $purple-dark;
   padding-top: $xxl;
 
+  @include media(md) {
+    max-width: 300px;
+  }
+
   @include media(xs) {
-    border-right: none;
+    border-bottom: 1px solid $gray-lighter;
+    border-right: 0;
     height: 272px;
+    max-width: none;
     width: 100vw;
   }
 
@@ -23,16 +29,20 @@
     padding: $sm;
 
     @include media(sm) {
-      padding: $sm 0;
+      padding-bottom: $sm;
+      padding-top: $sm;
     }
 
     @include media(xs) {
+      padding-left: 0;
+      padding-right: 0;
       width: 100vw;
     }
   }
 }
 
 .nav {
+
   .ul {
     list-style: none;
     margin-left: $sm;
@@ -79,6 +89,10 @@
       border-left: 0;
       border-radius: 0;
       border-right: 0;
+    }
+
+    @include media(xs) {
+      padding: 6px $sm;
     }
 
     &:hover,
