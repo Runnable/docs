@@ -38,86 +38,83 @@
       padding-right: 0;
       width: 100vw;
     }
-  }
-}
 
-.nav {
+    .ul {
+      list-style: none;
+      margin-left: $sm;
+      padding: 0;
 
-  .ul {
-    list-style: none;
-    margin-left: $sm;
-    padding: 0;
-
-    @include media(sm) {
-      margin-left: 0;
-    }
-  }
-
-  .li {
-    border-color: transparent;
-    border-radius: $input-border-radius-lg;
-
-    @include media(sm) {
-      border-radius: 0;
-    }
-
-    // active state
-    &.active {
-      background-color: $purple-lightest;
-      color: $purple;
-
-      .a,
-      .a:hover {
-        background-color: transparent;
-        border-color: transparent;
+      @include media(sm) {
+        margin-left: 0;
       }
     }
-  }
 
-  .a {
-    border: $input-border solid transparent;
-    border-radius: $input-border-radius-lg;
-    display: block;
-    font-size: 14px;
-    line-height: $input-line-height-sm - 12px;
-    margin-bottom: 3px;
-    outline: none;
-    padding: 6px $xxs;
-    text-decoration: none;
+    .li {
+      border-color: transparent;
+      border-radius: $input-border-radius-lg;
 
-    @include media(sm) {
-      border-left: 0;
-      border-radius: 0;
-      border-right: 0;
+      @include media(sm) {
+        border-radius: 0;
+      }
+
+      // active state
+      &.active {
+        background-color: $purple-lightest;
+        color: $purple;
+
+        .a,
+        .a:hover {
+          background-color: transparent;
+          border-color: transparent;
+        }
+      }
     }
 
-    @include media(xs) {
-      padding: 6px $sm;
+    .a {
+      border: $input-border solid transparent;
+      border-radius: $input-border-radius-lg;
+      display: block;
+      font-size: 14px;
+      line-height: $input-line-height-sm - 12px;
+      margin-bottom: 3px;
+      outline: none;
+      padding: 6px $xxs;
+      text-decoration: none;
+
+      @include media(sm) {
+        border-left: 0;
+        border-radius: 0;
+        border-right: 0;
+      }
+
+      @include media(xs) {
+        padding: 6px $sm;
+      }
+
+      &:hover,
+      &:active {
+        background-color: $purple-lightest;
+        color: $purple;
+      }
+
+      > span {
+        float: right;
+      }
     }
 
-    &:hover,
-    &:active {
-      background-color: $purple-lightest;
-      color: $purple;
+    // + & - symbols
+    .a > span,
+    .a > span::after {
+      content: '+';
+      font-size: 16px;
+      font-weight: $weight-bold;
+      opacity: .6;
+      text-align: center;
+      width: $xs;
     }
 
-    > span {
-      float: right;
+    .open > a > span::after {
+      content: '-';
     }
-  }
-
-  // + & - symbols
-  .a > span,
-  .a > span::after {
-    content: '+';
-    font-size: 16px;
-    font-weight: $weight-bold;
-    opacity: .6;
-    text-align: center;
-    width: $xs;
-  }
-
-  .open > a > span::after {
-    content: '-';
   }
 }
