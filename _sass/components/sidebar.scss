@@ -62,8 +62,8 @@
     .a {
       display: block;
       font-size: 13px;
-      height: 32px;
       margin-bottom: 2px;
+      min-height: 32px;
       padding: 3px $xxs;
 
       @include media(xs) {
@@ -79,9 +79,10 @@
         font-weight: $weight-bold;
       }
 
-    > span {
-      float: right;
-      margin-left: 5px;
+      > span {
+        float: right;
+        margin-left: 5px;
+      }
     }
 
     // + & - symbols
