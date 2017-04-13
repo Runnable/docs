@@ -4,7 +4,8 @@
   width: 100%;
 
   @include media(xs) {
-    padding-top: 0;
+    padding-left: $lg;
+    padding-right: $lg;
   }
 
   > *:last-child:not(.well) {

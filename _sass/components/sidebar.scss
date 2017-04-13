@@ -5,12 +5,25 @@
   padding: $lg $md;
   width: 280px;
 
+  @include media(sm) {
+    padding-left: $sm;
+    padding-right: $sm;
+    width: 250px;
+  }
+
   @include media(xs) {
     border-bottom: 1px solid $gray-lighter;
     border-right: 0;
     height: 272px;
-    max-width: none;
-    width: 100vw;
+    padding: $md 0 0;
+    width: 100%;
+  }
+
+  .search {
+    @include media(xs) {
+      margin-left: $lg;
+      margin-right: $lg;
+    }
   }
 
   .nav {
@@ -18,7 +31,8 @@
     overflow: auto;
 
     @include media(xs) {
-      width: 100vw;
+      margin-top: 0;
+      padding: $sm $md;
     }
 
     .ul {

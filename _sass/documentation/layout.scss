@@ -3,6 +3,7 @@
   padding: $lg $md;
 
   @include media(xs) {
+    flex-direction: column;
     justify-content: center;
   }
 }
