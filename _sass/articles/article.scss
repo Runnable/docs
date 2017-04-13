@@ -1,11 +1,12 @@
 .article {
   width: 100%;
   max-width: 880px;
-  padding: $md;
-  padding-top: $lg;
+  padding: $lg $md;
+  width: 100%;
 
   @include media(xs) {
-    padding-top: 0;
+    padding-left: $lg;
+    padding-right: $lg;
   }
 
   > *:last-child:not(.well) {
@@ -15,20 +16,20 @@
   img {
     display: block;
     height: auto;
-    margin: 30px 0;
+    margin: $lg auto;
     max-height: 420px;
-    width: auto;
     max-width: 100%;
+    width: auto;
   }
 
-  h1 {
-    font-size: 36px;
+  h1:first-child {
+    margin-top: 0;
   }
 
   h1,
   h2,
   h3, {
-    margin: $lg 0 $sm;
+    margin: $sm 0;
   }
 
   // vertical rhythm
@@ -66,6 +67,7 @@
   }
 
   code {
+    display: inline-block;
     padding: 1px 5px;
   }
 
@@ -183,8 +185,8 @@
     background: $gray-lighter;
     border: 0;
     height: 1px;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    margin-bottom: $lg;
+    margin-top: $lg;
 
     @include media(xs) {
       margin-left: 30px;
@@ -240,9 +242,9 @@
 
   img {
     height: auto;
-    margin-bottom: $lg;
-    margin-top: $sm;
-    max-width: calc(100vw - 3rem);
+    margin-bottom: $md;
+    margin-top: $md;
+    max-width: 100%;
     width: auto;
 
     &.img-sm {

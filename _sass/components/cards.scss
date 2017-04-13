@@ -3,22 +3,26 @@
   border: $input-border solid $gray-lighter;
   border-radius: $input-border-radius-lg;
   box-shadow: 0 2px 9px rgba($black,.075);
-  margin: $sm;
-  width: 420px;
+  flex: 0 0 calc(50% - #{$md});
+  margin-bottom: $md;
 
-
-  @include media(sm) {
-    max-width: calc(100vw - #{$sidebar-width});
+  @include media(md) {
+    flex: 1 1 auto;
   }
 
-  @include media(xs) {
-    max-width: calc(100vw - 60px);
+  &:nth-child(even) {
+    margin-left: $md;
+
+    @include media(md) {
+      margin-left: 0;
+    }
   }
 
   .h1 {
     font-size: 20px;
     font-weight: $weight-bold;
   }
+
   .p {
     font-size: 16px;
     font-weight: $weight-normal;
@@ -31,10 +35,11 @@
 
     > .img {
       display: block;
-      margin: 0 auto;
       height: 160px;
+      margin: 0 auto;
       width: 160px;
     }
+
     .runnabear {
       display: block;
       margin: 0 auto;
@@ -43,14 +48,15 @@
       width: 280px;
     }
   }
+
   .list-item {
     margin-top: 2px;
   }
 
   .link {
-    font-size: 16px;
     border: 1px solid transparent;
     border-radius: $input-border-radius-lg;
+    font-size: 16px;
     text-decoration: none;
 
     &:hover {
@@ -69,8 +75,8 @@
   .icons-chevron-right {
     float: right;
     height: 12px;
+    margin-left: 10px;
     opacity: .3;
     width: 12px;
-    margin-left: 10px;
   }
 }
