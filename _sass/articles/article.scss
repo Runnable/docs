@@ -1,6 +1,6 @@
 .article {
   max-width: 880px;
-  padding: $md;
+  padding: $lg $md;
   width: 100%;
 
   @include media(xs) {

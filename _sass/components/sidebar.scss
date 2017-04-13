@@ -2,11 +2,7 @@
   background: $gray-lighterest;
   border-right: 1px solid $gray-lighter;
   color: $gray;
-  padding: $md;
-
-  @include media(md) {
-    padding: $md $sm;
-  }
+  padding: $lg $md;
 
   @include media(xs) {
     border-bottom: 1px solid $gray-lighter;
@@ -35,26 +31,15 @@
     }
 
     .li {
-      border: $input-border solid transparent;
-      border-radius: $input-border-radius;
 
       // active state
       &.active {
-        background-color: $white;
-        border-color: $gray-lighter;
-        height: 32px;
-
-        .a,
-        .a:hover {
-          background-color: transparent;
-          border-color: transparent;
-        }
+        color: $purple-light;
+        font-weight: $weight-bold;
       }
     }
 
     .a {
-      border: $input-border solid transparent;
-      border-radius: $input-border-radius;
       display: block;
       font-size: 13px;
       height: 32px;
@@ -65,10 +50,13 @@
         padding: 6px $sm;
       }
 
-      &:hover,
+      &:hover {
+        color: $gray-dark;
+      }
+
       &:active {
-        background-color: $white;
-        border-color: $gray-lighter;
+        color: $purple-light;
+        font-weight: $weight-bold;
       }
 
       > span {
