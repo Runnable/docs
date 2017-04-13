@@ -1,10 +1,8 @@
 .home {
   flex-wrap: wrap;
-  padding: $sm;
-  padding-top: $xxl;
+  padding: $lg $md;
 
   @include media(xs) {
     justify-content: center;
-    padding-top: $sm;
   }
 }

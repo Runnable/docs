@@ -3,6 +3,7 @@
   border-right: 1px solid $gray-lighter;
   color: $gray;
   padding: $lg $md;
+  width: 280px;
 
   @include media(xs) {
     border-bottom: 1px solid $gray-lighter;
@@ -36,6 +37,11 @@
       &.active {
         color: $purple-light;
         font-weight: $weight-bold;
+
+        .a:hover,
+        .a:active {
+          color: $purple-light;
+        }
       }
     }
 
