@@ -20,6 +20,10 @@
     max-width: 640px;
     width: auto;
 
+    @include media($md) {
+      max-width: 100%;
+    }
+
     &.img-sm {
       max-width: 150px;
     }
