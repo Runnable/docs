@@ -1,136 +1,101 @@
 .sidebar {
-  background: linear-gradient($purple-light, $purple-blue);
-  color: $white;
-  height: 100vh;
-
-  @include media(xxl) {
-    padding-left: 300px;
-    width: $sidebar-width + 300px;
-  }
-
-  @include media(xl) {
-    padding-left: 150px;
-    width: $sidebar-width + 150px;
-  }
-
-  @include media(lg) {
-    padding-left: 90px;
-    width: $sidebar-width + 90px;
-  }
-
-  @include media(md) {
-    padding-left: 0;
-    width: $sidebar-width;
-  }
+  background: $gray-lighterest;
+  border-right: 1px solid $gray-lighter;
+  color: $gray;
+  padding: $lg $md;
+  width: 280px;
 
   @include media(sm) {
-    width: $sidebar-width - 60px;
+    padding-left: $sm;
+    padding-right: $sm;
+    width: 250px;
   }
 
   @include media(xs) {
-    height: 285px;
-    width: 100vw;
+    border-bottom: 1px solid $gray-lighter;
+    border-right: 0;
+    height: 272px;
+    padding: $md 0 0;
+    width: 100%;
   }
 
-  .logo {
-    padding: $md $sm $sm;
-
+  .search {
     @include media(xs) {
-      padding-top: $sm;
+      margin-left: $lg;
+      margin-right: $lg;
     }
   }
 
   .nav {
-    border-top: 1px solid rgba($white,.1);
-    margin-top: $sm;
+    margin-top: $md;
     overflow: auto;
-    padding: $sm;
-    width: $sidebar-width;
-
-    @include media(sm) {
-      padding: $sm 0;
-      width: $sidebar-width - 60px;
-    }
 
     @include media(xs) {
-      width: 100vw;
-    }
-  }
-}
-
-.nav {
-
-  .ul {
-    list-style: none;
-    margin-left: $sm;
-    padding: 0;
-
-    @include media(sm) {
-      margin-left: 0;
-    }
-  }
-
-  .li {
-    border-color: transparent;
-    border-radius: $input-border-radius-lg;
-
-    @include media(sm) {
-      border-radius: 0;
+      margin-top: 0;
+      padding: $sm $md;
     }
 
-    // active state
-    &.active {
-      background-color: $purple-lightest;
-      color: $purple;
+    .ul {
+      list-style: none;
+      margin-left: $sm;
+      padding: 0;
 
-      .a,
-      .a:hover {
-        background-color: transparent;
-        border-color: transparent;
+      @include media(sm) {
+        margin-left: 0;
       }
     }
-  }
 
-  .a {
-    border: $input-border solid transparent;
-    border-radius: $input-border-radius-lg;
-    display: block;
-    font-size: 14px;
-    line-height: $input-line-height-sm - 12px;
-    margin-bottom: 3px;
-    outline: none;
-    padding: 6px $xxs;
-    text-decoration: none;
+    .li {
 
-    @include media(sm) {
-      border-left: 0;
-      border-radius: 0;
-      border-right: 0;
+      // active state
+      &.active {
+        color: $purple-light;
+        font-weight: $weight-bold;
+
+        .a:hover,
+        .a:active {
+          color: $purple-light;
+        }
+      }
     }
 
-    &:hover,
-    &:active {
-      background-color: $purple-lightest;
-      color: $purple;
+    .a {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 2px;
+      min-height: 32px;
+      padding: 3px $xxs;
+
+      @include media(xs) {
+        padding: 6px $sm;
+      }
+
+      &:hover {
+        color: $gray-dark;
+      }
+
+      &:active {
+        color: $purple-light;
+        font-weight: $weight-bold;
+      }
+
+      > span {
+        float: right;
+        margin-left: 5px;
+      }
     }
 
-    > span {
-      float: right;
+    // + & - symbols
+    .a > span,
+    .a > span::after {
+      content: '+';
+      font-weight: $weight-bold;
+      text-align: center;
+      width: $xs;
     }
-  }
 
-  // + & - symbols
-  .a > span,
-  .a > span::after {
-    content: '+';
-    font-size: 16px;
-    font-weight: $weight-bold;
-    opacity: .6;
-    text-align: center;
-    width: $xs;
-  }
-
-  .open > a > span::after {
-    content: '-';
+    .open > a > span::after {
+      content: '-';
+    }
   }
 }

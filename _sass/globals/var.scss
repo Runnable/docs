@@ -91,6 +91,8 @@ $screen-md: 1024px;
 $screen-lg: 1440px;
 $screen-xl: 1920px;
 
+// component sizes
+$header-height: 64px;
 $sidebar-width: 300px;
 
 $directions-list: col row;
@@ -131,6 +133,7 @@ $sm: 15px;
 $md: 30px;
 $lg: 45px;
 $xl: 60px;
+$xxl: 80px;
 
 $size-directions: top right bottom left;
 $size-list: none xxs xs sm md lg xl;

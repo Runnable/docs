@@ -8,36 +8,24 @@ h4 {
   margin: 0;
 }
 
+h1,
 .h1 {
-  font-size: 45px;
-
-  @include media(sm) {
-    font-size: 36px;
-  }
-}
-
-.h2 {
-  font-size: 36px;
-
-  @include media(sm) {
-    font-size: 30px;
-  }
-}
-
-.h3 {
-  font-size: 30px;
-
-  @include media(sm) {
-    font-size: 24px;
-  }
-}
-
-.h4 {
   font-size: 24px;
+}
 
-  @include media(sm) {
-    font-size: 18px;
-  }
+h2,
+.h2 {
+  font-size: 21px;
+}
+
+h3,
+.h3 {
+  font-size: 19px;
+}
+
+h4,
+.h4 {
+  font-size: 16px;
 }
 
 // inline styles
