@@ -2,7 +2,6 @@
   max-width: 880px;
   padding: $lg $md;
   width: 100%;
-  width: 100%;
 
   @include media(xs) {
     padding-left: $lg;
@@ -18,8 +17,21 @@
     height: auto;
     margin: $lg auto;
     max-height: 420px;
-    max-width: 100%;
+    max-width: 640px;
     width: auto;
+
+    &.img-sm {
+      max-width: 150px;
+    }
+
+    &.img-md {
+      max-width: 300px;
+    }
+
+    &.img-lg {
+      max-width: 520px;
+      width: 100%;
+    }
   }
 
   h1:first-child {
@@ -227,37 +239,6 @@
       margin-left: 30px;
       margin-right: 30px;
       max-width: calc(100% - 60px);
-    }
-  }
-
-  .img-centered {
-    display: block;
-    margin: 0 auto;
-
-    @include media(xxs) {
-      height: auto;
-      max-width: 100%;
-    }
-  }
-
-  img {
-    height: auto;
-    margin-bottom: $md;
-    margin-top: $md;
-    max-width: 100%;
-    width: auto;
-
-    &.img-sm {
-      max-width: 150px;
-    }
-
-    &.img-md {
-      max-width: 300px;
-    }
-
-    &.img-lg {
-      max-width: 520px;
-      width: 100%;
     }
   }
 }
