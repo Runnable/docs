@@ -5,21 +5,16 @@
 // scss-lint:disable IdSelector
 #results {
 // scss-lint:enable IdSelector
-  padding: 50px;
+  padding: $lg $md;
 }
 
 .result {
-  margin: 36px 0;
-  max-width: 580px;
+  margin: $md 0;
 }
 
 .result-length {
   border-bottom: 1px solid $gray-lightest;
-  font-size: 16px;
-  font-weight: 600;
-  margin-top: 27px;
-  padding-bottom: 15px;
-  width: 100%;
+  font-weight: $weight-bold;
 }
 
 .search {
