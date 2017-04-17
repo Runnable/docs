@@ -14,36 +14,40 @@ to seed you DB during the build process. This allows you to 'bake' your seed int
 container. Then every branch that you run in isolation will immediately start up with a DB
 container that is pre-seeded, taking advantage of the container image cache.
 
+---
+
 ### Getting Started
-* Make sure you have set up your database template first.
-#### Create a _Non-Repository Template_ for PostgreSQL.
-  1. Click __Create Template__ in the _Templates_ tab
-  2. Select __Non-Repository Template__ to reveal a list of non-repository templates. Select __PostgreSQL__.
+1. Make sure you have set up your database template first.
+
+2. Create a _Non-Repository Template_ for PostgreSQL.
+  * Click __Create Template__ in the _Templates_ tab
+  * Select __Non-Repository Template__ to reveal a list of non-repository templates. Select __PostgreSQL__.
     ![Select Template]({{ site.baseurl }}/images/create-postgres-db-1.png)  
 
-  3. Name your template, if desired. Click __Create Template__
+  * Name your template, if desired. Click __Create Template__
     ![Name & Create Template]({{ site.baseurl }}/images/create-postgres-db-2.png)  
 
-  4. Your template should launch and turn *green* when the container has finsihed building.
+  * Your template should launch and turn *green* when the container has finsihed building.
     ![Template launched]({{ site.baseurl }}/images/create-postgres-db-3.png)  
 
-  5. Select __Dockerfile__ to customize your database. Here you can modify the environment variables to
-  change desired usernames, passwords, and database names. Defaults have been set for your convienence, 
+  * Select __Dockerfile__ to customize your database. Here you can modify the environment variables to
+  change desired usernames, passwords, and database names. Defaults have been set for your convienence,
   but if you would like to change anything, just uncomment the line and modify as desired.
     ![Dockerfile]({{ site.baseurl }}/images/create-postgres-db-4.png)  
 
-  6. Once running, you can setup template connections with your repository applications. [Here is how.](/connections/how_to_connect_your_containers.md)
+  * Once running, you can setup template connections with your repository applications. [Here is how.](/connections/how_to_connect_your_containers.md)
 
+  ---
 
 ### Produce a dump of your development database to upload to Runnable
-* Take a dump of your PostgreSQL database. The following command will dump the contents of your database named `postgres` to a `dump` file.
+1. Take a dump of your PostgreSQL database. The following command will dump the contents of your database named `postgres` to a `dump` file.
   > Note the use of `-U postgres`, you will need to authorize the pg_dump command with whichever custom credentials you have set.
-  
+
   ```
   $ pg_dump -U postgres -Fc postgres -f seed.dump
   ```  
 
-* Your dump file should end up looking similar to this, but much longer:
+2. Your dump file should end up looking similar to this, but much longer:
     ```
     $ cat seed.dump
     PGDMP                                                                                                      
@@ -57,6 +61,8 @@ container that is pre-seeded, taking advantage of the container image cache.
     ...
     ```
 
+    ---
+
 ### Upload the seed file to your template configuration
 1. Bring up the template configuration modal by either clicking on the _cog_ next to your database template in the `Containers` pane, or clicking on Dockerfile in the `Templates` pane.
   ![Select Template]({{ site.baseurl }}/images/seed-postgres-db-1.png)  
@@ -67,6 +73,7 @@ container that is pre-seeded, taking advantage of the container image cache.
 4. Select 'Upload File' to bring up the file selector and choose your dump file (i.e. `seed.dump`).
   ![File Uploaded]({{ site.baseurl }}/images/seed-postgres-db-4.png)  
 
+  ---
 
 ### Enable the database seeding functionality
 1. Uncomment the `ADD seed.dump /seed/dump` line in the Dockerfile editor to the right.
@@ -75,6 +82,7 @@ container that is pre-seeded, taking advantage of the container image cache.
     Make sure you leave the second `seed.dump` intact so the init script will work.
 2. Now click `Save & Build` to build your container and seed your database.
 
+---
 
 ### Next steps
 Now that your template database container has been 'baked' in with your seed file, subsequent databases that are spawned per branch will immediately start up with the seeded data. If you ever want to update your seed file, just click `Rebuild Without Cache` on the template container to pull a newer seed and cache it into the container image.

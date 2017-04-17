@@ -14,31 +14,33 @@ to seed you DB during the build process. This allows you to 'bake' your seed int
 container. Then every branch that you run in isolation will immediately start up with a DB
 container that is pre-seeded, taking advantage of the container image cache.
 
+---
+
 ### Getting Started
-* Make sure you have set up your database template first.
-#### Create a _Non-Repository Template_ for MySQL.
-  1. Click __Create Template__ in the _Templates_ tab
-  2. Select __Non-Repository Template__ to reveal a list of non-repository templates. Select __MySQL__.
+1. Make sure you have set up your database template first.
+2. Create a _Non-Repository Template_ for MySQL.
+  * Click __Create Template__ in the _Templates_ tab
+  * Select __Non-Repository Template__ to reveal a list of non-repository templates. Select __MySQL__.
     ![Select Template]({{ site.baseurl }}/images/create-mysql-db-1.png)  
 
-  3. Name your template, if desired. Click __Create Template__
+  * Name your template, if desired. Click __Create Template__
     ![Name & Create Template]({{ site.baseurl }}/images/create-mysql-db-2.png)  
 
-  4. Your template should launch and turn *green* when the container has finsihed building.
+  * Your template should launch and turn *green* when the container has finsihed building.
     ![Template launched]({{ site.baseurl }}/images/create-mysql-db-3.png)  
 
-  5. Select __Dockerfile__ to customize your database. Here you can modify the environment variables to
+  * Select __Dockerfile__ to customize your database. Here you can modify the environment variables to
   change desired usernames, passwords, and database names. Defaults have been set for your convienence.
     ![Dockerfile]({{ site.baseurl }}/images/create-mysql-db-4.png)  
 
-  6. Once running, you can setup template connections with your repository applications. [Here is how.](/connections/how_to_connect_your_containers.md)
+  * Once running, you can setup template connections with your repository applications. [Here is how.](/connections/how_to_connect_your_containers.md)
 
 
 ### Produce a dump of your development database to upload to Runnable
 * Take a dump of your MySQL database. The following command will dump the contents of your database to a `sql` file.
-  > Note the use of `-u mysql` and `-p`. This will prompt you for your password, the default being `mysql`. 
+  > Note the use of `-u mysql` and `-p`. This will prompt you for your password, the default being `mysql`.
   You will have to authorize the mysqldump command with whichever custom credentials you have set.
-  
+
   ```
   $ mysqldump --all-databases -u mysql -p > seed.sql
   ```  
