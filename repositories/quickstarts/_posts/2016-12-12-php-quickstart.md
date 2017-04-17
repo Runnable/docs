@@ -24,7 +24,7 @@ In order to get a Laravel app running, here are the following steps you need to 
   `$ chgrp -R www-data /var/www/html/`
   `$ chmod -R 775 /var/www/html/storage`
 
-  ---
+---
 
 #### Add your *laravel.conf* apache2 configuration to */etc/apache2/sites-available*.
 1. You can do this by clicking on *Files & SSH Keys* and clicking the *Add* dropdown then *File*. This will bring up the **Upload File** modal.
@@ -55,7 +55,7 @@ In order to get a Laravel app running, here are the following steps you need to 
   $ a2enmod rewrite
   ```
 
-  ---
+---
 
 #### Set up your Laravel environment
 Add the following lines to the **Build Commands** section under *Commands & Packages*
