@@ -4,8 +4,10 @@ shortTitle: Supported Features
 step: 2
 tags:
 - docker
-description: Docker compose features that Runnable supports out of the box.
+description: Docker Compose features that Runnable supports out of the box.
 ---
+
+Docker Compose features that Runnable supports out of the box.
 
 ---
 
