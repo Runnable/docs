@@ -8,9 +8,11 @@ tags:
 description: Pull Request bot for Github that updates your Pull Requests with build / test results.
 ---
 
-Once your team is setup on Runnable, you can launch into your Runnable environments straight from your Github org's PR pages. 
+Once your team is setup on Runnable, you can launch into your Runnable environments straight from your Github org's PR pages.
 
-To enable our PR Bot's comments:
+---
+
+### To enable our PR Bot's comments:
 
 1. Click on your Github org's avatar on the top left to reveal a dropdown.
   ![prbot1]({{ site.baseurl }}/images/prbot1.png)
@@ -31,4 +33,3 @@ To enable our PR Bot's comments:
 7. Push a commit to the branch.
 
 8. Go to the PR page to see Runnabot's comment!
-
