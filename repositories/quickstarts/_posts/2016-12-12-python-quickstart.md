@@ -66,8 +66,8 @@ Use this tool to add any addtional configuration files, other GitHub repositorie
 
 For more details, Check Out:
 
-1. [Adding Files to your Container](https://support.runnable.com/hc/en-us/articles/208221743)
-2. [Adding SSH Keys to build private modules](https://support.runnable.com/hc/en-us/articles/208018586-My-build-is-failing-because-of-No-Such-Key-or-Host-key-verification-failed-What-do-I-do-)
+1. [Adding Files to your Container]({{site.baseurl}}/repositories/adding-additional-files)
+2. [Adding SSH Keys to build private modules]({{site.baseurl}}/troubleshooting/my-build-is-failing-because-of-no-such-key-or-host-key-verification-failed-what-do-i-do}})
 
 ---
 
@@ -87,7 +87,7 @@ Since your app runs on port 8000, we'll click on the *Exposed Ports* tool and ex
 
 These logs correspond to all the output from the build process of your template. Any errors here will correspond to configuration options you have specified in your repository, Build Commands, Packages and Files & SSH keys.
 
-![Build Logs](https://support.runnable.com/hc/en-us/article_attachments/203094436/Screen_Shot_2016-03-10_at_3.06.10_PM.png)  
+![Build Logs](https://support.runnable.com/hc/en-us/article_attachments/203094436/Screen_Shot_2016-03-10_at_3.06.10_PM.png)
 
 ---
 
@@ -111,7 +111,7 @@ This is a terminal session into a container launched from your template. This is
 
 ### URL
 
-This is the Environment URL corresponding to the container launched from the default branch. Check [this](https://support.runnable.com/hc/en-us/articles/212802006-Runnable-URLs) article out for more about Runnable URLs.
+This is the Environment URL corresponding to the container launched from the default branch. Check [this]({{site.baseurl}}/networking/runnable-urls-explained) article out for more about Runnable URLs.
 
 ![Runnable URL]({{ site.baseurl }}/images/python-url.png)
 
@@ -119,13 +119,13 @@ This is the Environment URL corresponding to the container launched from the def
 
 * When you’re ready, click *Done* to see a summary of your new container.
 ![Done](https://support.runnable.com/hc/en-us/article_attachments/203162656/Screen_Shot_2016-03-16_at_9.43.16_PM.png)
-* If everything went well, your build will complete successfully. Anytime you run across an error that you need help with, we have developers ready to help in real-time. Click on the chat bubble on the bottom left!  
+* If everything went well, your build will complete successfully. Anytime you run across an error that you need help with, we have developers ready to help in real-time. Click on the chat bubble on the bottom left!
 
 ---
 
 ## Connecting to a DB template
 
-1. Follow one of our DB Quickstarts to add and seed a database: [MySQL](https://support.runnable.com/hc/en-us/sections/202755686-Branches) / [PostgresQL](https://support.runnable.com/hc/en-us/sections/202755686-Branches) / [MongoDB](https://support.runnable.com/hc/en-us/sections/202755686-Branches).
+1. Follow one of our DB Quickstarts to add and seed a database: [MySQL]({{site.baseurl}}/services/databases/how-to-setup-your-mysql-database-template) / [PostgresQL]({{site.baseurl}}/services/databases/how-to-setup-your-postgres-database-template)
 
 2. In our case, we added a MySQL template.
 ![MySQL 1]({{ site.baseurl }}/images/python-mysql1.png)
@@ -134,11 +134,11 @@ This is the Environment URL corresponding to the container launched from the def
 
 > If you don't use Environment Variables for host discovery, you may have to modify your repository to use the Runnable template URL as your MySQL hostname. You can do this by either uploading a file using "Files & SSH Keys" or by actually modifying your repository on Github.com.
 
-4. Specify the the value for the "MYSQL_HOST" environment variable. From our article [Runnable URLs](https://support.runnable.com/hc/en-us/articles/212802006-Runnable-URLs), it is clear that we need to use MySQL's template URL to connect to it. As a convenience we provide all template URLs in the Environment Variables tab.
+4. Specify the the value for the "MYSQL_HOST" environment variable. From our article [Runnable URLs]({{site.baseurl}}/networking/runnable-urls-explained), it is clear that we need to use MySQL's template URL to connect to it. As a convenience we provide all template URLs in the Environment Variables tab.
 ![MySQL 2]({{ site.baseurl }}/images/python-mysql2.png) ![MySQL 3]({{ site.baseurl }}/images/python-mysql3.png) ![MySQL 4]({{ site.baseurl }}/images/python-mysql4.png)
 
 5. Click *Save & Build*.
 
 6. The Pyhton template is now successfully connected with the "MySQL" template!
 
-Head on over to our [Branches](https://support.runnable.com/hc/en-us/sections/202755686-Branches) section to see how to containers from your templates.
+Head on over to our [Branches]({{site.baseurl}}/troubleshooting/i-dont-see-my-branches-being-added-on-runnable) section to see how to containers from your templates.

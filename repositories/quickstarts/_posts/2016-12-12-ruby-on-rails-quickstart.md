@@ -78,8 +78,8 @@ Use this tool to add any addtional configuration files, other GitHub repositorie
 
 For more details, Check Out:
 
-1. [Adding Files to your Container](https://support.runnable.com/hc/en-us/articles/208221743)
-2. [Adding SSH Keys to build private modules](https://support.runnable.com/hc/en-us/articles/208018586-My-build-is-failing-because-of-No-Such-Key-or-Host-key-verification-failed-What-do-I-do-)
+1. [Adding Files to your Container]({{site.baseurl}}/repositories/adding-additional-files)
+2. [Adding SSH Keys to build private modules]({{site.baseurl}}/troubleshooting/my-build-is-failing-because-of-no-such-key-or-host-key-verification-failed-what-do-i-do)
 
 ---
 
@@ -120,7 +120,7 @@ This is a terminal session into a container launched from your template. This is
 
 ### URL
 
-This is the Environment URL corresponding to the container launched from the default branch. Check [this](https://support.runnable.com/hc/en-us/articles/212802006-Runnable-URLs) article out for more about Runnable URLs.
+This is the Environment URL corresponding to the container launched from the default branch. Check [this]({{site.baseurl}}/networking/runnable-urls-explained) article out for more about Runnable URLs.
 ![URL]({{ site.baseurl }}/images/create-rails-14.png)
 
 
@@ -134,7 +134,7 @@ This is the Environment URL corresponding to the container launched from the def
 
 ## Connecting to a DB template
 
-1. Follow one of our DB Quickstarts to add and seed a database: [MySQL](https://support.runnable.com/hc/en-us/sections/202755686-Branches) / [PostgresQL](https://support.runnable.com/hc/en-us/sections/202755686-Branches) / [MongoDB](https://support.runnable.com/hc/en-us/sections/202755686-Branches).
+1. Follow one of our DB Quickstarts to add and seed a database: [MySQL]({{site.baseurl}}/services/databases/how-to-setup-your-mysql-database-template) / [PostgresQL]({{site.baseurl}}/services/databases/how-to-setup-your-postgres-database-template)
 
 2. In our case, we added a PostgreSQL template.
 ![Postgres DB]({{ site.baseurl }}/images/rails-add-db-1.png)
@@ -144,7 +144,7 @@ This is the Environment URL corresponding to the container launched from the def
 
   > If you don't use Environment Variables for host discovery, you may have to modify your repository to use the Runnable template URL as your PostgreSQL hostname. You can do this by either uploading a file using "Files & SSH Keys" or by actually modifying your repository on Github.com.
 
-4. Specify the the value for the "DATABASE_URL" environment variable. From our article [Runnable URLs](https://support.runnable.com/hc/en-us/articles/212802006-Runnable-URLs), it is clear that we need to use PostgreSQL's template URL to connect to it. As a convenience we provide all template URLs in the Environment Variables tab.
+4. Specify the the value for the "DATABASE_URL" environment variable. From our article [Runnable URLs]({{site.baseurl}}/networking/runnable-urls-explained), it is clear that we need to use PostgreSQL's template URL to connect to it. As a convenience we provide all template URLs in the Environment Variables tab.
 ![Env Vars]({{ site.baseurl }}/images/rails-add-db-2.png) ![Insert URL]({{ site.baseurl }}/images/rails-add-db-3.png) ![Added URL]({{ site.baseurl }}/images/rails-add-db-4.png)
 
   > Make sure to add the PORT: 5432 as well!
@@ -153,4 +153,4 @@ This is the Environment URL corresponding to the container launched from the def
 
 6. The Rails template is now successfully connected with the "PostgreSQL" template!
 
-Head on over to our [Branches](https://support.runnable.com/hc/en-us/sections/202755686-Branches) section to see how to containers from your templates.
+Head on over to our [Branches]({{site.baseurl}}/troubleshooting/i-dont-see-my-branches-being-added-on-runnable) section to see how to containers from your templates.
