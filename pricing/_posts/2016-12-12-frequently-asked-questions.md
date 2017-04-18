@@ -13,26 +13,40 @@ description: Frequently Asked Questions regarding pricing for Runnable
 
 ---
 
-### Q: What is a service?
+### What is a service?
 A service is a repository or other service (like a database) that Runnable will create containers for. The number of services your team will need is roughly the number of services that make up your application.
 
-### Q: How are services calculated with Docker Compose?
+---
+
+### How are services calculated with Docker Compose?
 The number of services your team uses is the same as the number of services defined in each Compose file you add.
 
-### Q: What is a user?
+---
+
+### What is a user?
 A user is anyone who is able to make changes to your account, and have their branches deployed and kept up-to-date on Runnable.
 
-### Q: How do I remove a user?
+---
+
+### How do I remove a user?
 That feature is coming soon. For now, please contact us via the in-app chat or by [email](mailto:support@runnable.com) to remove users.
 
-### Q: What happens when a user is added or removed?
+---
+
+### What happens when a user is added or removed?
 We’ll prorate the cost of users daily, so your team will only pay for the time your users are active.
 
-### Q: How do I change my plan?
+---
+
+### How do I change my plan?
 We automatically determine your plan at end of every billing cycle based on the number of services your team is using.
 
-### Q: Why isn’t there a free plan?
+---
+
+### Why isn’t there a free plan?
 Runnable will remain free for your team’s first 14 days. If your development team believes our pricing plans are not well-suited for your needs, please [get in touch](mailto:support@runnable.com) with us.
 
-### Q: I have more questions.
+---
+
+### I have more questions.
 No problem! [Email us](mailto:support@runnable.com) and we’d be happy to help.
