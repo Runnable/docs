@@ -7,6 +7,8 @@ description: What permissions does Runnable need?
 
 Based on GitHub’s current permission model, we have to ask for more permissions than we would ideally like to (we **do not** modify your code). The permissions we need are:
 
+---
+
 1. Get a users basic info.
 2. Get a list of a user's organizations.
 3. Get a list of branches and commits from private repos from a particular organization.
