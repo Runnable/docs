@@ -30,14 +30,19 @@ container that is pre-seeded, taking advantage of the container image cache.
   * Your template should launch and turn *green* when the container has finsihed building.
     ![Template launched]({{ site.baseurl }}/images/create-postgres-db-3.png)  
 
+<<<<<<< Updated upstream
   * Select __Dockerfile__ to customize your database. Here you can modify the environment variables to
+=======
+  5. Select __Dockerfile__ to customize your database. Here you can modify the environment variables to
+>>>>>>> Stashed changes
   change desired usernames, passwords, and database names. Defaults have been set for your convienence,
   but if you would like to change anything, just uncomment the line and modify as desired.
     ![Dockerfile]({{ site.baseurl }}/images/create-postgres-db-4.png)  
 
   * Once running, you can setup template connections with your repository applications. [Here is how.](/connections/how_to_connect_your_containers.md)
 
-  ---
+
+---
 
 ### Produce a dump of your development database to upload to Runnable
 1. Take a dump of your PostgreSQL database. The following command will dump the contents of your database named `postgres` to a `dump` file.
@@ -61,7 +66,7 @@ container that is pre-seeded, taking advantage of the container image cache.
     ...
     ```
 
-    ---
+---
 
 ### Upload the seed file to your template configuration
 1. Bring up the template configuration modal by either clicking on the _cog_ next to your database template in the `Containers` pane, or clicking on Dockerfile in the `Templates` pane.
@@ -73,7 +78,7 @@ container that is pre-seeded, taking advantage of the container image cache.
 4. Select 'Upload File' to bring up the file selector and choose your dump file (i.e. `seed.dump`).
   ![File Uploaded]({{ site.baseurl }}/images/seed-postgres-db-4.png)  
 
-  ---
+---
 
 ### Enable the database seeding functionality
 1. Uncomment the `ADD seed.dump /seed/dump` line in the Dockerfile editor to the right.

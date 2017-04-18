@@ -35,6 +35,7 @@ container that is pre-seeded, taking advantage of the container image cache.
 
   * Once running, you can setup template connections with your repository applications. [Here is how.](/connections/how_to_connect_your_containers.md)
 
+---
 
 ### Produce a dump of your development database to upload to Runnable
 * Take a dump of your MySQL database. The following command will dump the contents of your database to a `sql` file.
@@ -85,6 +86,8 @@ container that is pre-seeded, taking advantage of the container image cache.
     -- Dump completed on 2016-09-19 23:38:51
     ```
 
+---
+
 ### Upload the seed file to your template configuration
 1. Bring up the template configuration modal by either clicking on the _cog_ next to your database template in the `Containers` pane, or clicking on Dockerfile in the `Templates` pane.
   ![Select Template]({{ site.baseurl }}/images/seed-mysql-db-1.png)  
@@ -96,6 +99,8 @@ container that is pre-seeded, taking advantage of the container image cache.
   ![File Uploaded]({{ site.baseurl }}/images/seed-mysql-db-4.png)  
 
 
+---
+
 ### Enable the database seeding functionality
 1. Uncomment the `ADD seed.sql /seed/sql` line in the Dockerfile editor to the right.
   ![Uncomment Seed]({{ site.baseurl }}/images/seed-mysql-db-5.png)  
@@ -103,6 +108,7 @@ container that is pre-seeded, taking advantage of the container image cache.
     Make sure you leave the second `seed.sql` intact so the init script will work.
 2. Now click `Save & Build` to build your container and seed your database.
 
+---
 
 ### Next steps
 Now that your template database container has been 'baked' in with your seed file, subsequent databases that are spawned per branch will immediately start up with the seeded data. If you ever want to update your seed file, just click `Rebuild Without Cache` on the template container to pull a newer seed and cache it into the container image.

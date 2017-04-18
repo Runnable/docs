@@ -21,15 +21,19 @@ to seed you DB during the build process. This allows you to 'bake' your seed int
 container. Then every branch that you run in isolation will immediately start up with a DB
 container that is pre-seeded, taking advantage of the container image cache.
 
-#### Get Started
+---
+
+### Getting Started
 In order to seed your database, you will need to [obtain a backup (or dump) of your existing database](clone_database.md).
 Once you have obtained the dump file, continue on the following steps:
 
 * [MySQL](#mysql)
 * [PostgreSQL](#postgresql)
 
-# MySQL
-### Upload the seed file to your template configuration
+---
+
+### MySQL
+Upload the seed file to your template configuration
 1. Bring up the template configuration modal by either clicking on the _cog_ next to your database template in the `Containers` pane, or clicking on Dockerfile in the `Templates` pane.
   ![Select Template]({{ site.baseurl }}/images/seed-mysql-db-1.png)
 2. Select the `Dockerfile` tab on the top menu within the modal.
@@ -39,6 +43,7 @@ Once you have obtained the dump file, continue on the following steps:
 4. Select 'Upload File' to bring up the file selector and choose your dump file (i.e. `seed.sql`).
   ![File Uploaded]({{ site.baseurl }}/images/seed-mysql-db-4.png)
 
+---
 
 ### Enable the database seeding functionality
 1. Uncomment the `ADD seed.sql /seed/sql` line in the Dockerfile editor to the right.
@@ -47,9 +52,10 @@ Once you have obtained the dump file, continue on the following steps:
     Make sure you leave the second `seed.sql` intact so the init script will work.
 2. Now click `Save & Build` to build your container and seed your database.
 
+---
 
-# PostgreSQL
-### Upload the seed file to your template configuration
+### PostgreSQL
+Upload the seed file to your template configuration
 1. Bring up the template configuration modal by either clicking on the _cog_ next to your database template in the `Containers` pane, or clicking on Dockerfile in the `Templates` pane.
   ![Select Template]({{ site.baseurl }}/images/seed-postgres-db-1.png)
 2. Select the `Dockerfile` tab on the top menu within the modal.
@@ -59,6 +65,7 @@ Once you have obtained the dump file, continue on the following steps:
 4. Select 'Upload File' to bring up the file selector and choose your dump file (i.e. `seed.dump`).
   ![File Uploaded]({{ site.baseurl }}/images/seed-postgres-db-4.png)
 
+---
 
 ### Enable the database seeding functionality
 1. Uncomment the `ADD seed.dump /seed/dump` line in the Dockerfile editor to the right.
