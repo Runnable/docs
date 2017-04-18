@@ -10,15 +10,21 @@ description: How to setup your multi-tier PHP application.
 
 In order to get a Laravel app running, here are the following steps you need to make sure you do:
 
+---
+
 #### Setup basic configuration
 1. Add your repository
 2. Select PHP stack and choose the suggested version.
 3. Follow the suggested recommendations for build and start commands. See below for slight modifications.
 
+---
+
 #### Set proper permissions for your application directory
   1. Add the following lines to the **Build Commands** section under *Commands & Packages*
   `$ chgrp -R www-data /var/www/html/`
   `$ chmod -R 775 /var/www/html/storage`
+
+---
 
 #### Add your *laravel.conf* apache2 configuration to */etc/apache2/sites-available*.
 1. You can do this by clicking on *Files & SSH Keys* and clicking the *Add* dropdown then *File*. This will bring up the **Upload File** modal.
@@ -44,8 +50,12 @@ In order to get a Laravel app running, here are the following steps you need to 
 3. Enter `/etc/apache2/sites-available` under Destination
 
 4. Add the following scripts to Scripts
-  ```$ a2ensite laravel.conf
-  $ a2enmod rewrite```
+  ```
+  $ a2ensite laravel.conf
+  $ a2enmod rewrite
+  ```
+
+---
 
 #### Set up your Laravel environment
 Add the following lines to the **Build Commands** section under *Commands & Packages*

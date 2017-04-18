@@ -10,7 +10,9 @@ description: How to setup your multi-tier Python application.
 
 This guide will help you setup Runnable templates for a simple Pyhton application. This guide will assume that you don't have a Dockerfile and want Runnable to generate the Dockerfile for you using a simple setup guide.
 
-## Configuring the App 
+---
+
+## Configuring the App
 
 * From the *Configure* page, click on the *Create Template* button. Choose the Pyhton repository you want to add.<br />
 ![Add Template]({{ site.baseurl }}/images/python-select-repo.png)
@@ -23,19 +25,25 @@ This guide will help you setup Runnable templates for a simple Pyhton applicatio
 * After clicking *Next*, you will be presented with the following three options: *Packages*, *Build Commands*, and *Container CMD*.<br />
 ![Build Commands and CMD]({{ site.baseurl }}/images/python-choose-cmd.png)
 
-### Packages 
+---
+
+### Packages
 
 This option allows you to install any tools, libraries, or frameworks you need. Add multiple packages by separating them with spaces. You can specify packages that are listed in the [Ubuntu Aptitude library](http://packages.ubuntu.com/).
 
+---
+
 ### Build Commands
 
-Use this option to specify any commands needed to build and prepare your app (supports UNIX bash format). These commands will run in the root folder of the repository after every push. This is also the perfect place to run any commands to build any assets (such as css, html and minified javascript code). 
+Use this option to specify any commands needed to build and prepare your app (supports UNIX bash format). These commands will run in the root folder of the repository after every push. This is also the perfect place to run any commands to build any assets (such as css, html and minified javascript code).
 
 For our simple API repository, this is where we’ll specify `pip install -r 'requirements.txt'`
 
 >Build commands cannot connect to any other container during a build. It is therefore not recommended to seed databases or communicate with another container using the Build Commands.
 
-### Container CMD 
+---
+
+### Container CMD
 
 Here the main run command for your app is specified. Important: the container will stop running when this command exits. For our simple Pyhton app, we will specify `python main.py`.
 
@@ -44,6 +52,8 @@ Here the main run command for your app is specified. Important: the container wi
 __Container CMD__ is where the invocation command for our app is specified. _Important:_ the container will stop running when this command exits.
 
 Click __Next__. Additional configuration options are revealed to customize your container further:
+
+---
 
 ### Environment Variables
 
@@ -59,35 +69,45 @@ For more details, Check Out:
 1. [Adding Files to your Container](https://support.runnable.com/hc/en-us/articles/208221743)
 2. [Adding SSH Keys to build private modules](https://support.runnable.com/hc/en-us/articles/208018586-My-build-is-failing-because-of-No-Such-Key-or-Host-key-verification-failed-What-do-I-do-)
 
+---
+
 ### Exposed Ports
 
-Open up any ports your repository may need. 
+Open up any ports your repository may need.
 
 Since your app runs on port 8000, we'll click on the *Exposed Ports* tool and expose it.
 ![Expose Ports](https://support.runnable.com/hc/en-us/article_attachments/203243523/Screen_Shot_2016-03-10_at_1.41.02_PM.png)
 
-1. Once you are happy with Save & Build to save our changes and trigger your first build. 
+1. Once you are happy with Save & Build to save our changes and trigger your first build.
 2. You will be automatically transitioned to the Logs tab of your configuration. Here you will be able to access:
+
+---
 
 ### Build Logs
 
-These logs correspond to all the output from the build process of your template. Any errors here will correspond to configuration options you have specified in your repository, Build Commands, Packages and Files & SSH keys. 
+These logs correspond to all the output from the build process of your template. Any errors here will correspond to configuration options you have specified in your repository, Build Commands, Packages and Files & SSH keys.
 
 ![Build Logs](https://support.runnable.com/hc/en-us/article_attachments/203094436/Screen_Shot_2016-03-10_at_3.06.10_PM.png)  
 
-### CMD Logs 
+---
 
-These logs correspond to all the output from the run process of a container launched from your template. Any errors here will correspond to configuration options you have specified in your CMD Command or Environment Variables. 
+### CMD Logs
+
+These logs correspond to all the output from the run process of a container launched from your template. Any errors here will correspond to configuration options you have specified in your CMD Command or Environment Variables.
 
 ![CMD Logs]({{ site.baseurl }}/images/python-cmd-logs.png)
 
-> Your repository can crash for several reasons outside of your configuration on Runnable. There could be several factors ranging from a bug in your code or a misconfigured connection. 
+> Your repository can crash for several reasons outside of your configuration on Runnable. There could be several factors ranging from a bug in your code or a misconfigured connection.
+
+---
 
 ### Terminal
 
 This is a terminal session into a container launched from your template. This is useful to verify any configuration details you may want to confirm.
 
 ![Terminal]({{ site.baseurl }}/images/python-terminal.png)
+
+---
 
 ### URL
 
@@ -100,6 +120,8 @@ This is the Environment URL corresponding to the container launched from the def
 * When you’re ready, click *Done* to see a summary of your new container.
 ![Done](https://support.runnable.com/hc/en-us/article_attachments/203162656/Screen_Shot_2016-03-16_at_9.43.16_PM.png)
 * If everything went well, your build will complete successfully. Anytime you run across an error that you need help with, we have developers ready to help in real-time. Click on the chat bubble on the bottom left!  
+
+---
 
 ## Connecting to a DB template
 
