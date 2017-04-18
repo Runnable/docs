@@ -14,7 +14,7 @@ This guide will help you setup Runnable templates for a simple Rails application
 
 ## Configuring your first Rails app
 
-1. From the *Configure* page, click on the *Create Template* button. Choose the Rails repository you want to add.<br />
+1. From the *Configure* page, click on the *Create Template* button. Choose the Rails repository you want to add.
 ![Add Template]({{ site.baseurl }}/images/create-rails-1.png)
 2. Select _Start up with our setup guide_ as your configuration mode.
 ![Select Mode]({{ site.baseurl }}/images/create-rails-2.png)
@@ -38,25 +38,29 @@ This option allows you to install any tools, libraries, or frameworks you need. 
 
 Use this option to specify any commands needed to build and prepare your app (supports UNIX bash format). These commands will run in the root folder of the repository after every push. This is also the perfect place to run any commands to build any assets (such as css, html and minified javascript code).
 
-For our simple API repository, this is where we’ll specify:<br />
+For our simple API repository, this is where we’ll specify:
 `bundle install`
 ![Build Commands]({{ site.baseurl }}/images/create-rails-5b.png)
 
->Build commands cannot connect to any other container during a build. It is therefore not recommended to seed databases or communicate with another container using the Build Commands.
+> Build commands cannot connect to any other container during a build. It is therefore not recommended to seed databases or communicate with another container using the Build Commands.
 
 ---
 
 ### Container CMD
 
-Here the main run command for your app is specified. Important: the container will stop running when this command exits. For our simple Rails app, we will specify:<br />
-`rails server -b 0.0.0.0`
+Here the main run command for your app is specified.
+
+> **Important:** The container will stop running when this command exits. For our simple Rails app, we will specify: `rails server -b 0.0.0.0`
+
 ![Container CMD]({{ site.baseurl }}/images/create-rails-5c.png)
 
->Note that we are using 0.0.0.0 to bind to all interfaces. This will allow us to access the container from other containers and through the browser."
+> **Note:** That we are using `0.0.0.0` to bind to all interfaces. This will allow us to access the container from other containers and through the browser.
 
-__Container CMD__ is where the invocation command for our app is specified. _Important:_ the container will stop running when this command exits.
+__Container CMD__ is where the invocation command for our app is specified. 
 
->This would also be a good place to add your migration commands after connecting your database. Your container cmd would look something similar to "rake db:migrate && rails server -b 0.0.0.0"
+> **Important:** the container will stop running when this command exits.
+
+> This would also be a good place to add your migration commands after connecting your database. Your container cmd would look something similar to `rake db:migrate && rails server -b 0.0.0.0`.
 
 Click __Next__. Additional configuration options are revealed to customize your container further:
 
@@ -64,10 +68,11 @@ Click __Next__. Additional configuration options are revealed to customize your 
 
 ### Environment Variables
 
-Add any required Environtment Variables your app may need. These values will be inserted into a container's environment when it launches from the template. The the syntax for entering in Environment variables is `KEY=VAL`<br />
+Add any required Environtment Variables your app may need. These values will be inserted into a container's environment when it launches from the template. The the syntax for entering in Environment variables is `KEY=VAL`
+
 ![Environment Variables]({{ site.baseurl }}/images/create-rails-8.png)
 
->For example: if you are trying to set the "RAILS_ENV" to "staging", you would input "RAILS_ENV=staging".
+> For example, if you are trying to set the `RAILS_ENV` to `staging`, you would input `RAILS_ENV=staging`.
 
 ---
 
@@ -87,7 +92,8 @@ For more details, Check Out:
 
 Open up any ports your repository may need.
 
-Most Rails apps run on 3000 when developing, so we'll click on the *Exposed Ports* tool and expose it. 
+Most Rails apps run on `3000` when developing, so we'll click on the *Exposed Ports* tool and expose it. 
+
 ![Exposed Ports]({{ site.baseurl }}/images/create-rails-7.png)
 
 1. Once you are happy with Save & Build to save our changes and trigger your first build.
@@ -124,30 +130,31 @@ This is the Environment URL corresponding to the container launched from the def
 ![URL]({{ site.baseurl }}/images/create-rails-14.png)
 
 
-* *Save &amp; Build* to save our changes and trigger your first build. ![Trigger Build](https://support.runnable.com/hc/en-us/article_attachments/203162596/Screen_Shot_2016-03-16_at_9.26.49_PM.png)
+1. *Save & Build* to save our changes and trigger your first build. ![Trigger Build](https://support.runnable.com/hc/en-us/article_attachments/203162596/Screen_Shot_2016-03-16_at_9.26.49_PM.png)
 
-* When you’re ready, click *Done* to see a summary of your new container.
+2. When you’re ready, click *Done* to see a summary of your new container.
 ![Done]({{ site.baseurl }}/images/create-rails-15.png)
-* If everything went well, your build will complete successfully. Anytime you run across an error that you need help with, we have developers ready to help in real-time. Click on the chat bubble on the bottom left!
+
+3. If everything went well, your build will complete successfully. Anytime you run across an error that you need help with, we have developers ready to help in real-time. Click on the chat bubble on the bottom left!
 
 ---
 
-## Connecting to a DB template
+## Connecting to a DB Template
 
 1. Follow one of our DB Quickstarts to add and seed a database: [MySQL]({{site.baseurl}}/services/databases/how-to-setup-your-mysql-database-template) / [PostgresQL]({{site.baseurl}}/services/databases/how-to-setup-your-postgres-database-template)
 
 2. In our case, we added a PostgreSQL template.
 ![Postgres DB]({{ site.baseurl }}/images/rails-add-db-1.png)
 
-3. Our repository is setup to use the environment variable "DATABASE_URL" to reference the hostname for PostgreSQL. To connect our Rails repository template to the "PostgreSQL" template, open up the "Environment Variables" tool in the Rails template configuration modal.
-![Open Env Vars]({{ site.baseurl }}/images/rails-add-db-5.png)
+3. Our repository is setup to use the environment variable `DATABASE_URL` to reference the hostname for PostgreSQL. To connect our Rails repository template to the "PostgreSQL" template, open up the "Environment Variables" tool in the Rails template configuration modal.
+  ![Open Env Vars]({{ site.baseurl }}/images/rails-add-db-5.png)
 
-  > If you don't use Environment Variables for host discovery, you may have to modify your repository to use the Runnable template URL as your PostgreSQL hostname. You can do this by either uploading a file using "Files & SSH Keys" or by actually modifying your repository on Github.com.
+    > If you don't use Environment Variables for host discovery, you may have to modify your repository to use the Runnable template URL as your PostgreSQL hostname. You can do this by either uploading a file using "Files & SSH Keys" or by actually modifying your repository on Github.com.
 
-4. Specify the the value for the "DATABASE_URL" environment variable. From our article [Runnable URLs]({{site.baseurl}}/networking/runnable-urls-explained), it is clear that we need to use PostgreSQL's template URL to connect to it. As a convenience we provide all template URLs in the Environment Variables tab.
+4. Specify the the value for the `DATABASE_URL` environment variable. From our article [Runnable URLs]({{site.baseurl}}/networking/runnable-urls-explained), it is clear that we need to use PostgreSQL's template URL to connect to it. As a convenience we provide all template URLs in the Environment Variables tab.
 ![Env Vars]({{ site.baseurl }}/images/rails-add-db-2.png) ![Insert URL]({{ site.baseurl }}/images/rails-add-db-3.png) ![Added URL]({{ site.baseurl }}/images/rails-add-db-4.png)
 
-  > Make sure to add the PORT: 5432 as well!
+  > Make sure to add the `PORT: 5432` as well!
 
 5. Click *Save & Build*.
 
