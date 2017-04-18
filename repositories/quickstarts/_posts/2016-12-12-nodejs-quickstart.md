@@ -32,7 +32,7 @@ This guide will help you setup Runnable templates for a simple 2-tier Node.js ap
 This option allows you to install any tools, libraries, or frameworks you need. Add multiple packages by separating them with spaces. You can specify packages that are listed in the Ubuntu Aptitude library.
   ![node4]({{ site.baseurl }}/images/node4.png)  
 
-  ---
+---
 
 ### Build Commands
 
