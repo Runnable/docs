@@ -20,7 +20,7 @@ This guide will help you setup Runnable templates for a simple 2-tier Node.js ap
 3. Find the repository you would like to configure the template for. In this case, we are starting with a simple Python repository.
   ![node2]({{ site.baseurl }}/images/node2.png)
 4. Choose the first option to use our simple setup guide.
-5. Give your template a name. This name will be used to generate the template URLs of all the containers that will launch from this template. Check out [this](http://https://runnable.zendesk.com/hc/en-us/articles/212802006) article for more details on URLs in Runnable.
+5. Give your template a name. This name will be used to generate the template URLs of all the containers that will launch from this template. Check out [this]({{site.baseurl}}/networking/runnable-urls-explained) article for more details on URLs in Runnable.
 6. Next, you’ll be able to select your app’s Stack Type, Version and Branch for your template. Go ahead and choose Node.js for your stack type, and select the version you want to use. Make sure you choose the branch that corresponds to your team’s main integration branch (‘master’  or ‘develop’ for example).
   ![node3]({{ site.baseurl }}/images/node3.png)
 6. On the next step, you can specify additional Packages, Build Commands, and the Container CMD.
@@ -118,7 +118,7 @@ This is a terminal session into a container launched from your template. This is
 
 ### URL
 
-This is the Environment URL corresponding to the container launched from the default branch. Check [this](https://support.runnable.com/hc/en-us/articles/212802006-Runnable-URLs) article out for more about Runnable URLs.
+This is the Environment URL corresponding to the container launched from the default branch. [Read more]({{ site.baseurl }}/networking/runnable-urls-explained) about Runnable URLs.
 
 ![node12]({{ site.baseurl }}/images/node12.png)
 
@@ -128,7 +128,7 @@ If everything went well, your build will complete successfully. Anytime you run 
 
 ## Connecting to a DB template
 
-1. Follow one of our DB Quickstarts to add and seed a database: [MySQL](https://support.runnable.com/hc/en-us/sections/202755686-Branches) / [PostgresQL](https://support.runnable.com/hc/en-us/sections/202755686-Branches) / [MongoDB](https://support.runnable.com/hc/en-us/sections/202755686-Branches).
+1. Follow one of our DB Quickstarts to add and seed a database: [MySQL]({{site.baseurl}}/services/databases/how-to-setup-your-mysql-database-template) / [PostgresQL]({{site.baseurl}}/services/databases/how-to-setup-your-postgres-database-template)
 
 2. In our case, we added a MySQL template.
 ![node14]({{ site.baseurl }}/images/node14.png)
@@ -137,11 +137,11 @@ If everything went well, your build will complete successfully. Anytime you run 
 
     > If you don't use Environment Variables for host discovery, you may have to modify your repository to use the Runnable template URL as your MySQL hostname. You can do this by either uploading a file using "Files & SSH Keys" or by actually modifying your repository on Github.com.
 
-4. Specify the the value for the `MYSQL_HOST` environment variable. From our article [Runnable URLs](https://support.runnable.com/hc/en-us/articles/212802006-Runnable-URLs), it is clear that we need to use MySQL's template URL to connect to it. As a convenience we provide all template URLs in the Environment Variables tab.
+4. Specify the the value for the `MYSQL_HOST` environment variable. From our article [Runnable URLs]({{site.baseurl}}/networking/runnable-urls-explained), it is clear that we need to use MySQL's template URL to connect to it. As a convenience we provide all template URLs in the Environment Variables tab.
 ![node15]({{ site.baseurl }}/images/node15.png) ![node16]({{ site.baseurl }}/images/node16.png) ![node17]({{ site.baseurl }}/images/node17.png)
 
 5. Click Save & Build.
 
 6. The "api" template is now successfully connected with the "MySQL" template!
 
-Head on over to our [Branches](https://support.runnable.com/hc/en-us/sections/202755686-Branches) section to see how to containers from your templates.
+Head on over to our [Branches]({{site.baseurl}}/troubleshooting/i-dont-see-my-branches-being-added-on-runnable) section to see how to launch containers from your templates.
