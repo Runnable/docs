@@ -30,12 +30,7 @@ container that is pre-seeded, taking advantage of the container image cache.
   * Your template should launch and turn *green* when the container has finsihed building.
     ![Template launched]({{ site.baseurl }}/images/create-postgres-db-3.png)  
 
-<<<<<<< Updated upstream
-  * Select __Dockerfile__ to customize your database. Here you can modify the environment variables to
-=======
-  5. Select __Dockerfile__ to customize your database. Here you can modify the environment variables to
->>>>>>> Stashed changes
-  change desired usernames, passwords, and database names. Defaults have been set for your convienence,
+  * Select __Dockerfile__ to customize your database. Here you can modify the environment variables to change desired usernames, passwords, and database names. Defaults have been set for your convienence,
   but if you would like to change anything, just uncomment the line and modify as desired.
     ![Dockerfile]({{ site.baseurl }}/images/create-postgres-db-4.png)  
 
