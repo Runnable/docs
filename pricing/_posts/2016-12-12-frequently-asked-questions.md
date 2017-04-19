@@ -5,7 +5,9 @@ step: 1
 description: Frequently Asked Questions regarding pricing for Runnable
 ---
 
-## Here’s how we calculate your bill each month:
+---
+
+### Here’s how we calculate your bill each month:
 
 1. We automatically determine which [plan](//runnable.com/pricing/) your team is on based on the number of services your team is using, and subtract any services used for testing (testing is free at the moment!).
 2. We figure out how many users your team had on Runnable, and prorate for users that were not present for the full month.
