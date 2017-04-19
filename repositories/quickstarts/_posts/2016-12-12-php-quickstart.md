@@ -12,14 +12,14 @@ In order to get a Laravel app running, here are the following steps you need to 
 
 ---
 
-#### Setup Basic Configuration
+### Set up Basic Configuration
 1. Add your repository.
 2. Select PHP stack and choose the suggested version.
 3. Follow the suggested recommendations for build and start commands. See below for slight modifications.
 
 ---
 
-#### Set Permissions for Your Application Directory
+### Set Permissions for Your Application Directory
   1. Add the following lines to the **Build Commands** section under *Commands & Packages*
 
     $ chgrp -R www-data /var/www/html/
@@ -27,10 +27,12 @@ In order to get a Laravel app running, here are the following steps you need to 
 
 ---
 
-#### Add your `laravel.conf` apache2 configuration to `/etc/apache2/sites-available`.
-1. You can do this by clicking on *Files & SSH Keys* and clicking the *Add* dropdown then *File*. This will bring up the **Upload File** modal.
+### Add Apache2 Configuration
 
-2. Select your configuration file (`laravel.conf`). It would look something like this:
+1. Add your `laravel.conf` apache2 configuration to `/etc/apache2/sites-available`.
+2. You can do this by clicking on *Files & SSH Keys* and clicking the *Add* dropdown then *File*. This will bring up the **Upload File** modal.
+
+3. Select your configuration file (`laravel.conf`). It would look something like this:
 
 ```xml
 <VirtualHost *:80>
@@ -48,9 +50,9 @@ In order to get a Laravel app running, here are the following steps you need to 
 </VirtualHost>
 ```
 
-3. Enter `/etc/apache2/sites-available` under Destination.
+4. Enter `/etc/apache2/sites-available` under Destination.
 
-4. Add the following scripts to Scripts:
+5. Add the following scripts to Scripts:
   ```
     $ a2ensite laravel.conf
     $ a2enmod rewrite
@@ -58,7 +60,7 @@ In order to get a Laravel app running, here are the following steps you need to 
 
 ---
 
-#### Set up your Laravel environment
+### Set up your Laravel environment
 Add the following lines to the **Build Commands** section under *Commands & Packages*
 
 1. Copy your `.env.sample` to `.env` in your project directory:

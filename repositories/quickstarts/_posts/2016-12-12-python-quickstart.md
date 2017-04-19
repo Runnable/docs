@@ -8,13 +8,13 @@ tags:
 description: How to setup your multi-tier Python application.
 ---
 
-This guide will help you setup Runnable templates for a simple Pyhton application. This guide will assume that you don't have a Dockerfile and want Runnable to generate the Dockerfile for you using a simple setup guide.
+This guide will help you set up Runnable templates for a simple Pyhton application. This guide will assume that you don't have a Dockerfile and want Runnable to generate the Dockerfile for you using a simple setup guide.
 
 ---
 
-## Configuring the App
+### Configuring the App
 
-1. From the *Configure* page, click on the *Create Template* button. Choose the Pyhton repository you want to add.
+1. From the **Configure** page, click on the **Create Template** button. Choose the Pyhton repository you want to add.
 ![Add Template]({{ site.baseurl }}/images/python-select-repo.png)
 
 2. Select _Start up with our setup guide_ as your configuration mode.
@@ -23,10 +23,10 @@ This guide will help you setup Runnable templates for a simple Pyhton applicatio
 3. Name your template.
 ![Name Template]({{ site.baseurl }}/images/python-name-template.png)
 
-4. Now you can select your *Stack Type*. This is the environment that your repository requires for runtime. In our case, it is *Python*.
+4. Now you can select your **Stack Type**. This is the environment that your repository requires for runtime. In our case, it is **Python**.
 ![Select Stack]({{ site.baseurl }}/images/python-select-stack.png)
 
-5. After clicking *Next*, you will be presented with the following three options: *Packages*, *Build Commands*, and *Container CMD*.
+5. After clicking **Next**, you will be presented with the following three options: **Packages**, **Build Commands**, and **Container CMD**.
 ![Build Commands and CMD]({{ site.baseurl }}/images/python-choose-cmd.png)
 
 ---
@@ -55,11 +55,11 @@ Here the main run command for your app is specified.
 
 > **Note:** We are using `0.0.0.0` to bind to all interfaces in our `main.py`. This will allow us to access the container from other containers and through the browser.
 
-__Container CMD__ is where the invocation command for our app is specified.
+**Container CMD** is where the invocation command for our app is specified.
 
 > **Important:** The container will stop running when this command exits.
 
-Click __Next__. Additional configuration options are revealed to customize your container further:
+Click **Next**. Additional configuration options are revealed to customize your container further:
 
 ---
 
@@ -124,7 +124,7 @@ This is the Environment URL corresponding to the container launched from the def
 
 ![Runnable URL]({{ site.baseurl }}/images/python-url.png)
 
-1. *Save &amp; Build* to save our changes and trigger your first build. ![Trigger Build](https://support.runnable.com/hc/en-us/article_attachments/203162596/Screen_Shot_2016-03-16_at_9.26.49_PM.png)
+1. **Save &amp; Build** to save our changes and trigger your first build. ![Trigger Build](https://support.runnable.com/hc/en-us/article_attachments/203162596/Screen_Shot_2016-03-16_at_9.26.49_PM.png)
 
 2. When you’re ready, click *Done* to see a summary of your new container.
 ![Done](https://support.runnable.com/hc/en-us/article_attachments/203162656/Screen_Shot_2016-03-16_at_9.43.16_PM.png)
@@ -147,7 +147,7 @@ This is the Environment URL corresponding to the container launched from the def
 4. Specify the the value for the `MYSQL_HOST` environment variable. From our article [Runnable URLs]({{site.baseurl}}/networking/runnable-urls-explained), it is clear that we need to use MySQL’s template URL to connect to it. As a convenience we provide all template URLs in the Environment Variables tab.
 ![MySQL 2]({{ site.baseurl }}/images/python-mysql2.png) ![MySQL 3]({{ site.baseurl }}/images/python-mysql3.png) ![MySQL 4]({{ site.baseurl }}/images/python-mysql4.png)
 
-5. Click *Save & Build*.
+5. Click **Save & Build**.
 
 6. The Pyhton template is now successfully connected with the "MySQL" template!
 

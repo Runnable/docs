@@ -12,9 +12,9 @@ This guide will help you setup Runnable templates for a simple Rails application
 
 ---
 
-## Configuring your first Rails app
+## Configuring your Rails app
 
-1. From the *Configure* page, click on the *Create Template* button. Choose the Rails repository you want to add.
+1. From the **Configure** page, click on the **Create Template** button. Choose the Rails repository you want to add.
 ![Add Template]({{ site.baseurl }}/images/create-rails-1.png)
 2. Select _Start up with our setup guide_ as your configuration mode.
 ![Select Mode]({{ site.baseurl }}/images/create-rails-2.png)
@@ -29,14 +29,14 @@ This guide will help you setup Runnable templates for a simple Rails application
 
 ### Packages
 
-This option allows you to install any tools, libraries, or frameworks you need. Add multiple packages by separating them with spaces. You can specify packages that are listed in the [Ubuntu Aptitude library](http://packages.ubuntu.com/).
+This option allows you to install any tools, libraries, or frameworks you may need. Add multiple packages by separating them with spaces. You can specify packages that are listed in the [Ubuntu Aptitude library](http://packages.ubuntu.com/).
 ![Packages]({{ site.baseurl }}/images/create-rails-5a.png)
 
 ---
 
 ### Build Commands
 
-Use this option to specify any commands needed to build and prepare your app (supports UNIX bash format). These commands will run in the root folder of the repository after every push. This is also the perfect place to run any commands to build any assets (such as css, html and minified javascript code).
+Use this option to specify any commands needed to build and prepare your app (supports UNIX bash format). These commands will run in the root folder of the repository after every push. This is also the perfect place to run any commands to build any assets (such as CSS, HTML and minified Javascript code).
 
 For our simple API repository, this is where we’ll specify:
 `bundle install`
@@ -56,13 +56,13 @@ Here the main run command for your app is specified.
 
 > **Note:** That we are using `0.0.0.0` to bind to all interfaces. This will allow us to access the container from other containers and through the browser.
 
-__Container CMD__ is where the invocation command for our app is specified. 
+**Container CMD** is where the invocation command for our app is specified. 
 
 > **Important:** the container will stop running when this command exits.
 
 > This would also be a good place to add your migration commands after connecting your database. Your container cmd would look something similar to `rake db:migrate && rails server -b 0.0.0.0`.
 
-Click __Next__. Additional configuration options are revealed to customize your container further:
+Click **Next**. Additional configuration options are revealed to customize your container further:
 
 ---
 
@@ -92,7 +92,7 @@ For more details, Check Out:
 
 Open up any ports your repository may need.
 
-Most Rails apps run on `3000` when developing, so we'll click on the *Exposed Ports* tool and expose it. 
+Most Rails apps run on `3000` when developing, so we'll click on the **Exposed Ports** tool and expose it. 
 
 ![Exposed Ports]({{ site.baseurl }}/images/create-rails-7.png)
 
@@ -132,7 +132,7 @@ This is the Environment URL corresponding to the container launched from the def
 
 1. *Save & Build* to save our changes and trigger your first build. ![Trigger Build](https://support.runnable.com/hc/en-us/article_attachments/203162596/Screen_Shot_2016-03-16_at_9.26.49_PM.png)
 
-2. When you’re ready, click *Done* to see a summary of your new container.
+2. When you’re ready, click **Done** to see a summary of your new container.
 ![Done]({{ site.baseurl }}/images/create-rails-15.png)
 
 3. If everything went well, your build will complete successfully. Anytime you run across an error that you need help with, we have developers ready to help in real-time. Click on the chat bubble on the bottom left!
@@ -156,7 +156,7 @@ This is the Environment URL corresponding to the container launched from the def
 
   > Make sure to add the `PORT: 5432` as well!
 
-5. Click *Save & Build*.
+5. Click **Save & Build**.
 
 6. The Rails template is now successfully connected with the "PostgreSQL" template!
 
