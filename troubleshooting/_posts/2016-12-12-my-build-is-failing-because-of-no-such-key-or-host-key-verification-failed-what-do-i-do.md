@@ -15,17 +15,20 @@ and the repository exists.
 ```
 
 To give containers within Runnable access to those dependency repositories, we just need to generate and add the right ssh key to the repository’s configuration.
- 
+
 ## Generate SSH Key {#generateSSH}
 
 SSH keys come in a pair, private and public. To generate a new ssh key pair, open up a terminal session on a Linux or Mac machine you trust. If you already have an SSH key that you would like to use, [skip this step](#addSSHGitHub).
 
 1. Navigate to the ~/.ssh/ directory. (Or create it, if it doesn't exist)
-  
-  `$ mkdir -p ~/.ssh/ && cd ~/.ssh`
+
+```
+$ mkdir -p ~/.ssh/ && cd ~/.ssh
+```
+
 
 2. Generate the SSH key
-  
+
   `$ ssh-keygen -t rsa -b 4096 -C "your@email.com**.`
 
 3. You will be prompted to provide a location for the generated key. Press enter if you are happy with the default location. You can change the location if you want to, but make sure that you choose a safe location.
@@ -55,7 +58,7 @@ Now, you are ready to upload the public key to your Github.com user account. If 
 
 4. Next, click on **SSH Keys** settings under **Personal Settings**.
 
-5. Click on **New SSH Key** button on the top right. 
+5. Click on **New SSH Key** button on the top right.
 
 6. Give your new ssh-key a title with which you can easily associate Runnable with.
 
@@ -82,4 +85,4 @@ Now, we move on to adding the private key into our repository configuration in R
 9. Paste in the private key that you copied in step 19 into the text area.
 10. Click "Save & Rebuild** and your failing build step should now complete successfully!
 
-As always, please feel to reach out to us using the in-app chat if you are unable to resolve your build errors. 
+As always, please feel to reach out to us using the in-app chat if you are unable to resolve your build errors.
