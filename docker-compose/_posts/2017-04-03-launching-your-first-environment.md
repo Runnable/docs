@@ -30,7 +30,7 @@ Let's walkthrough configuring an example repository. The repository we will conf
         links:
           - "db"
         environment:
-          -MONGODB_HOST=db
+          - MONGODB_HOST=db
 
 From Compose file, it is clear that we expect to see 2 containers launch for this repository: a web container and a db container. To configure this repository on Runnable:
 
