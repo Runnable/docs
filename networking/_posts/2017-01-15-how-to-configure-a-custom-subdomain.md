@@ -10,7 +10,7 @@ Our routing logic does a wildcard match on ```*.containerID-repo-org-staging.run
 
 ---
 
-## My subdomains still don’t work! What do I do?
+### My subdomains still don’t work! What do I do?
 
 Let’s assume that when you app runs on outside of Runnable, like on server.com, it handle’s all requests to abc.server.com successfully.
 
