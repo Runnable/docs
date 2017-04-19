@@ -12,7 +12,7 @@ Runnable makes it easy to launch containers from your compose file.
 
 ---
 
-### Configuring your first repository
+### Configuring Your First Repository
 
 
 Let's walkthrough configuring an example repository. The repository we will configure has the following Docker compose file:
@@ -67,7 +67,7 @@ From Compose file, it is clear that we expect to see 2 containers launch for thi
 
 ---
 
-###  Launching a full-Stack environment for a branch
+###  Launching a Full-Stack Environment for a Branch
 
 Now that you have setup your environment, you can instantly get a clone of this environment for each branch you or your teammates work with. To do this:
 
@@ -84,4 +84,4 @@ Now that you have setup your environment, you can instantly get a clone of this 
 5. You will notice that a full-stack environment for your branch is launched right away on the sidebar.
   ![More Environments]({{ site.baseurl }}/images/compose_config_new_branch.png)
 
-6. You can now use your branch's environment to verify or debug yours and your teammates' changes.
+6. You can now use your branch’s environment to verify or debug yours and your teammates’ changes.
