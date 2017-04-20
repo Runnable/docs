@@ -10,7 +10,7 @@ description: How to seed your database from S3
 ---
 
 Instead of uploading a seed directly through the Runnable UI, we can add a script to pull your seed
-from an external location. In this case, we will pull the seed from an S3 bucket.
+from an external location. In this case, we’ll pull the seed from an S3 bucket.
 
 ---
 

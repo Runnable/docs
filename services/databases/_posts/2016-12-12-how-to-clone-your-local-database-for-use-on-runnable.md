@@ -1,14 +1,18 @@
 ---
-title: How to clone your local database for use on Runnable
-shortTitle: Clone your local database
+title: How To Clone Your Local Database For Use on Runnable
+shortTitle: Clone your Local Database
 step: 5
 tags:
 - services
 - databases
 - postgres
 - mysql
-description: How to clone your local database for use on Runnable
+description: How To Clone Your Local Database For Use on Runnable
 ---
+
+---
+
+### Getting Started
 
 * [MySQL](#mysql)
 * [PostgreSQL](#postgresql)
@@ -16,7 +20,7 @@ description: How to clone your local database for use on Runnable
 ---
 
 ### MySQL
-* Take a dump of your MySQL database. The following command will dump the contents of your database to a `sql` file.
+* Take a dump of your MySQL Database. The following command will dump the contents of your Database to a `sql` file.
   > Note the use of `-u mysql` and `-p`. This will prompt you for your password, the default being `mysql`.
   You will have to authorize the mysqldump command with whichever custom credentials you have set.
 

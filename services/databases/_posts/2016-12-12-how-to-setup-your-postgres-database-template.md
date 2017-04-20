@@ -1,33 +1,34 @@
 ---
-title: How to setup your PostgreSQL database template
+title: How To Set Up Your PostgreSQL Database Template
 shortTitle: PostgreSQL Setup
 step: 2
 tags:
 - services
 - databases
 - postgres
-description: How to setup your PostgreSQL database template
+description: How To Set Up Your PostgreSQL Database Template
 ---
 
-Our DB templates for PostgreSQL come with a build-in initialization script that allows you
-to seed you DB during the build process. This allows you to 'bake' your seed into your master DB
-container. Then every branch that you run in isolation will immediately start up with a DB
-container that is pre-seeded, taking advantage of the container image cache.
+Our Database templates for PostgreSQL come with a build-in initialization script that allows you
+to seed your Database during the build process.
+
+This allows you to 'bake' your seed into your master Database
+container. Every branch that you run in isolation will immediately start up with a container that is pre-seeded, taking advantage of the container image cache.
 
 ---
 
 ### Getting Started
 1. Make sure you have set up your database template first.
 
-2. Create a _Non-Repository Template_ for PostgreSQL.
-  * Click __Create Template__ in the _Templates_ tab
-  * Select __Non-Repository Template__ to reveal a list of non-repository templates. Select __PostgreSQL__.
+2. Create a **Non-Repository Template** for PostgreSQL.
+  * Click **Create Template** in the **Templates** tab
+  * Select **Non-Repository Template** to reveal a list of non-repository templates. Select **PostgreSQL**.
     ![Select Template]({{ site.baseurl }}/images/create-postgres-db-1.png)  
 
-  * Name your template, if desired. Click __Create Template__
+  * Name your template, if desired. Click **Create Template**
     ![Name & Create Template]({{ site.baseurl }}/images/create-postgres-db-2.png)  
 
-  * Your template should launch and turn *green* when the container has finsihed building.
+  * Your template should launch and turn **green** when the container has finsihed building.
     ![Template launched]({{ site.baseurl }}/images/create-postgres-db-3.png)  
 
   * Select __Dockerfile__ to customize your database. Here you can modify the environment variables to change desired usernames, passwords, and database names. Defaults have been set for your convienence,
@@ -64,7 +65,7 @@ container that is pre-seeded, taking advantage of the container image cache.
 ---
 
 ### Upload the seed file to your template configuration
-1. Bring up the template configuration modal by either clicking on the _cog_ next to your database template in the `Containers` pane, or clicking on Dockerfile in the `Templates` pane.
+1. Bring up the template configuration modal by either clicking on the **cog** next to your database template in the `Containers` pane, or clicking on Dockerfile in the `Templates` pane.
   ![Select Template]({{ site.baseurl }}/images/seed-postgres-db-1.png)  
 2. Select the `Dockerfile` tab on the top menu within the modal.
   ![Select Dockerfile]({{ site.baseurl }}/images/seed-postgres-db-2.png)  
@@ -85,6 +86,8 @@ container that is pre-seeded, taking advantage of the container image cache.
 ---
 
 ### Next steps
-Now that your template database container has been 'baked' in with your seed file, subsequent databases that are spawned per branch will immediately start up with the seeded data. If you ever want to update your seed file, just click `Rebuild Without Cache` on the template container to pull a newer seed and cache it into the container image.
+Now that your Template Database container has been 'baked' in with your seed file, subsequent databases that are spawned per branch will immediately start up with the seeded data.
+
+ If you ever want to update your seed file, just click `Rebuild Without Cache` on the template container to pull a newer seed and cache it into the container image.
 
 Want to seed your database from S3? [Here is how.](/docs/services/databases/how-to-seed-your-database-from-s3)
