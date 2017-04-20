@@ -1,12 +1,13 @@
 ---
 title: How to configure a Custom Subdomain
-shortTitle: Supported Features
+shortTitle: Configure a Custom Subdomain
 step: 1
-description: How to configure a Custom Subdomain
+description: How to Configure a Custom Subdomain
 ---
 
 Runnable supports routing subdomain requests to your containers.
-Our routing logic does a wildcard match on ```*.containerID-repo-org-staging.runnableapp.com``` and will route any queries to the URL pattern directly to the destination container.
+
+Our routing logic does a wildcard match on `*.containerID-repo-org-staging.runnableapp.com` and will route any queries to the URL pattern directly to the destination container.
 
 ---
 
@@ -14,7 +15,7 @@ Our routing logic does a wildcard match on ```*.containerID-repo-org-staging.run
 
 Let’s assume that when you app runs on outside of Runnable, like on server.com, it handle’s all requests to abc.server.com successfully.
 
-When you run the same app in Runnable, to get to ```abc.*``` you would use the following  URL: ```http://abc.containerID-repo-org-staging.runnableapp.com```.
+When you run the same app in Runnable, to get to `abc.*` you would use the following  URL: `http://abc.containerID-repo-org-staging.runnableapp.com`
 
 If subdomain routing still does not seem to be working for your app, your routing logic may need to be adjusted to account for the extra subdomain level you get on Runnable.
 
