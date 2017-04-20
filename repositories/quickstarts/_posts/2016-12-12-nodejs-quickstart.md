@@ -8,7 +8,7 @@ tags:
 description: How to setup your multi-tier Node.js application.
 ---
 
-This guide will help you setup Runnable templates for a simple 2-tier Node.js application. This guide will assume that you don't have a Dockerfile and want Runnable to generate the Dockerfile for you using a simple setup guide.
+This guide will help you set up Runnable templates for a 2-tier Node.js application. This guide will assume that you don't have a Dockerfile and want Runnable to generate the Dockerfile for you using a simple setup guide.
 
 ---
 

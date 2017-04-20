@@ -8,7 +8,7 @@ tags:
 description: How to setup your multi-tier Ruby on Rails application.
 ---
 
-This guide will help you setup Runnable templates for a simple Rails application. This guide will assume that you don’t have a Dockerfile and want Runnable to generate the Dockerfile for you using a simple setup guide.
+This guide will help you setup Runnable templates for a Rails application. This guide will assume that you don’t have a Dockerfile and want Runnable to generate the Dockerfile for you using a simple setup guide.
 
 ---
 
@@ -16,13 +16,13 @@ This guide will help you setup Runnable templates for a simple Rails application
 
 1. From the **Configure** page, click on the **Create Template** button. Choose the Rails repository you want to add.
 ![Add Template]({{ site.baseurl }}/images/create-rails-1.png)
-2. Select _Start up with our setup guide_ as your configuration mode.
+2. Select **Start up with our setup guide** as your configuration mode.
 ![Select Mode]({{ site.baseurl }}/images/create-rails-2.png)
 3. Name your template.
 ![Name Template]({{ site.baseurl }}/images/create-rails-3.png)
-4. Now you can select your *Stack Type*. This is the environment that your repository requires for runtime. In our case, it is *Rails*. Also, make sure to select a compatible *Ruby* version.
+4. Now you can select your **Stack Type**. This is the environment that your repository requires for runtime. In our case, it is *Rails*. Also, make sure to select a compatible *Ruby* version.
 ![Select Stack]({{ site.baseurl }}/images/create-rails-4.png)
-5. After clicking *Next*, you will be presented with the following three options: *Packages*, *Build Commands*, and *Container CMD*.
+5. After clicking **Next**, you will be presented with the following three options: **Packages**, **Build Commands**, and **Container CMD**.
 ![Build Commands and CMD]({{ site.baseurl }}/images/create-rails-5.png)
 
 ---
@@ -78,7 +78,7 @@ Add any required Environtment Variables your app may need. These values will be 
 
 ### Files & SSH Keys
 
-Use this tool to add any addtional configuration files, other GitHub repositories, SSH Keys or assets your repository needs to build and run properly. This is also the option to use if you have to upload any override files to overwrite any hard coded values in your repository.
+Use this tool to add any additional configuration files, other GitHub repositories, SSH Keys or assets your repository needs to build and run properly. This is also the option to use if you have to upload any override files to overwrite any hard coded values in your repository.
 ![Files & SSH Keys]({{ site.baseurl }}/images/create-rails-9.png)
 
 For more details, Check Out:

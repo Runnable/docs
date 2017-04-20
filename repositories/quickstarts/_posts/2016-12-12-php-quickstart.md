@@ -61,7 +61,7 @@ In order to get a Laravel app running, here are the following steps you need to 
 ---
 
 ### Set up your Laravel environment
-Add the following lines to the **Build Commands** section under *Commands & Packages*
+Add the following lines to the **Build Commands** section under **Commands & Packages**
 
 1. Copy your `.env.sample` to `.env` in your project directory:
   ```
