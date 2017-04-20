@@ -1,10 +1,11 @@
 ---
-title: Using Docker Compose With Runnable
-shortTitle: Launching your first environment
+title: Launching Your First Environment
+shortTitle: Launching Your First Environment
 step: 3
 tags:
 - docker
-description: Using Docker Compose With Runnable
+- environment
+description: Launching Your First Environment
 ---
 
 
@@ -13,8 +14,6 @@ Runnable makes it easy to launch containers from your compose file.
 ---
 
 ### Configuring Your First Repository
-
-
 Let's walkthrough configuring an example repository. The repository we will configure has the following Docker compose file:
 
     version: '2'
