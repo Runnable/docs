@@ -15,7 +15,7 @@ This guide will help you set up Runnable templates for a 2-tier Node.js applicat
 ## Configuring the App
 
 1. Choose your GitHub org.
-2. On the _Configure_ page, click on the __Create Template__ button.
+2. On the **Configure** page, click on the **Create Template** button.
   ![node1]({{ site.baseurl }}/images/node1.png)
 3. Find the repository you would like to configure the template for. In this case, we are starting with a simple Python repository.
   ![node2]({{ site.baseurl }}/images/node2.png)
