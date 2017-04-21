@@ -38,6 +38,7 @@ Once you have obtained the dump file, continue on the following steps:
 
 ### MySQL
 Upload the seed file to your template configuration
+
 1. Bring up the template configuration modal by either clicking on the _cog_ next to your database template in the `Containers` pane, or clicking on Dockerfile in the `Templates` pane.
   ![Select Template]({{ site.baseurl }}/images/seed-mysql-db-1.png)
 2. Select the `Dockerfile` tab on the top menu within the modal.
@@ -60,6 +61,7 @@ Upload the seed file to your template configuration
 
 ### PostgreSQL
 Upload the seed file to your template configuration
+
 1. Bring up the template configuration modal by either clicking on the _cog_ next to your database template in the `Containers` pane, or clicking on Dockerfile in the `Templates` pane.
   ![Select Template]({{ site.baseurl }}/images/seed-postgres-db-1.png)
 2. Select the `Dockerfile` tab on the top menu within the modal.
