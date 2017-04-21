@@ -1,12 +1,12 @@
 ---
-title: How to seed your database from S3
+title: How To Seed Your Database From S3
 shortTitle: Seeding Data from Amazon S3
 step: 6
 tags:
 - services
 - databases
 - postgres
-description: How to seed your database from S3
+description: How To Seed Your Database From S3
 ---
 
 Instead of uploading a seed directly through the Runnable UI, we can add a script to pull your seed
