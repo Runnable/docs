@@ -1,13 +1,13 @@
 ---
-title: How to use the Runnable CLI
+title: How To Use The Runnable CLI
 shortTitle: Basic Usage
 step: 1
-description: How to use the Runnable CLI
+description: How To Use The Runnable CLI
 ---
 
 ---
 
-## Requirements
+### Requirements
 
 To use the CLI, you need:
 
@@ -34,19 +34,19 @@ To install the CLI, run `npm install -g @runnable/cli`.
 
 ### Commands
 
-#### `runnable login`
+`runnable login`
 
 Use this command to authenticate your CLI session in your terminal. You will also be prompted to choose a Github organization. You can change the Github organization at any time using `runnable org`.
 
 ---
 
-#### `runnable org`
+`runnable org`
 
 Use this command to change the active Github organization in your session.
 
 ---
 
-#### `runnable logs [repository] [--build|--cmd]`
+`runnable logs [repository] [--build|--cmd]`
 
 Use this command to view the logs of a container. You can specify the name of the container you are trying to reach in the following format: `<reponame>/<branchname>`.
 
@@ -56,7 +56,7 @@ You can choose to view the build logs by adding the `-b` argument to the command
 
 ---
 
-#### `runnable list [repository]`
+`runnable list [repository]`
 
 Use this command to get an overview of all the different containers you have under the active Github organization.
 
@@ -64,7 +64,7 @@ You can drill down and list all the branches of a repository by specifying a rep
 
 ---
 
-#### [`runnable ssh [repository]`](/docs/cli/starting-an-ssh-session)
+[`runnable ssh [repository]`](/docs/cli/starting-an-ssh-session)
 
 ---
 

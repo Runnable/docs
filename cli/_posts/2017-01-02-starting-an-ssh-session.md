@@ -7,11 +7,15 @@ description: Starting an SSH Session
 
 ---
 
-Usage:
+### Usage
 `runnable ssh [repository]`
+
 Use this command to spawn a shell session into the container.
 
+---
+
 `[repository] format: <repo-name>/<branch-name>.`
+
 Without `[repository]`, the current directory will be used to determine `<repo-name>/<branch-name>`.
 
 ---

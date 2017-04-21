@@ -12,8 +12,7 @@ Instead of uploading files through the UI on [runnable.io](http://runnable.io), 
 ### Usage
 `runnable upload <file>`
 
-Use this command to upload a file to the repository.
-The file will be placed at the root of the repository folder in the container.
+Use this command to upload a file to the repository. The file will be placed at the root of the repository folder in the container.
 
 ---
 
