@@ -1,5 +1,5 @@
 ---
-title: How to setup Integration Tests for your services
+title: How to Set up Integration Tests for Your Services
 shortTitle: Running Integration Tests
 step: 2
 description: How to setup Integration Tests for your services on Runnable.
