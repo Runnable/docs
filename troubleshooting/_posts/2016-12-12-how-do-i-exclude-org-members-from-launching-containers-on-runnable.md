@@ -18,6 +18,6 @@ Choose the teammate you want to remove and their commits will no longer be refle
 
 ---
 
-## Do many teams share your Github org?
+### Do many teams share your Github org?
 
 Sometimes, there are multiple teams sharing one Github org. In this situation, members from other teams can sign in to launch branches on your Sandbox and add to your monthly Runnable bill. If a user is added to your team on Runnable, you can remove them and we’ll prorate your charges for the time they were using Runnable.

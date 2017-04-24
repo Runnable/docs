@@ -13,7 +13,7 @@ After you setup a repository on Runnable, new pushes to any of it’s branches w
 
 ---
 
-# Still not seeing your branches?
+### Still not seeing your branches?
 
 If you are not seeing a branch automatically added and launched on Runnable, it is probably because the branch's latest commit author is not a registered Runnable user. To fix this:
 

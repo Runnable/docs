@@ -8,18 +8,18 @@ description: My build is failing because of "No Such Key" or "Host key verificat
 If you are seeing these errors, your configuration is probably trying to use other repositories that Runnable does not have access to.
 
 ```
-Command failed: Host key verification failed.
-fatal: Could not read from remote repository.
+  Command failed: Host key verification failed.
+  fatal: Could not read from remote repository.
 
-Please make sure you have the correct access rights
-and the repository exists.
+  Please make sure you have the correct access rights
+  and the repository exists.
 ```
 
 To give containers within Runnable access to those dependency repositories, we just need to generate and add the right ssh key to the repository’s configuration.
 
 ---
 
-## Generate SSH Key {#generateSSH}
+### Generate SSH Key {#generateSSH}
 
 SSH keys come in a pair, private and public. To generate a new ssh key pair, open up a terminal session on a Linux or Mac machine you trust. If you already have an SSH key that you would like to use, [skip this step](#addSSHGitHub).
 
@@ -42,7 +42,7 @@ You have now generated an ssh key pair. In our case, the private key is called  
 
 ---
 
-## Add Public SSH key to GitHub {#addSSHGitHub}
+### Add Public SSH key to GitHub {#addSSHGitHub}
 
 Now, you are ready to upload the public key to your Github.com user account. If you already have an SSH key added to GitHub that you would like to use, [skip this step](#addSSHRunnable).
 
@@ -65,7 +65,7 @@ Now, you are ready to upload the public key to your Github.com user account. If 
 
 ---
 
-## Add Private SSH key to Runnable {#addSSHRunnable}
+### Add Private SSH key to Runnable {#addSSHRunnable}
 
 Now, we move on to adding the private key into our repository configuration in Runnable.
 
