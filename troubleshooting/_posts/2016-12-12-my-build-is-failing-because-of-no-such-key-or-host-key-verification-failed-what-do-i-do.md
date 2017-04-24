@@ -1,8 +1,8 @@
 ---
-title: My build is failing because of "No Such Key" or "Host key verification failed". What do I do?
+title: My Build Is Failing Because of "No Such Key" Or "Host Key Verification Failed". What Do I Do?
 shortTitle: My Build is Failing!?
 step: 2
-description: My build is failing because of "No Such Key" or "Host key verification failed". What do I do?
+description: My Build Is Failing Because of "No Such Key" Or "Host Key Verification Failed". What Do I Do?
 ---
 
 If you are seeing these errors, your configuration is probably trying to use other repositories that Runnable does not have access to.

@@ -1,5 +1,5 @@
 ---
-title: I dont see my branches being added on Runnable
+title: I Dont See My Branches Being Added on Runnable
 shortTitle: Where are my branches?
 step: 3
 description: I dont see my branches being added on Runnable
