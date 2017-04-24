@@ -1,16 +1,24 @@
 ---
 title: Starting an SSH Session
 shortTitle: SSH into Containers
-step: 2 
+step: 2
 description: Starting an SSH Session
 ---
 
-    Usage:
-      runnable ssh [repository]
+---
 
-    Use this command to spawn a shell session into the container.
-    [repository] format: <repo-name>/<branch-name>.
-    Without [repository], the current directory will be used to determine <repo-name>/<branch-name>.
+### Usage
+`runnable ssh [repository]`
+
+Use this command to spawn a shell session into the container.
+
+---
+
+`[repository] format: <repo-name>/<branch-name>.`
+
+Without `[repository]`, the current directory will be used to determine `<repo-name>/<branch-name>`.
+
+---
 
 1. In your terminal, navigate to the local directory of a repository whose container is running in Runnable.
 
