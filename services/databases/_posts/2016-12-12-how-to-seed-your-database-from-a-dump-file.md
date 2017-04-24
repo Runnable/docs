@@ -22,7 +22,7 @@ container. Then every branch that you run in isolation will immediately start up
 container that is pre-seeded, taking advantage of the container image cache.
 
 #### Get Started
-In order to seed your database, you will need to [obtain a backup (or dump) of your existing database](clone_database.md).
+In order to seed your database, you will need to [obtain a backup (or dump) of your existing database](https://runnable.com/docs/services/databases/how-to-clone-your-local-database-for-use-on-runnable).
 Once you have obtained the dump file, continue on the following steps:
 
 * [MySQL](#mysql)
