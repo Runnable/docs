@@ -70,6 +70,9 @@ Now, you are ready to upload the public key to your Github.com user account. If 
 
 8. Click on **Add SSH Key**.
 
+
+---
+
 ### Add Private SSH key to Runnable {#addSSHRunnable}
 
 Now, we move on to adding the private key into our repository configuration in Runnable.
