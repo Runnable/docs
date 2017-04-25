@@ -8,15 +8,31 @@ description: Using Docker Compose With Runnable
 ---
 
 
-Runnable makes it easy to launch containers from your compose file. 
+Runnable makes it easy to launch containers from your compose file.
 
-### Configuring your first repository
+---
+
+### Configuring Your First Repository
 
 
 Let's walkthrough configuring an example repository. The repository we will configure has the following Docker compose file:
-  ![Compose File]({{ site.baseurl }}/images/compose_config_composefile.png)
 
-From Compose file, it is clear that we expect to see 2 containers launch for this repository: a web container and a db container. To configure this repository on Runnable,
+    version: '2'
+    services:
+      db:
+        image: mongo
+        ports:
+          - "27017:27017"
+      web:
+        build: .
+        ports:
+          - "3000:3000"
+        links:
+          - "db"
+        environment:
+          - MONGODB_HOST=db
+
+From Compose file, it is clear that we expect to see 2 containers launch for this repository: a web container and a db container. To configure this repository on Runnable:
 
 1. Go to your org on Runnable.com.
 
@@ -49,7 +65,9 @@ From Compose file, it is clear that we expect to see 2 containers launch for thi
 11. Your master environment should be up! You can explore the environment using the URL, Terminal and File browser.
   ![Environment Up!]({{ site.baseurl }}/images/compose_config_running.png)
 
-###  Launching a full-Stack environment for a branch
+---
+
+###  Launching a Full-Stack Environment for a Branch
 
 Now that you have setup your environment, you can instantly get a clone of this environment for each branch you or your teammates work with. To do this:
 
@@ -66,6 +84,4 @@ Now that you have setup your environment, you can instantly get a clone of this 
 5. You will notice that a full-stack environment for your branch is launched right away on the sidebar.
   ![More Environments]({{ site.baseurl }}/images/compose_config_new_branch.png)
 
-6. You can now use your branch's environment to verify or debug yours and your teammates' changes.
-
-
+6. You can now use your branch’s environment to verify or debug yours and your teammates’ changes.
