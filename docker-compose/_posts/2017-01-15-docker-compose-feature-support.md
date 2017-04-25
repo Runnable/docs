@@ -4,16 +4,22 @@ shortTitle: Supported Features
 step: 2
 tags:
 - docker
-description: Docker compose features that Runnable supports out of the box.
+description: Docker Compose features that Runnable supports out of the box.
+---
+
+Docker Compose features that Runnable supports out of the box.
+
 ---
 
 ### Supported Versions
 
 Runnable currently supports the Docker Compose version 2 file format. Unsupported options are listed below.
 
+---
+
 ### Unsupported Options
 
-The current service configuration options are unsupported at this time, and will simply be ignored by Runnable if they are present in your Compose YAML file. 
+The current service configuration options are unsupported at this time, and will simply be ignored by Runnable if they are present in your Compose YAML file.
 
 > If these unsupported options prevent your environment from building and running on Runnable, please let us know. You can reach out via our in-app chat (Intercom) or via email at [support@runnable.com](mailto:support@runnable.com?subject=Docker%20Compose%20-%20Unsupported%20Options).
 
