@@ -4,11 +4,15 @@ shortTitle: Introduction
 step: 1
 tags:
 - docker
+- compose
 description: Using Docker Compose With Runnable
 ---
 
 Docker Compose enables Docker users to specify definitions across all their services in a YAML file. This is useful for describing how a multi-service application, composed with multiple containers, should build and run on Docker.
 
+---
+
+### Teams and Docker Compose
 Teams that use Docker Compose can use their existing YAML file to instruct Runnable on how to build and run their application, without any additional configuration.
 
 <img src="{{ site.baseurl }}/images/compose.svg" width="420" height="300">

@@ -16,6 +16,8 @@ and the repository exists.
 
 To give containers within Runnable access to those dependency repositories, we just need to generate and add the right ssh key to the repository’s configuration.
 
+---
+
 ### Generate SSH Key {#generateSSH}
 
 SSH keys come in a pair, private and public. To generate a new ssh key pair, open up a terminal session on a Linux or Mac machine you trust. If you already have an SSH key that you would like to use, [skip this step](#addSSHGitHub).
@@ -67,6 +69,7 @@ Now, you are ready to upload the public key to your Github.com user account. If 
 7. Paste the public key into the text area labeled **Key**
 
 8. Click on **Add SSH Key**.
+
 
 ---
 
