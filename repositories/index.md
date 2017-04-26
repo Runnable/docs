@@ -1,8 +1,8 @@
 ---
 layout: categories
-title: Configuring a Repository
+title: Using Dockerfiles
 categories:
   - quickstarts
   - repositories
-description: Articles to help get your Repository running on Runnable
+description: Articles to help get your Dockerfiles running on Runnable
 ---

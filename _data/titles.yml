@@ -15,8 +15,8 @@ oauth: OAuth
 pricing: Pricing
 privacy: Privacy & Security
 quickstarts: Quickstart Guides
-repositories: Configuring a Repository
-routers: HTTP Routers / Load Balancers 
+repositories: Using Dockerfiles
+routers: HTTP Routers / Load Balancers
 servicediscovery: Service Discovery
 services: Configuring Other Services
 testing: Automated Testing
