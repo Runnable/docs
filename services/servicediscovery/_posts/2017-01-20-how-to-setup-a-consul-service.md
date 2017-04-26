@@ -1,12 +1,12 @@
 ---
-title: How to setup a Consul service
+title: How to Set up a Consul Service
 shortTitle: Consul Setup
 step: 2
 tags:
 - services
 - servicediscovery
 - consul
-description: How to setup a Consul service
+description: How to Set up a Consul Service
 ---
 
 ---

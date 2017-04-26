@@ -21,6 +21,7 @@ description: How To Clone Your Local Database For Use on Runnable
 
 ### MySQL
 * Take a dump of your MySQL Database. The following command will dump the contents of your Database to a `sql` file.
+
   > Note the use of `-u mysql` and `-p`. This will prompt you for your password, the default being `mysql`.
   You will have to authorize the mysqldump command with whichever custom credentials you have set.
 

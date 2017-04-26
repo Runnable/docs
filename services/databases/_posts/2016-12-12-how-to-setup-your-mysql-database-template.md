@@ -1,12 +1,12 @@
 ---
-title: How To Set Up Your MySQL Database Template
+title: How To Set up Your MySQL Database Template
 shortTitle: MySQL Setup
 step: 1
 tags:
 - services
 - databases
 - mysql
-description: How To Set Up Your MySQL Database Template
+description: How To Set up Your MySQL Database Template
 ---
 
 Our Database templates for MySQL come with a build-in initialization script that allows you
@@ -19,6 +19,7 @@ container. Every branch that you run in isolation will immediately start up with
 
 ### Getting Started
 1. Make sure you have set up your database template first.
+
 2. Create a **Non-Repository Template** for MySQL.
   * Click **Create Template** in the **Templates** tab
   * Select **Non-Repository Template** to reveal a list of non-repository templates. Select **MySQL**.

@@ -1,12 +1,12 @@
 ---
-title: How To Set Up a RabbitMQ Service
+title: How To Set up a RabbitMQ Service
 shortTitle: RabbitMQ Setup
 step: 2
 tags:
 - services
 - msgqueues
 - rabbitmq
-description: How To Set Up a RabbitMQ Service
+description: How To Set up a RabbitMQ Service
 ---
 
 ---
@@ -26,4 +26,4 @@ description: How To Set Up a RabbitMQ Service
   ![rabbitmq-configure]({{ site.baseurl }}/images/rabbitmq-configure.png)
 
 6. You should be able to instantly connect another services to this container, just use the URL:  
-    `rabbitmq://rabbitmq-datatore-staging-yourGitHubOrgName.runnableapp.com`.
+  `rabbitmq://rabbitmq-datatore-staging-yourGitHubOrgName.runnableapp.com`.

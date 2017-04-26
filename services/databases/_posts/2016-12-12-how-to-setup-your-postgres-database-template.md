@@ -1,12 +1,12 @@
 ---
-title: How To Set Up Your PostgreSQL Database Template
+title: How To Set up Your PostgreSQL Database Template
 shortTitle: PostgreSQL Setup
 step: 2
 tags:
 - services
 - databases
 - postgres
-description: How To Set Up Your PostgreSQL Database Template
+description: How To Set up Your PostgreSQL Database Template
 ---
 
 Our Database templates for PostgreSQL come with a build-in initialization script that allows you
@@ -28,7 +28,7 @@ container. Every branch that you run in isolation will immediately start up with
   * Name your template, if desired. Click **Create Template**
     ![Name & Create Template]({{ site.baseurl }}/images/create-postgres-db-2.png)  
 
-  * Your template should launch and turn **green** when the container has finsihed building.
+  * Your template should launch and turn **green** when the container has finsihed building. 
     ![Template launched]({{ site.baseurl }}/images/create-postgres-db-3.png)  
 
   * Select __Dockerfile__ to customize your database. Here you can modify the environment variables to change desired usernames, passwords, and database names. Defaults have been set for your convienence,
@@ -37,6 +37,7 @@ container. Every branch that you run in isolation will immediately start up with
 
   * Once running, you can setup template connections with your repository applications. [Here is how.](/connections/how_to_connect_your_containers.md)
 
+---
 
 ---
 

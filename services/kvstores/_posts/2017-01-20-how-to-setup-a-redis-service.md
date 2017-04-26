@@ -1,12 +1,12 @@
 ---
-title: How to setup a Redis service
+title: How to Set up a Redis service
 shortTitle: Redis Setup
 step: 1
 tags:
 - services
 - kvstores
 - redis
-description: How to setup a Redis service
+description: How to Set up a Redis service
 ---
 
 ---

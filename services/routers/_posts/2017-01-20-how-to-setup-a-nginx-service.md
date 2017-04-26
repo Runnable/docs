@@ -1,12 +1,12 @@
 ---
-title: How to Set Up a NGINX Service
+title: How to Set up a NGINX Service
 shortTitle: NGINX Setup
 step: 2
 tags:
 - services
 - routers
 - nginx
-description: How to Set Up a NGINX Service
+description: How to Set up a NGINX Service
 ---
 
 ---

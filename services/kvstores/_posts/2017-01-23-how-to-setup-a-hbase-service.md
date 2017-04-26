@@ -1,12 +1,12 @@
 ---
-title: How To Set Up a HBase Service
+title: How To Set up a HBase Service
 shortTitle: HBase Setup
 step: 2
 tags:
 - services
 - kvstores
 - hbase
-description: How To Set Up a HBase Service
+description: How To Set up a HBase Service
 ---
 
 ---
