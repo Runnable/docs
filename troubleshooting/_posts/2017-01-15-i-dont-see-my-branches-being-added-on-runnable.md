@@ -1,5 +1,5 @@
 ---
-title: I dont see my branches being added on Runnable
+title: I Dont See My Branches Being Added on Runnable
 shortTitle: Where are my branches?
 step: 3
 description: I dont see my branches being added on Runnable
@@ -11,10 +11,10 @@ After you setup a repository on Runnable, new pushes to any of it’s branches w
 
 2. A registered Runnable user pushes a commit to an existing branch that has not been added to Runnable yet.
 
-* * *
+---
 
-# Still not seeing your branches?
-  
+### Still not seeing your branches?
+
 If you are not seeing a branch automatically added and launched on Runnable, it is probably because the branch's latest commit author is not a registered Runnable user. To fix this:
 
 1. Request the commit author sign into Runnable.
