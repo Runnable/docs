@@ -8,7 +8,9 @@ description: Pull in your own private docker images using your Docker registry c
 ---
 
 To use a private Docker repository on Runnable:
- 
+
+---
+
 1. First, create a file called `runnable.json` on the root of the File Explorer under the Dockerfile section of the container configuration.
   ![Create A File]({{ site.baseurl }}/images/add-file-dockerfile-mode.png)
 
