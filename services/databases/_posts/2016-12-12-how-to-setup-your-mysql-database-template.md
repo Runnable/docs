@@ -17,8 +17,6 @@ container. Every branch that you run in isolation will immediately start up with
 
 ---
 
----
-
 ### Getting Started
 1. Make sure you have set up your database template first.
 

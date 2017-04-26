@@ -14,8 +14,6 @@ from an external location. In this case, we’ll pull the seed from an S3 bucket
 
 ---
 
----
-
 1. Create a script using the language of your choice to pull the seed from your S3 bucket. Or, just
 use the Bash script we have provided below (remember to replace your aws key/secret/region/bucket).
 This script will get the latest dump from an S3 bucket, as it sorts by the timestamp given by S3.
