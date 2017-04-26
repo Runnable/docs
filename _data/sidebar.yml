@@ -1,11 +1,13 @@
-- 
+-
+  category: docker-compose
+-
   category: repositories
   subcategories:
     -
       category: quickstarts
     -
       category: byod
-- 
+-
   category: services
   subcategories:
     -
@@ -18,15 +20,13 @@
       category: msgqueues
     -
       category: routers
-- 
-  category: docker-compose
-- 
+-
   category: networking
 -
   category: testing
-- 
+-
   category: enterprise
-- 
+-
   category: integrations
   subcategories:
     -
@@ -35,11 +35,11 @@
       category: dockerhub
     -
       category: oauth
-- 
+-
   category: cli
-- 
+-
   category: privacy
-- 
+-
   category: pricing
-- 
+-
   category: troubleshooting

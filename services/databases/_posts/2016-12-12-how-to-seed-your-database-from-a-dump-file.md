@@ -1,25 +1,29 @@
 ---
-title: How to seed your database from a dump file
-shortTitle: Seeding from a Dump File
+title: How To Seed Your Database From a Dump File
+shortTitle: Seeding From a Dump File
 step: 4
 tags:
 - services
 - databases
 - postgres
 - mysql
-description: How to seed your database from a dump file
+description: How To Seed Your Database From a Dump File
 ---
 
 One of the greatest features of Runnable is the ability to launch isolated application stacks for
 every branch that you commit. In fact, every single branch can have it's own database or set of
 databases to interact with, isolated from other branches, for testing any assortment of new
-features. As a result, breaking changes in your database schema or the addition of new models can
-be tested on the fly without affecting your _master_ branch databases.
+features.
 
-Our DB templates for Postgres and Mysql come with a build-in initialization script that allows you
-to seed you DB during the build process. This allows you to 'bake' your seed into your master DB
-container. Then every branch that you run in isolation will immediately start up with a DB
-container that is pre-seeded, taking advantage of the container image cache.
+As a result, breaking changes in your Database schema or the addition of new models can
+be tested on the fly without affecting your **master** branch databases.
+
+---
+
+Our Database templates for Postgres and Mysql come with a build-in initialization script that allows you
+to seed your Database during the build process. This allows you to 'bake' your seed into your master Database
+Container. Then every branch that you run in isolation will immediately start up with a Database
+Container that is pre-seeded, taking advantage of the container image cache.
 
 ---
 
@@ -34,6 +38,7 @@ Once you have obtained the dump file, continue on the following steps:
 
 ### MySQL
 Upload the seed file to your template configuration
+
 1. Bring up the template configuration modal by either clicking on the _cog_ next to your database template in the `Containers` pane, or clicking on Dockerfile in the `Templates` pane.
   ![Select Template]({{ site.baseurl }}/images/seed-mysql-db-1.png)
 2. Select the `Dockerfile` tab on the top menu within the modal.
@@ -56,6 +61,7 @@ Upload the seed file to your template configuration
 
 ### PostgreSQL
 Upload the seed file to your template configuration
+
 1. Bring up the template configuration modal by either clicking on the _cog_ next to your database template in the `Containers` pane, or clicking on Dockerfile in the `Templates` pane.
   ![Select Template]({{ site.baseurl }}/images/seed-postgres-db-1.png)
 2. Select the `Dockerfile` tab on the top menu within the modal.
@@ -74,6 +80,7 @@ Upload the seed file to your template configuration
     Make sure you leave the second `seed.dump` intact so the init script will work.
 2. Now click `Save & Build` to build your container and seed your database.
 
-# Next steps
+---
 
-Now that your template database container has been 'baked' in with your seed file, subsequent databases that are spawned per branch will immediately start up with the seeded data. If you ever want to update your seed file, just click `Rebuild Without Cache` on the template container to pull a newer seed and cache it into the container image.
+### Next steps
+Now that your Template Database container has been 'baked' in with your seed file, subsequent databases that are spawned per branch will immediately start up with the seeded data. If you ever want to update your seed file, just click `Rebuild Without Cache` on the template container to pull a newer seed and cache it into the container image.
