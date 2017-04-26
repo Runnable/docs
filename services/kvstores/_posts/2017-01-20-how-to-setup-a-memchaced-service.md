@@ -1,12 +1,12 @@
 ---
-title: How to setup a Memcached service
+title: How to Set up a Memcached Service
 shortTitle: Memcached Setup
 step: 2
 tags:
 - services
 - kvstores
 - memcached
-description: How to setup a Memcached service
+description: How to Set up a Memcached Service
 ---
 
 ---
