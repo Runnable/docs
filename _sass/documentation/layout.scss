@@ -2,8 +2,70 @@
   flex-wrap: wrap;
   padding: $lg $md;
 
-  @include media(xs) {
-    flex-direction: column;
-    justify-content: center;
+  .h1 {
+    font-weight: $weight-bold;
+    margin-top: 0;
+  }
+}
+
+.section-cta {
+
+  .p {
+    margin-bottom: 0;
+
+    &:first-of-type {
+      font-weight: $weight-bold;
+    }
+  }
+
+  .small {
+    font-weight: $weight-light;
+  }
+
+  .well {
+    color: $gray-dark;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      border-color: $purple-light;
+      box-shadow: inset 0 0 0 1px $purple-light;
+    }
+  }
+
+  // links to quick starts
+  .well-wrapper .well {
+    flex: 1 1 50%;
+    padding: $md;
+    text-align: center;
+
+    + .well {
+      margin-left: $md;
+    }
+
+    .img {
+      background: $gray-lightest;
+      border-radius: $input-border-radius-lg;
+      display: block;
+      height: 150px;
+      margin-bottom: $sm;
+      padding: $md;
+      width: 150px;
+    }
+  }
+
+  .well-alt {
+    margin-top: $md;
+    padding: $sm;
+
+    .img {
+      background: $gray-lightest;
+      border-radius: $input-border-radius-lg;
+      display: block;
+      height: $lg;
+      margin-right: $sm;
+      padding: $sm;
+      width: $lg;
+    }
   }
 }
