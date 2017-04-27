@@ -34,23 +34,45 @@
   }
 
   // links to quick starts
-  .well-wrapper .well {
-    flex: 1 1 50%;
-    padding: $md;
-    text-align: center;
+  .well-wrapper {
 
-    + .well {
-      margin-left: $md;
+    @include media(md) {
+      flex-direction: column;
     }
 
-    .img {
-      background: $gray-lightest;
-      border-radius: $input-border-radius-lg;
-      display: block;
-      height: 150px;
-      margin-bottom: $sm;
+    .well {
+      flex: 1 1 50%;
       padding: $md;
-      width: 150px;
+      text-align: center;
+
+      @media (max-width: $screen-md) and (min-width: $screen-sm) {
+        flex-direction: row;
+        text-align: left;
+      }
+
+      + .well {
+        margin-left: $md;
+
+        @include media(md) {
+          margin-left: 0;
+          margin-top: $md;
+        }
+      }
+
+      .img {
+        background: $gray-lightest;
+        border-radius: $input-border-radius-lg;
+        display: block;
+        height: 150px;
+        margin-bottom: $sm;
+        padding: $md;
+        width: 150px;
+
+        @media (max-width: $screen-md) and (min-width: $screen-sm) {
+          margin-bottom: 0;
+          margin-right: $sm;
+        }
+      }
     }
   }
 
@@ -74,22 +96,43 @@
   flex-wrap: wrap;
   padding: $md 0;
 
+  @include media(md) {
+    flex-direction: column;
+  }
+
   .ul {
     flex: 0 0 50%;
     list-style: none;
     padding: 0;
 
+    @include media(md) {
+      flex: 1 1 auto;
+      padding-bottom: $lg;
+    }
+
     &:nth-child(1),
     &:nth-child(2) {
       margin-bottom: $lg;
+
+      @include media(md) {
+        margin-bottom: 0;
+      }
     }
 
     &:nth-child(odd) {
       padding-right: $sm;
+
+      @include media(md) {
+        padding-right: 0;
+      }
     }
 
     &:nth-child(even) {
       padding-left: $sm;
+
+      @include media(md) {
+        padding-left: 0;
+      }
     }
   }
 
