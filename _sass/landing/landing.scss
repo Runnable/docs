@@ -6,4 +6,9 @@
     font-weight: $weight-bold;
     margin-top: 0;
   }
+
+  .icons-chevron-right {
+    opacity: .3;
+    transition: transform .3s ease-in-out;
+  }
 }

@@ -22,6 +22,7 @@
       box-shadow: inset 0 0 0 1px $purple-light;
 
       .icons-chevron-right {
+        color: $purple-light;
         transform: translate3d(3px,0,0);
       }
     }
@@ -83,10 +84,6 @@
       margin-top: $xxs;
       text-decoration: none;
     }
-
-    .icons {
-      transition: transform .3s ease-in-out;
-    }
   }
 
   .well-alt {
@@ -101,6 +98,12 @@
       margin-right: $sm;
       padding: $xxs;
       width: $lg;
+    }
+
+    .icons-chevron-right {
+      height: 15px;
+      margin-right: 6px;
+      width: 15px;
     }
   }
 }
