@@ -1,20 +1,9 @@
-.body {
-  padding: 0 $md;
+.home {
+  flex-wrap: wrap;
+  padding: $lg $md;
 
-  @include media(sm) {
-    padding: 0 $sm;
-  }
-
-
-  .main-card {
-    background: $white;
-    border: $input-border solid $gray-lighter;
-    border-radius: $input-border-radius-lg;
-    box-shadow: 0 2px 9px rgba($black,.075);
-    margin: 120px auto;
-
-    @include media(xs) {
-      flex-direction: column;
-    }
+  .h1 {
+    font-weight: $weight-bold;
+    margin-top: 0;
   }
 }
