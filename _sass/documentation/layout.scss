@@ -30,6 +30,10 @@
     &:active {
       border-color: $purple-light;
       box-shadow: inset 0 0 0 1px $purple-light;
+
+      .icons-chevron-right {
+        transform: translate3d(3px,0,0);
+      }
     }
   }
 
@@ -50,6 +54,16 @@
         text-align: left;
       }
 
+      // scss-lint:disable ColorVariable
+      &:first-child .img {
+        background: #fff3e7;
+      }
+
+      &:last-child .img {
+        background: #dbf7fc;
+      }
+      // scss-lint:enable ColorVariable
+
       + .well {
         margin-left: $md;
 
@@ -60,12 +74,11 @@
       }
 
       .img {
-        background: $gray-lightest;
         border-radius: $input-border-radius-lg;
         display: block;
-        height: 150px;
+        height: 120px;
         margin-bottom: $sm;
-        padding: $md;
+        padding: $xs $md;
         width: 150px;
 
         @media (max-width: $screen-md) and (min-width: $screen-sm) {
@@ -73,6 +86,16 @@
           margin-right: $sm;
         }
       }
+    }
+
+    .link {
+      color: $purple-light;
+      margin-top: $xxs;
+      text-decoration: none;
+    }
+
+    .icons {
+      transition: transform .3s ease-in-out;
     }
   }
 
