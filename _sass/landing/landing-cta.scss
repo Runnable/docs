@@ -84,8 +84,10 @@
         width: 150px;
 
         @media (max-width: $screen-md) and (min-width: $screen-sm) {
+          height: auto;
           margin-bottom: 0;
-          margin-right: $sm;
+          margin-right: $md;
+          width: 135px;
         }
       }
     }
