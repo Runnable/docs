@@ -63,7 +63,9 @@
   }
 
   .link {
+    @extend %text-overflow;
     color: $gray-dark;
+    display: block;
     font-size: 15px;
     margin-left: 30px;
     text-decoration: none;
