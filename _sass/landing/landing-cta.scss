@@ -28,6 +28,11 @@
     }
   }
 
+  .img {
+    border-radius: $input-border-radius-lg;
+    display: block;
+  }
+
   // links to quick starts
   .well-wrapper {
 
@@ -73,8 +78,6 @@
       }
 
       .img {
-        border-radius: $input-border-radius-lg;
-        display: block;
         height: 120px;
         margin-bottom: $sm;
         padding: $xs $md;
@@ -85,12 +88,6 @@
           margin-right: $sm;
         }
       }
-    }
-
-    .link {
-      color: $purple-light;
-      margin-top: $xxs;
-      text-decoration: none;
     }
   }
 
@@ -104,8 +101,6 @@
 
     .img {
       background: $gray-lightest;
-      border-radius: $input-border-radius-lg;
-      display: block;
       height: $lg;
       margin-right: $sm;
       padding: $xxs;
