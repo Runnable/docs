@@ -1,6 +1,5 @@
 .section-additional {
   flex-wrap: wrap;
-  padding: $md 0;
 
   @include media(md) {
     flex-direction: column;
