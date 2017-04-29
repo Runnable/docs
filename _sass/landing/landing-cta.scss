@@ -40,9 +40,17 @@
       padding: $md;
       text-align: center;
 
+      @include media(md) {
+        flex: 0 0 auto;
+      }
+
       @media (max-width: $screen-md) and (min-width: $screen-sm) {
         flex-direction: row;
         text-align: left;
+      }
+
+      @include media(xs) {
+        padding: $sm;
       }
 
       // scss-lint:disable ColorVariable
@@ -90,6 +98,10 @@
     margin-top: $md;
     padding: $sm;
 
+    @include media(xxs) {
+      text-align: center;
+    }
+
     .img {
       background: $gray-lightest;
       border-radius: $input-border-radius-lg;
@@ -104,6 +116,10 @@
       height: 15px;
       margin-right: 6px;
       width: 15px;
+
+      @include media(xs) {
+        display: none;
+      }
     }
   }
 }
