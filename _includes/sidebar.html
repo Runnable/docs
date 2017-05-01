@@ -18,7 +18,11 @@
       </a>
     {% assign docs = site.categories.docker-compose | sort: 'order'  %}
     {% for doc in docs %}
-    <li><a class="grid-block align-center a {% if doc.url == page.url %}active{% endif %}" href="{{ site.baseurl }}{{ doc.url }}">{{ doc.short }}</a>
+    <li>
+      <a class="grid-block align-center a {% if doc.url == page.url %}active{% endif %}" href="{{ site.baseurl }}{{ doc.url }}">
+        <div class="img"></div>
+        {{ doc.short }}
+      </a>
     {% endfor %}
   </ul>
 
@@ -31,7 +35,11 @@
       </a>
     {% assign docs = site.categories.repositories | sort: 'order'  %}
     {% for doc in docs %}
-    <li><a class="a grid-block align-center {% if doc.url == page.url %}active{% endif %}" href="{{ site.baseurl }}{{ doc.url }}">{{ doc.short }}</a>
+    <li>
+      <a class="a grid-block align-center {% if doc.url == page.url %}active{% endif %}" href="{{ site.baseurl }}{{ doc.url }}">
+        <div class="img"></div>
+        {{ doc.short }}
+      </a>
     {% endfor %}
   </ul>
 </nav>
