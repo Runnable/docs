@@ -3,8 +3,8 @@
   <!-- home -->
   <ul class="grid-block shrink vertical ul active">
     <li class="li">
-      <a class="grid-block align-center a {% if page.layout == 'default' %}active{% endif %}" href="{{ site.baseurl }}/">
-        <img class="img" src="{{ site.baseurl }}/images/icons/icons-database.svg">
+      <a class="grid-block align-center weight-strong a {% if page.layout == 'default' %}active{% endif %}" href="{{ site.baseurl }}/">
+        <img class="img" src="{{ site.baseurl }}/images/icons/icons-home.svg">
         Home
       </a>
   </ul>
@@ -12,8 +12,8 @@
   <!-- compose -->
   <ul class="grid-block shrink vertical ul {% if page.category == 'docker-compose' %}active{% endif %}">
     <li class="li">
-      <a class="grid-block align-center weight-bold a">
-        <img class="img" src="{{ site.baseurl }}/images/icons/icons-database.svg">
+      <a class="grid-block align-center weight-strong a">
+        <img class="img" src="{{ site.baseurl }}/images/icons/icons-compose.svg">
         Using Docker Compose
       </a>
     {% assign docs = site.categories.docker-compose | sort: 'order'  %}
@@ -29,11 +29,28 @@
   <!-- dockerfiles -->
   <ul class="grid-block shrink vertical ul {% if page.category == 'repositories' %}active{% endif %}">
     <li class="li">
-      <a class="grid-block align-center weight-bold a">
-        <img class="img" src="{{ site.baseurl }}/images/icons/icons-database.svg">
+      <a class="grid-block align-center weight-strong a">
+        <img class="img" src="{{ site.baseurl }}/images/icons/icons-dockerfile.svg">
         Using Dockerfiles
       </a>
     {% assign docs = site.categories.repositories | sort: 'order'  %}
+    {% for doc in docs %}
+    <li class="li">
+      <a class="a grid-block align-center {% if doc.url == page.url %}active{% endif %}" href="{{ site.baseurl }}{{ doc.url }}">
+        <div class="img"></div>
+        {{ doc.short }}
+      </a>
+    {% endfor %}
+  </ul>
+
+  <!-- databases & datastores -->
+  <ul class="grid-block shrink vertical ul {% if page.category == 'database-datastore' %}active{% endif %}">
+    <li class="li">
+      <a class="grid-block align-center weight-strong a">
+        <img class="img" src="{{ site.baseurl }}/images/icons/icons-database.svg">
+        Databases & Data Stores
+      </a>
+    {% assign docs = site.categories.database-datastore | sort: 'order'  %}
     {% for doc in docs %}
     <li class="li">
       <a class="a grid-block align-center {% if doc.url == page.url %}active{% endif %}" href="{{ site.baseurl }}{{ doc.url }}">
