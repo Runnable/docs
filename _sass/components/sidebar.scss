@@ -2,8 +2,8 @@
   background: $gray-lighterest;
   border-right: 1px solid $gray-lighter;
   color: $gray;
-  font-size: 13px;
-  padding: $lg $md;
+  font-size: 14px;
+  padding: $lg 24px;
   width: 280px;
 
   @include media(sm) {
@@ -16,7 +16,7 @@
     border-bottom: 1px solid $gray-lighter;
     border-right: 0;
     height: 272px;
-    padding: $md 0 0;
+    padding: $md;
     width: 100%;
   }
 
@@ -36,6 +36,10 @@
 
     &:not(.active) .li:not(:first-child) {
       opacity: 0;
+    }
+
+    + .ul {
+      margin-top: 6px;
     }
   }
 
