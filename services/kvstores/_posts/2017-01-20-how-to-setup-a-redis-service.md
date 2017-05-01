@@ -1,5 +1,5 @@
 ---
-title: How to Set up a Redis service
+title: How to Set up a Redis Service
 shortTitle: Redis Setup
 step: 1
 tags:
