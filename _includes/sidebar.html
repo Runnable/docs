@@ -1,41 +1,37 @@
-<nav class="grid-block vertical shrink sidebar">
+<nav class="grid-block vertical shrink sidebar js-nav">
   <input placeholder="Search…" type="search" id="search" class="grid-block shrink search">
-  <ul class="grid-block vertical nav">
-    {% for section in site.data.sidebar %}
-    <li class="li"><a class="a strong" href="#">{{ site.data.titles.[section.category] }}</a>
-      <ul class="ul">
-        {% for subCategory in section.subcategories %}
-        {% assign posts = site.categories.[subCategory.category] %}
-        <li class="li"><a class="a" href="#">{{ site.data.titles.[subCategory.category] }}</a>
-          <ul class="ul">
-            {% for p in posts %}
-            {% if page.url == p.url %}
-            <li class="li active">
-            {% else %}
-            <li class="li">
-            {% endif %}
-              <a class="a" href="{{ site.baseurl }}{{ p.url }}">{{ p.shortTitle }}</a>
-            {% endfor %}
-          </ul>
-        {% endfor %}
-        {% assign posts = site.categories.[section.category] | sort: "step" %}
-        {% for p in posts %}
-        {% unless p.categories.size > 1 %}
-        {% if page.url == p.url %}
-        <li class="li active">
-        {% else %}
-        <li class="li">
-        {% endif %}
-          <a class="a" href="{{ site.baseurl }}{{ p.url }}">{{ p.shortTitle }}</a>
-        {% endunless %}
-      {% endfor %}
-    </ul>
-  {% endfor %}
+  <!-- home -->
+  <ul class="grid-block shrink vertical ul active">
+    <li class="grid-block align-center li">
+      <a class="grid-block align-center a {% if page.layout == 'default' %}active{% endif %}" href="{{ site.baseurl }}/">
+        <img class="img" src="{{ site.baseurl }}/images/icons/icons-database.svg">
+        Home
+      </a>
+  </ul>
+
+  <!-- compose -->
+  <ul class="grid-block shrink vertical ul {% if page.category == 'docker-compose' %}active{% endif %}">
+    <li>
+      <a class="grid-block align-center weight-bold a">
+        <img class="img" src="{{ site.baseurl }}/images/icons/icons-database.svg">
+        Using Docker Compose
+      </a>
+    {% assign docs = site.categories.docker-compose | sort: 'order'  %}
+    {% for doc in docs %}
+    <li><a class="grid-block align-center a {% if doc.url == page.url %}active{% endif %}" href="{{ site.baseurl }}{{ doc.url }}">{{ doc.short }}</a>
+    {% endfor %}
+  </ul>
+
+  <!-- dockerfiles -->
+  <ul class="grid-block shrink vertical ul {% if page.category == 'repositories' %}active{% endif %}">
+    <li>
+      <a class="grid-block align-center weight-bold a">
+        <img class="img" src="{{ site.baseurl }}/images/icons/icons-database.svg">
+        Using Dockerfiles
+      </a>
+    {% assign docs = site.categories.repositories | sort: 'order'  %}
+    {% for doc in docs %}
+    <li><a class="a grid-block align-center {% if doc.url == page.url %}active{% endif %}" href="{{ site.baseurl }}{{ doc.url }}">{{ doc.short }}</a>
+    {% endfor %}
   </ul>
 </nav>
-
-<script>
-$(document).ready(() => {
-  $('.nav').navgoco();
-})
-</script>

@@ -2,6 +2,7 @@
   background: $gray-lighterest;
   border-right: 1px solid $gray-lighter;
   color: $gray;
+  font-size: 13px;
   padding: $lg $md;
   width: 280px;
 
@@ -26,76 +27,36 @@
     }
   }
 
-  .nav {
-    margin-top: $md;
-    overflow: auto;
+  .ul {
+    list-style: none;
+    max-height: $input-xs;
+    overflow: hidden;
+    padding: 0;
+    transition: max-height .3s ease-in-out;
 
-    @include media(xs) {
-      margin-top: 0;
-      padding: $sm $md;
+    &.active {
+      max-height: 1000px;
+    }
+  }
+
+  .a {
+    cursor: pointer;
+    min-height: $input-xs;
+
+    &:hover {
+      color: $gray-dark;
     }
 
-    .ul {
-      list-style: none;
-      margin-left: $sm;
-      padding: 0;
-
-      @include media(sm) {
-        margin-left: 0;
-      }
-    }
-
-    .li {
-
-      // active state
-      &.active {
-        color: $purple-light;
-        font-weight: $weight-bold;
-
-        .a:hover,
-        .a:active {
-          color: $purple-light;
-        }
-      }
-    }
-
-    .a {
-      display: block;
-      font-size: 13px;
-      margin-bottom: 2px;
-      min-height: 32px;
-      padding: 3px $xxs;
-
-      @include media(xs) {
-        padding: 6px $sm;
-      }
-
-      &:hover {
-        color: $gray-dark;
-      }
-
-      &:active {
-        color: $purple-light;
-        font-weight: $weight-bold;
-      }
-
-      > span {
-        float: right;
-        margin-left: 5px;
-      }
-    }
-
-    // + & - symbols
-    .a > span,
-    .a > span::after {
-      content: '+';
+    &:active,
+    &.active {
+      color: $purple-light;
       font-weight: $weight-bold;
-      text-align: center;
-      width: $xs;
     }
+  }
 
-    .open > a > span::after {
-      content: '-';
-    }
+  .img {
+    height: 15px;
+    margin-right: 4px;
+    width: 15px;
   }
 }

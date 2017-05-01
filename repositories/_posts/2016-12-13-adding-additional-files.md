@@ -1,9 +1,8 @@
 ---
 title: Adding Additional Files
-shortTitle: Adding Additional Files
+short: Adding Additional Files
 category: repositories
-step: 5
-description: How Docker helps speed up development and future proof the deployment process for your PHP applications.
+order: 8
 ---
 
 Every time a container is rebuilt, all dirty files and changes are reverted to the cached state before the Dockerfile CMD.
@@ -20,7 +19,7 @@ If you have files that you want to persist for every build of a container, you c
 4. Click on **Choose** to locate the file you want to add. Then specify the desired **Destination** path for the file you will be adding.
     > You can also add a script that will be executed after adding the file during the container build process.
    _For example:_ **chmod +x file.sh**
-   
+
 5. Click on **Add File** to complete the process of adding the file to your template configuration.
 6. Click **Save & Build** to build the template with the file you have just uploaded.
 

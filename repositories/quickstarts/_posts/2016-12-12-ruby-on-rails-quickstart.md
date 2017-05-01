@@ -1,11 +1,8 @@
 ---
 title: Ruby on Rails Quickstart Guide
-shortTitle: Ruby on Rails
-step: 2
-tags:
-- quickstarts
-- rails
-description: How to setup your multi-tier Ruby on Rails application.
+short: Ruby on Rails
+category: repositories
+order: 1
 ---
 
 This guide will help you setup Runnable templates for a simple Rails application. This guide will assume that you don’t have a Dockerfile and want Runnable to generate the Dockerfile for you using a simple setup guide.
