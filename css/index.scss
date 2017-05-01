@@ -48,12 +48,10 @@
 
 // landing specific
 @import "landing/landing";
-@import "landing/hero";
-@import "landing/modals";
-@import "landing/coming-soon";
+@import "landing/landing-cta";
+@import "landing/landing-additional-setup";
 @import "landing/signup";
 
 // documentation specific
-@import "documentation/layout";
 @import "articles/article";
 @import "globals/responsive-utils";

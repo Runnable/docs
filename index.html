@@ -2,132 +2,123 @@
 layout: default
 ---
 
-<div class="grid-block justify-center shrink noscroll home">
-  <section class="grid-block vertical card">
-    <div class="preview">
-      <img class="img" src="{{ site.baseurl }}/images/icons/quickstart-guides.svg">
+<div class="grid-block vertical justify-center shrink noscroll home">
+  <h1 class="h1"><span class="emoji">👋</span> Welcome to our documentation!</h1>
+  <p class="p">We’ll walk you through how to set up your code regardless of how dockerized you are. You’ll build complete staging and testing environments for every branch of your GitHub repos.</p>
+  <hr class="hr">
+  <section class="grid-block vertical section-cta">
+    <div class="grid-block well-wrapper">
+      <a class="grid-block vertical align-center well well-primary" href="{{ site.baseurl }}/docker-compose/launching-your-first-environment">
+        <img src="{{ site.baseurl }}/images/home/file-compose.svg" class="grid-block shrink img">
+        <div class="grid-block vertical text-wrapper">
+          <p class="grid-block vertical shrink p">Docker Compose
+            <small class="small">Setup Guide</small>
+          </p>
+          <p class="p margin-top-xs">If you already use Compose, this is the easiest way to get started.</p>
+          <span class="text-purple-light margin-top-xxs">Get Started
+            <svg class="icons icons-chevron-right">
+              <use xlink:href="#icons-chevron-right">
+            </svg>
+          </span>
+        </div>
+      </a>
+      <a class="grid-block vertical align-center well" href="{{ site.baseurl }}/repositories/byod/how-to-use-your-own-dockerfile-on-runnable">
+        <img src="{{ site.baseurl }}/images/home/file-dockerfile.svg" class="grid-block shrink img">
+        <div class="grid-block vertical text-wrapper">
+          <p class="grid-block vertical shrink p">Dockerfile
+            <small class="small">Setup Guide</small>
+          </p>
+          <p class="p margin-top-xs">If you don’t use Compose, we can build your services independently.</p>
+          <span class="text-purple-light margin-top-xxs">Get Started
+            <svg class="icons icons-chevron-right">
+              <use xlink:href="#icons-chevron-right">
+            </svg>
+          </span>
+        </div>
+      </a>
     </div>
-    <div class="padding-sm">
-      <h1 class="h1 padding-xxs">Quickstart Guides</h1>
-      <ul class="list">
-        {% assign posts = site.categories.quickstarts | sort: "step" %}
-        {% for post in posts %}
-          {% unless forloop.index > 5 %}
-          <li class="list-item">
-            <a class="grid-block justify-justified align-center link padding-xxs" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}
-              <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
-            </a>
-          </li>
-          {% endunless %}
-        {% endfor %}
-      </ul>
-    </div>
+    <a class="grid-block align-center well well-alt" href="{{ site.baseurl }}/repositories/quickstarts/ruby-on-rails-quickstart">
+      <img src="images/home/file-empty.svg" class="grid-block shrink img hidden-xxs">
+      <div class="grid-block vertical">
+        <p class="p">Don’t have Dockerfiles yet?</p>
+        <p class="p">We can generate Dockerfiles from your source code.</p>
+      </div>
+      <svg class="grid-block shrink icons icons-chevron-right">
+        <use xlink:href="#icons-chevron-right">
+      </svg>
+    </a>
   </section>
-
-  <section class="grid-block vertical card">
-    <div class="preview">
-      <img class="img" src="{{ site.baseurl }}/images/icons/configuring-a-repository.svg">
-    </div>
-    <div class="padding-sm">
-      <h1 class="h1 justify padding-xxs">Configuring a Repository</h1>
-      <ul class="list">
-        {% assign posts = site.categories.repositories | sort: "step" %}
-        {% for post in posts %}
-          {% unless forloop.index > 5 %}
-            {% if post.categories.[0] == 'repositories' %}
-          <li class="list-item">
-            <a class="grid-block justify-justified align-center link padding-xxs" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}
-              <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
-            </a>
-          </li>
-            {% endif %}
-          {% endunless %}
-        {% endfor %}
-      </ul>
-    </div>
+  <hr class="hr">
+  <h1 class="h1">Additional Setup</h1>
+  <section class="grid-block section-additional">
+    <ul class="ul">
+      <li class="grid-block align-center li"><img class="img margin-right-xxs hidden-xxs" src="{{ site.baseurl }}/images/icons/icons-database.svg">Databases
+      <li class="li">
+        <a class="link" href="{{ site.baseurl }}/services/databases/how-to-setup-your-mysql-database-template">Setting Up MySQL
+          <svg class="icons icons-chevron-right">
+            <use xlink:href="#icons-chevron-right">
+          </svg>
+        </a>
+      <li class="li">
+        <a class="link" href="{{ site.baseurl }}/services/databases/how-to-setup-your-postgres-database-template">Setting Up PostgreSQL
+          <svg class="icons icons-chevron-right">
+            <use xlink:href="#icons-chevron-right">
+          </svg>
+        </a>
+      <li class="li">
+        <a class="link" href="{{ site.baseurl }}/services/databases/how-to-seed-your-database-from-s3">Seeding Your Database
+          <svg class="icons icons-chevron-right">
+            <use xlink:href="#icons-chevron-right">
+          </svg>
+        </a>
+      <li class="li">
+        <a class="link" href="{{ site.baseurl }}/services/databases/how-to-clone-your-local-database-for-use-on-runnable">Cloning a Local Database for Runnable
+          <svg class="icons icons-chevron-right">
+            <use xlink:href="#icons-chevron-right">
+          </svg>
+        </a>
+    </ul>
+    <ul class="ul">
+      <li class="grid-block align-center li"><img class="img margin-right-xxs hidden-xxs" src="{{ site.baseurl }}/images/icons/icons-network.svg">Networking
+      <li class="li">
+        <a class="link" href="{{ site.baseurl }}/networking/how-to-configure-a-custom-subdomain">Setting Up Custom Subdomains
+          <svg class="icons icons-chevron-right">
+            <use xlink:href="#icons-chevron-right">
+          </svg>
+        </a>
+      <li class="li">
+        <a class="link" href="{{ site.baseurl }}/networking/how-do-i-configure-ssl-in-runnable">Configuring SSL
+          <svg class="icons icons-chevron-right">
+            <use xlink:href="#icons-chevron-right">
+          </svg>
+        </a>
+    </ul>
+    <ul class="ul">
+      <li class="grid-block align-center li"><img class="img margin-right-xxs hidden-xxs" src="{{ site.baseurl }}/images/icons/icons-test.svg">Automated Testing
+      <li class="li">
+        <a class="link" href="{{ site.baseurl }}/testing/how-to-setup-unit-tests-for-your-services">Setting Up Unit Tests
+          <svg class="icons icons-chevron-right">
+            <use xlink:href="#icons-chevron-right">
+          </svg>
+        </a>
+    </ul>
+    <ul class="ul">
+      <li class="grid-block align-center li"><img class="img margin-right-xxs hidden-xxs" src="{{ site.baseurl }}/images/icons/icons-integration.svg">Integrations
+      <li class="li">
+        <a class="link" href="{{ site.baseurl }}/integrations/notifications/github-pull-request-notifications">Show Environment Links on GitHub
+          <svg class="icons icons-chevron-right">
+            <use xlink:href="#icons-chevron-right">
+          </svg>
+        </a>
+      <li class="li">
+        <a class="link" href="{{ site.baseurl }}/integrations/notifications/jira">Show Environment Links on JIRA
+          <svg class="icons icons-chevron-right">
+            <use xlink:href="#icons-chevron-right">
+          </svg>
+        </a>
+    </ul>
   </section>
-
-  <section class="grid-block vertical card">
-    <div class="preview">
-      <img class="img" src="{{ site.baseurl }}/images/icons/integrations.svg">
-    </div>
-    <div class="padding-sm">
-      <h1 class="h1 justify padding-xxs">Integrations</h1>
-      <ul class="list">
-        {% assign posts = site.categories.integrations | sort: "step" %}
-        {% for post in posts %}
-          {% unless forloop.index > 5 %}
-          <li class="list-item">
-            <a class="grid-block justify-justified align-center link padding-xxs" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}
-              <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
-            </a>
-          </li>
-          {% endunless %}
-        {% endfor %}
-      </ul>
-    </div>
-  </section>
-
-  <section class="grid-block vertical card">
-    <div class="preview">
-      <img class="img" src="{{ site.baseurl }}/images/icons/configuring-a-database.svg">
-    </div>
-    <div class="padding-sm">
-      <h1 class="h1 padding-xxs">Configuring a Database</h1>
-      <ul class="list">
-        {% assign posts = site.categories.databases | sort: "step" %}
-        {% for post in posts %}
-          {% unless forloop.index > 5 %}
-          <li class="list-item">
-            <a class="grid-block justify-justified align-center link padding-xxs" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}
-              <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
-            </a>
-          </li>
-          {% endunless %}
-        {% endfor %}
-      </ul>
-    </div>
-  </section>
-
-  <section class="grid-block vertical card">
-    <div class="preview">
-      <img class="img" src="{{ site.baseurl }}/images/icons/testing.svg">
-    </div>
-    <div class="padding-sm">
-      <h1 class="h1 padding-xxs">Testing</h1>
-      <ul class="list">
-        {% assign posts = site.categories.testing | sort: "step" %}
-        {% for post in posts %}
-          {% unless forloop.index > 5 %}
-          <li class="list-item">
-            <a class="grid-block justify-justified align-center link padding-xxs" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}
-              <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
-            </a>
-          </li>
-          {% endunless %}
-        {% endfor %}
-      </ul>
-    </div>
-  </section>
-
-  <section class="grid-block vertical card">
-    <div class="preview">
-      <img class="img" src="{{ site.baseurl }}/images/icons/networking.svg">
-    </div>
-    <div class="padding-sm">
-      <h1 class="h1 padding-xxs">Networking</h1>
-      <ul class="list">
-        {% assign posts = site.categories.networking | sort: "step" %}
-        {% for post in posts %}
-          {% unless forloop.index > 5 %}
-          <li class="list-item">
-            <a class="grid-block justify-justified align-center link padding-xxs" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}
-              <svg class="icons icons-chevron-right"><use xlink:href="#icons-chevron-right"></svg>
-            </a>
-          </li>
-          {% endunless %}
-        {% endfor %}
-      </ul>
-    </div>
-  </section>
+  <hr class="hr">
+  <h1 class="h1">Live Support</h1>
+  <p class="p">We want to help your team to get the most out of Runnable 💯. If you have questions, you can <a class="link js-intercom-open">chat with us</a> now (also available in-app), or reach us by <a class="link" href="mailto:support@runnable.com">email</a>.</p>
 </div>

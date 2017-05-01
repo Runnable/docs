@@ -216,33 +216,3 @@
     margin-left: 30px;
   }
 }
-
-.page-landing {
-
-  .ol,
-  .ul,
-  .p {
-    margin-bottom: 9px;
-  }
-
-  .ol,
-  .ul {
-    list-style-type: circle;
-    margin: 0;
-    padding-left: 21px;
-  }
-
-  .hr {
-    background: $gray-lighter;
-    border: 0;
-    height: 1px;
-    margin-bottom: 30px;
-    margin-top: 30px;
-
-    @include media(xs) {
-      margin-left: 30px;
-      margin-right: 30px;
-      max-width: calc(100% - 60px);
-    }
-  }
-}

@@ -1,0 +1,122 @@
+.section-cta {
+
+  .p {
+    margin-bottom: 0;
+
+    &:first-of-type {
+      font-weight: $weight-bold;
+    }
+  }
+
+  .small {
+    font-weight: $weight-light;
+  }
+
+  .well {
+    color: $gray-dark;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      border-color: $purple-light;
+      box-shadow: inset 0 0 0 1px $purple-light;
+
+      .icons-chevron-right {
+        color: $purple-light;
+        transform: translate3d(3px,0,0);
+      }
+    }
+  }
+
+  .img {
+    border-radius: $input-border-radius-lg;
+    display: block;
+  }
+
+  // links to quick starts
+  .well-wrapper {
+
+    @include media(md) {
+      flex-direction: column;
+    }
+
+    .well {
+      flex: 1 1 50%;
+      padding: $md;
+      text-align: center;
+
+      @include media(md) {
+        flex: 0 0 auto;
+      }
+
+      @media (max-width: $screen-md) and (min-width: $screen-sm) {
+        flex-direction: row;
+        text-align: left;
+      }
+
+      @include media(xs) {
+        padding: $sm;
+      }
+
+      // scss-lint:disable ColorVariable
+      &:first-child .img {
+        background: #fff3e7;
+      }
+
+      &:last-child .img {
+        background: #dbf7fc;
+      }
+      // scss-lint:enable ColorVariable
+
+      + .well {
+        margin-left: $md;
+
+        @include media(md) {
+          margin-left: 0;
+          margin-top: $md;
+        }
+      }
+
+      .img {
+        height: 120px;
+        margin-bottom: $sm;
+        padding: $xs $md;
+        width: 150px;
+
+        @media (max-width: $screen-md) and (min-width: $screen-sm) {
+          height: auto;
+          margin-bottom: 0;
+          margin-right: $md;
+          width: 135px;
+        }
+      }
+    }
+  }
+
+  .well-alt {
+    margin-top: $md;
+    padding: $sm;
+
+    @include media(xxs) {
+      text-align: center;
+    }
+
+    .img {
+      background: $gray-lightest;
+      height: $lg;
+      margin-right: $sm;
+      padding: $xxs;
+      width: $lg;
+    }
+
+    .icons-chevron-right {
+      height: 15px;
+      margin-right: 6px;
+      width: 15px;
+
+      @include media(xs) {
+        display: none;
+      }
+    }
+  }
+}
