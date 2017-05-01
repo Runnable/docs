@@ -1,9 +1,0 @@
-.home {
-  flex-wrap: wrap;
-  padding: $lg $md;
-
-  @include media(xs) {
-    flex-direction: column;
-    justify-content: center;
-  }
-}
