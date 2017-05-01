@@ -29,19 +29,23 @@
 
   .ul {
     list-style: none;
-    max-height: $input-xs;
+    max-height: 30px;
     overflow: hidden;
     padding: 0;
     transition: max-height .3s ease-in-out;
 
-    &.active {
-      max-height: 1000px;
+    &:not(.active) .li:not(:first-child) {
+      opacity: 0;
     }
+  }
+
+  .li {
+    transition: opacity .3s ease-in-out;
   }
 
   .a {
     cursor: pointer;
-    min-height: $input-xs;
+    min-height: 30px;
 
     &:hover {
       color: $gray-dark;

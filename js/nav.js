@@ -3,6 +3,7 @@ function setupNav(jsNav) {
   var uls = jsNav.getElementsByTagName('ul');
   var lis;
   var lisHeight;
+  var liHeight;
   var anchor;
 
   for (i = 0; i < uls.length; i++) {
@@ -13,7 +14,8 @@ function setupNav(jsNav) {
 
     // set height on active lists
     lis = uls[i].getElementsByTagName('li');
-    lisHeight = lis.length * 24 + 'px';
+    liHeight = lis[0].offsetHeight * 1.4; // allows up to 2 rows per list item
+    lisHeight = lis.length * liHeight + 'px';
     if (uls[i].classList.contains('active')) {
       uls[i].style.maxHeight = lisHeight
     }
@@ -27,11 +29,13 @@ function toggleList(e) {
   var uls = jsNav.getElementsByTagName('ul');
   var lis;
   var lisHeight;
+  var liHeight;
 
   // get element to make active
   while ((thisTarget = thisTarget.parentNode) && (thisTarget.tagName !== 'UL'));
   lis = thisTarget.getElementsByTagName('li');
-  lisHeight = lis.length * 24 + 'px';
+  liHeight = lis[0].offsetHeight * 1.4; // allows up to 2 rows per list item
+  lisHeight = lis.length * liHeight + 'px';
 
   // make other elements inactive
   for (i = 0; i < uls.length; i++) {
