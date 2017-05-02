@@ -18,7 +18,7 @@
   }
 
   .h4 {
-    color: $white;
+    color: rgba($white,0.5);
     font-size: 16px;
     font-weight: $weight-normal;
     padding: $xxs;
@@ -32,7 +32,7 @@
     font-size: 19px;
     padding: $xxs;
     text-decoration: none;
-    color: rgba($white,0.9);
+    color: rgba($white,0.85);
     transition: 0.125s ease-in-out color;
 
     &:hover,
@@ -107,7 +107,7 @@
   .figure {
     border: 0px;
     box-shadow: 0 2px 4px rgba($black,.1);
-    
+
     @include media(xs) {
       margin: 0 auto;
       max-width: 225px;
