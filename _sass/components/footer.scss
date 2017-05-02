@@ -67,22 +67,22 @@
 .aside-support {
   border-bottom: 1px solid rgba($white, .5); // darken colors for gradient
   color: $gray-dark;
-  margin: 45px auto 0;
+  margin: $lg auto 0;
   max-width: 660px;
-  padding: 0 30px 30px;
+  padding: 0 $md $md;
 
   @include media(xs) {
     flex-flow: column;
-    padding: 0 15px 30px;
+    padding: 0 $sm $md;
   }
 
   .support-text {
     color: $white;
     line-height: 1.4;
-    margin-right: 30px;
+    margin-right: $md;
 
     @include media(xs) {
-      margin-bottom: 15px;
+      margin-bottom: $sm;
       margin-right: 0;
       text-align: center;
     }
@@ -105,7 +105,7 @@
   }
 
   .figure {
-    border: 0px;
+    border: 0;
     box-shadow: 0 2px 4px rgba($black,.1);
 
     @include media(xs) {
@@ -128,7 +128,7 @@
     border: 0px;
     font-size: 13px;
     font-weight: $weight-normal;
-    padding: 6px 15px 6px 9px;
+    padding: 6px $sm 6px 9px;
     pointer-events: none;
     user-select: none;
 
@@ -160,14 +160,14 @@
 // status indicator
 .link.status {
   color: $gray-light;
-  font-size: 15px;
+  font-size: $sm;
   margin-bottom: 24px;
   position: relative;
   text-decoration: none;
   text-indent: 9px;
 
   @include media(xs) {
-    margin-bottom: 60px;
+    margin-bottom: $xl;
   }
 
   &:hover,
