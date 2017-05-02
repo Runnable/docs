@@ -18,7 +18,7 @@
   }
 
   .h4 {
-    color: rgba($white,0.5);
+    color: rgba($white,.5);
     font-size: 16px;
     font-weight: $weight-normal;
     padding: $xxs;
@@ -32,8 +32,8 @@
     font-size: 19px;
     padding: $xxs;
     text-decoration: none;
-    color: rgba($white,0.85);
-    transition: 0.125s ease-in-out color;
+    color: rgba($white,.85);
+    transition: .125s ease-in-out color;
 
     &:hover,
     &:active {
@@ -65,7 +65,7 @@
 
 // support aside
 .aside-support {
-  border-bottom: 1px solid rgba($white, 0.5); // darken colors for gradient
+  border-bottom: 1px solid rgba($white, .5); // darken colors for gradient
   color: $gray-dark;
   margin: 45px auto 0;
   max-width: 660px;

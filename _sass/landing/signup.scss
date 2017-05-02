@@ -4,7 +4,7 @@
   background: $white;
   min-width: 660px;
   overflow: visible;
-  padding-left: 60px;
+  padding-left: $xl;
   position: relative;
 
   @media (max-width: 720px) {
@@ -13,14 +13,14 @@
 
   @include media(xs) {
     align-items: center;
-    padding: 30px 15px 90px;
+    padding: $md $sm 90px;
   }
 
   .img {
     bottom: -11px;
     height: auto;
     position: absolute;
-    right: 30px;
+    right: $md;
     width: 210px;
 
     @include media(xs) {

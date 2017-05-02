@@ -1,5 +1,5 @@
 .well {
-  border: none;
+  border: 0;
   border-radius: $input-border-radius-lg;
   box-shadow: 0 2px 4px rgba($black,.1);
 
@@ -16,18 +16,18 @@
   cursor: pointer;
   display: flex;
   font-size: 21px;
-  padding: 30px;
-  transition: 0.125s ease-in-out box-shadow;
+  padding: $md;
+  transition: box-shadow ease-in-out .125s;
 
   @include media(sm) {
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: $md;
+    margin-right: $md;
     max-width: none;
   }
 
   @include media(xs) {
     flex-direction: column;
-    padding: 15px 30px 30px;
+    padding: $sm $md $md;
     text-align: center;
   }
 
@@ -38,7 +38,7 @@
   }
 
   &:hover {
-    box-shadow: 0 3px 15px rgba($black,.15);
+    box-shadow: 0 3px $sm rgba($black,.15);
 
     .a {
       text-decoration: underline;
@@ -51,7 +51,7 @@
   }
 
   .img {
-    margin-right: 15px;
+    margin-right: $sm;
 
     &.grid-block {
       @include media(xs) {
