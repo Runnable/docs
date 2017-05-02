@@ -1,11 +1,8 @@
 ---
 title: Node.js Quickstart Guide
-shortTitle: Node.js
-step: 1
-tags:
-- quickstarts
-- nodejs
-description: How to setup your multi-tier Node.js application.
+short: Node.js
+category: repositories
+order: 4
 ---
 
 This guide will help you setup Runnable templates for a simple 2-tier Node.js application. This guide will assume that you don't have a Dockerfile and want Runnable to generate the Dockerfile for you using a simple setup guide.

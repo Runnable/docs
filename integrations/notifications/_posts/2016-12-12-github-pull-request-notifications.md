@@ -1,14 +1,11 @@
 ---
-title: Github Pull Request Notifications
-shortTitle: Runnabot for Github
-step: 1
-tags:
-- integrations
-- github
-description: Pull Request bot for Github that updates your Pull Requests with build / test results.
+title: GitHub Pull Request Notifications
+short: Runnabot for GitHub
+category: integrations
+order: 3
 ---
 
-Once your team is setup on Runnable, you can launch into your Runnable environments straight from your Github org's PR pages. 
+Once your team is setup on Runnable, you can launch into your Runnable environments straight from your Github org's PR pages.
 
 To enable our PR Bot's comments:
 

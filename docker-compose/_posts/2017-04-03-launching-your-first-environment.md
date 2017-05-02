@@ -1,13 +1,9 @@
 ---
 title: Launching Your First Environment
-shortTitle: Launching Your First Environment
-step: 3
-tags:
-- docker
-- environment
-description: Launching Your First Environment
+short: Launching Your First Environment
+category: docker-compose
+order: 3
 ---
-
 
 Runnable makes it easy to launch containers from your compose file.
 

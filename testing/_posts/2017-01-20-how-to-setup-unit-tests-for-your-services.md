@@ -1,8 +1,8 @@
 ---
-title: How to setup Unit Tests for your Services
-shortTitle: Running Unit Tests
-step: 1
-description: How to setup Unit Tests for your Services
+title: How to Run Unit Tests for Your Services
+short: Running Unit Tests
+category: testing
+order: 1
 ---
 
 Runnable makes it easy to setup testing for your services using Compose.
@@ -27,7 +27,7 @@ From this Compose file, it is clear that we expect to see 2 containers launch fo
   ![Specify Docker-Compose Path]({{ site.baseurl }}/images/testing-type-name.png)
 
 6. Next, select the service that you will be running tests from. Github integration will be applied to this service.
-  ![Select Test Container]({{ site.baseurl }}/images/testing-select-service.png) 
+  ![Select Test Container]({{ site.baseurl }}/images/testing-select-service.png)
 
 7. Click on "Create Environment".
   ![GitHub Organization People]({{ site.baseurl }}/images/testing-create-envs.png)

@@ -1,8 +1,8 @@
 ---
-title: How Do I Get the Current Container's Url from Inside the Container?
-shortTitle: Access Container URL
-step: 6
-description: How Do I Get the Current Container's Url from Inside the Container?
+title: How Do I Get the Current Container’s URL from Inside the Container
+short: Access Container URL
+category: troubleshooting
+order: 4
 ---
 
 There can be many reasons why knowing the [Web URL](networking/runnable_urls.md) of a container is required when setting up on Runnable. Here is a walk through that can explain how to generate the Web URL of a given container.

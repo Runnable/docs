@@ -1,11 +1,8 @@
 ---
 title: Python Quickstart Guide
-shortTitle: Python
-step: 4
-tags:
-- quickstarts
-- python
-description: How to setup your multi-tier Python application.
+short: Python
+category: repositories
+order: 2
 ---
 
 This guide will help you setup Runnable templates for a simple Pyhton application. This guide will assume that you don't have a Dockerfile and want Runnable to generate the Dockerfile for you using a simple setup guide.

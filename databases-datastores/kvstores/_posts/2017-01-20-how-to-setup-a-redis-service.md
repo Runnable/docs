@@ -1,12 +1,8 @@
 ---
-title: How to Set up a Redis Service
-shortTitle: Redis Setup
-step: 1
-tags:
-- services
-- kvstores
-- redis
-description: How to Set up a Redis service
+title: How to Set Up a Redis Service
+short: Redis Setup
+category: database-datastore
+order: 7
 ---
 
 ---
@@ -25,5 +21,5 @@ description: How to Set up a Redis service
 5. Your Redis is now ready to configure. Just click on the **Configure Service** button to reveal additional configuration settings.
   ![redis-configure]({{ site.baseurl }}/images/redis-configure.png)
 
-6. You should be able to instantly connect another services to this container, just use the URL:  
+6. You should be able to instantly connect another services to this container, just use the URL:
     `redis://redis-datatore-staging-yourGitHubOrgName.runnableapp.com`.

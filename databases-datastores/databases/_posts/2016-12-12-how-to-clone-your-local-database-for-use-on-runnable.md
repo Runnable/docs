@@ -1,13 +1,8 @@
 ---
-title: How To Clone Your Local Database For Use on Runnable
-shortTitle: Clone your Local Database
-step: 5
-tags:
-- services
-- databases
-- postgres
-- mysql
-description: How To Clone Your Local Database For Use on Runnable
+title: How to Clone Your Local Database for Use on Runnable
+short: Clone Local Database
+category: database-datastore
+order: 5
 ---
 
 ---

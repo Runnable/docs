@@ -1,17 +1,13 @@
 ---
-title: How To Set up a HBase Service
-shortTitle: HBase Setup
-step: 2
-tags:
-- services
-- kvstores
-- hbase
-description: How To Set up a HBase Service
+title: How to Set Up an HBase Service
+short: HBase Setup
+category: database-datastore
+order: 6
 ---
 
 ---
 
-1. Click on the **Add a Service** button.  
+1. Click on the **Add a Service** button.
   ![add-a-service]({{ site.baseurl }}/images/hbase-add-service.png)
 
 2. Find **HBase** in the list and click select next to it.
@@ -25,5 +21,5 @@ description: How To Set up a HBase Service
 5. HBase is now ready to configure. Just click on the **Configure Service** button to reveal additional configuration settings.
   ![hbase-configure]({{ site.baseurl }}/images/hbase-configure.png)
 
-6. You should be able to instantly connect another services to this container, just use the URL:  
+6. You should be able to instantly connect another services to this container, just use the URL:
     `hbase://hbase-datatore-staging-yourGitHubOrgName.runnableapp.com`.

@@ -1,12 +1,8 @@
 ---
-title: How To Set up Your MySQL Database Template
-shortTitle: MySQL Setup
-step: 1
-tags:
-- services
-- databases
-- mysql
-description: How To Set up Your MySQL Database Template
+title: How to Set Up Your MySQL Database Template
+short: MySQL Setup
+category: database-datastore
+order: 2
 ---
 
 Our Database templates for MySQL come with a build-in initialization script that allows you
@@ -23,17 +19,17 @@ container. Every branch that you run in isolation will immediately start up with
 2. Create a **Non-Repository Template** for MySQL.
   * Click **Create Template** in the **Templates** tab
   * Select **Non-Repository Template** to reveal a list of non-repository templates. Select **MySQL**.
-    ![Select Template]({{ site.baseurl }}/images/create-mysql-db-1.png)  
+    ![Select Template]({{ site.baseurl }}/images/create-mysql-db-1.png)
 
   * Name your template, if desired. Click **Create Template**
-    ![Name & Create Template]({{ site.baseurl }}/images/create-mysql-db-2.png)  
+    ![Name & Create Template]({{ site.baseurl }}/images/create-mysql-db-2.png)
 
   * Your template should launch and turn **green** when the container has finsihed building.
-    ![Template launched]({{ site.baseurl }}/images/create-mysql-db-3.png)  
+    ![Template launched]({{ site.baseurl }}/images/create-mysql-db-3.png)
 
   * Select **Dockerfile** to customize your database. Here you can modify the environment variables to
   change desired usernames, passwords, and database names. Defaults have been set for your convienence.
-    ![Dockerfile]({{ site.baseurl }}/images/create-mysql-db-4.png)  
+    ![Dockerfile]({{ site.baseurl }}/images/create-mysql-db-4.png)
 
   * Once running, you can setup template connections with your repository applications. [Here is how.](/connections/how_to_connect_your_containers.md)
 
@@ -46,7 +42,7 @@ container. Every branch that you run in isolation will immediately start up with
 
   ```
   $ mysqldump --all-databases -u mysql -p > seed.sql
-  ```  
+  ```
 
 * Your seed file should end up looking similar to this, but much longer:
     ```
@@ -92,20 +88,20 @@ container. Every branch that you run in isolation will immediately start up with
 
 ### Upload the seed file to your template configuration
 1. Bring up the template configuration modal by either clicking on the **cog** next to your database template in the `Containers` pane, or clicking on Dockerfile in the `Templates` pane.
-  ![Select Template]({{ site.baseurl }}/images/seed-mysql-db-1.png)  
+  ![Select Template]({{ site.baseurl }}/images/seed-mysql-db-1.png)
 2. Select the `Dockerfile` tab on the top menu within the modal.
-  ![Select Dockerfile]({{ site.baseurl }}/images/seed-mysql-db-2.png)  
+  ![Select Dockerfile]({{ site.baseurl }}/images/seed-mysql-db-2.png)
 3. Click on the `[+]` button above the file explorer to the left of the Dockerfile editor.
-  ![Add File/Folder]({{ site.baseurl }}/images/seed-mysql-db-3.png)  
+  ![Add File/Folder]({{ site.baseurl }}/images/seed-mysql-db-3.png)
 4. Select 'Upload File' to bring up the file selector and choose your dump file (i.e. `seed.sql`).
-  ![File Uploaded]({{ site.baseurl }}/images/seed-mysql-db-4.png)  
+  ![File Uploaded]({{ site.baseurl }}/images/seed-mysql-db-4.png)
 
 
 ---
 
 ### Enable the database seeding functionality
 1. Uncomment the `ADD seed.sql /seed/sql` line in the Dockerfile editor to the right.
-  ![Uncomment Seed]({{ site.baseurl }}/images/seed-mysql-db-5.png)  
+  ![Uncomment Seed]({{ site.baseurl }}/images/seed-mysql-db-5.png)
     > If you have named your seed something other than `seed.sql`, you should modify the first part of the add command.
     Make sure you leave the second `seed.sql` intact so the init script will work.
 2. Now click `Save & Build` to build your container and seed your database.

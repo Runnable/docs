@@ -1,8 +1,8 @@
 ---
-title: My Build Is Failing Because of "No Such Key" Or "Host Key Verification Failed". What Do I Do?
-shortTitle: My Build is Failing!?
-step: 2
-description: My Build Is Failing Because of "No Such Key" Or "Host Key Verification Failed". What Do I Do?
+title: What Do I Do If My Build Fails Because Of "No Such Key" Or "Host Key Verification Failed" Errors?
+short: SSH Key Errors
+category: troubleshooting
+order: 1
 ---
 
 If you are seeing these errors, your configuration is probably trying to use other repositories that Runnable does not have access to.
@@ -64,7 +64,7 @@ Now, you are ready to upload the public key to your Github.com user account. If 
 
 2. Next, log in to your account on Github.com.
 
-3. Click on your username on the top right to reveal a tray. On the tray, click on **Settings**.  
+3. Click on your username on the top right to reveal a tray. On the tray, click on **Settings**.
 
 4. Next, click on **SSH Keys** settings under **Personal Settings**.
 

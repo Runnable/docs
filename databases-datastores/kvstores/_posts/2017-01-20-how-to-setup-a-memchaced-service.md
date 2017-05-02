@@ -1,12 +1,8 @@
 ---
-title: How to Set up a Memcached Service
-shortTitle: Memcached Setup
-step: 2
-tags:
-- services
-- kvstores
-- memcached
-description: How to Set up a Memcached Service
+title: How to Set Up a Memcached Service
+short: Memcached Setup
+category: database-datastore
+order: 8
 ---
 
 ---
@@ -25,5 +21,5 @@ description: How to Set up a Memcached Service
 5. Your Memcached is now ready to configure. Just click on the **Configure Service** button to reveal additional configuration settings.
   ![memcached-configure]({{ site.baseurl }}/images/memcached-configure.png)
 
-6. You should be able to instantly connect another services to this container, just use the URL:  
+6. You should be able to instantly connect another services to this container, just use the URL:
 	`memcached://memcached-datatore-staging-yourGitHubOrgName.runnableapp.com`.

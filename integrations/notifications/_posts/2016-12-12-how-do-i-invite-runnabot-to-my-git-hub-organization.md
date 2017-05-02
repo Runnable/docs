@@ -1,11 +1,8 @@
 ---
-title: How do I invite Runnabot to my GitHub Organization?
-shortTitle: Inviting Runnabot
-step: 2
-tags:
-- integrations
-- github
-description: Instructions on how to add Runnabot to your GitHub Organization
+title: How Do I Invite Runnabot to My GitHub Organization
+short: Inviting Runnabot
+category: integrations
+order: 2
 ---
 
 1. Contact us to make sure you are whitelisted for using our `Runnabot` feature.
@@ -26,5 +23,5 @@ description: Instructions on how to add Runnabot to your GitHub Organization
 
   ![GitHub Choose Member]({{ site.baseurl }}/images/runnabot-choose-member.png)
 
-Now *every-time you commit to a pull request* on a branch that is Running on Runnable, you will get a status update from Runnabot! 
+Now *every-time you commit to a pull request* on a branch that is Running on Runnable, you will get a status update from Runnabot!
 ![GitHub PR Notification]({{ site.baseurl }}/images/runnabot-notify.png)

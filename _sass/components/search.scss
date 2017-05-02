@@ -29,7 +29,7 @@
   font-size: 13px;
   height: $input-xs;
   line-height: $input-line-height-xs;
-  margin: 0 $sm;
+  margin-bottom: 24px; // lines up nav with text under article headlines
   padding: 0 $xs 0 30px;
   transition: .12s linear background-color;
 

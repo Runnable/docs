@@ -1,10 +1,8 @@
 ---
 title: Docker Compose Feature Support
-shortTitle: Supported Features
-step: 2
-tags:
-- docker
-description: Docker Compose features that Runnable supports out of the box.
+short: Supported Features
+category: docker-compose
+order: 2
 ---
 
 Docker Compose features that Runnable supports out of the box.

@@ -1,8 +1,8 @@
 ---
-title: What permissions does Runnable need?
-shortTitle: GitHub Permissions
-step: 2
-description: What permissions does Runnable need?
+title: What Permissions Does Runnable Need?
+short: GitHub Permissions
+category: privacy
+order: 2
 ---
 
 Based on GitHub’s current permission model, we have to ask for more permissions than we would ideally like to (we **do not** modify your code). The permissions we need are:
