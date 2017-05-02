@@ -6,6 +6,7 @@
       <ul class="ul">
         {% for subCategory in section.subcategories %}
         {% assign posts = site.categories.[subCategory.category] %}
+        {% unless posts.size < 1 %}
         <li class="li"><a class="a" href="#">{{ site.data.titles.[subCategory.category] }}</a>
           <ul class="ul">
             {% for p in posts %}
@@ -17,6 +18,7 @@
               <a class="a" href="{{ site.baseurl }}{{ p.url }}">{{ p.shortTitle }}</a>
             {% endfor %}
           </ul>
+        {% endunless %}
         {% endfor %}
         {% assign posts = site.categories.[section.category] | sort: "step" %}
         {% for p in posts %}
