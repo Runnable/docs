@@ -1,8 +1,8 @@
 ---
 title: How to Use the Runnable CLI
-shortTitle: Basic Usage
-step: 1
-description: How to Use the Runnable CLI
+short: Basic Usage
+category: cli
+order: 1
 ---
 
 ---
