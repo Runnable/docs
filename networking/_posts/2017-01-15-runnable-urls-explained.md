@@ -1,8 +1,8 @@
 ---
 title: Runnable URLs Explained
-shortTitle: Runnable URLs
-step: 3
-description: Runnable URLs Explained
+short: Runnable URLs
+category: networking
+order: 3
 ---
 
 All containers on Runnable launch from templates. As a result, a Runnable container has 2 URLs:

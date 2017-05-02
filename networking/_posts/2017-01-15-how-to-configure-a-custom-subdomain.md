@@ -1,8 +1,8 @@
 ---
-title: How to configure a Custom Subdomain
-shortTitle: Configure a Custom Subdomain
-step: 1
-description: How to Configure a Custom Subdomain
+title: How To Configure a Custom Subdomain
+short: Configure a Customer Subdomain
+category: networking
+order: 1
 ---
 
 Runnable supports routing subdomain requests to your containers.
