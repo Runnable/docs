@@ -1,7 +1,7 @@
 // setup
 function setupNav(jsNav) {
   var uls = jsNav.getElementsByTagName('ul');
-  var ulsHeights = new Array();
+  var ulsHeights = [];
   var lis;
   var liHeight;
   var anchor;
