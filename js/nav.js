@@ -24,19 +24,17 @@ function setupNav(jsNav) {
     // create events on first li
     anchor = uls[i].firstElementChild.firstElementChild;
     anchor.addEventListener('click', function(e){
-      toggleList(e, ulsHeights);
+      toggleList(e, jsNav, uls, ulsHeights);
     });
     anchor.addEventListener('touchend', function(e){
-      toggleList(e, ulsHeights);
+      toggleList(e, jsNav, uls, ulsHeights);
     });
   }
 }
 
 // toggle list
-function toggleList(e, ulsHeights) {
+function toggleList(e, jsNav, uls, ulsHeights) {
   var thisTarget = e.target;
-  var jsNav = document.getElementsByClassName('js-nav')[0];
-  var uls = jsNav.getElementsByTagName('ul');
   var thisIndex;
 
   // get element to make active
