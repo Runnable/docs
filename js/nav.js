@@ -13,10 +13,10 @@ function setupNav(jsNav) {
     anchor.addEventListener('touchend', toggleList);
 
     // set height on active lists
-    lis = uls[i].getElementsByTagName('li');
-    liHeight = lis[0].offsetHeight * 1.4; // allows up to 2 rows per list item
-    lisHeight = lis.length * liHeight + 'px';
     if (uls[i].classList.contains('active')) {
+      lis = uls[i].getElementsByTagName('li');
+      liHeight = lis[0].offsetHeight * 1.4; // allows up to 2 rows per list item
+      lisHeight = lis.length * liHeight + 'px';
       uls[i].style.maxHeight = lisHeight
     }
   }
