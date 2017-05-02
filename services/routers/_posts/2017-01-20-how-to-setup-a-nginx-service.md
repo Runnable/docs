@@ -1,5 +1,5 @@
 ---
-title: How To Set Up a Nginx Service
+title: How to Set Up a Nginx Service
 short: Nginx Setup
 category: services
 order: 2

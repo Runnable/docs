@@ -1,5 +1,5 @@
 ---
-title: How To Set Up Your PostgreSQL Database Template
+title: How to Set Up Your PostgreSQL Database Template
 short: PostgreSQL Setup
 category: database-datastore
 order: 1

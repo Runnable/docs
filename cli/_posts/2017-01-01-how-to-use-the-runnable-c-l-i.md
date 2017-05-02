@@ -1,5 +1,5 @@
 ---
-title: How To Use the Runnable CLI
+title: How to Use the Runnable CLI
 short: Basic Usage
 category: cli
 order: 1

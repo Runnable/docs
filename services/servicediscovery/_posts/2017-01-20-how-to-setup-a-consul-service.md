@@ -1,5 +1,5 @@
 ---
-title: How To Set Up a Consul Service
+title: How to Set Up a Consul Service
 short: Consul Setup
 category: services
 order: 1

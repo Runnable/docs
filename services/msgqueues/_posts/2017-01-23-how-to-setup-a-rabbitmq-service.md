@@ -1,5 +1,5 @@
 ---
-title: How To Set Up a RabbitMQ Service
+title: How to Set Up a RabbitMQ Service
 short: RabbitMQ Setup
 category: services
 order: 2

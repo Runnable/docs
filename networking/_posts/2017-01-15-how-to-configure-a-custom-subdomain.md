@@ -1,5 +1,5 @@
 ---
-title: How To Configure a Custom Subdomain
+title: How to Configure a Custom Subdomain
 short: Configure a Custom Subdomain
 category: networking
 order: 1

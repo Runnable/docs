@@ -1,5 +1,5 @@
 ---
-title: How To Set Up Your MySQL Database Template
+title: How to Set Up Your MySQL Database Template
 short: MySQL Setup
 category: database-datastore
 order: 2

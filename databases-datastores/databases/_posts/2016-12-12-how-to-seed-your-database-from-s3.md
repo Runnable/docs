@@ -1,5 +1,5 @@
 ---
-title: How To Seed Your Database from S3
+title: How to Seed Your Database from S3
 short: Seeding Data from S3
 category: database-datastore
 order: 3

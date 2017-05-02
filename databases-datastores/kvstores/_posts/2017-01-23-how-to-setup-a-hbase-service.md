@@ -1,5 +1,5 @@
 ---
-title: How To Set Up an HBase Service
+title: How to Set Up an HBase Service
 short: HBase Setup
 category: database-datastore
 order: 6

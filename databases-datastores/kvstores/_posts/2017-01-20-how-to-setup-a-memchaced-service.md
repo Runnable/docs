@@ -1,5 +1,5 @@
 ---
-title: How To Set Up a Memcached Service
+title: How to Set Up a Memcached Service
 short: Memcached Setup
 category: database-datastore
 order: 8
