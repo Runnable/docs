@@ -1,5 +1,5 @@
 ---
-title: How To Set Up a Redis Service
+title: How to Set up a Redis Service
 short: Redis Setup
 category: database-datastore
 order: 7
