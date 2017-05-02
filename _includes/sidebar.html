@@ -77,7 +77,7 @@
     {% endfor %}
   </ul>
 
-  <!-- other networking -->
+  <!-- networking -->
   <ul class="grid-block shrink vertical ul {% if page.category == 'networking' %}active{% endif %}">
     <li class="li">
       <a class="grid-block align-center weight-strong a">
@@ -85,6 +85,23 @@
         Networking
       </a>
     {% assign docs = site.categories.networking | sort: 'order'  %}
+    {% for doc in docs %}
+    <li class="li">
+      <a class="a grid-block align-center {% if doc.url == page.url %}active{% endif %}" href="{{ site.baseurl }}{{ doc.url }}">
+        <div class="img"></div>
+        {{ doc.short }}
+      </a>
+    {% endfor %}
+  </ul>
+
+  <!-- automated testing -->
+  <ul class="grid-block shrink vertical ul {% if page.category == 'testing' %}active{% endif %}">
+    <li class="li">
+      <a class="grid-block align-center weight-strong a">
+        <img class="img" src="{{ site.baseurl }}/images/icons/icons-testing.svg">
+        Automated Testing
+      </a>
+    {% assign docs = site.categories.testing | sort: 'order'  %}
     {% for doc in docs %}
     <li class="li">
       <a class="a grid-block align-center {% if doc.url == page.url %}active{% endif %}" href="{{ site.baseurl }}{{ doc.url }}">

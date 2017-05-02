@@ -45,6 +45,10 @@
 
   .li {
     transition: opacity .3s ease-in-out;
+
+    &:nth-child(2) {
+      margin-top: 3px;
+    }
   }
 
   .a {
