@@ -2,7 +2,7 @@ body {
   // scss-lint:disable ColorVariable
   background: linear-gradient($purple-light, #396fc6);
   // scss-lint:enable ColorVariable
-  font-size: 16px;
+  font-size: 19px;
   padding: 0 $md;
 
   @include media(sm) {
