@@ -1,5 +1,5 @@
 ---
-title: How Do I Cancel My Runnable Account?
+title: How Do I Cancel My Account?
 short: Cancellation
 category: pricing
 order: 1

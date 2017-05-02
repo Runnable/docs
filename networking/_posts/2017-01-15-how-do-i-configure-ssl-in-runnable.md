@@ -1,5 +1,5 @@
 ---
-title: How to Configure SSL
+title: How To Configure SSL
 short: Configure HTTPS/SSL
 category: networking
 order: 2

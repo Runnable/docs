@@ -1,6 +1,6 @@
 ---
-title: How To Seed Your Database From a Dump File
-short: Seeding From a Dump File
+title: How To Seed Your Database from a Dump File
+short: Seeding from a Dump File
 category: database-datastore
 order: 4
 ---

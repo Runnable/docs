@@ -1,6 +1,6 @@
 ---
 title: How To Configure a Custom Subdomain
-short: Configure a Customer Subdomain
+short: Configure a Custom Subdomain
 category: networking
 order: 1
 ---

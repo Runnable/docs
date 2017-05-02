@@ -1,6 +1,6 @@
 ---
-title: Using Runnable’s Dockerfile Mode
-short: Runnable Dockerfile Mode
+title: Using Dockerfile Mode
+short: Dockerfile Mode
 category: repositories
 order: 5
 ---

@@ -1,5 +1,5 @@
 ---
-title: Using Docker Compose With Runnable
+title: Using Docker Compose with Runnable
 short: Introduction
 category: docker-compose
 order: 1

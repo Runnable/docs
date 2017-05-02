@@ -1,5 +1,5 @@
 ---
-title: How Do I Prevent Members From Launching Containers on Runnable?
+title: How Do I Prevent Members from Launching Containers?
 short: Excluding Teammates
 category: troubleshooting
 order: 5

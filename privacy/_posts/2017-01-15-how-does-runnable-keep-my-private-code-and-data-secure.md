@@ -1,5 +1,5 @@
 ---
-title: How does Runnable Keep My Code & Data Secure?
+title: How Is My Code & Data Kept Secure?
 short: Code & Data Privacy
 category: privacy
 order: 1

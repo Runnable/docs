@@ -1,5 +1,5 @@
 ---
-title: Syncing Files through Runnable CLI
+title: Syncing Files with Runnable CLI
 short: Syncing Files
 category: cli
 order: 3

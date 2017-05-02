@@ -1,5 +1,5 @@
 ---
-title: How to Use Your Own Dockerfile on Runnable
+title: How To Use Your Own Dockerfile
 short: Importing Dockerfiles
 category: repositories
 order: 6
