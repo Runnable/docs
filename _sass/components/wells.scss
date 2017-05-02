@@ -1,7 +1,6 @@
 .well {
   border: none;
   border-radius: $input-border-radius-lg;
-  color: $gray;
   box-shadow: 0 2px 4px rgba($black,.1);
 
   > .icons-chevron-right {
@@ -66,7 +65,6 @@
 
   .p {
     line-height: 1.4;
-    margin-bottom: 0;
 
     @include media(xs) {
       max-width: 450px;

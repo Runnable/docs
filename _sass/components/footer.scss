@@ -98,10 +98,16 @@
         display: none;
       }
     }
+
+    .p {
+      font-size: 19px;
+    }
   }
 
   .figure {
-
+    border: 0px;
+    box-shadow: 0 2px 4px rgba($black,.1);
+    
     @include media(xs) {
       margin: 0 auto;
       max-width: 225px;
@@ -118,8 +124,8 @@
   // chat message
   .bubble {
     background: $white;
-    border: 1px solid $gray-lighter;
     border-radius: $input-border-radius-lg $input-border-radius-lg 0 0;
+    border: 0px;
     font-size: 13px;
     font-weight: $weight-normal;
     padding: 6px 15px 6px 9px;
@@ -128,7 +134,7 @@
 
     + .bubble {
       border-radius: 0 0 $input-border-radius-lg $input-border-radius-lg;
-      margin-top: -1px;
+      border-top: 1px solid $gray-lighter;
     }
   }
 
