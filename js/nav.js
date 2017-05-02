@@ -1,56 +1,66 @@
 // setup
 function setupNav(jsNav) {
   var uls = jsNav.getElementsByTagName('ul');
+  var ulsHeights = new Array();
   var lis;
-  var lisHeight;
   var liHeight;
   var anchor;
 
   for (i = 0; i < uls.length; i++) {
-    // create events
-    anchor = uls[i].firstElementChild.firstElementChild; // get anchors
-    anchor.addEventListener('click', toggleList);
-    anchor.addEventListener('touchend', toggleList);
+    lis = uls[i].getElementsByTagName('li');
+    liHeight = 0;
 
-    // set height on active lists
-    if (uls[i].classList.contains('active')) {
-      lis = uls[i].getElementsByTagName('li');
-      liHeight = lis[0].offsetHeight * 1.4; // allows up to 2 rows per list item
-      lisHeight = lis.length * liHeight + 'px';
-      uls[i].style.maxHeight = lisHeight
+    // get height of list
+    for (y = 0; y < lis.length; y++) {
+      liHeight += lis[y].offsetHeight;
+      ulsHeights[i] = liHeight;
     }
+
+    // set height on active list on load
+    if (uls[i].classList.contains('active')) {
+      uls[i].style.maxHeight = ulsHeights[i] + 'px';
+    }
+
+    // create events on first li
+    anchor = uls[i].firstElementChild.firstElementChild;
+    anchor.addEventListener('click', function(e){
+      toggleList(e, ulsHeights);
+    });
+    anchor.addEventListener('touchend', function(e){
+      toggleList(e, ulsHeights);
+    });
   }
 }
 
 // toggle list
-function toggleList(e) {
+function toggleList(e, ulsHeights) {
   var thisTarget = e.target;
   var jsNav = document.getElementsByClassName('js-nav')[0];
   var uls = jsNav.getElementsByTagName('ul');
-  var lis;
-  var lisHeight;
-  var liHeight;
+  var thisIndex;
 
   // get element to make active
   while ((thisTarget = thisTarget.parentNode) && (thisTarget.tagName !== 'UL'));
-  lis = thisTarget.getElementsByTagName('li');
-  liHeight = lis[0].offsetHeight * 1.4; // allows up to 2 rows per list item
-  lisHeight = lis.length * liHeight + 'px';
 
-  // make other elements inactive
   for (i = 0; i < uls.length; i++) {
+    // make other elements inactive
     uls[i].classList.remove('active');
     uls[i].style.maxHeight = null;
+
+    // check if list matches active target
+    if (uls[i] === thisTarget) {
+      thisIndex = i;
+    }
   }
 
   // make current element active
-  thisTarget.style.maxHeight = lisHeight;
+  thisTarget.style.maxHeight = ulsHeights[thisIndex] + 'px';
   thisTarget.classList.add('active');
 }
 
 // events
 window.addEventListener('DOMContentLoaded', function(){
-  // assume there's only one js-nav
+  // assume there’s only one js-nav
   var jsNav = document.getElementsByClassName('js-nav')[0];
 
   if (jsNav) {
