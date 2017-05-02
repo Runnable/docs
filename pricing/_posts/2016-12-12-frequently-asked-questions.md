@@ -1,5 +1,5 @@
 ---
-title: Frequently Asked Questions?
+title: Frequently Asked Questions
 short: FAQ
 category: pricing
 order: 2

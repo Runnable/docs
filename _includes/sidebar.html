@@ -178,4 +178,21 @@
       </a>
     {% endfor %}
   </ul>
+
+  <!-- troubleshooting -->
+  <ul class="grid-block shrink vertical ul {% if page.category == 'troubleshooting' %}active{% endif %}">
+    <li class="li">
+      <a class="grid-block align-center weight-strong a">
+        <img class="img" src="{{ site.baseurl }}/images/icons/icons-troubleshooting.svg">
+        Troubleshooting
+      </a>
+    {% assign docs = site.categories.troubleshooting | sort: 'order'  %}
+    {% for doc in docs %}
+    <li class="li">
+      <a class="a grid-block align-center {% if doc.url == page.url %}active{% endif %}" href="{{ site.baseurl }}{{ doc.url }}">
+        <div class="img"></div>
+        {{ doc.short }}
+      </a>
+    {% endfor %}
+  </ul>
 </nav>
