@@ -59,4 +59,21 @@
       </a>
     {% endfor %}
   </ul>
+
+  <!-- other services -->
+  <ul class="grid-block shrink vertical ul {% if page.category == 'services' %}active{% endif %}">
+    <li class="li">
+      <a class="grid-block align-center weight-strong a">
+        <img class="img" src="{{ site.baseurl }}/images/icons/icons-services.svg">
+        Other Services
+      </a>
+    {% assign docs = site.categories.services | sort: 'order'  %}
+    {% for doc in docs %}
+    <li class="li">
+      <a class="a grid-block align-center {% if doc.url == page.url %}active{% endif %}" href="{{ site.baseurl }}{{ doc.url }}">
+        <div class="img"></div>
+        {{ doc.short }}
+      </a>
+    {% endfor %}
+  </ul>
 </nav>

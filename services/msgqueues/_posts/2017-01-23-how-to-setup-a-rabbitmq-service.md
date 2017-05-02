@@ -1,17 +1,13 @@
 ---
-title: How To Set up a RabbitMQ Service
-shortTitle: RabbitMQ Setup
-step: 2
-tags:
-- services
-- msgqueues
-- rabbitmq
-description: How To Set up a RabbitMQ Service
+title: How To Set Up a RabbitMQ Service
+short: RabbitMQ Setup
+category: services
+order: 2
 ---
 
 ---
 
-1. Just click on the **Add a Service** button.  
+1. Just click on the **Add a Service** button.
   ![add-a-service]({{ site.baseurl }}/images/rabbitmq-add-service.png)
 
 2. Find **RabbitMQ** in the list and click select next to it.
@@ -25,5 +21,5 @@ description: How To Set up a RabbitMQ Service
 5. Rabbitmq is now ready to configure. Just click on the **Configure Service** button to reveal additional configuration settings.
   ![rabbitmq-configure]({{ site.baseurl }}/images/rabbitmq-configure.png)
 
-6. You should be able to instantly connect another services to this container, just use the URL:  
+6. You should be able to instantly connect another services to this container, just use the URL:
   `rabbitmq://rabbitmq-datatore-staging-yourGitHubOrgName.runnableapp.com`.
