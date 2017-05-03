@@ -1,7 +1,7 @@
 .share {
   border-top: 1px solid $gray-lighter;
   margin: 0 auto;
-  padding: $md 0 $md 0;
+  padding: $md 0 0 0;
   text-align: center;
 
   @include media(xs) {
@@ -10,10 +10,16 @@
   }
   .share-icons {
     height: 48px;
+    opacity: .75;
+    transition: opacity .125s ease-in-out;
     width: 48px;
 
     img {
       margin: 0;
+    }
+
+    &:hover {
+      opacity: 1;
     }
 
     + .share-icons {
