@@ -1,4 +1,4 @@
-.share {
+.section-share {
   border-top: 1px solid $gray-lighter;
   margin: 0 auto;
   padding: $md 0 0 0;
@@ -8,18 +8,18 @@
     flex-direction: column;
     padding: $md 0;
   }
+
   .share-icons {
-    height: 48px;
+    height: $lg;
     opacity: .75;
     transition: opacity .125s ease-in-out;
-    width: 48px;
-
-    img {
-      margin: 0;
-    }
+    width: $lg;
 
     &:hover {
       opacity: 1;
+    }
+    .img {
+      margin: 0;
     }
 
     + .share-icons {
