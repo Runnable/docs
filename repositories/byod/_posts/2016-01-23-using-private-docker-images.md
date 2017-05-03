@@ -11,13 +11,13 @@ Many teams use private Docker registries to securely host images that are built 
 
 ---
 
-## 1. Add a File
+## 1. Create a Credentials File
 
 First, open the configuration for your repository by clicking the gear icon next to its name in the Containers view.
 
 ![Configure Service]({{ site.baseurl }}/images/dockerfiles_configure.png)
 
-Select the **Dockerfile** tool, then click the **+** button and add a file named `runnable.json`. **If Mirror Dockerfile** is enabled, you'll need to disable it first.
+Select the **Dockerfile** tool, then click the **+** button and add a file named `runnable.json`. If **Mirror Dockerfile** is enabled, you'll need to disable it first.
 
 ![Adding Private Registry]({{ site.baseurl }}/images/dockerfiles_private_registry.png)
 
@@ -33,4 +33,4 @@ In the file you created, add the credentials for your private registry in the fo
 }
 ```
 
-Then click the **Save & Build** button to apply your changes. Now our image builder will use the credentials you added when accessing images in your private registry. Next, you should go through these steps again for any other repositories that build from private images.
+Then click the **Save & Build** button to apply your changes. Now our image builder will use the credentials you added when accessing images in your private registry. You should go through these steps again for any other repositories that build from private images.
