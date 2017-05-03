@@ -1,6 +1,6 @@
 .footer {
   align-items: center;
-  border: none;
+  border: 0;
   background: transparent;
   margin: 0 auto;
   overflow: visible;
@@ -29,10 +29,10 @@
   }
 
   .a {
+    color: rgba($white,.85);
     font-size: 19px;
     padding: $xxs;
     text-decoration: none;
-    color: rgba($white,.85);
     transition: .125s ease-in-out color;
 
     &:hover,
@@ -124,11 +124,11 @@
   // chat message
   .bubble {
     background: $white;
+    border: none;
     border-radius: $input-border-radius-lg $input-border-radius-lg 0 0;
-    border: 0;
     font-size: 13px;
     font-weight: $weight-normal;
-    padding: 6px $sm 6px 9px;
+    padding: 6px $sm 6px $xxs;
     pointer-events: none;
     user-select: none;
 
@@ -164,7 +164,7 @@
   margin-bottom: 24px;
   position: relative;
   text-decoration: none;
-  text-indent: 9px;
+  text-indent: $xxs;
 
   @include media(xs) {
     margin-bottom: $xl;
