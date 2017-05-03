@@ -35,3 +35,5 @@ Runnable will create a container for the default branch of the repository, using
 Once the container is running, you can interact with the terminal or open its URL to view its web output.
 
 ![Terminal]({{ site.baseurl }}/images/dockerfiles_terminal.png)
+
+By default, you’ll also get new environments for branches of this repository when you push to GitHub. Pushes from other collaborators who have joined Runnable will also trigger new environments.
