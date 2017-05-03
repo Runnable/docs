@@ -125,7 +125,7 @@
   .bubble {
     background: $white;
     border-radius: $input-border-radius-lg $input-border-radius-lg 0 0;
-    border: 0px;
+    border: 0;
     font-size: 13px;
     font-weight: $weight-normal;
     padding: 6px $sm 6px 9px;
@@ -148,7 +148,7 @@
   }
 
   .user-time {
-    color: lighten($gray, 20%);
+    color: lighten($gray,20%);
     font-size: 11px;
   }
 
