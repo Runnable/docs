@@ -8,16 +8,20 @@
     flex-direction: column;
     padding: $md 0;
   }
-
-  .share-icons {
-    height: $lg;
+  
+  .a {
     opacity: .75;
     transition: opacity .125s ease-in-out;
-    width: $lg;
 
     &:hover {
       opacity: 1;
     }
+  }
+
+  .share-icons {
+    height: $lg;
+    width: $lg;
+
     .img {
       margin: 0;
     }
