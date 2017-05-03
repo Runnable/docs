@@ -7,10 +7,10 @@ order: 6
 
 Dockerfiles are often used for managing configuration and automating the build process for a service. If your repositories have Dockerfiles, it’s easy to get them set up in Runnable. At the end of this guide, you'll have a running container for a repository, built from its Dockerfile.
 
-*Note: Using your own Dockerfiles is a great way to start using Runnable, but some features are reserved for apps that use Docker Compose:*
-
-- *Automatically creating isolated stacks for branches*
-- *Running automated tests*
+> Note: Using your own Dockerfiles is a great way to start using Runnable, but some features are reserved for apps that use Docker Compose:
+>
+> - Automatically creating isolated stacks for branches
+> - Running automated tests
 
 ---
 
