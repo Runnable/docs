@@ -19,7 +19,7 @@ First, open the configuration for your repository by clicking the gear icon next
 
 Select the **Dockerfile** tool, then click the **+** button and add a file named `runnable.json`. **If Mirror Dockerfile** is enabled, you'll need to disable it first.
 
-![New File]({{ site.baseurl }}/images/dockerfiles_new_file.png)
+![Adding Private Registry]({{ site.baseurl }}/images/dockerfiles_private_registry.png)
 
 ## 2. Add Your Credentials
 
