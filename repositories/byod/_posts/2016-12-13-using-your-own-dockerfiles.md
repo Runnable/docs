@@ -33,3 +33,5 @@ Then click the **Create Environment** button to continue.
 Runnable will create a container for the default branch of the repository, using the Dockerfile you specified. If your Dockerfile uses a private image, you’ll need to [set up Runnable to access your registry]({{ site.baseurl }}/repositories/byod/using-private-docker-images) so the container can build successfully.
 
 Once the container is running, you can interact with the terminal or open its URL to view its web output.
+
+![Terminal]({{ site.baseurl }}/images/dockerfiles_terminal.png)
