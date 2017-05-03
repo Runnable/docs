@@ -1,7 +1,7 @@
-.share {
+.section-share {
   border-top: 1px solid $gray-lighter;
   margin: 0 auto;
-  padding: $md 0 $md 0;
+  padding: $md 0 0 0;
   text-align: center;
 
   @include media(xs) {
@@ -9,25 +9,25 @@
     padding: $md 0;
   }
 
-  .btn + .btn {
-    margin-left: $xs;
+  .a {
+    opacity: .75;
+    transition: opacity .125s ease-in-out;
 
-    @include media(md) {
-      margin-left: 0;
-      margin-top: $xxs;
+    &:hover {
+      opacity: 1;
     }
   }
 
-  .btn-sm {
-    @include media(md) {
-      max-width: 480px;
-      margin: 0 auto;
-      width: 100%;
+  .share-icons {
+    height: $lg;
+    width: $lg;
+
+    .img {
+      margin: 0;
+    }
+
+    + .share-icons {
+      margin-left: $md;
     }
   }
-}
-
-.share-title {
-  font-size: 24px;
-  font-weight: 600;
 }
