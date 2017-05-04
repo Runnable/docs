@@ -11,17 +11,16 @@ Docker Compose files contain all the necessary information for Runnable to build
 
 ## Review Your Compose File
 
-We parse your Compose file for the `build` feature, and build your code based on that reference. It’s important to reference your Dockerfile at the repository level, so any changes your team makes are built with the latest code in your repository.
+If you use the `build` feature to reference your repository’s Dockerfile, your builds will reflect changes to that Dockerfile on every commit and branch you make. The build path is relative to your Compose file:
 
-If your Dockerfile is in the root level of your code, your reference would be: `build: .`.
+    build: ./dir
 
-> **Tip:** You can reference Dockerfiles in a different repository by using `context`:
-> <pre>
-build:
-  context: git@github.com/your-org/your-project.git
-  dockerfile: Dockerfile-alternative</pre>
+If you want to reference a Dockerfile in a different repository, use `context`:
 
-You can also check which Compose features and operating systems we [currently support]({{ site.baseurl }}/docker-compose/docker-compose-feature-support).
+    build:
+      context: git@github.com/your-org/your-project.git
+
+If you’re running into build problems, it’s a good idea to check which Compose features and operating systems we [currently support]({{ site.baseurl }}/docker-compose/docker-compose-feature-support).
 
 ---
 
