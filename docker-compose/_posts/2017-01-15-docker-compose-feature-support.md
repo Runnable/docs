@@ -77,6 +77,24 @@ We’re happy to help you with a solution or hear your feature requests. The bes
 
 ---
 
+## Known Workarounds
+
+### entrypoint
+
+If you use Docker’s [MySQL](https://github.com/docker-library/mysql/blob/master/5.6/Dockerfile#L66) or [PostgreSQL](https://github.com/docker-library/postgres/blob/master/9.6/Dockerfile#L66) Dockerfiles, you may run into issues because `entrypoint` is used to execute a script:
+
+<pre>
+<strong>ENTRYPOINT</strong> ["docker-entrypoint.sh"]
+</pre>
+
+You can execute the script without `entrypoint` by using `run`:
+
+<pre>
+<strong>RUN</strong> docker-entrypoint.sh
+</pre>
+
+---
+
 ## Want More?
 
 - [Setting Up with Compose]({{ site.baseurl }}/docker-compose/launching-your-first-environment)
