@@ -52,7 +52,6 @@ h4,
 
 .pre,
 %pre {
-  // scss-lint:disable ImportantRule
   font-family: $monospace;
   font-weight: $weight-normal;
   line-height: 1.4;
@@ -64,6 +63,7 @@ h4,
 .monospace {
   font-family: $monospace;
   font-size: 14px;
+  font-weight: $weight-normal;
   white-space: pre;
   word-wrap: normal;
 }
