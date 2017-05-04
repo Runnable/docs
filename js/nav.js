@@ -18,6 +18,7 @@ function setupNav(jsNav) {
 
     // set height on active list on load
     if (uls[i].classList.contains('active')) {
+      uls[i].style.transition = 'none';
       uls[i].style.maxHeight = ulsHeights[i] + 'px';
     }
 
@@ -41,6 +42,11 @@ function toggleList(e, jsNav, uls, ulsHeights) {
   while ((thisTarget = thisTarget.parentNode) && (thisTarget.tagName !== 'UL'));
 
   for (i = 0; i < uls.length; i++) {
+    // if transition disabled on load, re-enable
+    if (uls[i].style.transition) {
+      uls[i].style.transition = null;
+    }
+
     // make other elements inactive
     uls[i].classList.remove('active');
     uls[i].style.maxHeight = null;
