@@ -53,13 +53,10 @@
   h5,
   h6,
   p,
-  blockquote,
-  pre,
   ul,
   ol,
   dl,
-  figure,
-  .highlight {
+  figure {
     margin: $sm 0;
   }
 
@@ -78,21 +75,25 @@
     background-color: $gray-lightest;
     border-radius: $input-border-radius-lg;
     font-size: 16px;
+    margin: $md 0;
     overflow-x: auto;
     padding: $sm;
 
     > code {
       background: transparent;
+      color: inherit;
       padding-left: 0;
       padding-right: 0;
     }
   }
 
   code {
-    background-color: $gray-lightest;
+    background-color: $purple-light-faded;
     border: 0;
     border-radius: $input-border-radius;
+    color: $purple-light;
     display: inline-block;
+    line-height: 1.4;
     padding: 0 5px;
 
     &.orange {
@@ -163,9 +164,16 @@
     color: $gray;
     font-size: 16px;
     font-style: italic;
-    margin-left: $md;
-    margin-right: $md;
+    margin: $md;
     padding: 0 $md;
+
+    > pre {
+      font-style: normal;
+
+      &:last-child {
+        margin-top: 0;
+      }
+    }
 
     > :last-child {
       margin-bottom: 0;

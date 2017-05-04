@@ -9,7 +9,15 @@ While Runnable currently supports the Docker Compose v2 file format, there are s
 
 ---
 
-### Features with Limited Support
+## Operating Systems
+
+We recommend installing Ubuntu or CentOS on your containers. Other operating systems may work, but Ubuntu and CentOS are our most popular and well tested.
+
+---
+
+## Features with Limited Support
+
+If a feature is not supported, we may ignore the option if it’s present in your Compose file so your container may run without it.
 
 {:.grid-block.shrink.ul.ul-monospace}
 * `build: *args*`{:.orange}
@@ -65,4 +73,10 @@ While Runnable currently supports the Docker Compose v2 file format, there are s
 * `volumes_*`{:.orange}
 * `working_dir`{:.orange}
 
-If a feature is not supported, we may ignore the option if it’s present in your Compose YAML file. We’re happy to help you with a solution or hear your feature requests. The best way to reach us is by <a class="link js-intercom-open">chat</a> or [email](mailto:support@runnable.com).
+We’re happy to help you with a solution or hear your feature requests. The best way to reach us is by <a class="link js-intercom-open">chat</a> or [email](mailto:support@runnable.com).
+
+---
+
+## Want More?
+
+- [Setting Up with Compose]({{ site.baseurl }}/docker-compose/launching-your-first-environment)
