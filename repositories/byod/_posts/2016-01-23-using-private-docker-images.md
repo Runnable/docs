@@ -7,7 +7,7 @@ order: 7
 
 Many teams use private Docker registries to securely host images that are built from their source code. If your repositories build from private images, you can set up access to your registry so we can build environments with your images.
 
-> Note: This won’t work if you are using Docker Compose files in Runnable. Private registry support for Compose is coming soon.
+> Note: This doesn't apply if you are [using Docker Compose]({{ site.baseurl }}/docker-compose/launching-your-first-environment) files in Runnable. Private registry support for Compose is coming soon.
 
 ---
 
