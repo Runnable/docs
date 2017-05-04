@@ -28,9 +28,19 @@ Then click the **Create Environment** button to continue.
 
 ---
 
-## Using Your Containers
+## Building your Dockerfile
 
-Runnable will create a container for the default branch of the repository, using the Dockerfile you specified. If your Dockerfile uses a private image, you’ll need to [set up Runnable to access your registry]({{ site.baseurl }}/repositories/byod/using-private-docker-images) so the container can build successfully.
+In the next view, you'll see the Dockerfile we imported from your repository.
+
+> Note: If your Dockerfile uses a private image, you’ll need to [set up access to your registry]({{ site.baseurl }}/repositories/byod/using-private-docker-images) so your container can build successfully.
+
+![Dockerfile]({{ site.baseurl }}/images/dockerfiles_dockerfile.png)
+
+Click **Save & Build** to start building your container. When your container's build logs appear, you can click **Done** to close this view.
+
+---
+
+## Using Your Containers
 
 Once the container is running, you can interact with the terminal or open its URL to view its web output.
 
