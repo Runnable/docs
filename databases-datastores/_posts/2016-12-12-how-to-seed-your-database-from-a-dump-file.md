@@ -1,7 +1,7 @@
 ---
 title: How to Seed Your Database from a Dump File
 short: Seeding from a Dump File
-category: database-datastore
+category: databases-datastores
 order: 4
 ---
 
@@ -23,7 +23,7 @@ Container that is pre-seeded, taking advantage of the container image cache.
 ---
 
 ### Getting Started
-In order to seed your database, you will need to [obtain a backup (or dump) of your existing database](clone_database.md).
+In order to seed your database, you will need to [obtain a backup (or dump) of your existing database]({{ site.baseurl }}/databases-datastores/how-to-clone-your-local-database-for-use-on-runnable).
 Once you have obtained the dump file, continue on the following steps:
 
 * [MySQL](#mysql)

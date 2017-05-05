@@ -44,13 +44,13 @@
   </ul>
 
   <!-- databases & datastores -->
-  <ul class="grid-block shrink vertical ul {% if page.category == 'database-datastore' %}active{% endif %}">
+  <ul class="grid-block shrink vertical ul {% if page.category == 'databases-datastores' %}active{% endif %}">
     <li class="li">
       <a class="grid-block align-center weight-strong a">
         <img class="img" src="{{ site.baseurl }}/images/icons/icons-database.svg">
         Databases & Data Stores
       </a>
-    {% assign docs = site.categories.database-datastore | sort: 'order'  %}
+    {% assign docs = site.categories.databases-datastores | sort: 'order'  %}
     {% for doc in docs %}
     <li class="li">
       <a class="a grid-block align-center {% if doc.url == page.url %}active{% endif %}" href="{{ site.baseurl }}{{ doc.url }}">

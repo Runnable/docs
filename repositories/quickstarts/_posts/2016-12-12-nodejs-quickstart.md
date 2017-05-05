@@ -125,7 +125,7 @@ If everything went well, your build will complete successfully. Anytime you run 
 
 ## Connecting to a DB template
 
-1. Follow one of our DB Quickstarts to add and seed a database: [MySQL]({{site.baseurl}}/databases-datastores/databases/database-datastore/how-to-setup-your-mysql-database-template) / [PostgresQL]({{site.baseurl}}/databases-datastores/databases/database-datastore/how-to-setup-your-postgres-database-template)
+1. Follow one of our DB Quickstarts to add and seed a database: [MySQL]({{ site.baseurl }}/databases-datastores/how-to-setup-your-mysql-database-template) / [PostgresQL]({{site.baseurl}}/databases-datastores/how-to-setup-your-postgres-database-template)
 
 2. In our case, we added a MySQL template.
 ![node14]({{ site.baseurl }}/images/node14.png)
@@ -134,7 +134,7 @@ If everything went well, your build will complete successfully. Anytime you run 
 
     > If you don't use Environment Variables for host discovery, you may have to modify your repository to use the Runnable template URL as your MySQL hostname. You can do this by either uploading a file using "Files & SSH Keys" or by actually modifying your repository on Github.com.
 
-4. Specify the the value for the `MYSQL_HOST` environment variable. From our article [Runnable URLs]({{site.baseurl}}/networking/runnable-urls-explained), it is clear that we need to use MySQL's template URL to connect to it. As a convenience we provide all template URLs in the Environment Variables tab.
+4. Specify the the value for the `MYSQL_HOST` environment variable. From our article [Runnable URLs]({{ site.baseurl }}/networking/runnable-urls-explained), it is clear that we need to use MySQL's template URL to connect to it. As a convenience we provide all template URLs in the Environment Variables tab.
 ![node15]({{ site.baseurl }}/images/node15.png) ![node16]({{ site.baseurl }}/images/node16.png) ![node17]({{ site.baseurl }}/images/node17.png)
 
 5. Click Save & Build.

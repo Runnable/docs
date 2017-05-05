@@ -40,7 +40,7 @@ defaults:
       type: "posts"
     values:
       seo:
-        type: TechArticle 
+        type: TechArticle
 
 sass:
   sass_dir: _sass/
