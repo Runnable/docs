@@ -1,11 +1,19 @@
 .footer {
   align-items: center;
-  border: 0;
   background: transparent;
-  margin: 0 auto;
+  border: 0;
+  margin: $xl auto 0;
   overflow: visible;
   position: relative;
   width: 100%;
+
+  @include media(sm) {
+    margin-top: $lg;
+  }
+
+  @include media(xxs) {
+    margin-top: 0;
+  }
 
   .link-wrapper {
     padding: $xl $md $xl 0;
@@ -124,7 +132,7 @@
   // chat message
   .bubble {
     background: $white;
-    border: none;
+    border: 0;
     border-radius: $input-border-radius-lg $input-border-radius-lg 0 0;
     font-size: 13px;
     font-weight: $weight-normal;
