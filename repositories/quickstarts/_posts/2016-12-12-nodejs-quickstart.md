@@ -17,7 +17,7 @@ This guide will help you setup Runnable templates for a simple 2-tier Node.js ap
 3. Find the repository you would like to configure the template for. In this case, we are starting with a simple Python repository.
   ![node2]({{ site.baseurl }}/images/node2.png)
 4. Choose the first option to use our simple setup guide.
-5. Give your template a name. This name will be used to generate the template URLs of all the containers that will launch from this template. Check out [this]({{site.baseurl}}/networking/runnable-urls-explained) article for more details on URLs in Runnable.
+5. Give your template a name. This name will be used to generate the template URLs of all the containers that will launch from this template. Check out [this]({{ site.baseurl }}/networking/runnable-urls-explained) article for more details on URLs in Runnable.
 6. Next, you’ll be able to select your app’s Stack Type, Version and Branch for your template. Go ahead and choose Node.js for your stack type, and select the version you want to use. Make sure you choose the branch that corresponds to your team’s main integration branch (‘master’  or ‘develop’ for example).
   ![node3]({{ site.baseurl }}/images/node3.png)
 6. On the next step, you can specify additional Packages, Build Commands, and the Container CMD.
@@ -125,7 +125,7 @@ If everything went well, your build will complete successfully. Anytime you run 
 
 ## Connecting to a DB template
 
-1. Follow one of our DB Quickstarts to add and seed a database: [MySQL]({{ site.baseurl }}/databases-datastores/how-to-setup-your-mysql-database-template) / [PostgresQL]({{site.baseurl}}/databases-datastores/how-to-setup-your-postgres-database-template)
+1. Follow one of our DB Quickstarts to add and seed a database: [MySQL]({{ site.baseurl }}/databases-datastores/how-to-setup-your-mysql-database-template) / [PostgresQL]({{ site.baseurl }}/databases-datastores/how-to-setup-your-postgres-database-template)
 
 2. In our case, we added a MySQL template.
 ![node14]({{ site.baseurl }}/images/node14.png)
@@ -141,4 +141,4 @@ If everything went well, your build will complete successfully. Anytime you run 
 
 6. The "api" template is now successfully connected with the "MySQL" template!
 
-Head on over to our [Branches]({{site.baseurl}}/troubleshooting/i-dont-see-my-branches-being-added-on-runnable) section to see how to launch containers from your templates.
+Head on over to our [Branches]({{ site.baseurl }}/troubleshooting/i-dont-see-my-branches-being-added-on-runnable) section to see how to launch containers from your templates.
