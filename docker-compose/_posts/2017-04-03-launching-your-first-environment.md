@@ -11,7 +11,7 @@ Docker Compose files contain all the necessary information for Runnable to build
 
 ## Review Your Compose File
 
-If you use the `build` feature to reference your repository’s Dockerfile, your builds will reflect changes to that Dockerfile on every commit and branch you make. The build path is relative to your Compose file:
+By using the `build` feature to reference your repository’s Dockerfile, your builds will reflect changes to your code on every commit and branch you make. The build path is relative to your Compose file:
 
     build: ./dir
 
@@ -30,11 +30,11 @@ From the Containers page, click the **Add Services** button and select the repos
 
 ![](images/ss-compose-add.png)
 
-In the modal that appears, click the **Use a Compose File** tab if it’s not already selected. If you currently have a file named “docker-compose.yml” in the root of your repository, it’ll be added for you. Otherwise, type in the path of your Compose file in the **Compose for Staging** section, relative to the root of your repository. You’ll see a green check when we find a matching file.
+In the modal that appears, click the **Use a Compose File** tab if it’s not already selected. Type in the path of your Compose file in the **Compose for Staging** section, relative to the root of your repository. You’ll see a green check when we find a matching file.
 
 ![](images/ss-compose-staging.png)
 
-If you have a Compose file for testing, enable the toggle for **Compose for Testing** and type in the path of your testing Compose file. We’ll parse your file so you can select the service that runs your tests. This container’s status will be reported as a test result to the GitHub and JIRA integrations.
+If you have a Compose file for testing, enable the toggle for **Compose for Testing** and type in the path of your testing Compose file. We’ll parse your file so you can select the service that runs your tests. This container’s status will be reported as a test result to the [GitHub]({{ site.baseurl }}/integrations/notifications/github-pull-request-notifications) and [JIRA]({{ site.baseurl }}/integrations/notifications/jira) integrations.
 
 ![](images/ss-compose-testing.png)
 

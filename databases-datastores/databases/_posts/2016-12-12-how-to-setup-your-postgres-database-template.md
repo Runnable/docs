@@ -87,4 +87,4 @@ Now that your Template Database container has been 'baked' in with your seed fil
 
  If you ever want to update your seed file, just click `Rebuild Without Cache` on the template container to pull a newer seed and cache it into the container image.
 
-Want to seed your database from S3? [Here is how.](/docs/services/databases/how-to-seed-your-database-from-s3)
+Want to seed your database from S3? [Here is how.]({{ site.baseurl }}/databases-datastores/databases/how-to-seed-your-database-from-s3)
