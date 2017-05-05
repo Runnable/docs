@@ -1,12 +1,8 @@
 ---
-title: How to Set up a Consul Service
-shortTitle: Consul Setup
-step: 2
-tags:
-- services
-- servicediscovery
-- consul
-description: How to Set up a Consul Service
+title: How to Set Up a Consul Service
+short: Consul Setup
+category: services
+order: 1
 ---
 
 ---
@@ -25,5 +21,5 @@ description: How to Set up a Consul Service
 5. Consul is now ready to configure. Just click on the **Configure Service** button to reveal additional configuration settings.
   ![consul-configure]({{ site.baseurl }}/images/consul-configure.png)
 
-6. You should be able to instantly connect another services to this container, just use the URL:  
+6. You should be able to instantly connect another services to this container, just use the URL:
     `consul://consul-datatore-staging-yourGitHubOrgName.runnableapp.com`.

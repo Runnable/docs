@@ -1,11 +1,8 @@
 ---
 title: PHP Quickstart Guide
-shortTitle: PHP
-step: 3
-tags:
-- quickstarts
-- php
-description: How to setup your multi-tier PHP application.
+short: PHP
+category: repositories
+order: 2
 ---
 
 In order to get a Laravel app running, here are the following steps you need to make sure you do:

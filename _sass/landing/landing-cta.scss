@@ -1,4 +1,5 @@
 .section-cta {
+  font-size: 16px;
 
   .p {
     margin-bottom: 0;
@@ -38,6 +39,10 @@
 
     @include media(md) {
       flex-direction: column;
+    }
+
+    .p:first-of-type {
+      font-size: 19px;
     }
 
     .well {

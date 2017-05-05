@@ -1,11 +1,8 @@
 ---
 title: Python Quickstart Guide
-shortTitle: Python
-step: 4
-tags:
-- quickstarts
-- python
-description: How to setup your multi-tier Python application.
+short: Python
+category: repositories
+order: 2
 ---
 
 This guide will help you setup Runnable templates for a simple Pyhton application. This guide will assume that you don't have a Dockerfile and want Runnable to generate the Dockerfile for you using a simple setup guide.
@@ -77,7 +74,7 @@ Use this tool to add any addtional configuration files, other GitHub repositorie
 
 For more details, check out:
 
-1. [Adding Files to your Container]({{site.baseurl}}/repositories/adding-additional-files)
+1. [Adding Files to your Container]({{site.baseurl}}/repositories/adding-files-and-ssh-keys)
 2. [Adding SSH Keys to build private modules]({{site.baseurl}}/troubleshooting/my-build-is-failing-because-of-no-such-key-or-host-key-verification-failed-what-do-i-do}})
 
 ---

@@ -1,8 +1,8 @@
 ---
-title: How does Runnable keep my private code and data secure?
-shortTitle: Data/Code Privacy
-step: 1
-description: How does Runnable keep my private code and data secure?
+title: How Is My Code & Data Kept Secure?
+short: Code & Data Privacy
+category: privacy
+order: 1
 ---
 
 ---

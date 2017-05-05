@@ -1,8 +1,8 @@
 ---
 title: Frequently Asked Questions
-shortTitle: F.A.Q.
-step: 1
-description: Frequently Asked Questions
+short: FAQ
+category: troubleshooting
+order: 6
 ---
 
 ---

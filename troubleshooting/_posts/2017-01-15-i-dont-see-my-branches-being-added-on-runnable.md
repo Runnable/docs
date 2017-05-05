@@ -1,8 +1,8 @@
 ---
-title: I Dont See My Branches Being Added on Runnable
-shortTitle: Where are my branches?
-step: 3
-description: I dont see my branches being added on Runnable
+title: Why Aren’t My Branches Being Added?
+short: Where Are My Branches?
+category: troubleshooting
+order: 2
 ---
 
 After you setup a repository on Runnable, new pushes to any of it’s branches will be automatically deployed on Runnable. This means that branches will be added to Runnable when:
