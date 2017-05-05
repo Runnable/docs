@@ -31,7 +31,7 @@ container. Every branch that you run in isolation will immediately start up with
   but if you would like to change anything, just uncomment the line and modify as desired.
     ![Dockerfile]({{ site.baseurl }}/images/create-postgres-db-4.png)
 
-  * Once running, you can setup template connections with your repository applications. [Here is how.](/connections/how_to_connect_your_containers.md)
+  * Once running, you can setup template connections with your repository applications.
 
 ---
 
