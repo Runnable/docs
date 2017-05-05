@@ -74,7 +74,7 @@ Use this tool to add any addtional configuration files, other GitHub repositorie
 
 For more details, check out:
 
-1. [Adding Files to your Container]({{site.baseurl}}/repositories/adding-additional-files)
+1. [Adding Files to your Container]({{site.baseurl}}/repositories/adding-files-and-ssh-keys)
 2. [Adding SSH Keys to build private modules]({{site.baseurl}}/troubleshooting/my-build-is-failing-because-of-no-such-key-or-host-key-verification-failed-what-do-i-do}})
 
 ---
