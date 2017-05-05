@@ -64,8 +64,8 @@ You can drill down and list all the branches of a repository by specifying a rep
 
 ---
 
-[`runnable ssh [repository]`](/docs/cli/starting-an-ssh-session)
+[`runnable ssh [repository]`]({{ site.baseurl }}/cli/starting-an-ssh-session)
 
 ---
 
-#### [`runnable upload <file>`](/docs/cli/syncing-files-through-runnable-c-l-i)
+#### [`runnable upload <file>`]({{ site.baseurl }}/cli/syncing-files-through-runnable-c-l-i)
