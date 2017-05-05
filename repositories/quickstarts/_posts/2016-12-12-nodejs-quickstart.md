@@ -125,7 +125,7 @@ If everything went well, your build will complete successfully. Anytime you run 
 
 ## Connecting to a DB template
 
-1. Follow one of our DB Quickstarts to add and seed a database: [MySQL]({{site.baseurl}}/services/databases/how-to-setup-your-mysql-database-template) / [PostgresQL]({{site.baseurl}}/services/databases/how-to-setup-your-postgres-database-template)
+1. Follow one of our DB Quickstarts to add and seed a database: [MySQL]({{site.baseurl}}/databases-datastores/databases/database-datastore/how-to-setup-your-mysql-database-template) / [PostgresQL]({{site.baseurl}}/databases-datastores/databases/database-datastore/how-to-setup-your-postgres-database-template)
 
 2. In our case, we added a MySQL template.
 ![node14]({{ site.baseurl }}/images/node14.png)

@@ -132,7 +132,7 @@ This is the Environment URL corresponding to the container launched from the def
 
 ## Connecting to a DB Template
 
-1. Follow one of our DB Quickstarts to add and seed a database: [MySQL]({{site.baseurl}}/services/databases/how-to-setup-your-mysql-database-template) / [PostgresQL]({{site.baseurl}}/services/databases/how-to-setup-your-postgres-database-template)
+1. Follow one of our DB Quickstarts to add and seed a database: [MySQL]({{site.baseurl}}/databases-datastores/databases/database-datastore/how-to-setup-your-mysql-database-template) / [PostgresQL]({{site.baseurl}}/databases-datastores/databases/database-datastore/how-to-setup-your-postgres-database-template)
 
 2. In our case, we added a MySQL template.
 ![MySQL 1]({{ site.baseurl }}/images/python-mysql1.png)
