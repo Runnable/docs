@@ -2,18 +2,10 @@
   align-items: center;
   background: transparent;
   border: 0;
-  margin: $xl auto 0;
+  margin: $lg auto 0;
   overflow: visible;
   position: relative;
   width: 100%;
-
-  @include media(sm) {
-    margin-top: $lg;
-  }
-
-  @include media(xxs) {
-    margin-top: 0;
-  }
 
   .link-wrapper {
     padding: $xl $md $xl 0;
@@ -208,7 +200,7 @@
     top: 6px;
     width: 10px;
   }
-  
+
   .well {
     border: 0;
     box-shadow: 0 2px 4px rgba($black,.1);
