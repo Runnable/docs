@@ -1,7 +1,7 @@
 .well {
-  border: 1px solid $gray-lighter;
+  border: 0;
   border-radius: $input-border-radius-lg;
-  color: $gray;
+  box-shadow: 0 2px 4px rgba($black,.1);
 
   > .icons-chevron-right {
     flex: 0 0 auto;
@@ -13,21 +13,21 @@
 }
 
 .well-anchor {
-  color: $gray-dark;
   cursor: pointer;
   display: flex;
   font-size: 21px;
-  padding: 30px;
+  padding: $md;
+  transition: box-shadow ease-in-out .125s;
 
   @include media(sm) {
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: $md;
+    margin-right: $md;
     max-width: none;
   }
 
   @include media(xs) {
     flex-direction: column;
-    padding: 15px 30px 30px;
+    padding: $sm $md $md;
     text-align: center;
   }
 
@@ -38,8 +38,7 @@
   }
 
   &:hover {
-    border-color: $purple-light;
-    box-shadow: inset 0 0 0 1px $purple-light;
+    box-shadow: 0 3px $sm rgba($black,.15);
 
     .a {
       text-decoration: underline;
@@ -52,7 +51,7 @@
   }
 
   .img {
-    margin-right: 15px;
+    margin-right: $sm;
 
     &.grid-block {
       @include media(xs) {
@@ -66,7 +65,6 @@
 
   .p {
     line-height: 1.4;
-    margin-bottom: 0;
 
     @include media(xs) {
       max-width: 450px;

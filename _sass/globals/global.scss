@@ -14,7 +14,7 @@ body {
     border: $input-border solid $gray-lighter;
     border-radius: $input-border-radius-lg;
     box-shadow: 0 2px 9px rgba($black,.075);
-    margin: 120px auto;
+    margin: 120px auto 0;
 
     @include media(xs) {
       flex-direction: column;
