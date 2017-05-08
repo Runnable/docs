@@ -1,0 +1,9 @@
+.popover-search {
+
+  &:not(.lunr-hidden) {
+    opacity: 1;
+    transform: scale3d(1, 1, 1) translate3d(-50%, 0, 0);
+    transition: all .15s ease-in-out;
+    visibility: visible;
+  }
+}
