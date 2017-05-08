@@ -1,41 +1,198 @@
-<nav class="grid-block vertical shrink sidebar">
+<nav class="grid-block vertical shrink sidebar js-nav">
   <input placeholder="Search…" type="search" id="search" class="grid-block shrink search">
-  <ul class="grid-block vertical nav">
-    {% for section in site.data.sidebar %}
-    <li class="li"><a class="a strong" href="#">{{ site.data.titles.[section.category] }}</a>
-      <ul class="ul">
-        {% for subCategory in section.subcategories %}
-        {% assign posts = site.categories.[subCategory.category] %}
-        <li class="li"><a class="a" href="#">{{ site.data.titles.[subCategory.category] }}</a>
-          <ul class="ul">
-            {% for p in posts %}
-            {% if page.url == p.url %}
-            <li class="li active">
-            {% else %}
-            <li class="li">
-            {% endif %}
-              <a class="a" href="{{ site.baseurl }}{{ p.url }}">{{ p.shortTitle }}</a>
-            {% endfor %}
-          </ul>
-        {% endfor %}
-        {% assign posts = site.categories.[section.category] | sort: "step" %}
-        {% for p in posts %}
-        {% unless p.categories.size > 1 %}
-        {% if page.url == p.url %}
-        <li class="li active">
-        {% else %}
-        <li class="li">
-        {% endif %}
-          <a class="a" href="{{ site.baseurl }}{{ p.url }}">{{ p.shortTitle }}</a>
-        {% endunless %}
-      {% endfor %}
-    </ul>
-  {% endfor %}
+  <!-- home -->
+  <ul class="grid-block shrink vertical ul active">
+    <li class="li">
+      <a class="grid-block align-center weight-strong a {% if page.layout == 'default' %}active{% endif %}" href="{{ site.baseurl }}/">
+        <img class="img" src="{{ site.baseurl }}/images/icons/icons-home.svg">
+        Home
+      </a>
+  </ul>
+
+  <!-- compose -->
+  <ul class="grid-block shrink vertical ul {% if page.category == 'docker-compose' %}active{% endif %}">
+    <li class="li">
+      <a class="grid-block align-center weight-strong a">
+        <img class="img" src="{{ site.baseurl }}/images/icons/icons-compose.svg">
+        Using Docker Compose
+      </a>
+    {% assign docs = site.categories.docker-compose | sort: 'order'  %}
+    {% for doc in docs %}
+    <li class="li">
+      <a class="grid-block align-center a {% if doc.url == page.url %}active{% endif %}" href="{{ site.baseurl }}{{ doc.url }}">
+        <div class="img"></div>
+        {{ doc.short }}
+      </a>
+    {% endfor %}
+  </ul>
+
+  <!-- dockerfiles -->
+  <ul class="grid-block shrink vertical ul {% if page.category == 'repositories' %}active{% endif %}">
+    <li class="li">
+      <a class="grid-block align-center weight-strong a">
+        <img class="img" src="{{ site.baseurl }}/images/icons/icons-dockerfile.svg">
+        Using Dockerfiles
+      </a>
+    {% assign docs = site.categories.repositories | sort: 'order'  %}
+    {% for doc in docs %}
+    <li class="li">
+      <a class="a grid-block align-center {% if doc.url == page.url %}active{% endif %}" href="{{ site.baseurl }}{{ doc.url }}">
+        <div class="img"></div>
+        {{ doc.short }}
+      </a>
+    {% endfor %}
+  </ul>
+
+  <!-- databases & datastores -->
+  <ul class="grid-block shrink vertical ul {% if page.category == 'database-datastore' %}active{% endif %}">
+    <li class="li">
+      <a class="grid-block align-center weight-strong a">
+        <img class="img" src="{{ site.baseurl }}/images/icons/icons-database.svg">
+        Databases & Data Stores
+      </a>
+    {% assign docs = site.categories.database-datastore | sort: 'order'  %}
+    {% for doc in docs %}
+    <li class="li">
+      <a class="a grid-block align-center {% if doc.url == page.url %}active{% endif %}" href="{{ site.baseurl }}{{ doc.url }}">
+        <div class="img"></div>
+        {{ doc.short }}
+      </a>
+    {% endfor %}
+  </ul>
+
+  <!-- other services -->
+  <ul class="grid-block shrink vertical ul {% if page.category == 'services' %}active{% endif %}">
+    <li class="li">
+      <a class="grid-block align-center weight-strong a">
+        <img class="img" src="{{ site.baseurl }}/images/icons/icons-services.svg">
+        Other Services
+      </a>
+    {% assign docs = site.categories.services | sort: 'order'  %}
+    {% for doc in docs %}
+    <li class="li">
+      <a class="a grid-block align-center {% if doc.url == page.url %}active{% endif %}" href="{{ site.baseurl }}{{ doc.url }}">
+        <div class="img"></div>
+        {{ doc.short }}
+      </a>
+    {% endfor %}
+  </ul>
+
+  <!-- networking -->
+  <ul class="grid-block shrink vertical ul {% if page.category == 'networking' %}active{% endif %}">
+    <li class="li">
+      <a class="grid-block align-center weight-strong a">
+        <img class="img" src="{{ site.baseurl }}/images/icons/icons-networking.svg">
+        Networking
+      </a>
+    {% assign docs = site.categories.networking | sort: 'order'  %}
+    {% for doc in docs %}
+    <li class="li">
+      <a class="a grid-block align-center {% if doc.url == page.url %}active{% endif %}" href="{{ site.baseurl }}{{ doc.url }}">
+        <div class="img"></div>
+        {{ doc.short }}
+      </a>
+    {% endfor %}
+  </ul>
+
+  <!-- automated testing -->
+  <ul class="grid-block shrink vertical ul {% if page.category == 'testing' %}active{% endif %}">
+    <li class="li">
+      <a class="grid-block align-center weight-strong a">
+        <img class="img" src="{{ site.baseurl }}/images/icons/icons-testing.svg">
+        Automated Testing
+      </a>
+    {% assign docs = site.categories.testing | sort: 'order'  %}
+    {% for doc in docs %}
+    <li class="li">
+      <a class="a grid-block align-center {% if doc.url == page.url %}active{% endif %}" href="{{ site.baseurl }}{{ doc.url }}">
+        <div class="img"></div>
+        {{ doc.short }}
+      </a>
+    {% endfor %}
+  </ul>
+
+  <!-- integrations -->
+  <ul class="grid-block shrink vertical ul {% if page.category == 'integrations' %}active{% endif %}">
+    <li class="li">
+      <a class="grid-block align-center weight-strong a">
+        <img class="img" src="{{ site.baseurl }}/images/icons/icons-integrations.svg">
+        Integrations
+      </a>
+    {% assign docs = site.categories.integrations | sort: 'order'  %}
+    {% for doc in docs %}
+    <li class="li">
+      <a class="a grid-block align-center {% if doc.url == page.url %}active{% endif %}" href="{{ site.baseurl }}{{ doc.url }}">
+        <div class="img"></div>
+        {{ doc.short }}
+      </a>
+    {% endfor %}
+  </ul>
+
+  <!-- cli -->
+  <ul class="grid-block shrink vertical ul {% if page.category == 'cli' %}active{% endif %}">
+    <li class="li">
+      <a class="grid-block align-center weight-strong a">
+        <img class="img" src="{{ site.baseurl }}/images/icons/icons-cli.svg">
+        Runnable CLI
+      </a>
+    {% assign docs = site.categories.cli | sort: 'order'  %}
+    {% for doc in docs %}
+    <li class="li">
+      <a class="a grid-block align-center {% if doc.url == page.url %}active{% endif %}" href="{{ site.baseurl }}{{ doc.url }}">
+        <div class="img"></div>
+        {{ doc.short }}
+      </a>
+    {% endfor %}
+  </ul>
+
+  <!-- privacy & security -->
+  <ul class="grid-block shrink vertical ul {% if page.category == 'privacy' %}active{% endif %}">
+    <li class="li">
+      <a class="grid-block align-center weight-strong a">
+        <img class="img" src="{{ site.baseurl }}/images/icons/icons-privacy.svg">
+        Privacy & Security
+      </a>
+    {% assign docs = site.categories.privacy | sort: 'order'  %}
+    {% for doc in docs %}
+    <li class="li">
+      <a class="a grid-block align-center {% if doc.url == page.url %}active{% endif %}" href="{{ site.baseurl }}{{ doc.url }}">
+        <div class="img"></div>
+        {{ doc.short }}
+      </a>
+    {% endfor %}
+  </ul>
+
+  <!-- pricing -->
+  <ul class="grid-block shrink vertical ul {% if page.category == 'pricing' %}active{% endif %}">
+    <li class="li">
+      <a class="grid-block align-center weight-strong a">
+        <img class="img" src="{{ site.baseurl }}/images/icons/icons-pricing.svg">
+        Pricing
+      </a>
+    {% assign docs = site.categories.pricing | sort: 'order'  %}
+    {% for doc in docs %}
+    <li class="li">
+      <a class="a grid-block align-center {% if doc.url == page.url %}active{% endif %}" href="{{ site.baseurl }}{{ doc.url }}">
+        <div class="img"></div>
+        {{ doc.short }}
+      </a>
+    {% endfor %}
+  </ul>
+
+  <!-- troubleshooting -->
+  <ul class="grid-block shrink vertical ul {% if page.category == 'troubleshooting' %}active{% endif %}">
+    <li class="li">
+      <a class="grid-block align-center weight-strong a">
+        <img class="img" src="{{ site.baseurl }}/images/icons/icons-troubleshooting.svg">
+        Troubleshooting
+      </a>
+    {% assign docs = site.categories.troubleshooting | sort: 'order'  %}
+    {% for doc in docs %}
+    <li class="li">
+      <a class="a grid-block align-center {% if doc.url == page.url %}active{% endif %}" href="{{ site.baseurl }}{{ doc.url }}">
+        <div class="img"></div>
+        {{ doc.short }}
+      </a>
+    {% endfor %}
   </ul>
 </nav>
-
-<script>
-$(document).ready(() => {
-  $('.nav').navgoco();
-})
-</script>

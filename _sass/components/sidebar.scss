@@ -2,6 +2,7 @@
   background: $gray-lighterest;
   border-right: 1px solid $gray-lighter;
   color: $gray;
+  font-size: 14px;
   padding: $lg $md;
   width: 280px;
 
@@ -15,7 +16,7 @@
     border-bottom: 1px solid $gray-lighter;
     border-right: 0;
     height: 272px;
-    padding: $md 0 0;
+    padding: $md;
     width: 100%;
   }
 
@@ -26,76 +27,48 @@
     }
   }
 
-  .nav {
-    margin-top: $md;
-    overflow: auto;
+  .ul {
+    list-style: none;
+    max-height: 30px;
+    overflow: hidden;
+    padding: 0;
+    transition: max-height .2s ease-in-out;
 
-    @include media(xs) {
-      margin-top: 0;
-      padding: $sm $md;
+    &:not(.active) .li:not(:first-child) {
+      opacity: 0;
     }
 
-    .ul {
-      list-style: none;
-      margin-left: $sm;
-      padding: 0;
+    + .ul {
+      margin-top: 6px;
+    }
+  }
 
-      @include media(sm) {
-        margin-left: 0;
-      }
+  .li {
+    transition: opacity .2s ease-in-out;
+
+    &:nth-child(2) {
+      margin-top: 3px;
+    }
+  }
+
+  .a {
+    cursor: pointer;
+    min-height: 30px;
+
+    &:hover {
+      color: $gray-dark;
     }
 
-    .li {
-
-      // active state
-      &.active {
-        color: $purple-light;
-        font-weight: $weight-bold;
-
-        .a:hover,
-        .a:active {
-          color: $purple-light;
-        }
-      }
-    }
-
-    .a {
-      display: block;
-      font-size: 13px;
-      margin-bottom: 2px;
-      min-height: 32px;
-      padding: 3px $xxs;
-
-      @include media(xs) {
-        padding: 6px $sm;
-      }
-
-      &:hover {
-        color: $gray-dark;
-      }
-
-      &:active {
-        color: $purple-light;
-        font-weight: $weight-bold;
-      }
-
-      > span {
-        float: right;
-        margin-left: 5px;
-      }
-    }
-
-    // + & - symbols
-    .a > span,
-    .a > span::after {
-      content: '+';
+    &:active,
+    &.active {
+      color: $purple-light;
       font-weight: $weight-bold;
-      text-align: center;
-      width: $xs;
     }
+  }
 
-    .open > a > span::after {
-      content: '-';
-    }
+  .img {
+    height: 15px;
+    margin-right: 6px;
+    width: 15px;
   }
 }

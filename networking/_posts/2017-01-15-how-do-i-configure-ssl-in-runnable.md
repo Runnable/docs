@@ -1,8 +1,8 @@
 ---
-title: How do I Configure SSL in Runnable?
-shortTitle: Configure HTTPS/SSL
-step: 2
-description: How do I Configure SSL in Runnable?
+title: How to Configure SSL
+short: Configure HTTPS/SSL
+category: networking
+order: 2
 ---
 
 ---

@@ -1,86 +1,57 @@
 ---
-title: Launching Your First Environment
-shortTitle: Launching Your First Environment
-step: 3
-tags:
-- docker
-- environment
-description: Launching Your First Environment
+title: Setting Up With a Compose File
+short: Setting Up With Compose
+category: docker-compose
+order: 1
 ---
 
-
-Runnable makes it easy to launch containers from your compose file.
+Docker Compose files contain all the necessary information for Runnable to build and run your multi-service environments. If you’re using Docker Compose, this guide is for you! We’ll walk through the setup for creating staging and testing environments using the existing Compose YAML file in your repository.
 
 ---
 
-### Configuring Your First Repository
-Let's walkthrough configuring an example repository. The repository we will configure has the following Docker compose file:
+## Review Your Compose File
 
-    version: '2'
-    services:
-      db:
-        image: mongo
-        ports:
-          - "27017:27017"
-      web:
-        build: .
-        ports:
-          - "3000:3000"
-        links:
-          - "db"
-        environment:
-          - MONGODB_HOST=db
+If you use the `build` feature to reference your repository’s Dockerfile, your builds will reflect changes to that Dockerfile on every commit and branch you make. The build path is relative to your Compose file:
 
-From Compose file, it is clear that we expect to see 2 containers launch for this repository: a web container and a db container. To configure this repository on Runnable:
+    build: ./dir
 
-1. Go to your org on Runnable.com.
+If you want to reference a Dockerfile in a different repository, use `context`:
 
-2. Click on the "Add Services" button.
-  ![Add Services]({{ site.baseurl }}/images/compose_add_service.png)
+    build:
+      context: git@github.com/your-org/your-project.git
 
-3. Find the repository where the Compose file lives, and select it.
-  ![Choose Repository]({{ site.baseurl }}/images/compose_add_service_find.png)
-
-4. You will now see the configuration modal with the 'Compose' tab selected.
-  ![Configuration Modal]({{ site.baseurl }}/images/compose_config_1.png)
-
-5. You can give your environment a name. This name will be used to identify the group of the containers in your Compose file going forward.
-  ![Name Environment]({{ site.baseurl }}/images/compose_config_name.png)
-
-6. To configure a staging environment, ensure that the staging is toggled on.
-  ![Toggle Staging Environment]({{ site.baseurl }}/images/compose_staging_toggle.png)
-
-7. Specify the path of the Docker Compose file in the repository. The path should be relative to the root of the repo.
-  ![Specify Docker-Compose Path]({{ site.baseurl }}/images/compose_config_composefile_name.png)
-
-8. Click on "Create Environment".
-
-9. You will now see the 2 containers running for the default branch of your repository. Note the name of the containers is the same name you gave them as in the Docker compose file.
-  ![Services List]({{ site.baseurl }}/images/compose_container_list.png)
-
-10. Each container on Runnable gets a unique URL for external HTTP/HTTPS access.
-  ![Container URLs]({{ site.baseurl }}/images/compose_url.png)
-
-11. Your master environment should be up! You can explore the environment using the URL, Terminal and File browser.
-  ![Environment Up!]({{ site.baseurl }}/images/compose_config_running.png)
+If you’re running into build problems, it’s a good idea to check which Compose features and operating systems we [currently support]({{ site.baseurl }}/docker-compose/docker-compose-feature-support).
 
 ---
 
-###  Launching a Full-Stack Environment for a Branch
+## Adding Your Repository
 
-Now that you have setup your environment, you can instantly get a clone of this environment for each branch you or your teammates work with. To do this:
+From the Containers page, click the **Add Services** button and select the repository that you keep your Compose file in. We'll be using the Compose file in the default branch (set on GitHub) to build and run your environments. Later, you'll be able to launch environments for additional branches of this repository.
 
-1. Find your repository on the sidebar.
-  ![Sidebar Navigation]({{ site.baseurl }}/images/compose_branch_side_bar.png)
+![](images/ss-compose-add.png)
 
-2. Click on the "Add a Branch" button.
+In the modal that appears, click the **Use a Compose File** tab if it’s not already selected. If you currently have a file named “docker-compose.yml” in the root of your repository, it’ll be added for you. Otherwise, type in the path of your Compose file in the **Compose for Staging** section, relative to the root of your repository. You’ll see a green check when we find a matching file.
 
-3. Ensure that the toggle on the top of the branch popover is toggled on. This will ensure that branches are created as they appear on GitHub.
-  ![Turn on Auto-Deploy]({{ site.baseurl }}/images/compose_config_automatic.png)
+![](images/ss-compose-staging.png)
 
-4. Now push a change to the repository GitHub, on an existing branch other than master.
+If you have a Compose file for testing, enable the toggle for **Compose for Testing** and type in the path of your testing Compose file. We’ll parse your file so you can select the service that runs your tests. This container’s status will be reported as a test result to the GitHub and JIRA integrations.
 
-5. You will notice that a full-stack environment for your branch is launched right away on the sidebar.
-  ![More Environments]({{ site.baseurl }}/images/compose_config_new_branch.png)
+![](images/ss-compose-testing.png)
 
-6. You can now use your branch’s environment to verify or debug yours and your teammates’ changes.
+Then click the **Create Environment** button to continue.
+
+---
+
+## Using Your Containers
+
+Runnable will create environments for the specified Compose files in your default branch. Once the containers are running, you can interact with the terminals or open their URLs to view the web output.
+
+![](images/ss-compose-instance.png)
+
+By default, you’ll also get new environments for branches of this repository when you push to GitHub. Pushes from other collaborators who have joined Runnable will also trigger new environments.
+
+---
+
+## Want More?
+
+- [Supported Compose Features]({{ site.baseurl }}/docker-compose/docker-compose-feature-support)

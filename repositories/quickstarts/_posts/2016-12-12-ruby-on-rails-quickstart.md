@@ -1,11 +1,8 @@
 ---
 title: Ruby on Rails Quickstart Guide
-shortTitle: Ruby on Rails
-step: 2
-tags:
-- quickstarts
-- rails
-description: How to setup your multi-tier Ruby on Rails application.
+short: Ruby on Rails
+category: repositories
+order: 1
 ---
 
 This guide will help you setup Runnable templates for a simple Rails application. This guide will assume that you don’t have a Dockerfile and want Runnable to generate the Dockerfile for you using a simple setup guide.
@@ -83,7 +80,7 @@ Use this tool to add any addtional configuration files, other GitHub repositorie
 
 For more details, Check Out:
 
-1. [Adding Files to your Container]({{site.baseurl}}/repositories/adding-additional-files)
+1. [Adding Files to your Container]({{site.baseurl}}/repositories/adding-files-and-ssh-keys)
 2. [Adding SSH Keys to build private modules]({{site.baseurl}}/troubleshooting/my-build-is-failing-because-of-no-such-key-or-host-key-verification-failed-what-do-i-do)
 
 ---

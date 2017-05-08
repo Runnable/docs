@@ -1,8 +1,8 @@
 ---
 title: Starting an SSH Session
-shortTitle: SSH into Containers
-step: 2
-description: Starting an SSH Session
+short: SSH into Containers
+category: cli
+order: 2
 ---
 
 ---

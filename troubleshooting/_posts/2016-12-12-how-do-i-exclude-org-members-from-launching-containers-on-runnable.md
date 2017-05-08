@@ -1,8 +1,8 @@
 ---
-title: How Do I Exclude Org Members from Launching Containers on Runnable?
-shortTitle: Excluding Teammates
-step: 5
-description: How Do I Exclude Org Members from Launching Containers on Runnable?
+title: How Do I Prevent Members from Launching Containers?
+short: Excluding Teammates
+category: troubleshooting
+order: 5
 ---
 
 ---

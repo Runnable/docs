@@ -1,11 +1,8 @@
 ---
 title: Node.js Quickstart Guide
-shortTitle: Node.js
-step: 1
-tags:
-- quickstarts
-- nodejs
-description: How to setup your multi-tier Node.js application.
+short: Node.js
+category: repositories
+order: 4
 ---
 
 This guide will help you setup Runnable templates for a simple 2-tier Node.js application. This guide will assume that you don't have a Dockerfile and want Runnable to generate the Dockerfile for you using a simple setup guide.
@@ -73,7 +70,7 @@ Use this tool to add any addtional configuration files, other GitHub repositorie
 
 For more details, Check Out:
 
-1. [Adding Files to your Container](/repositories/2016-12-13-adding-additional-files)
+1. [Adding Files to your Container](/repositories/adding-files-and-ssh-keys)
 2. [Adding SSH Keys to build private modules](/troubleshooting/2016-12-12-my-build-is-failing-because-of-no-such-key-or-host-key-verification-failed-what-do-i-do)
 
 ---
