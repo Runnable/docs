@@ -5,7 +5,7 @@ category: troubleshooting
 order: 4
 ---
 
-There can be many reasons why knowing the [Web URL](networking/runnable_urls.md) of a container is required when setting up on Runnable. Here is a walk through that can explain how to generate the Web URL of a given container.
+There can be many reasons why knowing the [Web URL]({{ site.baseurl }}/networking/runnable-urls-explained) of a container is required when setting up on Runnable. Here is a walk through that can explain how to generate the Web URL of a given container.
 
 ---
 

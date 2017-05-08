@@ -1,7 +1,7 @@
 ---
 title: How to Set Up Your MySQL Database Template
 short: MySQL Setup
-category: database-datastore
+category: databases-datastores
 order: 2
 ---
 
@@ -31,7 +31,7 @@ container. Every branch that you run in isolation will immediately start up with
   change desired usernames, passwords, and database names. Defaults have been set for your convienence.
     ![Dockerfile]({{ site.baseurl }}/images/create-mysql-db-4.png)
 
-  * Once running, you can setup template connections with your repository applications. [Here is how.](/connections/how_to_connect_your_containers.md)
+  * Once running, you can setup template connections with your repository applications.
 
 ---
 
@@ -111,4 +111,4 @@ container. Every branch that you run in isolation will immediately start up with
 ### Next steps
 Now that your Template Database container has been 'baked' in with your seed file, subsequent databases that are spawned per branch will immediately start up with the seeded data. If you ever want to update your seed file, just click `Rebuild Without Cache` on the template container to pull a newer seed and cache it into the container image.
 
-Want to seed your database from S3? [Here is how.](/reference/upload_seed_from_s3.md)
+Want to seed your database from S3? [Here is how.]({{ site.baseurl }}/databases-datastores/how-to-setup-your-mysql-database-template)

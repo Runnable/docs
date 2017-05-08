@@ -1,7 +1,7 @@
 ---
 title: How to Clone Your Local Database for Use on Runnable
 short: Clone Local Database
-category: database-datastore
+category: databases-datastores
 order: 5
 ---
 

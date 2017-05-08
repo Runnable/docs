@@ -1,7 +1,7 @@
 ---
 title: How to Set Up Your PostgreSQL Database Template
 short: PostgreSQL Setup
-category: database-datastore
+category: databases-datastores
 order: 1
 ---
 
@@ -31,7 +31,7 @@ container. Every branch that you run in isolation will immediately start up with
   but if you would like to change anything, just uncomment the line and modify as desired.
     ![Dockerfile]({{ site.baseurl }}/images/create-postgres-db-4.png)
 
-  * Once running, you can setup template connections with your repository applications. [Here is how.](/connections/how_to_connect_your_containers.md)
+  * Once running, you can setup template connections with your repository applications.
 
 ---
 
@@ -87,4 +87,4 @@ Now that your Template Database container has been 'baked' in with your seed fil
 
  If you ever want to update your seed file, just click `Rebuild Without Cache` on the template container to pull a newer seed and cache it into the container image.
 
-Want to seed your database from S3? [Here is how.](/docs/services/databases/how-to-seed-your-database-from-s3)
+Want to seed your database from S3? [Here is how.]({{ site.baseurl }}/databases-datastores/how-to-seed-your-database-from-s3)
