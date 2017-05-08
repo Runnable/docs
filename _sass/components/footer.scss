@@ -200,4 +200,9 @@
     top: 6px;
     width: 10px;
   }
+  
+  .well {
+    border: 0;
+    box-shadow: 0 2px 4px rgba($black,.1);
+  }
 }
