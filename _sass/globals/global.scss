@@ -3,11 +3,6 @@ body {
   background: linear-gradient($purple-light, #396fc6);
   // scss-lint:enable ColorVariable
   font-size: 19px;
-  padding: 0 $md;
-
-  @include media(sm) {
-    padding: 0 $sm;
-  }
 
   .main-card {
     background: $white;

@@ -4,10 +4,12 @@
   <body class="grid-block vertical body page-landing">
     {% include icons.html %}
     {% include header.html %}
-    <main class="grid-block grid-container-lg main-card">
-      {% include sidebar.html %}
-      <div class="grid-block vertical lunr-hidden" id="results"></div>
-      <div class="grid-block vertical lunr-active" id="content">{{ content }}</div>
+    <main class="grid-block grid-container-lg padding-sm">
+      <div class="grid-block main-card">
+        {% include sidebar.html %}
+        <div class="grid-block vertical lunr-hidden" id="results"></div>
+        <div class="grid-block vertical lunr-active" id="content">{{ content }}</div>
+      </div>
     </main>
   </body>
   {% include footer.html %}
