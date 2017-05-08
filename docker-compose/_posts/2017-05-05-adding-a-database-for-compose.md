@@ -13,25 +13,31 @@ Learn how to add a database to your Compose based environment.
 
 Start by creating a Dockerfile to build your service and adding it to your repository:
 
-Dockerfile-db:
-[mysql][postgresql]
+<div class="grid-block align-center justify-justified pre-header">
+  <div class="grid-block">
+    <button class="btn btn-xs active">MySQL</button>
+    <button class="btn btn-xs">PostgreSQL</button>
+  </div>
+  <div class="grid-block shrink monospace">Dockerfile-db</div>
+</div>
+<pre>
+# Change version number to desired (i.e. 5.5, 5.6, 5.7)
+FROM runnable/mysql:5.6
 
-    # Change version number to desired (i.e. 5.5, 5.6, 5.7)
-    FROM runnable/mysql:5.6
+# Set desired environment variables
+ENV MYSQL_USER mysql
+ENV MYSQL_PASSWORD mysql
+ENV MYSQL_DATABASE app
+# to set a root password, uncomment the next line
+# ENV MYSQL_ROOT_PASSWORD test
 
-    # Set desired environment variables
-    ENV MYSQL_USER mysql
-    ENV MYSQL_PASSWORD mysql
-    ENV MYSQL_DATABASE app
-    # to set a root password, uncomment the next line
-    # ENV MYSQL_ROOT_PASSWORD test
+# Uncomment the following ADD line to enable seeding the PostgreSQL DB
+# Make sure to check in a mysql dump file (i.e. mysqldump [options] > seed.sql)
+# ADD seed.sql /seed.sql
 
-    # Uncomment the following ADD line to enable seeding the PostgreSQL DB
-    # Make sure to check in a mysql dump file (i.e. mysqldump [options] > seed.sql)
-    # ADD seed.sql /seed.sql
-
-    # Run the initialization script (leave this alone)
-    RUN gosu mysql /init.sh
+# Run the initialization script (leave this alone)
+RUN gosu mysql /init.sh
+</pre>
 
 ---
 

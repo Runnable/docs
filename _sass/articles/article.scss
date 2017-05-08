@@ -106,6 +106,39 @@
     word-break: break-word;
   }
 
+  // fancy code blocks
+  .pre-header {
+    background-color: $gray-lighter;
+    border-radius: $input-border-radius $input-border-radius 0 0;
+    color: $gray;
+    padding: $xs $sm;
+
+    + pre {
+      border-radius: 0 0 $input-border-radius $input-border-radius;
+      margin-top: 0;
+    }
+
+    .btn {
+
+      &:hover {
+        background: rgba($white,.6);
+      }
+
+      &:active,
+      &.active {
+        background: $white;
+      }
+
+      + .btn {
+        margin-left: 6px;
+      }
+    }
+
+    .monospace {
+      font-size: 11px;
+    }
+  }
+
   // tables
   table {
     display: block;
