@@ -1,6 +1,6 @@
 ---
 title: Adding a Database for Compose
-short: Adding a Database
+short: Adding a Database for Compose
 category: docker-compose
 order: 2
 ---
