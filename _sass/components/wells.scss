@@ -1,7 +1,7 @@
 .well {
-  border: 0;
+  border: 1px solid $gray-lighter;
   border-radius: $input-border-radius-lg;
-  box-shadow: 0 2px 4px rgba($black,.1);
+  color: $gray;
 
   > .icons-chevron-right {
     flex: 0 0 auto;
@@ -13,6 +13,7 @@
 }
 
 .well-anchor {
+  border: 0;
   cursor: pointer;
   display: flex;
   font-size: 21px;

@@ -202,7 +202,7 @@
   }
 
   .well {
-    border: 0px transparent;
+    border: 0 solid $white;
     box-shadow: 0 2px 4px rgba($black,.1);
   }
 }
