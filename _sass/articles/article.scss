@@ -142,7 +142,15 @@
     }
 
     .monospace {
+      @extend %text-overflow;
+      display: block;
+      flex: 1 1 auto;
       font-size: 11px;
+
+      &:not(:only-child) {
+        margin-left: 6px;
+        text-align: right;
+      }
     }
   }
 
