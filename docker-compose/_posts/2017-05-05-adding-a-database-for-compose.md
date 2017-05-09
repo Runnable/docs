@@ -63,7 +63,7 @@ Then add your database service to your Compose file:
 </div>
     Database: ./Dockerfile-db
 
-Once you push your changes to your repository, should see a new database service launch on the Container page.
+Once you push your changes to your repository, you should see a new database service launch on the Containers page.
 
 > **Note:** If you’re using Docker Hub’s <span data-picker-text>MySQL</span> image, your output may differ due to their use of `entrypoint` and `volumes`, which are [unsupported features](docker-compose/docker-compose-feature-support).
 
@@ -108,7 +108,7 @@ ADD [src] /seed.dump
 
 Replace `[src]` with the path to your dump file, relative to your Dockerfile:
 
-> **Note:** Do not modify the destination `/seed.sql`{:data-picker="MySQL" data-picker-toggle=""}`/seed.dump`{:data-picker="PostgreSQL" data-picker-toggle="false"} it’s required to for the initialization script.
+> **Note:** Do not modify the destination `/seed.sql`{:data-picker="MySQL" data-picker-toggle=""}`/seed.dump`{:data-picker="PostgreSQL" data-picker-toggle="false"}; it’s required to for the initialization script.
 
 Your seeded database will now be created for all new builds.
 
