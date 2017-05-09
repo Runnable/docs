@@ -13,14 +13,12 @@ Learn how to add a database to your Compose based environment.
 
 Start by creating a Dockerfile to build your service and adding it to your repository:
 
-<div class="grid-block align-center justify-justified pre-header">
-  <div class="grid-block">
-    <button class="btn btn-xs active">MySQL</button>
-    <button class="btn btn-xs">PostgreSQL</button>
-  </div>
-  <div class="grid-block shrink monospace">Dockerfile-db</div>
+<div class="grid-block align-center pre-header">
+  <button class="grid-block shrink btn btn-xs active" data-picker="MySQL">MySQL</button>
+  <button class="grid-block shrink btn btn-xs" data-picker="PostgreSQL" data-picker-default="false">PostgreSQL</button>
+  <div class="grid-block monospace justify-right">Dockerfile-db</div>
 </div>
-<pre>
+<pre data-picker="MySQL" data-picker-toggle>
 # Change version number to desired (i.e. 5.5, 5.6, 5.7)
 FROM runnable/mysql:5.6
 
@@ -38,33 +36,36 @@ ENV MYSQL_DATABASE app
 # Run the initialization script (leave this alone)
 RUN gosu mysql /init.sh
 </pre>
+<pre data-picker="PostgreSQL" data-picker-toggle="false">
+# Change desired version below (Available: 9.3, 9.4, 9.5)
+FROM runnable/postgres:9.4
 
----
+ENV POSTGRES_USER postgres
+ENV POSTGRES_DB postgres
 
-    # Change desired version below (Available: 9.3, 9.4, 9.5)
-    FROM runnable/postgres:9.4
+# Uncomment the following ADD line to enable seeding the PostgreSQL DB
+# Make sure to check in a pg_dump file (i.e. pg_dump -Fc db_name -f seed.dump)
+# ADD seed.dump /seed.dump
 
-    ENV POSTGRES_USER postgres
-    ENV POSTGRES_DB postgres
+# Run the initialization script (leave this alone)
+RUN gosu postgres /init.sh \
+  # Uncomment the following line for a custom pg_restore command. Edit as needed
+  # "pg_restore --no-acl --no-owner -c -v -d $POSTGRES_DB /seed.dump"
 
-    # Uncomment the following ADD line to enable seeding the PostgreSQL DB
-    # Make sure to check in a pg_dump file (i.e. pg_dump -Fc db_name -f seed.dump)
-    # ADD seed.dump /seed.dump
 
-    # Run the initialization script (leave this alone)
-    RUN gosu postgres /init.sh \
-      # Uncomment the following line for a custom pg_restore command. Edit as needed
-      # "pg_restore --no-acl --no-owner -c -v -d $POSTGRES_DB /seed.dump"
+</pre>
 
 Then add your database service to your Compose file:
 
-Compose File:
 
+<div class="grid-block align-center pre-header">
+  <div class="grid-block monospace">Dockerfile-db</div>
+</div>
     Database: ./Dockerfile-db
 
 Once you push your changes to your repository, should see a new database service launch on the Container page.
 
-> **Note:** If you’re using Docker Hub’s [MySQL || PostgreSQL] image, your output may differ due to their use of `entrypoint` and `volumes`, which are [unsupported features](docker-compose/docker-compose-feature-support).
+> **Note:** If you’re using Docker Hub’s <span data-picker-text>MySQL</span> image, your output may differ due to their use of `entrypoint` and `volumes`, which are [unsupported features](docker-compose/docker-compose-feature-support).
 
 ---
 
@@ -74,30 +75,39 @@ Once you push your changes to your repository, should see a new database service
 
 You can seed your database from a seed file. If you don’t have one, here’s how to create one:
 
-[mysql][postgresql]
+<div class="grid-block align-center pre-header">
+  <button class="grid-block shrink btn btn-xs active" data-picker="MySQL">MySQL</button>
+  <button class="grid-block shrink btn btn-xs" data-picker="PostgreSQL">PostgreSQL</button>
+</div>
+<pre data-picker="MySQL" data-picker-toggle>
+$ mysqldump --all-databases -u mysql -p > seed.sql
+</pre>
+<pre data-picker="PostgreSQL" data-picker-toggle="false">
+$ pg_dump -U postgres -Fc postgres -f seed.dump
+</pre>
 
-    $ mysqldump --all-databases -u mysql -p > seed.sql
-
-    $ pg_dump -U postgres -Fc postgres -f seed.dump
-
-[mysql]
-
+{:data-picker="MySQL" data-picker-toggle=""}
 > Note: The default password is `mysql`.
 
-You are now the proud owner of a [seed.sql || seed.dump] file.
+You are now the proud owner of a `seed.sql`{:data-picker="MySQL" data-picker-toggle=""}`seed.dump`{:data-picker="PostgreSQL" data-picker-toggle="false"} file.
 
-Using the Seed File
+## Using the Seed File
 Your database’s Dockerfile will need access to your seed file. Check the file into your repository and add this line to the Dockerfile before the `RUN` command:
 
-[mysql][postgresql]
+<div class="grid-block align-center pre-header">
+  <button class="grid-block shrink btn btn-xs active" data-picker="MySQL">MySQL</button>
+  <button class="grid-block shrink btn btn-xs" data-picker="PostgreSQL">PostgreSQL</button>
+</div>
+<pre data-picker="MySQL" data-picker-toggle>
+ADD [src] /seed.sql
+</pre>
+<pre data-picker="PostgreSQL" data-picker-toggle="false">
+ADD [src] /seed.dump
+</pre>
 
-    ADD [src] /seed.sql
+Replace `[src]` with the path to your dump file, relative to your Dockerfile:
 
-    ADD [src] /seed.dump
-
-Replace [src] with the path to your dump file, relative to your Dockerfile:
-
-> **Note:** Do not modify the destination [/seed.sql || /seed.dump]; it’s required to for the initialization script.
+> **Note:** Do not modify the destination `/seed.sql`{:data-picker="MySQL" data-picker-toggle=""}`/seed.dump`{:data-picker="PostgreSQL" data-picker-toggle="false"} it’s required to for the initialization script.
 
 Your seeded database will now be created for all new builds.
 

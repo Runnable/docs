@@ -74,7 +74,7 @@
   pre {
     background-color: $gray-lightest;
     border-radius: $input-border-radius-lg;
-    font-size: 16px;
+    font-size: 15px;
     margin: $md 0;
     overflow-x: auto;
     padding: $sm;
@@ -113,15 +113,17 @@
     color: $gray;
     padding: $xs $sm;
 
-    + pre {
+    + pre,
+    + .highlighter-rouge > pre {
       border-radius: 0 0 $input-border-radius $input-border-radius;
       margin-top: 0;
     }
 
     .btn {
+      font-weight: $weight-bold;
 
       &:hover {
-        background: rgba($white,.6);
+        background: rgba($white,.5);
       }
 
       &:active,
