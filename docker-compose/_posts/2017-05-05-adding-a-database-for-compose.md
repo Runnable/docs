@@ -7,7 +7,7 @@ order: 3
 
 Learn how to add a database to your Compose based environment.
 
-> If you’re setting up without Compose, follow the [databases for Dockerfiles guide](https://runnable.com/docs/databases-datastores/how-to-setup-your-postgres-database-template).
+> If you’re **not using Compose**, follow the [databases for Dockerfiles guide](https://runnable.com/docs/databases-datastores/how-to-setup-your-postgres-database-template).
 
 ---
 

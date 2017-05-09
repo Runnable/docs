@@ -60,6 +60,11 @@
     margin: $sm 0;
   }
 
+  p + h2,
+  p + h3 {
+    margin-top: $md;
+  }
+
   // headings
   h1,
   h2,

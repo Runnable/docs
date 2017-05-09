@@ -11,6 +11,8 @@ to seed you DB during the build process.
 This allows you to 'bake' your seed into your master Database
 container. Every branch that you run in isolation will immediately start up with a Database container that is pre-seeded, taking advantage of the container image cache.
 
+> **Note:** If your environment is currently built with Docker Compose, refer to our [database for Compose]({{ site.baseurl }}/docker-compose/adding-a-database-for-compose) article.
+
 ---
 
 ### Getting Started
