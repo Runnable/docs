@@ -25,7 +25,7 @@ Select a file to upload from your local system and enter its destination path, r
 
 ![File Details]({{ site.baseurl }}/images/dockerfiles_file_details.png)
 
-You can also add scripts to run immediately after a file is added during the build. For example, you may want to modify a file's permissions, or [seed a database]({{ site.baseurl }}/databases-datastores/how-to-seed-your-database-from-a-dump-file) after adding a seed file.
+You can also add scripts to run immediately after a file is added during the build. For example, you may want to modify a file's permissions, or [seed a database]({{ site.baseurl }}/databases-datastores/adding-a-database-for-dockerfiles#seeding-your-database) after adding a seed file.
 
 When you're done, click the **Add File** button to continue.
 
