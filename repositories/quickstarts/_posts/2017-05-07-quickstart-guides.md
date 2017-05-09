@@ -18,35 +18,23 @@ If your app doesn't use Dockerfiles, don't worry! this guide will show you how t
 
 ## 1. Adding Your Repository
 
-<div class="tab-wrapper grid-block">
-  <label class="tab grid-block">
-    <input class="radio" type="radio" name="content-toggle" value="rails" checked>
-    <div class="tab-shape grid-block align-center justify-center btn white btn-md">
-      <img class="icon" src="images/logo-icon-nodejs.svg"/>
-      Node.js
-    </div>
-  </label>
-  <label class="tab grid-block">
-    <input class="radio" type="radio" name="content-toggle" value="python">
-    <div class="tab-shape grid-block align-center justify-center btn white btn-md">
-      <img class="icon" src="images/logo-icon-python.svg"/>
-      Python
-    </div>
-  </label>
-  <label class="tab grid-block">
-    <input class="radio" type="radio" name="content-toggle" value="python">
-    <div class="tab-shape grid-block align-center justify-center btn white btn-md">
-      <img class="icon" src="images/logo-icon-rails.svg"/>
-      Rails
-    </div>
-  </label>
-  <label class="tab grid-block">
-    <input class="radio" type="radio" name="content-toggle" value="python">
-    <div class="tab-shape grid-block align-center justify-center btn white btn-md">
-      <img class="icon" src="images/logo-icon-php.svg"/>
-      PHP
-    </div>
-  </label>
+<div class="btn-group btn-group-quickstart">
+  <button class="grid-block align-center justify-center btn white btn-md active" data-picker="Node.js">
+    <img class="icon" src="images/logo-icon-nodejs.svg"/>
+    Node.js
+  </button>
+  <button class="grid-block align-center justify-center btn white btn-md" data-picker="Python">
+    <img class="icon" src="images/logo-icon-python.svg"/>
+    Python
+  </button>
+  <button class="grid-block align-center justify-center btn white btn-md" data-picker="Rails">
+    <img class="icon" src="images/logo-icon-rails.svg"/>
+    Rails
+  </button>
+  <button class="grid-block align-center justify-center btn white btn-md" data-picker="PHP">
+    <img class="icon" src="images/logo-icon-php.svg"/>
+    PHP
+  </button>
 </div>
 
 First you'll need to add the repository that you want to create a Dockerfile for. From the Containers page, click the **Add Services** button and select it from the list.
@@ -67,10 +55,10 @@ The next steps will walk you through the configuration of your repository.
 
 First you’ll set the base image for your Dockerfile. Select the **Rails**<!-- **Python** **Node.js**  **PHP** --> stack type and the versions of Ruby and Rails<!-- **version of Python** **version of Node.js** **version of PHP** --> that your repository requires for runtime.
 
-![](images/ss-rails-repository.png)
-<!-- ![](images/ss-node-repository.png) -->
-<!-- ![](images/ss-python-repository.png) -->
-<!-- ![](images/ss-php-repository.png) -->
+<img src="images/ss-rails-repository.png" data-picker="Rails">
+<img src="images/ss-node-repository.png" data-picker="Node.js">
+<img src="images/ss-python-repository.png" data-picker="Python">
+<img src="images/ss-php-repository.png" data-picker="PHP">
 
 ---
 
