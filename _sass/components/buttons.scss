@@ -285,6 +285,7 @@
     }
   }
 }
+
 .facebook {
   color: $gray-light;
 
@@ -307,4 +308,57 @@
       }
     }
   }
+}
+
+.tab-wrapper {
+  margin: 45px 0;
+  width: 100%;
+}
+
+.tab {
+  height: 72px;
+  position: relative;
+
+  &:first-child .tab-shape {
+    border-radius: 6px 0 0 6px;
+  }
+
+  &:last-child .tab-shape {
+    border-radius: 0 6px 6px 0;
+  }
+
+  + .tab {
+    margin-left: -1px;
+  }
+}
+
+.tab-shape {
+  border-radius: 0;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+
+  &:hover {
+    z-index: 1;
+  }
+}
+
+.radio {
+  opacity: 0;
+  position: absolute;
+
+  &:checked + .tab-shape {
+    background-color: #FDFBFE;
+    border-color: #E2C7F5;
+    color: #8920D9;
+    z-index: 1;
+  }
+}
+
+.icon.icon {
+  background-color: #ebebeb;
+  border-radius: 50%;
+  height: 24px;
+  margin: 0 12px 0 0;
+  width: 24px;
 }

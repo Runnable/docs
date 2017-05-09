@@ -1,6 +1,6 @@
 ---
-title: Quickstart Guide
-short: Quickstart Guide
+title: Quickstart Guides
+short: Quickstart Guides
 category: repositories
 order: 1
 ---
@@ -17,6 +17,37 @@ If your app doesn't use Dockerfiles, don't worry! this guide will show you how t
 ---
 
 ## 1. Adding Your Repository
+
+<div class="tab-wrapper grid-block">
+  <label class="tab grid-block">
+    <input class="radio" type="radio" name="content-toggle" value="rails" checked>
+    <div class="tab-shape grid-block align-center justify-center btn white btn-md">
+      <img class="icon" src="images/logo-icon-nodejs.svg"/>
+      Node.js
+    </div>
+  </label>
+  <label class="tab grid-block">
+    <input class="radio" type="radio" name="content-toggle" value="python">
+    <div class="tab-shape grid-block align-center justify-center btn white btn-md">
+      <img class="icon" src="images/logo-icon-python.svg"/>
+      Python
+    </div>
+  </label>
+  <label class="tab grid-block">
+    <input class="radio" type="radio" name="content-toggle" value="python">
+    <div class="tab-shape grid-block align-center justify-center btn white btn-md">
+      <img class="icon" src="images/logo-icon-rails.svg"/>
+      Rails
+    </div>
+  </label>
+  <label class="tab grid-block">
+    <input class="radio" type="radio" name="content-toggle" value="python">
+    <div class="tab-shape grid-block align-center justify-center btn white btn-md">
+      <img class="icon" src="images/logo-icon-php.svg"/>
+      PHP
+    </div>
+  </label>
+</div>
 
 First you'll need to add the repository that you want to create a Dockerfile for. From the Containers page, click the **Add Services** button and select it from the list.
 
