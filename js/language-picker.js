@@ -23,7 +23,7 @@ function setupPicker(pickerButton) {
 function togglePicker(e, pickerButton, pickerToggle, pickerText) {
   var thisLang = e.target.getAttribute('data-picker');
   var thisButton;
-  var thisToggle
+  var thisToggle;
 
   // update button states
   for (y = 0; y < pickerButton.length; y++) {
