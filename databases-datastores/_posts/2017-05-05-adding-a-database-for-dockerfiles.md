@@ -72,7 +72,7 @@ ADD [src] /seed.sql
 ADD [src] /seed.dump
 </pre>
 
-> **Note:** Do not modify the destination `/seed.sql`{:data-picker="MySQL" data-picker-toggle=""}`/seed.dump`{:data-picker="PostgreSQL" data-picker-toggle="false"} it’s required to for the initialization script.
+> **Note:** Do not modify the destination `/seed.sql`{:data-picker="MySQL" data-picker-toggle=""}`/seed.dump`{:data-picker="PostgreSQL" data-picker-toggle="false"}; it’s required to for the initialization script.
 
 Your seeded database will now be created for all new builds.
 
