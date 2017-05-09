@@ -179,5 +179,6 @@
 }
 
 .page-landing .grid-container-lg {
-    padding: 0 $sm;
+  padding: 0 $sm;
+  box-sizing: content-box;
 }
