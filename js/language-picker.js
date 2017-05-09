@@ -4,7 +4,7 @@ function setupPicker(pickerButton) {
   var pickerText = document.querySelectorAll('[data-picker-text]');
 
   for (y = 0; y < pickerToggle.length; y++) {
-    if  (pickerToggle[y].getAttribute('data-picker-toggle') === 'false') {
+    if (pickerToggle[y].getAttribute('data-picker-toggle') === 'false') {
       pickerToggle[y].style.display = 'none';
     }
   }
