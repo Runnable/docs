@@ -2,7 +2,7 @@
 title: Adding a Database for Dockerfiles
 short: Adding a Database for Dockerfiles
 category: databases-datastores
-order: 2
+order: 1
 ---
 
 Learn how to add a database to your Dockerfile (non-Compose) based environment.

@@ -2,7 +2,7 @@
 title: Cloning & Seeding Databases
 short: Cloning & Seeding Databases
 category: databases-datastores
-order: 5
+order: 2
 ---
 
 ## Cloning Your Database
