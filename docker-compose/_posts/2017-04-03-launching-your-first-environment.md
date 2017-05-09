@@ -52,6 +52,7 @@ By default, you’ll also get new environments for branches of this repository w
 
 ---
 
-## Want More?
+## What’s Next?
 
+- [Adding a Database]({{ site.baseurl }}/docker-compose/adding-a-database-for-compose)
 - [Supported Compose Features]({{ site.baseurl }}/docker-compose/docker-compose-feature-support)

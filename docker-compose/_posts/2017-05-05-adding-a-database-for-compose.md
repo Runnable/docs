@@ -2,7 +2,7 @@
 title: Adding a Database for Compose
 short: Adding a Database
 category: docker-compose
-order: 3
+order: 2
 ---
 
 Learn how to add a database to your Compose based environment.
@@ -97,6 +97,7 @@ Your database’s Dockerfile will need access to your seed file. Check the file 
 <div class="grid-block align-center pre-header">
   <button class="grid-block shrink btn btn-xs active" data-picker="MySQL">MySQL</button>
   <button class="grid-block shrink btn btn-xs" data-picker="PostgreSQL">PostgreSQL</button>
+  <div class="grid-block monospace justify-right">Dockerfile-db</div>
 </div>
 <pre data-picker="MySQL" data-picker-toggle>
 ADD [src] /seed.sql
@@ -116,6 +117,3 @@ Your seeded database will now be created for all new builds.
 ## What’s Next?
 
 - [Setting Up with Compose]({{ site.baseurl }}/docker-compose/launching-your-first-environment)
-- [Adding a Database (Non-Compose)]()
-- [How to Seed Your Database from S3]()
-
