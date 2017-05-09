@@ -1,6 +1,6 @@
 // setup
 function setupPicker(pickerButton) {
-  var pickerToggle = document.querySelectorAll('*[data-picker-toggle]');
+  var pickerToggle = document.querySelectorAll('[data-picker-toggle]');
   var pickerText = document.querySelectorAll('[data-picker-text]');
 
   for (y = 0; y < pickerToggle.length; y++) {
