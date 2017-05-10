@@ -2,7 +2,7 @@
 title: How to Set Up a Redis Service
 short: Redis Setup
 category: databases-datastores
-order: 7
+order: 4
 ---
 
 ---

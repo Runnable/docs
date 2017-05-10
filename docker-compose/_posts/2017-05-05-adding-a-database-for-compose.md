@@ -1,13 +1,13 @@
 ---
 title: Adding a Database for Compose
-short: Adding a Database
+short: Adding a Database for Compose
 category: docker-compose
 order: 2
 ---
 
 Learn how to add a database to your Compose based environment.
 
-> If you’re **not using Compose**, follow the [databases for Dockerfiles guide](https://runnable.com/docs/databases-datastores/how-to-setup-your-postgres-database-template).
+> If you’re **not using Compose**, follow the [databases for Dockerfiles guide]({{ site.baseurl }}/databases-datastores/adding-a-database-for-dockerfiles).
 
 ---
 
@@ -80,7 +80,7 @@ Once you push your changes to your repository, you should see a new database ser
 
 ## Creating a Seed File
 
-You can seed your database from a seed file. If you don’t have one, here’s how to create one:
+You can clone an existing database to create a seed file. Here’s how to create one:
 
 <div class="grid-block align-center pre-header">
   <button class="grid-block shrink btn btn-xs active" data-picker="MySQL">MySQL</button>
