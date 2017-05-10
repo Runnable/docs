@@ -21,11 +21,17 @@ function setupPicker(pickerButton) {
 }
 
 function togglePicker(e, pickerButton, pickerToggle, pickerText) {
-  var thisLang = e.target.getAttribute('data-picker');
+  var thisEl = e.target;
+  var thisLang;
   var thisButton;
   var thisToggle;
 
   // update button states
+  // get element to make active
+  if (thisEl.tagName !== 'BUTTON') {
+    while ((thisEl = thisEl.parentNode) && (thisEl.tagName !== 'BUTTON'));
+  }
+  thisLang = thisEl.getAttribute('data-picker');
   for (y = 0; y < pickerButton.length; y++) {
     thisButton = pickerButton[y];
     if (thisButton.getAttribute('data-picker') !== thisLang) {
