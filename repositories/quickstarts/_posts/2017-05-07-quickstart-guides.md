@@ -84,26 +84,26 @@ You can add commands for building your application. For example, you may want to
 <img src="images/ss-php-build-commands.png" data-picker="PHP" data-picker-toggle="false">
 
 {:data-picker="PHP" data-picker-toggle="false"}
-For your PHP app, you'll need to add the following lines to this section:
+For your PHP app, you'll need to add the following commands to this section:
 
 {:data-picker="PHP" data-picker-toggle="false"}
 Set permissions for your application directory:
 
 {:data-picker="PHP" data-picker-toggle="false"}
-    chgrp -R www-data /var/www/html/
-    chmod -R 775 /var/www/html/storage
+    $ chgrp -R www-data /var/www/html/
+    $ chmod -R 775 /var/www/html/storage
 
 {:data-picker="PHP" data-picker-toggle="false"}
 Copy Laravel’s `.env.example` to `.env` in your application directory:
 
 {:data-picker="PHP" data-picker-toggle="false"}
-    cp .env.example .env
+    $ cp .env.example .env
 
 {:data-picker="PHP" data-picker-toggle="false"}
 Generate your application key:
 
 {:data-picker="PHP" data-picker-toggle="false"}
-    php artisan key:generate
+    $ php artisan key:generate
 
 #### Container CMD
 
