@@ -14,7 +14,7 @@ function setupPicker(pickerButton) {
     thisButton.addEventListener('click',function(e) {
       togglePicker(e, pickerButton, pickerToggle, pickerText);
     });
-    thisButton.addEventListener('click',function(e) {
+    thisButton.addEventListener('touchend',function(e) {
       togglePicker(e, pickerButton, pickerToggle, pickerText);
     });
   }
