@@ -22,19 +22,19 @@ Select a language to customize this guide for your repository. If none apply, yo
 
 <div class="btn-group btn-group-quickstart">
   <button class="grid-block align-center justify-center btn white btn-md active" data-picker="Node.js">
-    <img class="icon" src="images/logo-icon-nodejs.svg"/>
+    <img class="icon" src="images/logo-icon-nodejs.svg">
     Node.js
   </button>
   <button class="grid-block align-center justify-center btn white btn-md" data-picker="Python">
-    <img class="icon" src="images/logo-icon-python.svg"/>
+    <img class="icon" src="images/logo-icon-python.svg">
     Python
   </button>
   <button class="grid-block align-center justify-center btn white btn-md" data-picker="Rails">
-    <img class="icon" src="images/logo-icon-rails.svg"/>
+    <img class="icon" src="images/logo-icon-rails.svg">
     Rails
   </button>
   <button class="grid-block align-center justify-center btn white btn-md" data-picker="PHP">
-    <img class="icon" src="images/logo-icon-php.svg"/>
+    <img class="icon" src="images/logo-icon-php.svg">
     PHP
   </button>
 </div>
