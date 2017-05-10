@@ -107,7 +107,7 @@ Generate your application key:
 
 #### Container CMD
 
-You’ll need to define your application’s run command, such as <code data-picker="Node.js" data-picker-toggle>npm start</code><code data-picker="Python" data-picker-toggle="false">python main.py</code><code data-picker="Rails" data-picker-toggle="false">rails server</code><code data-picker="PHP" data-picker-toggle="false">apache2-foreground</code>.
+You’ll need to define your application’s run command, such as `npm start`{:data-picker="Node.js" data-picker-toggle=""}`python main.py`{:data-picker="Python" data-picker-toggle="false"}`rails server`{:data-picker="Rails" data-picker-toggle="false"}`apache2-foreground`{:data-picker="PHP" data-picker-toggle="false"}.
 
 > Note: The container will stop running when this command exits.
 
@@ -118,8 +118,8 @@ You’ll need to define your application’s run command, such as <code data-pic
 
 Here are some pointers for this section:
 
-- It's typically a good idea to bind to all interfaces using `-b 0.0.0.0` as part of this line so the container can be accessed through the browser and by other containers. For example: <code data-picker="Node.js" data-picker-toggle>npm start -b 0.0.0.0</code><code data-picker="Python" data-picker-toggle="false">python main.py -b 0.0.0.0</code><code data-picker="Rails" data-picker-toggle="false">rails server -b 0.0.0.0</code><code data-picker="PHP" data-picker-toggle="false">apache2-foreground -b 0.0.0.0</code>
-- If you've already added a database, you may need to use `&&` to run migration commands after your main run command. For example: <code data-picker="Node.js" data-picker-toggle>npm run migrations && npm start</code><code data-picker="Python" data-picker-toggle="false">python main.py && ??</code><code data-picker="Rails" data-picker-toggle="false">rails server && rake db:migrate</code><code data-picker="PHP" data-picker-toggle="false">apache2-foreground && ??</code>
+- It's typically a good idea to bind to all interfaces using `-b 0.0.0.0` as part of this line so the container can be accessed through the browser and by other containers. For example: `npm start -b 0.0.0.0`{:data-picker="Node.js" data-picker-toggle=""}`python main.py -b 0.0.0.0`{:data-picker="Python" data-picker-toggle="false"}`rails server -b 0.0.0.0`{:data-picker="Rails" data-picker-toggle="false"}`apache2-foreground -b 0.0.0.0`{:data-picker="PHP" data-picker-toggle="false"}
+- If you've already added a database, you may need to use `&&` to run migration commands after your main run command. For example: `npm run migrations && npm start`{:data-picker="Node.js" data-picker-toggle=""}`python main.py && ??`{:data-picker="Python" data-picker-toggle="false"}`rails server && rake db:migrate`{:data-picker="Rails" data-picker-toggle="false"}`apache2-foreground && ??`{:data-picker="PHP" data-picker-toggle="false"}
 
 After configuring Commands and Packages, you're good to go. You can view the Dockerfile we've generated in the Dockerfile tab, and you can click the **Save & Build** button to start building a container from that Dockerfile.
 
