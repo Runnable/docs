@@ -145,7 +145,7 @@ You can add environment variables to set configuration values or secrets that yo
 
 If you've added other services to Runnable (like databases or other repositories), you can also use this tool to point your repository to [their URLs]({{ site.baseurl }}/networking/runnable-urls-explained).
 
-> For example: If your service uses MONGO_URL to set the URL for your database, you can add `MONGO_URL=mongodb-staging-myorg.runnableapp.com`.
+> For example: If your service uses `MONGO_URL` to set the URL for your database, you can add `MONGO_URL=mongodb-staging-myorg.runnableapp.com`.
 
 ---
 
