@@ -1,7 +1,6 @@
 .sidebar {
   background: $gray-lighterest;
   border-right: 1px solid $gray-lighter;
-  color: $gray;
   font-size: 14px;
   padding: $lg $md;
   width: 280px;
@@ -54,6 +53,7 @@
   .a {
     cursor: pointer;
     min-height: 30px;
+    color: $gray;
 
     &:hover {
       color: $gray-dark;

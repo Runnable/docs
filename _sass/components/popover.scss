@@ -1,3 +1,7 @@
+.popover {
+  padding: 0px;
+}
+
 .popover-hover-wrapper {
   @media (max-width: $screen-xs) and (min-width: $screen-xxxs) {
     min-width: 265px;
