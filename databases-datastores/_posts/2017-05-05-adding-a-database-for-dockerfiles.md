@@ -55,11 +55,19 @@ You are now the proud owner of a `seed.sql`{:data-picker="MySQL" data-picker-tog
 
 1. Open the configuration for your database by clicking the gear icon next to its name, and select the **Dockerfile** tab.
 
-    ![](images/ss-databases-menu.png)
+    {:data-picker="MySQL" data-picker-toggle=""}
+    ![](images/ss-databases-menu-mysql.png)
+
+    {:data-picker="PostgreSQL" data-picker-toggle="false"}
+    ![](images/ss-databases-menu-postgresql.png)
 
 2. Open the file menu by clicking the **+** icon in the file browser and select **Upload File**.
 
-    ![](images/ss-databases-configure.png)
+    {:data-picker="MySQL" data-picker-toggle=""}
+    ![](images/ss-databases-configure-mysql.png)
+
+    {:data-picker="PostgreSQL" data-picker-toggle="false"}
+    ![](images/ss-databases-configure-postgresql.png)
 
 3. Select and upload your `seed.sql`{:data-picker="MySQL" data-picker-toggle=""}`seed.dump`{:data-picker="PostgreSQL" data-picker-toggle="false"} file to your container.
 
