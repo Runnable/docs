@@ -18,6 +18,8 @@ If your app doesn't use Dockerfiles, don't worry! this guide will show you how t
 
 ## 1. Adding Your Repository
 
+Select a language to customize this guide for your repository. If none apply, you can still follow along.
+
 <div class="btn-group btn-group-quickstart">
   <button class="grid-block align-center justify-center btn white btn-md active" data-picker="Node.js">
     <img class="icon" src="images/logo-icon-nodejs.svg"/>
@@ -37,7 +39,7 @@ If your app doesn't use Dockerfiles, don't worry! this guide will show you how t
   </button>
 </div>
 
-First you'll need to add the repository that you want to create a Dockerfile for. From the Containers page, click the **Add Services** button and select it from the list.
+First you'll need to add the <span data-picker-text>Node.js</span> repository that you want to create a Dockerfile for. From the Containers page, click the **Add Services** button and select it from the list.
 
 ![](images/ss-add-service.png)
 
@@ -53,12 +55,12 @@ The next steps will walk you through the configuration of your repository.
 
 ### Repository
 
-First you’ll set the base image for your Dockerfile. Select the **Rails**<!-- **Python** **Node.js**  **PHP** --> stack type and the versions of Ruby and Rails<!-- **version of Python** **version of Node.js** **version of PHP** --> that your repository requires for runtime.
+First you’ll set the base image for your Dockerfile. Select the <span class="strong" data-picker-text>Node.js</span> stack type and the versions of <span data-picker="Node.js" data-picker-toggle>version of Node.js</span><span data-picker="Python" data-picker-toggle="false">version of Python</span><span data-picker="Rails" data-picker-toggle="false">versions of Ruby and Rails</span><span data-picker="PHP" data-picker-toggle="false">version of PHP</span> that your repository requires for runtime.
 
-<img src="images/ss-rails-repository.png" data-picker="Rails">
-<img src="images/ss-node-repository.png" data-picker="Node.js">
-<img src="images/ss-python-repository.png" data-picker="Python">
-<img src="images/ss-php-repository.png" data-picker="PHP">
+<img src="images/ss-node-repository.png" data-picker="Node.js" data-picker-toggle>
+<img src="images/ss-python-repository.png" data-picker="Python" data-picker-toggle="false">
+<img src="images/ss-rails-repository.png" data-picker="Rails" data-picker-toggle="false">
+<img src="images/ss-php-repository.png" data-picker="PHP" data-picker-toggle="false">
 
 ---
 
@@ -76,42 +78,48 @@ This section is where you can install any tools, libraries, or frameworks your r
 
 You can add commands for building your application. For example, you may want to add commands for building your CSS or minifying your JavaScript. These commands will run in the root folder of the repository when its container is building.
 
-![](images/ss-rails-build-commands.png)
-<!-- ![](images/ss-node-build-commands.png) -->
-<!-- ![](images/ss-python-build-commands.png) -->
-<!-- ![](images/ss-php-build-commands.png) -->
+<img src="images/ss-node-build-commands.png" data-picker="Node.js" data-picker-toggle>
+<img src="images/ss-python-build-commands.png" data-picker="Python" data-picker-toggle="false">
+<img src="images/ss-rails-build-commands.png" data-picker="Rails" data-picker-toggle="false">
+<img src="images/ss-php-build-commands.png" data-picker="PHP" data-picker-toggle="false">
 
-<!-- For your PHP app, you'll need to add the following lines to this section: -->
+{:data-picker="PHP" data-picker-toggle="false"}
+For your PHP app, you'll need to add the following lines to this section:
 
-<!-- Set permissions for your application directory: -->
-<!--
+{:data-picker="PHP" data-picker-toggle="false"}
+Set permissions for your application directory:
+
+{:data-picker="PHP" data-picker-toggle="false"}
     chgrp -R www-data /var/www/html/
     chmod -R 775 /var/www/html/storage
- -->
-<!-- Copy Laravel’s .env.example to .env in your applicationproject directory: -->
-<!--
+
+{:data-picker="PHP" data-picker-toggle="false"}
+Copy Laravel’s `.env.example` to `.env` in your application directory:
+
+{:data-picker="PHP" data-picker-toggle="false"}
     cp .env.example .env
- -->
-<!-- Generate your application key: -->
-<!--
-    php artisan key:generate]
- -->
+
+{:data-picker="PHP" data-picker-toggle="false"}
+Generate your application key:
+
+{:data-picker="PHP" data-picker-toggle="false"}
+    php artisan key:generate
 
 #### Container CMD
 
-You’ll need to define your application’s run command, such as `rails server`<!-- `python main.py` `npm start` `apache2-foreground` -->.
+You’ll need to define your application’s run command, such as <code data-picker="Node.js" data-picker-toggle>npm start</code><code data-picker="Python" data-picker-toggle="false">python main.py</code><code data-picker="Rails" data-picker-toggle="false">rails server</code><code data-picker="PHP" data-picker-toggle="false">apache2-foreground</code>.
 
 > Note: The container will stop running when this command exits.
 
-![](images/ss-rails-container-cmd.png)
-<!-- ![](images/ss-node-container-cmd.png) -->
-<!-- ![](images/ss-python-container-cmd.png) -->
-<!-- ![](images/ss-php-container-cmd.png) -->
+<img src="images/ss-node-container-cmd.png" data-picker="Node.js" data-picker-toggle>
+<img src="images/ss-python-container-cmd.png" data-picker="Python" data-picker-toggle="false">
+<img src="images/ss-rails-container-cmd.png" data-picker="Rails" data-picker-toggle="false">
+<img src="images/ss-php-container-cmd.png" data-picker="PHP" data-picker-toggle="false">
 
-Here for some pointers for this section:
+Here are some pointers for this section:
 
-- It's typically a good idea to bind to all interfaces using `-b 0.0.0.0` as part of this line so the container can be accessed through the browser and by other containers. For example: `rails server -b 0.0.0.0`<!-- `python main.py -b 0.0.0.0`  `npm start -b 0.0.0.0` `apache2-foreground -b 0.0.0.0` -->
-- If you've already added a database, you may need to use `&&` to run migration commands after your main run command. For example: `rails server && rake db:migrate`<!-- `python main.py && ??` `npm run migrations && npm start` `apache2-foreground && ??` -->
+- It's typically a good idea to bind to all interfaces using `-b 0.0.0.0` as part of this line so the container can be accessed through the browser and by other containers. For example: <code data-picker="Node.js" data-picker-toggle>npm start -b 0.0.0.0</code><code data-picker="Python" data-picker-toggle="false">python main.py -b 0.0.0.0</code><code data-picker="Rails" data-picker-toggle="false">rails server -b 0.0.0.0</code><code data-picker="PHP" data-picker-toggle="false">apache2-foreground -b 0.0.0.0</code>
+- If you've already added a database, you may need to use `&&` to run migration commands after your main run command. For example: <code data-picker="Node.js" data-picker-toggle>npm run migrations && npm start</code><code data-picker="Python" data-picker-toggle="false">python main.py && ??</code><code data-picker="Rails" data-picker-toggle="false">rails server && rake db:migrate</code><code data-picker="PHP" data-picker-toggle="false">apache2-foreground && ??</code>
 
 After configuring Commands and Packages, you're good to go. You can view the Dockerfile we've generated in the Dockerfile tab, and you can click the **Save & Build** button to start building a container from that Dockerfile.
 
@@ -123,7 +131,7 @@ Many applications will need more setup. We'll walk you through the remaining too
 
 ### Exposed Ports
 
-You can expose any ports your container will use to communicate with other containers. Port `3000`<!-- `3000` `8000` `3306` --> is commonly exposed for Rails<!-- Python Node.js PHP --> apps.
+You can expose any ports your container will use to communicate with other containers. Port <span data-picker="Node.js" data-picker-toggle>3000</span><span data-picker="Python" data-picker-toggle="false">3000</span><span data-picker="Rails" data-picker-toggle="false">8000</span><span data-picker="PHP" data-picker-toggle="false">3306</span> is commonly exposed for <span data-picker-text>Node.js</span> apps.
 
 ![](images/ss-ports.png)
 
@@ -149,18 +157,30 @@ If you have hard-coded values in your repository that need to be changed, you ca
 
 ![](images/ss-files-and-ssh-keys.png)
 
+{:data-picker="Node.js" data-picker-toggle="false"}
 For more details, read about [adding persistent files to your container]({{ site.baseurl }}/repositories/adding-files-and-ssh-keys).
-<!-- For your PHP app, you’ll need to [upload your Laravel apache2 configuration file]({{ site.baseurl }}/repositories/adding-files-and-ssh-keys) (laravel.conf). -->
 
-<!-- Add this path for its Destination: -->
-<!--
+{:data-picker="Python" data-picker-toggle="false"}
+For more details, read about [adding persistent files to your container]({{ site.baseurl }}/repositories/adding-files-and-ssh-keys).
+
+{:data-picker="Rails" data-picker-toggle="false"}
+For more details, read about [adding persistent files to your container]({{ site.baseurl }}/repositories/adding-files-and-ssh-keys).
+
+{:data-picker="PHP" data-picker-toggle="false"}
+For your PHP app, you’ll need to [upload your Laravel apache2 configuration file]({{ site.baseurl }}/repositories/adding-files-and-ssh-keys) (laravel.conf).
+
+{:data-picker="PHP" data-picker-toggle="false"}
+Add this path for its Destination:
+
+{:data-picker="PHP" data-picker-toggle="false"}
     /etc/apache2/sites-available
- -->
-<!-- And add these Scripts: -->
-<!--
+
+{:data-picker="PHP" data-picker-toggle="false"}
+And add these Scripts:
+
+{:data-picker="PHP" data-picker-toggle="false"}
     a2ensite laravel.conf
     a2enmod rewrite]
- -->
 
 ---
 
