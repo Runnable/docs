@@ -29,16 +29,19 @@ $(document).ready(function() {
   $('input#search').on('keyup', function () {
     var resultdiv = $('#results');
     var contentdiv = $('#content');
+    var overlaydiv = $('#overlay')
 
     function showResults() {
       window.scroll(0, 0);
       resultdiv.removeClass('lunr-hidden');
       contentdiv.addClass('lunr-hidden');
+      overlaydiv.removeClass('lunr-hidden');
     }
 
     function hideResults() {
       contentdiv.removeClass('lunr-hidden');
       resultdiv.addClass('lunr-hidden');
+      overlaydiv.addClass('lunr-hidden');
     }
 
     // Get query
@@ -54,12 +57,14 @@ $(document).ready(function() {
 
     // Show results
     resultdiv.empty();
+    resultdiv.prepend('');
+    resultdiv.append('');
     // Add status
-    resultdiv.prepend('<p class="result-length">Found '+result.length+' result(s)</p>');
+    resultdiv.prepend('<input placeholder="Search…" type="search" id="search" class="grid-block search"></input><p class="result-length">Found '+result.length+' result(s)</p>');
     // Loop through, match, and add results
     for (var item in result) {
       var ref = result[item].ref;
-      var searchitem = '<div class="result"><div class="result-body"><a href="'+store[ref].link+'" class="post-title">'+store[ref].title+'</a><div class="post-date">'+store[ref].category+'</div><p class="post-excerpt">'+store[ref].excerpt+'</p></div>';
+      var searchitem = '<div class="result"><a href="'+store[ref].link+'" class="a"><div class="result-body"><div class="post-title">'+store[ref].title+'</div><div class="post-date">'+store[ref].category+'</div><p class="post-excerpt">'+store[ref].excerpt+'</p></div></a>';
       resultdiv.append(searchitem);
     }
   });

@@ -1,11 +1,25 @@
+
 .popover-search {
+  bottom:0;
   box-shadow: 0 2px 6px rgba($black,.075), 0 9px 25px rgba($black,0.04);
+  max-width: 420px;
+  overflow-x:hidden;
+  overflow-y:scroll;
+  position:fixed;
+  top: 0;
+
+  .search {
+    border-bottom: 1px solid $gray-lighter;
+    border-radius: 0;
+    border: 0;
+    height: 40px;
+  }
 
   &:not(.lunr-hidden) {
     opacity: 1;
-    overflow: auto;
+    overflow-y: auto;
     transform: scale3d(1, 1, 1) translate3d(-50%, 0, 0);
-    transition: all .15s ease-in-out;
+    transition: all .10s ease-in-out;
     visibility: visible;
   }
 
@@ -25,18 +39,30 @@
   }
 
   .post-title {
-    font-size: 19px;
+    font-size: 16px;
     color: $gray-dark;
     font-weight: $weight-bold;
   }
 
   .post-date {
-    font-size: 16px;
+    font-size: 13px;
     font-weight: $weight-normal;
   }
 
   .post-excerpt {
-    font-size: 16px;
+    font-size: 13px;
     color: $gray-dark;
+  }
+}
+
+.popover-overlay {
+
+  &:not(.lunr-hidden) {
+    background: rgba(0,0,0,0.5);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
 }
