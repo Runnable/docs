@@ -18,7 +18,9 @@ Start by creating a Dockerfile to build your service and adding it to your repos
   <button class="grid-block shrink btn btn-xs" data-picker="PostgreSQL" data-picker-default="false">PostgreSQL</button>
   <div class="monospace">Dockerfile-db</div>
 </div>
-<pre data-picker="MySQL" data-picker-toggle>
+
+{:data-picker="MySQL" data-picker-toggle=""}
+```yaml
 # Change version number to desired (i.e. 5.5, 5.6, 5.7)
 FROM runnable/mysql:5.6
 
@@ -35,8 +37,10 @@ ENV MYSQL_DATABASE app
 
 # Run the initialization script (leave this alone)
 RUN gosu mysql /init.sh
-</pre>
-<pre data-picker="PostgreSQL" data-picker-toggle="false">
+```
+
+{:data-picker="PostgreSQL" data-picker-toggle="false"}
+```yaml
 # Change desired version below (Available: 9.3, 9.4, 9.5)
 FROM runnable/postgres:9.4
 
@@ -53,7 +57,7 @@ RUN gosu postgres /init.sh \
   # "pg_restore --no-acl --no-owner -c -v -d $POSTGRES_DB /seed.dump"
 
 
-</pre>
+```
 
 Then add your database service to your Compose file:
 
@@ -61,7 +65,10 @@ Then add your database service to your Compose file:
 <div class="grid-block align-center pre-header">
   <div class="monospace">Dockerfile-db</div>
 </div>
-    Database: ./Dockerfile-db
+
+```yaml
+Database: ./Dockerfile-db
+```
 
 Once you push your changes to your repository, you should see a new database service launch on the Containers page.
 
@@ -79,12 +86,16 @@ You can clone an existing database to create a seed file. Here’s how to create
   <button class="grid-block shrink btn btn-xs active" data-picker="MySQL">MySQL</button>
   <button class="grid-block shrink btn btn-xs" data-picker="PostgreSQL">PostgreSQL</button>
 </div>
-<pre data-picker="MySQL" data-picker-toggle>
+
+{:data-picker="MySQL" data-picker-toggle=""}
+```
 $ mysqldump --all-databases -u mysql -p > seed.sql
-</pre>
-<pre data-picker="PostgreSQL" data-picker-toggle="false">
+```
+
+{:data-picker="PostgreSQL" data-picker-toggle="false"}
+```
 $ pg_dump -U postgres -Fc postgres -f seed.dump
-</pre>
+```
 
 {:data-picker="MySQL" data-picker-toggle=""}
 > Note: The default password is `mysql`.
@@ -99,12 +110,16 @@ Your database’s Dockerfile will need access to your seed file. Check the file 
   <button class="grid-block shrink btn btn-xs" data-picker="PostgreSQL">PostgreSQL</button>
   <div class="monospace">Dockerfile-db</div>
 </div>
-<pre data-picker="MySQL" data-picker-toggle>
+
+{:data-picker="MySQL" data-picker-toggle=""}
+```yaml
 ADD [src] /seed.sql
-</pre>
-<pre data-picker="PostgreSQL" data-picker-toggle="false">
+```
+
+{:data-picker="PostgreSQL" data-picker-toggle="false"}
+```yaml
 ADD [src] /seed.dump
-</pre>
+```
 
 Replace `[src]` with the path to your dump file, relative to your Dockerfile:
 
