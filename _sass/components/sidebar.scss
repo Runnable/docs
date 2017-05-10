@@ -59,6 +59,7 @@
       color: $gray-dark;
     }
 
+    &:active,
     &.active {
       color: $purple-light;
       font-weight: $weight-bold;
