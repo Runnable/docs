@@ -60,7 +60,7 @@ $(document).ready(function() {
     resultdiv.prepend('');
     resultdiv.append('');
     // Add status
-    resultdiv.prepend('<input placeholder="Search…" type="search" id="search" class="grid-block search"></input><p class="result-length">Found '+result.length+' result(s)</p>');
+    resultdiv.prepend('<p class="result-length">Found '+result.length+' result(s)</p>');
     // Loop through, match, and add results
     for (var item in result) {
       var ref = result[item].ref;

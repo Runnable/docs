@@ -3,9 +3,10 @@
   bottom:0;
   box-shadow: 0 2px 6px rgba($black,.075), 0 9px 25px rgba($black,0.04);
   max-width: 420px;
-  overflow-x:hidden;
-  overflow-y:scroll;
-  position:fixed;
+  max-height: 800px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: fixed;
   top: 0;
 
   .search {
@@ -16,6 +17,7 @@
   }
 
   &:not(.lunr-hidden) {
+    margin: 90px 20px 20px 20px;
     opacity: 1;
     overflow-y: auto;
     transform: scale3d(1, 1, 1) translate3d(-50%, 0, 0);
