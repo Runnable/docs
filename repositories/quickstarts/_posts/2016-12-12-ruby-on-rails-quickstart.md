@@ -138,7 +138,7 @@ This is the Environment URL corresponding to the container launched from the def
 
 ## Connecting to a DB Template
 
-1. Follow one of our DB Quickstarts to add and seed a database: [MySQL]({{ site.baseurl }}/databases-datastores/how-to-setup-your-mysql-database-template) / [PostgresQL]({{ site.baseurl }}/databases-datastores/how-to-setup-your-postgres-database-template)
+1. Follow one of our DB Quickstarts to [add and seed a database](databases-datastores/adding-a-database-for-dockerfiles).
 
 2. In our case, we added a PostgreSQL template.
 ![Postgres DB]({{ site.baseurl }}/images/rails-add-db-1.png)
