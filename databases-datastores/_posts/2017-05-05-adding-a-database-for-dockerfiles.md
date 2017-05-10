@@ -35,12 +35,16 @@ You can clone an existing database to create a seed file. Here’s how to create
   <button class="grid-block shrink btn btn-xs active" data-picker="MySQL">MySQL</button>
   <button class="grid-block shrink btn btn-xs" data-picker="PostgreSQL">PostgreSQL</button>
 </div>
-<pre data-picker="MySQL" data-picker-toggle>
+
+{:data-picker="MySQL" data-picker-toggle=""}
+```yaml
 $ mysqldump --all-databases -u mysql -p > seed.sql
-</pre>
-<pre data-picker="PostgreSQL" data-picker-toggle="false">
+```
+
+{:data-picker="PostgreSQL" data-picker-toggle="false"}
+```yaml
 $ pg_dump -U postgres -Fc postgres -f seed.dump
-</pre>
+```
 
 {:data-picker="MySQL" data-picker-toggle=""}
 > Note: The default password is `mysql`.
@@ -65,12 +69,16 @@ You are now the proud owner of a `seed.sql`{:data-picker="MySQL" data-picker-tog
   <button class="grid-block shrink btn btn-xs active" data-picker="MySQL">MySQL</button>
   <button class="grid-block shrink btn btn-xs" data-picker="PostgreSQL">PostgreSQL</button>
 </div>
-<pre data-picker="MySQL" data-picker-toggle>
+
+{:data-picker="MySQL" data-picker-toggle=""}
+```yaml
 ADD [src] /seed.sql
-</pre>
-<pre data-picker="PostgreSQL" data-picker-toggle="false">
+```
+
+{:data-picker="PostgreSQL" data-picker-toggle="false"}
+```yaml
 ADD [src] /seed.dump
-</pre>
+```
 
 > **Note:** Do not modify the destination `/seed.sql`{:data-picker="MySQL" data-picker-toggle=""}`/seed.dump`{:data-picker="PostgreSQL" data-picker-toggle="false"}; it’s required to for the initialization script.
 
