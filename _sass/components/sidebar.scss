@@ -49,6 +49,10 @@
     &:nth-child(2) {
       margin-top: 3px;
     }
+
+    &:last-child:not(:only-child) {
+      padding-bottom: 10px; // just enough to not cut off descenders
+    }
   }
 
   .a {
