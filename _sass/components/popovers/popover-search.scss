@@ -4,24 +4,34 @@
   bottom:0;
   box-shadow: 0 2px 6px rgba($black,.075), 0 9px 25px rgba($black,0.04);
   max-height: 420px;
-  max-width: 360px;
   overflow-x: hidden;
   overflow-y: scroll;
-  position: fixed;
+  position: absolute;
   top: 0;
 
   &:not(.lunr-hidden) {
-    margin: 90px 20px 20px 20px;
+    margin: 90px 0;
     opacity: 1;
     overflow-y: auto;
     transform: scale3d(1, 1, 1) translate3d(-50%, 0, 0);
     transition: all .10s ease-in-out;
     visibility: visible;
+    width: 100%;
+
+    @include media(md) {
+      max-width: 240px;
+    }
+
+    @include media(xs) {
+      height: 420px;
+      margin: 80px 0;
+      max-width: 460px;
+    }
   }
 
   .result {
     border-bottom: 1px solid $gray-lighter;
-    padding: $md;
+    padding: $sm;
     transition: background .075s ease-in-out;
 
     &:hover {
@@ -34,7 +44,8 @@
   }
 
   .result-length {
-    padding: $xs $md;
+    font-size: 13px;
+    padding: $xs $sm;
     border-bottom: 1px solid $gray-lighter;
   }
 
