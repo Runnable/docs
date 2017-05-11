@@ -1,9 +1,10 @@
 
 .popover-search {
+  border: 0;
   bottom:0;
   box-shadow: 0 2px 6px rgba($black,.075), 0 9px 25px rgba($black,0.04);
-  max-width: 420px;
-  max-height: 800px;
+  max-height: 420px;
+  max-width: 360px;
   overflow-x: hidden;
   overflow-y: scroll;
   position: fixed;
@@ -20,8 +21,12 @@
 
   .result {
     border-bottom: 1px solid $gray-lighter;
-    padding: $md 0;
-    margin: 0 $md;
+    padding: $md;
+    transition: background .075s ease-in-out;
+
+    &:hover {
+      background: $gray-lighterest;
+    }
 
     &:last-of-type {
       border-bottom: none;
