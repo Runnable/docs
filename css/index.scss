@@ -30,6 +30,7 @@
 // components
 @import "components/breadcrumbs";
 @import "components/buttons";
+@import "components/buttons-group";
 @import "components/cards";
 @import "components/faq";
 @import "components/header";
@@ -52,4 +53,5 @@
 
 // documentation specific
 @import "articles/article";
+@import "articles/quickstart";
 @import "globals/responsive-utils";
