@@ -9,13 +9,6 @@
   position: fixed;
   top: 0;
 
-  .search {
-    border-bottom: 1px solid $gray-lighter;
-    border-radius: 0;
-    border: 0;
-    height: 40px;
-  }
-
   &:not(.lunr-hidden) {
     margin: 90px 20px 20px 20px;
     opacity: 1;
@@ -58,9 +51,10 @@
 }
 
 .popover-overlay {
+  z-index: 1;
 
   &:not(.lunr-hidden) {
-    background: rgba(0,0,0,0.5);
+    background: rgba($purple-darkest,0.2);
     height: 100%;
     left: 0;
     position: fixed;

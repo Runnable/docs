@@ -29,19 +29,22 @@ $(document).ready(function() {
   $('input#search').on('keyup', function () {
     var resultdiv = $('#results');
     var contentdiv = $('#content');
-    var overlaydiv = $('#overlay')
+    var overlaydiv = $('#overlay');
+    var bodydiv = $('body');
 
     function showResults() {
       window.scroll(0, 0);
       resultdiv.removeClass('lunr-hidden');
       contentdiv.addClass('lunr-hidden');
       overlaydiv.removeClass('lunr-hidden');
+      bodydiv.addClass('no-scroll');
     }
 
     function hideResults() {
       contentdiv.removeClass('lunr-hidden');
       resultdiv.addClass('lunr-hidden');
       overlaydiv.addClass('lunr-hidden');
+      bodydiv.removeClass('no-scroll');
     }
 
     // Get query
