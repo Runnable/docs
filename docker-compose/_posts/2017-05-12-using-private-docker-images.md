@@ -11,7 +11,7 @@ Many teams use private Docker registries to host their images. To use your priva
 
 ## Using Images in Your Files
 
-Use images in a Compose file by referring to them with the image configuration option:
+Use images in a Compose file by referring to them with the `image` configuration option:
 
 ```yaml
 Services:
@@ -39,7 +39,7 @@ FROM example-registry.com:4000/api
 
     ![](images/ss-registry-credentials.png)
 
-Now any private images referenced by your Compose files or Dockerfiles can be used successfully.
+Now images from your registry that are referred to in your Compose files or Dockerfiles can be used successfully.
 
 ---
 
