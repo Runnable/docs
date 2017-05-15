@@ -2,7 +2,7 @@
 title: Using Private Docker Images
 short: Using Private Docker Images
 category: docker-compose
-order: 4
+order: 3
 ---
 
 Many teams use private Docker registries to host their images. To use your private images, refer to them in your Compose files or Dockerfiles and add your registry credentials to Runnable.
