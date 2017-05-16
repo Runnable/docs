@@ -10,7 +10,7 @@
   top: 0;
 
   &:not(.lunr-hidden) {
-    margin: 90px 0;
+    margin: 80px 0;
     max-width: 220px;
     opacity: 1;
     overflow-y: auto;
@@ -46,23 +46,23 @@
 
   .result-length {
     font-size: 13px;
-    padding: $xs $sm;
+    padding: $xxs $sm;
     border-bottom: 1px solid $gray-lighter;
   }
 
   .post-title {
-    font-size: 16px;
+    font-size: 14px;
     color: $gray-dark;
     font-weight: $weight-bold;
   }
 
   .post-date {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: $weight-normal;
   }
 
   .post-excerpt {
-    font-size: 13px;
+    font-size: 12px;
     color: $gray-dark;
   }
 }

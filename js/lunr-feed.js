@@ -19,10 +19,10 @@ index.add({
 });{% assign count = count | plus: 1 %}{% endfor %}
 
 var store = [{% for post in site.posts %}{
-  "title": {{post.title | jsonify}},
+  "title": {{post.title | jsonify | }},
   "link": {{ site.baseurl | append: post.url | jsonify }},
   "category": {{ post.categories.[0] | jsonify }},
-  "excerpt": {{ post.content | strip_html | truncatewords: 12 | jsonify }}
+  "excerpt": {{ post.content | strip_html | truncatewords: 10 | jsonify }}
 }{% unless forloop.last %},{% endunless %}{% endfor %}]
 
 $(document).ready(function() {
@@ -59,12 +59,11 @@ $(document).ready(function() {
     resultdiv.empty();
     resultdiv.prepend('');
     resultdiv.append('');
-    // Add status
-    resultdiv.prepend('<p class="result-length">Found '+result.length+' result(s)</p>');
+
     // Loop through, match, and add results
     for (var item in result) {
       var ref = result[item].ref;
-      var searchitem = '<div class="result"><a href="'+store[ref].link+'" class="a"><div class="result-body"><div class="post-title">'+store[ref].title+'</div><div class="post-date">'+store[ref].category+'</div><p class="post-excerpt">'+store[ref].excerpt+'</p></div></a>';
+      var searchitem = '<div class="result"><a href="'+store[ref].link+'" class="a"><div class="result-body"><div class="post-title margin-bottom-xxs">'+store[ref].title+'</div><p class="post-excerpt">'+store[ref].excerpt+'</p></div></a>';
       resultdiv.append(searchitem);
     }
   });
