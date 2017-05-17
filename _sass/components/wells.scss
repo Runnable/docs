@@ -100,12 +100,12 @@
   padding: $xs $sm;
 
   @include media(sm) {
-    width: 100%;
+    display: flex;
   }
 
   @include media(xxs) {
-    align-items: flex-start;
     flex-direction: column;
+    text-align: center;
   }
 
   .icon {
