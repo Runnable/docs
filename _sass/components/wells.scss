@@ -89,3 +89,34 @@
     }
   }
 }
+
+.well-in-development {
+  align-items: center;
+  display: inline-flex;
+  font-size: 15px;
+  margin-bottom: $md;
+  padding: $xs $sm;
+
+  @include media(sm) {
+    display: flex;
+  }
+
+  @include media(xxs) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .icon {
+    height: $lg;
+    margin: 0 $sm 0 0; // override article img
+    width: $lg;
+
+    @include media(xxs) {
+      margin: 0 0 $xs;
+    }
+  }
+
+  .weight-strong {
+    color: $gray-dark;
+  }
+}
