@@ -20,7 +20,7 @@
     max-width: 640px;
     width: auto;
 
-    @include media($md) {
+    @include media(md) {
       max-width: 100%;
     }
 
