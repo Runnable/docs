@@ -12,7 +12,7 @@ Many teams use private Docker registries to host their images. To use your priva
 
 ## Using Images in Your Files
 
-Use images in a Compose file by referring to them with the `image` configuration option:
+Use images in a Compose file by referring to them with the `image` feature:
 
 ```yaml
 Services:
@@ -22,7 +22,7 @@ Services:
 
 > **Tip:** Learn how to [use your Compose file]({{ site.baseurl }}/docker-compose/launching-your-first-environment) in Runnable.
 
-You can also use images in your services’ Dockerfiles:
+You can also use images in your Dockerfiles:
 
 ```yaml
 FROM example-registry.com:4000/api
