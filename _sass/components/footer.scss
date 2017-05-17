@@ -1,0 +1,215 @@
+.footer {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  margin: $lg auto 0;
+  overflow: visible;
+  position: relative;
+  width: 100%;
+
+  @include media(xs) {
+    padding-top: 0;
+  }
+
+  @include media(xxs) {
+    margin-top: $sm;
+  }
+
+  .link-wrapper {
+    padding: $xl $md $xl 0;
+
+    @include media(xs) {
+      flex-flow: column wrap;
+      justify-content: center;
+      padding: $xl $md;
+    }
+  }
+
+  .h4 {
+    color: rgba($white,.5);
+    font-size: 16px;
+    font-weight: $weight-normal;
+    padding: $xxs;
+
+    @include media(xs) {
+      align-content: center;
+    }
+  }
+
+  .a {
+    color: rgba($white,.85);
+    font-size: 19px;
+    padding: $xxs;
+    text-decoration: none;
+    transition: .125s ease-in-out color;
+
+    &:hover,
+    &:active {
+      color: $white;
+    }
+  }
+
+  .align-start {
+
+    @include media(xs) {
+      align-items: center;
+    }
+
+    + .align-start {
+      margin-left: 90px;
+
+      @include media(xs) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .hr {
+    background: $gray-lightest;
+    margin: 0 auto;
+    width: 510px;
+  }
+}
+
+// support aside
+.aside-support {
+  border-bottom: 1px solid rgba($white, .5); // darken colors for gradient
+  color: $gray-dark;
+  margin: $lg auto 0;
+  max-width: 660px;
+  padding: 0 $md $md;
+
+  @include media(xs) {
+    flex-flow: column;
+    padding: 0 $sm $md;
+  }
+
+  .support-text {
+    color: $white;
+    line-height: 1.4;
+    margin-right: $md;
+
+    @include media(xs) {
+      margin-bottom: $sm;
+      margin-right: 0;
+      text-align: center;
+    }
+
+    .br {
+      display: none;
+
+      @include media(xs) {
+        display: block;
+      }
+
+      @include media(xxs) {
+        display: none;
+      }
+    }
+
+    .p {
+      font-size: 19px;
+    }
+  }
+
+  .figure {
+    border: 0;
+    box-shadow: 0 2px 4px rgba($black,.1);
+
+    @include media(xs) {
+      margin: 0 auto;
+      max-width: 225px;
+    }
+
+    // user avatar
+    .img {
+      margin-right: 5px;
+      margin-top: 2px;
+      opacity: .75;
+    }
+  }
+
+  // chat message
+  .bubble {
+    background: $white;
+    border: 0;
+    border-radius: $input-border-radius-lg $input-border-radius-lg 0 0;
+    font-size: 13px;
+    font-weight: $weight-normal;
+    padding: 6px $sm 6px $xxs;
+    pointer-events: none;
+    user-select: none;
+
+    + .bubble {
+      border-radius: 0 0 $input-border-radius-lg $input-border-radius-lg;
+      border-top: 1px solid $gray-lighter;
+    }
+  }
+
+  .user-name {
+    color: $gray-dark;
+  }
+
+  .user-text {
+    color: $gray;
+    margin-bottom: 0;
+  }
+
+  .user-time {
+    color: lighten($gray,20%);
+    font-size: 11px;
+  }
+
+  .link-blue {
+    color: lighten($blue,10%);
+  }
+}
+
+// status indicator
+.link.status {
+  color: $gray-light;
+  font-size: $sm;
+  margin-bottom: 24px;
+  position: relative;
+  text-decoration: none;
+  text-indent: $xxs;
+
+  @include media(xs) {
+    margin-bottom: $xl;
+  }
+
+  &:hover,
+  &:active {
+    color: $purple-light;
+  }
+
+  &.status-green::before {
+    background: $green;
+  }
+
+  &.status-orange::before {
+    background: $orange;
+  }
+
+  &.status-red::before {
+    background: $red;
+  }
+
+  &::before {
+    border-radius: 50%;
+    bottom: 18px;
+    content: '';
+    display: block;
+    font-size: 18px;
+    height: 10px;
+    left: 0;
+    opacity: .5;
+    position: absolute;
+    top: 6px;
+    width: 10px;
+  }
+
+  .well {
+    box-shadow: 0 2px 4px rgba($black,.1);
+  }
+}

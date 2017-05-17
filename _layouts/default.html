@@ -1,13 +1,16 @@
 <!doctype html>
 <html>
   {% include head.html %}
-  <body class="grid-block body page-landing">
+  <body class="grid-block vertical body page-landing">
     {% include icons.html %}
     {% include header.html %}
-    <main class="grid-block grid-container-lg main-card">
-      {% include sidebar.html %}
-      <div class="grid-block vertical lunr-hidden" id="results"></div>
-      <div class="grid-block vertical lunr-active" id="content">{{ content }}</div>
-    </main>
+    <div class="grid-block padding-left-sm padding-right-sm">
+      <main class="grid-block main-card grid-container-lg">
+        {% include sidebar.html %}
+        <div class="grid-block vertical lunr-hidden" id="results"></div>
+        <div class="grid-block vertical lunr-active" id="content">{{ content }}</div>
+      </main>
+    </div>
   </body>
+  {% include footer.html %}
 </html>

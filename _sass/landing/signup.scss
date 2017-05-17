@@ -1,0 +1,34 @@
+.sign-up-box {
+  align-items: flex-start;
+  align-self: stretch;
+  background: $white;
+  min-width: 660px;
+  overflow: visible;
+  padding-left: $xl;
+  position: relative;
+
+  @media (max-width: 720px) {
+    min-width: 0;
+  }
+
+  @include media(xs) {
+    align-items: center;
+    padding: $md $sm 90px;
+  }
+
+  .img {
+    bottom: -11px;
+    height: auto;
+    position: absolute;
+    right: $md;
+    width: 210px;
+
+    @include media(xs) {
+      bottom: -8px;
+      left: 0;
+      margin: 0 auto;
+      right: 0;
+      width: 150px;
+    }
+  }
+}
