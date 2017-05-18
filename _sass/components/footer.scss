@@ -73,7 +73,7 @@
 
 // support aside
 .aside-support {
-  border-bottom: 1px solid rgba($white, .5); // darken colors for gradient
+  border-bottom: 1px solid rgba($white, .3);
   color: $gray-dark;
   margin: $lg auto 0;
   max-width: 660px;
@@ -114,7 +114,7 @@
 
   .figure {
     border: 0;
-    box-shadow: 0 2px 4px rgba($black,.1);
+    box-shadow: 0 2px 9px rgba($black,.15);
 
     @include media(xs) {
       margin: 0 auto;
@@ -207,9 +207,5 @@
     position: absolute;
     top: 6px;
     width: 10px;
-  }
-
-  .well {
-    box-shadow: 0 2px 4px rgba($black,.1);
   }
 }
