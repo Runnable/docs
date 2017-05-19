@@ -253,7 +253,5 @@
 // }
 
 .no-scroll {
-  overflow: hidden;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: hidden !important;
 }

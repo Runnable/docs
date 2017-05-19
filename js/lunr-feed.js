@@ -30,18 +30,21 @@ $(document).ready(function() {
     var resultdiv = $('#results');
     var contentdiv = $('#content');
     var overlaydiv = $('#overlay');
+    var sidebardiv = $('#sidebar');
 
     function showResults() {
       window.scroll(0, 0);
       resultdiv.removeClass('lunr-hidden');
       contentdiv.addClass('lunr-hidden');
       overlaydiv.removeClass('lunr-hidden');
+      sidebardiv.addClass('no-scroll');
     }
 
     function hideResults() {
       contentdiv.removeClass('lunr-hidden');
       resultdiv.addClass('lunr-hidden');
       overlaydiv.addClass('lunr-hidden');
+      sidebardiv.removeClass('no-scroll');
     }
 
     // Get query
