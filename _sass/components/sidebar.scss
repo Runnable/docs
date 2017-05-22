@@ -52,9 +52,9 @@
   }
 
   .a {
+    color: $gray;
     cursor: pointer;
     min-height: 30px;
-    color: $gray;
 
     &:hover {
       color: $gray-dark;
