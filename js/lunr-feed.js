@@ -19,26 +19,32 @@ index.add({
 });{% assign count = count | plus: 1 %}{% endfor %}
 
 var store = [{% for post in site.posts %}{
-  "title": {{post.title | jsonify}},
+  "title": {{post.title | jsonify | }},
   "link": {{ site.baseurl | append: post.url | jsonify }},
   "category": {{ post.categories.[0] | jsonify }},
-  "excerpt": {{ post.content | strip_html | truncatewords: 20 | jsonify }}
+  "excerpt": {{ post.content | strip_html | truncatewords: 9 | jsonify }}
 }{% unless forloop.last %},{% endunless %}{% endfor %}]
 
 $(document).ready(function() {
   $('input#search').on('keyup', function () {
     var resultdiv = $('#results');
     var contentdiv = $('#content');
+    var overlaydiv = $('#overlay');
+    var sidebardiv = $('#sidebar');
 
     function showResults() {
       window.scroll(0, 0);
       resultdiv.removeClass('lunr-hidden');
       contentdiv.addClass('lunr-hidden');
+      overlaydiv.removeClass('lunr-hidden');
+      sidebardiv.addClass('no-scroll');
     }
 
     function hideResults() {
       contentdiv.removeClass('lunr-hidden');
       resultdiv.addClass('lunr-hidden');
+      overlaydiv.addClass('lunr-hidden');
+      sidebardiv.removeClass('no-scroll');
     }
 
     // Get query
@@ -54,12 +60,13 @@ $(document).ready(function() {
 
     // Show results
     resultdiv.empty();
-    // Add status
-    resultdiv.prepend('<p class="result-length">Found '+result.length+' result(s)</p>');
+    resultdiv.prepend('');
+    resultdiv.append('');
+
     // Loop through, match, and add results
     for (var item in result) {
       var ref = result[item].ref;
-      var searchitem = '<div class="result"><div class="result-body"><a href="'+store[ref].link+'" class="post-title">'+store[ref].title+'</a><div class="post-date">'+store[ref].category+'</div><p class="post-excerpt">'+store[ref].excerpt+'</p></div>';
+      var searchitem = '<div class="result"><a href="'+store[ref].link+'" class="a"><div class="result-body"><div class="post-title margin-bottom-xxs">'+store[ref].title+'</div><p class="post-excerpt">'+store[ref].excerpt+'</p></div></a>';
       resultdiv.append(searchitem);
     }
   });
