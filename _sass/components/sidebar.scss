@@ -46,24 +46,24 @@
   .li {
     transition: opacity .2s ease-in-out;
 
+    .a {
+      color: $gray;
+      cursor: pointer;
+      min-height: 30px;
+
+      &:hover {
+        color: $gray-dark;
+      }
+
+      &:active,
+      &.active {
+        color: $purple-light;
+        font-weight: $weight-bold;
+      }
+    }
+
     &:nth-child(2) {
       margin-top: 3px;
-    }
-  }
-
-  .a {
-    color: $gray;
-    cursor: pointer;
-    min-height: 30px;
-
-    &:hover {
-      color: $gray-dark;
-    }
-
-    &:active,
-    &.active {
-      color: $purple-light;
-      font-weight: $weight-bold;
     }
   }
 

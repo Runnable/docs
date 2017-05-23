@@ -27,23 +27,23 @@ var store = [{% for post in site.posts %}{
 
 $(document).ready(function() {
   $('input#search').on('keyup', function () {
-    var resultdiv = $('#results');
     var contentdiv = $('#content');
     var overlaydiv = $('#overlay');
+    var resultdiv = $('#results');
     var sidebardiv = $('#sidebar');
 
     function showResults() {
       window.scroll(0, 0);
-      resultdiv.removeClass('lunr-hidden');
       contentdiv.addClass('lunr-hidden');
       overlaydiv.removeClass('lunr-hidden');
+      resultdiv.removeClass('lunr-hidden');
       sidebardiv.addClass('no-scroll');
     }
 
     function hideResults() {
       contentdiv.removeClass('lunr-hidden');
-      resultdiv.addClass('lunr-hidden');
       overlaydiv.addClass('lunr-hidden');
+      resultdiv.addClass('lunr-hidden');
       sidebardiv.removeClass('no-scroll');
     }
 
@@ -66,7 +66,7 @@ $(document).ready(function() {
     // Loop through, match, and add results
     for (var item in result) {
       var ref = result[item].ref;
-      var searchitem = '<div class="result"><a href="'+store[ref].link+'" class="a"><div class="result-body"><div class="post-title margin-bottom-xxs">'+store[ref].title+'</div><p class="post-excerpt">'+store[ref].excerpt+'</p></div></a>';
+      var searchitem = '<a href="'+store[ref].link+'" class="a"><div class="result"><div class="result-body"><div class="post-title text-overflow">'+store[ref].title+'</div><p class="post-excerpt text-overflow">'+store[ref].excerpt+'</p></div></a>';
       resultdiv.append(searchitem);
     }
   });
