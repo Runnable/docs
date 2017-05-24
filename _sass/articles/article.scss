@@ -20,7 +20,7 @@
     max-width: 640px;
     width: auto;
 
-    @include media($md) {
+    @include media(md) {
       max-width: 100%;
     }
 
@@ -60,6 +60,11 @@
     margin: $sm 0;
   }
 
+  p + h2,
+  p + h3 {
+    margin-top: $md;
+  }
+
   // headings
   h1,
   h2,
@@ -74,7 +79,7 @@
   pre {
     background-color: $gray-lightest;
     border-radius: $input-border-radius-lg;
-    font-size: 16px;
+    font-size: 15px;
     margin: $md 0;
     overflow-x: auto;
     padding: $sm;
@@ -104,6 +109,53 @@
 
   p code {
     word-break: break-word;
+  }
+
+  // fancy code blocks
+  .pre-header {
+    background-color: $gray-lighter;
+    border-radius: $input-border-radius $input-border-radius 0 0;
+    color: $gray;
+    padding: $xs $sm;
+
+    + pre,
+    + .highlighter-rouge > pre,
+    + [data-picker-toggle],
+    + [data-picker-toggle] > pre,
+    + [data-picker-toggle] + [data-picker-toggle],
+    + [data-picker-toggle] + [data-picker-toggle] > pre {
+      border-radius: 0 0 $input-border-radius $input-border-radius;
+      margin-top: 0;
+    }
+
+    .btn {
+      font-weight: $weight-bold;
+
+      &:hover {
+        background: rgba($white,.5);
+      }
+
+      &:active,
+      &.active {
+        background: $white;
+      }
+
+      + .btn {
+        margin-left: 6px;
+      }
+    }
+
+    .monospace {
+      @extend %text-overflow;
+      display: block;
+      flex: 1 1 auto;
+      font-size: 11px;
+
+      &:not(:only-child) {
+        margin-left: 6px;
+        text-align: right;
+      }
+    }
   }
 
   // tables

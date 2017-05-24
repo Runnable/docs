@@ -46,10 +46,29 @@
   .li {
     transition: opacity .2s ease-in-out;
 
-    .a {
-      color: $gray;
-      cursor: pointer;
-      min-height: 30px;
+    &:nth-child(2) {
+      margin-top: 3px;
+    }
+
+    &:last-child:not(:only-child) {
+      padding-bottom: 10px; // just enough to not cut off descenders
+    }
+  }
+
+  .a {
+    cursor: pointer;
+    min-height: 30px;
+
+    &:hover {
+      color: $gray-dark;
+    }
+
+    &:active,
+    &.active {
+      color: $purple-light;
+      font-weight: $weight-bold;
+    }
+  }
 
       &:hover {
         color: $gray-dark;

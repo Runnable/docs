@@ -1,0 +1,78 @@
+.btn-group.btn-group-quickstart {
+  display: flex;
+  margin: $lg 0;
+
+  @include media(md) {
+    flex-wrap: wrap;
+  }
+
+  @include media(sm) {
+    flex-direction: column;
+  }
+
+  .btn {
+    flex: 1 1 50%;
+    height: 72px;
+
+    @include media(sm) {
+      margin-left: 0;
+      margin-top: -$input-border;
+    }
+
+    &:first-child {
+      border-radius: $input-border-radius-lg 0 0 $input-border-radius-lg;
+
+      @include media(md) {
+        border-radius: $input-border-radius-lg 0 0;
+        margin-left: 0;
+      }
+
+      @include media(sm) {
+        border-radius: $input-border-radius-lg $input-border-radius-lg 0 0;
+      }
+    }
+
+    &:nth-child(2) {
+
+      @include media(md) {
+        border-radius: 0 $input-border-radius-lg 0 0;
+      }
+
+      @include media(sm) {
+        border-radius: 0;
+      }
+    }
+
+    &:nth-child(3) {
+
+      @include media(md) {
+        border-radius: 0 0 0 $input-border-radius-lg;
+        margin-left: 0;
+        margin-top: -$input-border;
+      }
+
+      @include media(sm) {
+        border-radius: 0;
+      }
+    }
+
+    &:nth-child(4) {
+      border-radius: 0 $input-border-radius-lg $input-border-radius-lg 0;
+
+      @include media(md) {
+        border-radius: 0 0 $input-border-radius-lg;
+        margin-top: -$input-border;
+      }
+
+      @include media(sm) {
+        border-radius: 0 0 $input-border-radius-lg $input-border-radius-lg;
+      }
+    }
+  }
+
+  .icon {
+    height: 24px;
+    margin: 0 $xs 0 0; // override article img
+    width: 24px;
+  }
+}

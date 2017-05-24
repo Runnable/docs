@@ -7,6 +7,14 @@
   position: relative;
   width: 100%;
 
+  @include media(xs) {
+    padding-top: 0;
+  }
+
+  @include media(xxs) {
+    margin-top: $sm;
+  }
+
   .link-wrapper {
     padding: $xl $md $xl 0;
 
@@ -202,7 +210,6 @@
   }
 
   .well {
-    border: 0px transparent;
     box-shadow: 0 2px 4px rgba($black,.1);
   }
 }
