@@ -41,6 +41,8 @@ FROM example-registry.com:4000/api
 
 Now images from your registry that are referred to in your Compose files or Dockerfiles can be used successfully.
 
+> Note: If you use Amazon ECR, your token will expire after 12 hours. [Email us](mailto:support@runnable.com) and we can help you update it automatically.
+
 ---
 
 ## What’s Next?
