@@ -6,5 +6,7 @@
 .popover-hover-wrapper {
   @media (max-width: $screen-xs) and (min-width: $screen-xxxs) {
     min-width: 265px;
+    box-shadow: 0 2px 9px rgba($black, 0.075);
+    visibility: visible;
   }
 }

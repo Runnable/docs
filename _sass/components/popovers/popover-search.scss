@@ -1,31 +1,21 @@
 .popover-search {
   border: 0;
   bottom: 0;
-  box-shadow: 0 2px 6px rgba($black,.075), 0 9px 25px rgba($black,0.04);
   height: auto;
   overflow-x: hidden;
   overflow-y: scroll;
-  position: absolute;
-  top: 0;
+  position: relative;
 
   &:not(.lunr-hidden) {
-    margin: 80px 0;
-    max-width: 220px;
-    opacity: 1;
-    overflow-y: auto;
-    transform: scale3d(1, 1, 1) translate3d(-50%, 0, 0);
+    background: #fff;
+    max-height: 349px;
     transition: all .10s ease-in-out;
     visibility: visible;
     width: 100%;
 
-    &:hover {
-      box-shadow: 0 3px 10px rgba($black,.1), 0 9px 25px rgba($black,0.04);
-    }
-
     @include media(xs) {
       margin-top: 80px;
       max-width: 340px;
-      overflow-y: visible;
     }
   }
 
@@ -33,17 +23,17 @@
     border-bottom: 1px solid $gray-lighter;
     transition: background .075s ease-in-out;
 
-    .a {
-      display: block;
-      padding: $sm;
-    }
-
     &:hover {
-      background: $gray-lighterest;
+      background: rgba($gray-lighterest, .5);
     }
 
     &:last-of-type {
       border-bottom: none;
+    }
+
+    .a {
+      display: block;
+      padding: $sm;
     }
   }
 
@@ -70,15 +60,12 @@
   }
 }
 
-.popover-overlay {
-  z-index: 1;
-
-  &:not(.lunr-hidden) {
-    background: rgba($purple-darkest,0.2);
-    height: 100%;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
+.popover-search-wrapper {
+  box-shadow: 0 2px 9px rgba(0, 0, 0, 0.075);
+  position: absolute;
+  margin: 40px 0;
+  max-width: 228px;
+  opacity: 1;
+  overflow-y: auto;
+  transform: scale3d(1, 1, 1) translate3d(-50%, 0, 0);
 }

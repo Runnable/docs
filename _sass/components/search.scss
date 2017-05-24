@@ -13,7 +13,6 @@
   margin-bottom: 24px; // lines up nav with text under article headlines
   padding: 0 $xs 0 30px;
   transition: .12s linear background-color;
-  z-index: 2;
 
   // for some reason, these have to be separate selectors
   // scss-lint:disable VendorPrefix PseudoElement
