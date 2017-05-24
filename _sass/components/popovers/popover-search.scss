@@ -61,11 +61,12 @@
 }
 
 .popover-search-wrapper {
-  box-shadow: 0 2px 9px rgba(0, 0, 0, 0.075);
-  position: absolute;
   margin: 40px 0;
   max-width: 228px;
   opacity: 1;
   overflow-y: auto;
+  position: absolute;
   transform: scale3d(1, 1, 1) translate3d(-50%, 0, 0);
+  visibility: visible;
+  box-shadow: 0 2px 9px rgba($black, 0.075);
 }
