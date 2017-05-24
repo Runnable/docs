@@ -37,14 +37,14 @@ $(document).ready(function() {
       contentdiv.addClass('lunr-hidden');
       overlaydiv.removeClass('lunr-hidden');
       resultdiv.removeClass('lunr-hidden');
-      sidebardiv.addClass('no-scroll');
+      sidebardiv.addClass('overflow-y-hidden');
     }
 
     function hideResults() {
       contentdiv.removeClass('lunr-hidden');
       overlaydiv.addClass('lunr-hidden');
       resultdiv.addClass('lunr-hidden');
-      sidebardiv.removeClass('no-scroll');
+      sidebardiv.removeClass('overflow-y-hidden');
     }
 
     // Get query
