@@ -36,7 +36,6 @@ If a feature is not supported, we may ignore the option if it’s present in you
 * `driver_opts`{:.orange}
 * `enable_ipv6`{:.orange}
 * `entrypoint:`{:.orange}
-* `env_file`{:.orange}
 * `extends`{:.orange}
 * `external`{:.orange}
 * `external_links`{:.orange}
