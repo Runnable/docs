@@ -34,6 +34,7 @@
     padding: 0;
     transition: max-height .2s ease-in-out;
 
+
     &:not(.active) .li:not(:first-child) {
       opacity: 0;
     }
@@ -41,29 +42,29 @@
     + .ul {
       margin-top: 6px;
     }
-  }
+    
+    .li {
+      transition: opacity .2s ease-in-out;
 
-  .li {
-    transition: opacity .2s ease-in-out;
+      .a {
+        color: $gray;
+        cursor: pointer;
+        min-height: 30px;
 
-    .a {
-      color: $gray;
-      cursor: pointer;
-      min-height: 30px;
+        &:hover {
+          color: $gray-dark;
+        }
 
-      &:hover {
-        color: $gray-dark;
+        &:active,
+        &.active {
+          color: $purple-light;
+          font-weight: $weight-bold;
+        }
       }
 
-      &:active,
-      &.active {
-        color: $purple-light;
-        font-weight: $weight-bold;
+      &:nth-child(2) {
+        margin-top: 3px;
       }
-    }
-
-    &:nth-child(2) {
-      margin-top: 3px;
     }
   }
 
