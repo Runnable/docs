@@ -1,7 +1,6 @@
 .well {
-  border: 0;
+  border: 1px solid $gray-lighter;
   border-radius: $input-border-radius-lg;
-  box-shadow: 0 2px 4px rgba($black,.1);
 
   > .icons-chevron-right {
     flex: 0 0 auto;
@@ -13,11 +12,12 @@
 }
 
 .well-anchor {
+  border: 0;
   cursor: pointer;
   display: flex;
   font-size: 21px;
   padding: $md;
-  transition: box-shadow ease-in-out .125s;
+  transition: box-shadow .3s ease-in-out;
 
   @include media(sm) {
     margin-left: $md;
@@ -33,8 +33,8 @@
 
   @include media(xxs) {
     font-size: 17px;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: $sm;
+    margin-right: $sm;
   }
 
   &:hover {
@@ -87,5 +87,36 @@
       top: 1px;
       width: 12px;
     }
+  }
+}
+
+.well-in-development {
+  align-items: center;
+  display: inline-flex;
+  font-size: 15px;
+  margin-bottom: $md;
+  padding: $xs $sm;
+
+  @include media(sm) {
+    display: flex;
+  }
+
+  @include media(xxs) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .icon {
+    height: $lg;
+    margin: 0 $sm 0 0; // override article img
+    width: $lg;
+
+    @include media(xxs) {
+      margin: 0 0 $xs;
+    }
+  }
+
+  .weight-strong {
+    color: $gray-dark;
   }
 }
