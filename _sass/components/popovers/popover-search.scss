@@ -1,12 +1,13 @@
 .popover-search {
-  display: none;
   background: $white;
   border: 0;
   bottom: 0;
+  display: none;
   height: auto;
   max-height: 349px;
   overflow-x: hidden;
   overflow-y: scroll;
+  pointer-events: all;
   position: relative;
   width: 100%;
 
