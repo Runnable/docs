@@ -13,6 +13,7 @@
 
 .well-anchor {
   border: 0;
+  box-shadow: 0 2px 9px rgba($black,.15);
   cursor: pointer;
   display: flex;
   font-size: 21px;
@@ -37,17 +38,17 @@
     margin-right: $sm;
   }
 
-  &:hover {
-    box-shadow: 0 3px $sm rgba($black,.15);
+  &:hover,
+  &:active {
+    box-shadow: 0 6px 30px rgba($black,.3);
 
     .a {
       text-decoration: underline;
     }
-  }
 
-  &:hover .icons,
-  &:active .icons {
-    color: $purple-light;
+    .icons {
+      color: $purple-light;
+    }
   }
 
   .img {

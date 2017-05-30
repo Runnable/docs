@@ -6,10 +6,17 @@ body {
 
   .main-card {
     background: $white;
-    border: $input-border solid $gray-lighter;
     border-radius: $input-border-radius-lg;
-    box-shadow: 0 2px 9px rgba($black,.075);
+    box-shadow: 0 4px 30px rgba($black,.15);
     margin: 120px auto 0;
+
+    @media (max-width: 1080px + ($sm * 2)) { // lg container + 2x $sm
+      &.grid-container-lg {
+        margin-left: $sm;
+        margin-right: $sm;
+        width: auto;
+      }
+    }
 
     @include media(xs) {
       flex-direction: column;
