@@ -15,15 +15,15 @@
   @include media(xs) {
     border-bottom: 1px solid $gray-lighter;
     border-right: 0;
-    height: 299px;
+    height: 410px;
     padding: $md;
     width: 100%;
   }
 
   .search {
     @include media(xs) {
-      margin-left: $lg;
-      margin-right: $lg;
+      margin-left: $sm;
+      margin-right: $sm;
     }
   }
 
@@ -34,7 +34,6 @@
     padding: 0;
     transition: max-height .2s ease-in-out;
 
-
     &:not(.active) .li:not(:first-child) {
       opacity: 0;
     }
@@ -42,9 +41,13 @@
     + .ul {
       margin-top: 6px;
     }
-    
+
     .li {
       transition: opacity .2s ease-in-out;
+
+      &:last-child:not(:only-child) {
+        padding-bottom: 10px; // just enough to not cut off descenders
+    }
 
       .a {
         color: $gray;
