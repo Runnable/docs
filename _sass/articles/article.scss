@@ -39,11 +39,30 @@
     }
 
     &.zoom {
-      height: 100vh;
-      left: 0;
+      border-radius: 3px;
+      box-shadow: 0 1px 1px rgba($black, .1), 0 4px 12px rgba($black, .2);
+      left: 50%;
       position: fixed;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      img {
+        max-height: 480px;
+        max-width: auto;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &.modal-open {
+      background: rgba($purple-light, 0.85);
+      bottom: 0;
+      cursor: zoom-out;
+      left: 0;
+      margin: 0;
+      padding: 0;
+      right: 0;
       top: 0;
-      width: 100vw;
     }
   }
 
