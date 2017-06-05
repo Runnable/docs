@@ -4,7 +4,7 @@
   bottom: 0;
   display: none;
   height: auto;
-  max-height: 420px;
+  max-height: 409px;
   overflow-x: hidden;
   overflow-y: scroll;
   pointer-events: all;
@@ -18,14 +18,13 @@
 
   .result {
     border-bottom: 1px solid $gray-lighter;
-    transition: background .075s ease-in-out;
 
     &:hover {
-      background: rgba($gray-lighterest, .6);
+      background: rgba($gray-lighterest, .4);
     }
 
     &:active {
-      background: rgba($gray-lighterest, .9);
+      background: rgba($purple-lighter, .2);
     }
 
     &:last-of-type {
@@ -73,8 +72,8 @@
   }
 
   @include media(xs) {
-    max-width: 312px;
-    max-height: 330px;
+    max-width: 270px;
+    max-height: 345px;
     top: 65px;
   }
 }
