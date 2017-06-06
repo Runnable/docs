@@ -24,6 +24,7 @@
 
     &:hover {
       background: rgba($gray-lighterest,.4);
+      color: $purple;
     }
 
     &:active {
@@ -47,14 +48,12 @@
   }
 
   .post-title {
-    color: $gray-dark;
     font-size: 14px;
     font-weight: $weight-bold;
     line-height: 20px;
   }
 
   .post-excerpt {
-    color: $gray-dark;
     font-size: 12px;
   }
 }
