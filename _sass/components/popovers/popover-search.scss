@@ -78,8 +78,8 @@
   }
 
   @include media(xs) {
-    max-width: 270px;
     max-height: 345px;
+    max-width: 270px;
     top: 65px;
   }
 }
