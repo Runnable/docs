@@ -66,7 +66,7 @@
   position: absolute;
   top: 80px;
   transform: scale3d(1, 1, 1) translate3d(-50%, 0, 0);
-  transition:  transform .1s ease-in-out;
+  transition: transform .1s ease-in-out;
   visibility: visible;
 
   &:empty {
@@ -81,5 +81,6 @@
     max-height: 345px;
     max-width: 270px;
     top: 65px;
+    max-width: 270px;
   }
 }
