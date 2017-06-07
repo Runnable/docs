@@ -1,9 +1,9 @@
 .sidebar {
   background: $gray-lighterest;
   border-right: 1px solid $gray-lighter;
-  color: $gray;
   font-size: 14px;
   padding: $lg $md;
+  position: relative;
   width: 280px;
 
   @include media(sm) {
@@ -15,15 +15,19 @@
   @include media(xs) {
     border-bottom: 1px solid $gray-lighter;
     border-right: 0;
-    height: 272px;
+    height: 440px;
     padding: $md;
     width: 100%;
   }
 
+  &.overflow-y-hidden {
+    overflow-y: hidden;
+  }
+
   .search {
     @include media(xs) {
-      margin-left: $lg;
-      margin-right: $lg;
+      margin-left: $sm;
+      margin-right: $sm;
     }
   }
 
@@ -41,32 +45,33 @@
     + .ul {
       margin-top: 6px;
     }
-  }
 
-  .li {
-    transition: opacity .2s ease-in-out;
+    .li {
+      transition: opacity .2s ease-in-out;
 
-    &:nth-child(2) {
-      margin-top: 3px;
-    }
+      &:last-child:not(:only-child) {
+        padding-bottom: 10px; // just enough to not cut off descenders
+      }
 
-    &:last-child:not(:only-child) {
-      padding-bottom: 10px; // just enough to not cut off descenders
-    }
-  }
+      .a {
+        color: $gray;
+        cursor: pointer;
+        min-height: 30px;
 
-  .a {
-    cursor: pointer;
-    min-height: 30px;
+        &:hover {
+          color: $gray-dark;
+        }
 
-    &:hover {
-      color: $gray-dark;
-    }
+        &:active,
+        &.active {
+          color: $purple-light;
+          font-weight: $weight-bold;
+        }
+      }
 
-    &:active,
-    &.active {
-      color: $purple-light;
-      font-weight: $weight-bold;
+      &:nth-child(2) {
+        margin-top: 3px;
+      }
     }
   }
 
