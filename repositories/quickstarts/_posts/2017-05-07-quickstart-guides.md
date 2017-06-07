@@ -198,5 +198,5 @@ You can follow this guide again to add and set up any other repositories in your
 
 ## What’s next?
 
-- [Adding a PostgreSQL Database]({{ site.baseurl }}/databases-datastores/how-to-setup-your-postgres-database-template)
-- [Adding a MySQL Database]({{ site.baseurl }}/databases-datastores/how-to-setup-your-mysql-database-template)
+- [Adding a Database]({{ site.baseurl }}/databases-datastores/adding-a-database-for-dockerfiles)
+- [Cloning & Seeding Databases]({{ site.baseurl }}/databases-datastores/how-to-clone-your-local-database-for-use-on-runnable)
