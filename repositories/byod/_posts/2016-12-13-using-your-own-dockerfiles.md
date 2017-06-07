@@ -32,7 +32,7 @@ Then click the **Create Environment** button to continue.
 
 In the next view, you'll see the Dockerfile we imported from your repository.
 
-> Note: If your Dockerfile uses a private image, you’ll need to [set up access to your registry]({{ site.baseurl }}/repositories/byod/using-private-docker-images) so your container can build successfully.
+> Note: If your Dockerfile uses a private image, you’ll need to [set up access to your registry]({{ site.baseurl }}/docker-compose/using-private-docker-images) so your container can build successfully.
 
 ![Dockerfile]({{ site.baseurl }}/images/dockerfiles_dockerfile.png)
 
