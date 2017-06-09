@@ -3,6 +3,7 @@ title: Adding SSH Keys
 short: Adding SSH Keys
 category: docker-compose
 order: 4
+development: true
 ---
 
 Adding your SSH key allows services in your project to access any private repositories they depend on when building.
