@@ -1,12 +1,12 @@
 ---
 title: Adding SSH Keys
 short: Adding SSH Keys
-category: docker-compose
-order: 4
+category: privacy
+order: 3
 development: true
 ---
 
-Adding your SSH key allows services in your project to access any private repositories they depend on when building.
+Adding an SSH key allows services in your project to access any private repositories they depend on when building.
 
 > **Note:** One way to know that your project needs a user key is if any of your services fail to build with “no such key” or “host key verification failed” errors.
 
@@ -43,10 +43,3 @@ Now that your key has been created, it will be added to the `.ssh` directory on 
 ## Deleting Your User Key
 
 If you no longer need to use your key, you can delete it from [your SSH key settings on GitHub](//github.com/settings/keys).
-
----
-
-## What’s Next?
-
-- [Setting Up with Compose]({{ site.baseurl }}/docker-compose/launching-your-first-environment)
-- [Adding a Database]({{ site.baseurl }}/docker-compose/adding-a-database-for-compose)
