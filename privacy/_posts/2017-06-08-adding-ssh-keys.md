@@ -6,9 +6,9 @@ order: 3
 development: true
 ---
 
-Adding an SSH key allows services in your project to access any private repositories they depend on when building.
+An SSH key will allow services in your project to access any private repositories they depend on when building.
 
-> **Note:** One way to know that your project needs a user key is if any of your services fail to build with “no such key” or “host key verification failed” errors.
+> **Note:** One way to know that your project needs an SSH key is if any of your services fail to build with “no such key” or “host key verification failed” errors.
 
 ---
 
