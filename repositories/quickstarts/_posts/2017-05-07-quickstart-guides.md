@@ -9,7 +9,7 @@ A Dockerfile is a file that contains instructions for building an image that can
 
 If your app doesn't use Dockerfiles, don't worry! this guide will show you how to generate them from your source code and settings you configure. Then we'll point you to the next steps for setting up your application.
 
-> **Note:** Creating Dockerfiles is a great way to start using Runnable, but some features are reserved for apps that use Docker Compose:
+> **Note:** Creating Dockerfiles is a great way to start using Runnable, but some features are reserved for apps that [use Docker Compose]({{ site.baseurl }}/docker-compose/launching-your-first-environment):
 >
 > - Automatically creating isolated stacks for branches
 > - Running automated tests
