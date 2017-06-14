@@ -3,7 +3,6 @@ title: Adding SSH Keys
 short: Adding SSH Keys
 category: privacy
 order: 3
-development: true
 ---
 
 An SSH key will allow services in your project to access any private repositories they depend on when building.
