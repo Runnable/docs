@@ -25,7 +25,7 @@ var store = [{% for post in site.posts %}{
   "excerpt": {{ post.content | strip_html | truncatewords: 9 | jsonify }}
 }{% unless forloop.last %},{% endunless %}{% endfor %}]
 
-document.addEventListener("DOMContentLoaded", function(e) {
+document.addEventListener('DOMContentLoaded', function(e) {
   var searchInput = document.getElementById('search');
 
   searchInput.addEventListener('keyup', function(e) {
