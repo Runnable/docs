@@ -5,7 +5,7 @@ category: troubleshooting
 order: 1
 ---
 
-If your project is failing to build, you may need to [add an SSH key]({{ site.baseurl/privacy/adding-ssh-keys }}) so it can access any private repositories it depends on.
+If your project is failing to build, you may need to [add an SSH key]({{ site.baseurl }}/privacy/adding-ssh-keys) so it can access any private repositories it depends on.
 
 Errors related to this issue can take a variety of forms depending on your application, including:
 
@@ -23,4 +23,4 @@ npm ERR! exited with error code: 128
 
 ---
 
-For detailed instructions on how to add your SSH key, [check out our guide]({{ site.baseurl/privacy/adding-ssh-keys }}).
+For detailed instructions on how to add your SSH key, [check out our guide]({{ site.baseurl }}/privacy/adding-ssh-keys).
