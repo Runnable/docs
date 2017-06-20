@@ -1,11 +1,11 @@
 ---
-title: Adding Files and SSH Keys
-short: Adding Files and SSH Keys
+title: Adding External Files
+short: Adding External Files
 category: repositories
 order: 8
 ---
 
-Many repositories depend on external resources like SSH keys, configuration files, or other repositories. This guide will show you how to add these assets to Runnable so your environments can build successfully.
+Many repositories depend on external resources like configuration files or other repositories. This guide will show you how to add these assets to Runnable so your environments can build successfully.
 
 If your repository has files with hard-coded values, we'll also show you how to add replacement files with modified values for use in your environments.
 
@@ -18,6 +18,8 @@ First, open the configuration for your repository by clicking the gear icon next
 ![Configure Service]({{ site.baseurl }}/images/dockerfiles_configure.png)
 
 Go to the **Files & SSH Keys** tool. Click on the **Add…** button and select whether you want to add a file, a repository, or an SSH Key. In this guide, we'll show examples for adding files. Adding repositories and SSH keys works in a similar way.
+
+> **Note:** We recommend [adding your SSH key through GitHub]({{ site.baseurl }}/privacy/adding-ssh-keys). It leaves your key in the control of your GitHub account, and applies to all your containers in Runnable.
 
 ![Add File]({{ site.baseurl }}/images/dockerfiles_file_add.png)
 
