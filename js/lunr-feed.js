@@ -1,7 +1,7 @@
 ---
 layout: null
 ---
-var index = lunr(function () {
+var index = lunr(function() {
   this.field('title')
   this.field('content', {boost: 10})
   this.field('category')
@@ -25,30 +25,27 @@ var store = [{% for post in site.posts %}{
   "excerpt": {{ post.content | strip_html | truncatewords: 9 | jsonify }}
 }{% unless forloop.last %},{% endunless %}{% endfor %}]
 
-$(document).ready(function() {
-  $('input#search').on('keyup', function () {
-    var contentdiv = $('#content');
-    var overlaydiv = $('#overlay');
-    var resultdiv = $('#results');
-    var sidebardiv = $('#sidebar');
+document.addEventListener("DOMContentLoaded", function(e) {
+  var searchInput = document.getElementById('search');
+
+  searchInput.addEventListener('keyup', function(e) {
+    var resultdiv = document.getElementById('results');
+    var sidebardiv = document.getElementById('sidebar');
+    var itemList = '';
 
     function showResults() {
-      window.scroll(0, 0);
-      contentdiv.addClass('lunr-hidden');
-      overlaydiv.removeClass('lunr-hidden');
-      resultdiv.removeClass('lunr-hidden');
-      sidebardiv.addClass('overflow-y-hidden');
+      window.scroll(0,0);
+      resultdiv.classList.add('in');
+      sidebardiv.classList.add('overflow-y-hidden');
     }
 
     function hideResults() {
-      contentdiv.removeClass('lunr-hidden');
-      overlaydiv.addClass('lunr-hidden');
-      resultdiv.addClass('lunr-hidden');
-      sidebardiv.removeClass('overflow-y-hidden');
+      resultdiv.classList.remove('in');
+      sidebardiv.classList.remove('overflow-y-hidden');
     }
 
     // Get query
-    var query = $(this).val();
+    var query = e.target.value;
     // Search for it
     var result = index.search(query);
 
@@ -59,15 +56,22 @@ $(document).ready(function() {
     }
 
     // Show results
-    resultdiv.empty();
-    resultdiv.prepend('');
-    resultdiv.append('');
+    while (resultdiv.firstChild) {
+      resultdiv.removeChild(resultdiv.firstChild);
+    }
 
     // Loop through, match, and add results
     for (var item in result) {
       var ref = result[item].ref;
-      var searchitem = '<a href="'+store[ref].link+'" class="a"><div class="result"><div class="result-body"><div class="post-title text-overflow">'+store[ref].title+'</div><p class="post-excerpt text-overflow">'+store[ref].excerpt+'</p></div></a>';
-      resultdiv.append(searchitem);
+      var searchItem = '\
+        <a href="'+store[ref].link+'" class="grid-block shrink col a result">\
+          <span class="post-title text-overflow">'+store[ref].title+'</span>\
+          <span class="post-excerpt text-overflow">'+store[ref].excerpt+'</span>\
+        </a>';
+      if (searchItem) {
+        itemList += searchItem;
+      }
     }
+    resultdiv.innerHTML = itemList;
   });
 });

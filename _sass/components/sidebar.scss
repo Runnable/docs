@@ -14,6 +14,7 @@
 
   @include media(xs) {
     border-bottom: 1px solid $gray-lighter;
+    border-radius: $input-border-radius-lg $input-border-radius-lg 0 0;
     border-right: 0;
     height: 440px;
     padding: $md;
