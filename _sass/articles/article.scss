@@ -267,16 +267,16 @@
   }
 
   .ul-monospace {
-    flex-wrap: wrap;
+    column-count: 2;
+    display: block;
     font-size: 14px;
 
-    li {
-      flex: 0 0 50%;
-      margin-bottom: 3px;
+    @include media(sm) {
+      column-count: 1;
+    }
 
-      @include media(sm) {
-        flex: 0 0 100%;
-      }
+    li {
+      margin-bottom: 3px;
     }
   }
 
