@@ -55,7 +55,7 @@ If a feature is not supported, we may ignore the option if it’s present in you
 * `mem_limit`{:.orange}
 * `memswap_limit,`{:.orange}
 * `net`{:.orange}
-* `network_*`{:.orange}
+* `network_mode`{:.orange}
 * `networks`{:.orange}
 * `oom_score_adj`{:.orange}
 * `pid`{:.orange}
