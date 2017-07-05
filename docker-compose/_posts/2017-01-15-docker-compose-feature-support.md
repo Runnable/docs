@@ -2,7 +2,7 @@
 title: Docker Compose Feature Support
 short: Supported Features
 category: docker-compose
-order: 4
+order: 5
 ---
 
 While Runnable currently supports the Docker Compose v2 file format, there are some Compose features that we don’t support…yet.
