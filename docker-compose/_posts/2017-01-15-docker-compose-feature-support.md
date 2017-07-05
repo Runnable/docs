@@ -96,4 +96,5 @@ You can execute the script without `entrypoint` by using `run`:
 ## What’s Next?
 
 - [Setting Up with Compose]({{ site.baseurl }}/docker-compose/launching-your-first-environment)
+- [Building a Compose File for Runnable]({{ site.baseurl }}/docker-compose/building-a-compose-file-for-runnable)
 - [Adding a Database]({{ site.baseurl }}/docker-compose/adding-a-database-for-compose)

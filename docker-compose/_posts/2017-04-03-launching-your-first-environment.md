@@ -59,4 +59,5 @@ By default, you’ll also get new environments for branches of this repository w
 ## What’s Next?
 
 - [Adding a Database]({{ site.baseurl }}/docker-compose/adding-a-database-for-compose)
+- [Building a Compose File for Runnable]({{ site.baseurl }}/docker-compose/building-a-compose-file-for-runnable)
 - [Supported Compose Features]({{ site.baseurl }}/docker-compose/docker-compose-feature-support)
