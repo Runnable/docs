@@ -5,24 +5,13 @@ category: docker-compose
 order: 4
 ---
 
-Runnable can deploy full-stack environments for branches of any repository that contains a Dockerfile. Let’s go over some practices you should follow in your Compose files to make this work for your team.
-
----
-
-## Compose File Organization Patterns
-
-There are two patterns that teams tend to follow for organizing their Compose files:
-
-1. A centralized approach, with a single Compose file in a central repository that defines the whole stack.
-2. A decentralized approach, in which each service’s repository has its own Compose file that defines the environment it needs.
-
-Runnable works with either pattern because of how it makes use of the `build` feature in Compose.
+We can accept most Docker Compose files, but some modifications may be necessary to run as expected on Runnable.
 
 ---
 
 ## Using `build` to Create Environments for Your Branches
 
-Environments include a container for each service in your Compose file. Services can be based on images or built from a Dockerfile. A service that specifies a build enables us to launch environments for its branches.
+Environments are made up of containers for each `service` in your Compose file. Though services can be based on images or built from a Dockerfile, building from a Dockerfile allows you to launch environments for the service.
 
 ```yaml
 ...
@@ -35,6 +24,8 @@ services:
     image: example-registry.com/db:latest
 ...
 ```
+
+Normally, your `context` would build with the specified Dockerfile in the default branch, but when you launch environments for your branches in Runnable, we’ll use the Dockerfile in that branch.
 
 > **Note:** The `context` for your Dockerfile can be a git URL to a separate repository (as in the example above), or a relative path to a file in the same repository.
 
