@@ -8,7 +8,7 @@ order: 1
 ---
 
 ### We follow a single tenant model.
-Every GitHub org gets its own dedicated walled infrastructure. Only members of your GitHub org have access to your private infrastructure.
+Every GitHub org gets its own dedicated walled infrastructure.
 
 ---
 
