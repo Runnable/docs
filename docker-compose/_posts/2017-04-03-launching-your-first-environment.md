@@ -2,7 +2,7 @@
 title: Setting Up With a Compose File
 short: Setting Up With Compose
 category: docker-compose
-order: 1
+order: 2
 ---
 
 Docker Compose files contain all the necessary information for Runnable to build and run your multi-service environments. If you’re using Docker Compose, this guide is for you! We’ll walk through the setup for creating staging and testing environments using the existing Compose YAML file in your repository.

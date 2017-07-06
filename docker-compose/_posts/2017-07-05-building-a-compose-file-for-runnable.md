@@ -2,7 +2,7 @@
 title: Building a Compose File
 short: Building a Compose File
 category: docker-compose
-order: 4
+order: 1
 ---
 
 We can accept most Docker Compose files, but some modifications may be necessary to run as expected on Runnable.
