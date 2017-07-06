@@ -1,6 +1,6 @@
 ---
-title: Building a Compose File for Runnable
-short: Building a Compose File for Runnable
+title: Building a Compose File
+short: Building a Compose File
 category: docker-compose
 order: 4
 ---
@@ -16,7 +16,7 @@ There are two patterns that teams tend to follow for organizing their Compose fi
 1. A centralized approach, with a single Compose file in a central repository that defines the whole stack.
 2. A decentralized approach, in which each service’s repository has its own Compose file that defines the environment it needs.
 
-Runnable works with either pattern because of how it makes use of the build feature in Compose.
+Runnable works with either pattern because of how it makes use of the `build` feature in Compose.
 
 ---
 
@@ -42,7 +42,7 @@ services:
 
 ## Unsupported Compose Features
 
-There are some features of Compose that we don’t support yet, including entrypoint, volumes, and build args. To see if your file is compatible, check out [our full list of supported features]() (and known workarounds for unsupported ones).
+There are some features of Compose that we don’t support yet, including `entrypoint`, `volumes`, and `build args`. To see if your file is compatible, check out [our full list of supported features]() (and known workarounds for unsupported ones).
 
 ---
 
