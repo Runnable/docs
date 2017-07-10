@@ -2,7 +2,7 @@
 title: Docker Compose Feature Support
 short: Supported Features
 category: docker-compose
-order: 4
+order: 5
 ---
 
 While Runnable currently supports the Docker Compose v2 file format, there are some Compose features that we don’t support…yet.
@@ -96,4 +96,5 @@ You can execute the script without `entrypoint` by using `run`:
 ## What’s Next?
 
 - [Setting Up with Compose]({{ site.baseurl }}/docker-compose/launching-your-first-environment)
+- [Building a Compose File for Runnable]({{ site.baseurl }}/docker-compose/building-a-compose-file-for-runnable)
 - [Adding a Database]({{ site.baseurl }}/docker-compose/adding-a-database-for-compose)
